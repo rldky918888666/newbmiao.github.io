@@ -1,0 +1,489 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>redis安装 | 菜鸟Miao</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  <meta name="keywords" itemprop="keywords" content="newbmiao,php开发,web开发,javascript,jquery,linux,hexo,编程,typecho迁移" />
+  
+  
+  <meta name="description" content="centos下安装redis
+下载redis
+安装
+
+
+#解压
+tar -zxf redisXXX.tar.gz
+cd redisXXX
+make
+make install
+
+设为服务项自启动">
+<meta property="og:type" content="article">
+<meta property="og:title" content="redis安装">
+<meta property="og:url" content="http://blog.newbmiao.com/2015/06/26/redis-installation-guide.html">
+<meta property="og:site_name" content="菜鸟Miao">
+<meta property="og:description" content="centos下安装redis
+下载redis
+安装
+
+
+#解压
+tar -zxf redisXXX.tar.gz
+cd redisXXX
+make
+make install
+
+设为服务项自启动">
+<meta property="og:updated_time" content="2015-08-10T02:10:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="redis安装">
+<meta name="twitter:description" content="centos下安装redis
+下载redis
+安装
+
+
+#解压
+tar -zxf redisXXX.tar.gz
+cd redisXXX
+make
+make install
+
+设为服务项自启动">
+  
+    <link rel="alternative" href="/atom.xml" title="菜鸟Miao" type="application/atom+xml">
+  
+  
+    <link rel="icon"   href="http://media.newbmiao.com/blog/asset/favicon.ico">
+  
+  
+  <link rel="stylesheet" href="//media.newbmiao.com/blog/asset/css/style.css" type="text/css">
+  
+  <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+  
+
+</head>
+
+<body>
+<div id="container">
+  <div id="wrap">
+    <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">菜鸟Miao</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">start from a newb...</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+	  
+	
+		 <form action="/search/index.html" method="get" accept-charset="utf-8" class="search-form">
+		<input type="text" class="search-form-input">
+		<input type="button" value="" class="search-form-submit">
+		 </form>																		
+      </div>
+    </div>
+  </div>
+</header>
+
+    <div class="outer">
+      <section id="main"><article id="post-redis-installation-guide" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/06/26/redis-installation-guide.html" class="article-date">
+  <time datetime="2015-06-26T09:43:23.000Z" itemprop="datePublished">2015-06-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/redis/">redis</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      redis安装
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+	
+        <h4 id="centos下安装redis">centos下安装redis</h4><ul>
+<li><a href="http://redis.io/download/" target="_blank" rel="external">下载redis</a></li>
+<li>安装</li>
+</ul>
+<hr>
+<pre><code>#解压
+tar -zxf redisXXX<span class="class">.tar</span><span class="class">.gz</span>
+cd redisXXX
+make
+make install
+</code></pre><ul>
+<li>设为服务项自启动<a id="more"></a>    
+</li>
+</ul>
+<hr>
+<pre><code>cp /pathto/redis/utils/redis_init_script /etc/rc.<span class="keyword">d</span>/init.<span class="keyword">d</span>/redis
+#修改使后台执行
+vim /etc/rc.<span class="keyword">d</span>/init.<span class="keyword">d</span>/redis
+#在开头注释下添加下行注释,使支持chkconfig
+# chkconfig:   2345 90 10 
+#<span class="label">$EXEC</span> <span class="label">$CONF</span> 替换为》<span class="label">$EXEC</span> <span class="label">$CONF</span> &amp;
+#还需要注意pid文件名与<span class="keyword">conf</span>里的一致，否则无法用于关闭redis-server
+
+#配置文件
+<span class="keyword">mkdir</span> /etc/redis     
+cp /pathto/redis/redis.<span class="keyword">conf</span> /etc/redis/6379.<span class="keyword">conf</span>
+#编辑配置使后台运行
+vim /etc/redis/6379.<span class="keyword">conf</span>
+daemonize yes   #修改<span class="keyword">no</span>为yes，后台运行redis
+
+#加入服务项
+chmod 755 /etc/init.<span class="keyword">d</span>/redis
+chkconfig --add redis 
+chkconfig --level 2345 redis <span class="keyword">on</span>
+chkconfig --<span class="keyword">list</span> redis
+</code></pre><ul>
+<li>启动</li>
+</ul>
+<hr>
+<pre><code><span class="keyword">service</span> redis <span class="literal">start</span>
+</code></pre><ul>
+<li>phpredis安装</li>
+</ul>
+<hr>
+<pre><code><span class="comment"># 下载</span>
+
+    <span class="keyword">https</span>://github.com/phpredis/phpredis
+<span class="comment"># 安装</span>
+
+    phpize
+    ./configure <span class="comment">--with-php-config=/usr/local/php/bin/php-config</span>
+    make
+    make install
+    <span class="comment">#在php.ini中添加</span>
+    extension=<span class="string">"redis.so"</span>
+</code></pre><ul>
+<li>issue</li>
+</ul>
+<hr>
+<h4 id="service_redis_does_not_support_chkconfig的解决办法">service redis does not support chkconfig的解决办法</h4><p>问题解决办法如下：</p>
+<p>必须把下面两行注释放在/etc/init.d/redis文件靠前的注释中：</p>
+<pre><code><span class="preprocessor"># chkconfig:   2345 90 10</span>
+<span class="preprocessor"># description:  Redis is a persistent key-value database</span>
+</code></pre><p>上面的注释的意思是，redis服务必须在运行级2，3，4，5下被启动或关闭，启动的优先级是90，关闭的优先级是10。</p>
+<p>附录：<br>linux 运行级别</p>
+<p>运行级别就是操作系统当前正在运行的功能级别。这个级别从0到6 ，具有不同的功能。这些级别在/etc/inittab文件里指定。这个文件是init程序寻找的主要文件，最先运行的服务是那些放在/etc/rc.d 目录下的文件。</p>
+<p>不同的运行级定义如下：(可以参考Linux里面的/etc/inittab)</p>
+<h5 id="缺省的运行级，RHS用到的级别如下：">缺省的运行级，RHS用到的级别如下：</h5><p>0：关机</p>
+<p>1：单用户模式</p>
+<p>2：无网络支持的多用户模式</p>
+<p>3：有网络支持的多用户模式</p>
+<p>4：保留，未使用</p>
+<p>5：有网络支持有X-Window支持的多用户模式</p>
+<p>6：重新引导系统，即重启</p>
+<p>对各个运行级的详细解释：</p>
+<p>0 为停机，机器关闭。</p>
+<p>1 为单用户模式，就像Win9x下的安全模式类似。</p>
+<p>2  为多用户模式，但是没有NFS支持。 </p>
+<p>3  为完整的多用户模式，是标准的运行级。</p>
+<p>4 一般不用，在一些特殊情况下可以用它来做一些事情。例如在笔记本 电脑的电池用尽时，可以切换到这个模式来做一些设置。</p>
+<p>5  就是X11，进到X Window系统了。</p>
+<p>6  为重启，运行init 6机器就会重启。</p>
+<p>chkconfig用法</p>
+<p>chkconfig命令可以用来检查、设置系统的各种服务</p>
+<p>使用语法：</p>
+<p>chkconfig [—add][—del][—list][系统服务] 或 chkconfig [—level &lt;等级代号&gt;][系统服务][on/off/reset]</p>
+<p>参数用法：</p>
+<p>–add 　增加所指定的系统服务，让chkconfig指令得以管理它，并同时在系统启动的叙述文件内增加相关数据。</p>
+<p>–del 　删除所指定的系统服务，不再由chkconfig指令管理，并同时在系统启动的叙述文件内删除相关数据。</p>
+<p>–level&lt;等级代号&gt; 　指定读系统服务要在哪一个执行等级中开启或关毕。</p>
+<p>使用范例：</p>
+<p>chkconfig –list                    列出所有的系统服务</p>
+<p>chkconfig –add redis               增加redis服务</p>
+<p>chkconfig –del redis                删除redis 服务</p>
+<p>chkconfig –level redis 2345 on     把redis在运行级别为2、3、4、5的情况下都是on（开启）的状态。    </p>
+<blockquote>
+<p>参考自<a href="http://blog.csdn.net/zqtsx/article/details/40894181?utm_source=tuicool" target="_blank" rel="external">redis安装+redis集群配置+phpredis扩展安装</a></p>
+</blockquote>
+
+	
+	<blockquote style="background: rgba(0, 0, 0, 0.06) none repeat scroll 0% 0%;border-left-color:green">
+	<p>如有疑问，请留言或邮件<a href="mailto:newbvirgil@gmail.com" title="newbvirgil@gmail.com">newbvirgil@gmail.com</a></p>
+	<p>本文链接:<a href="http://blog.newbmiao.com/2015/06/26/redis-installation-guide.html" title="redis安装" target="_blank" rel="external">redis安装</a></p>
+	</blockquote>
+	
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://blog.newbmiao.com/2015/06/26/redis-installation-guide.html" data-id="cid5a9cnx0018rr31jst9bwf5" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="http://blog.newbmiao.com/2015/06/26/redis-installation-guide.html#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/redis/">redis</a></li></ul>
+
+            
+	<span id="busuanzi_container_page_pv" style="color:#999">
+ 	 <i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"> <i class="fa fa-spinner fa-spin"></i></span>次阅读
+       </span>
+       
+     
+     <span style="color:#999">
+&nbsp; | &nbsp;最近更新 ：<time datetime="2015-08-10T02:10:10.000Z" itemprop="dateModify">2015-08-10</time>
+</span>
+
+     
+<!-- 无觅 -->
+<script type="text/javascript" id="wumiiRelatedItems"></script>
+
+
+<script type="text/javascript">
+    var wumiiPermaLink = "http://blog.newbmiao.com/2015/06/26/redis-installation-guide.html"; //请用代码生成文章永久的链接
+    var wumiiTitle = "redis安装"; //请用代码生成文章标题
+    var wumiiTags = "linux,redis"; //请用代码生成文章标签>，以英文逗号分隔，如："标签1,标签2"
+    var wumiiCategories = ["redis"]; //请用代码生成文章分类，分>类名放在 JSONArray 中，如: ["分类1", "分类2"]
+    var wumiiSitePrefix = "http://blog.newbmiao.com";
+    var wumiiParams = "&num=5&mode=2&pf=JAVASCRIPT";
+</script>
+<script type="text/javascript" src="http://widget.wumii.cn/ext/relatedItemsWidget"></script>
+<a href="http://www.wumii.com/widget/relatedItems" style="border:0;">
+    <img src="http://static.wumii.cn/images/pixel.png" alt="无觅关联推荐，快速提升流量" style="border:0;padding:0;margin:0;" />
+</a>
+
+    </footer>
+  </div>
+</article>
+
+
+
+  <section id="comments">
+    <div id="ds-thread" class="ds-thread" data-thread-key="2015/06/26/redis-installation-guide.html" data-title="redis安装" data-url="http://blog.newbmiao.com/2015/06/26/redis-installation-guide.html"></div>
+  </section>
+
+</section>
+      
+      <aside id="sidebar">
+  
+    
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/08/10/hello-world.html">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2015/08/08/auto-sync-your-mac-file-with-dropbox.html">dropbox同步你的mac文件</a>
+          </li>
+        
+          <li>
+            <a href="/2015/08/06/set-highlight-and-autoindent-in-vim-on-mac.html">mac vim高亮及缩进设置</a>
+          </li>
+        
+          <li>
+            <a href="/2015/08/01/use-limit-subquery-in-mysql.html">解决mysql不可用limit子查询</a>
+          </li>
+        
+          <li>
+            <a href="/2015/07/31/school-company-data-crawling.html">大学-公司数据爬取</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/dropbox/">dropbox</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/dataCrawl/">dataCrawl</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/html5/">html5</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/js/">js</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/">mac</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/">mysql</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/notes/">notes</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/">php</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/redis/">redis</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/random/" style="font-size: 15px; color: #1e90ff">random</a> <a href="/tags/phpdoc/" style="font-size: 15px; color: #1e90ff">phpdoc</a> <a href="/tags/mysql/" style="font-size: 18.75px; color: #2e94e7">mysql</a> <a href="/tags/limit/" style="font-size: 15px; color: #1e90ff">limit</a> <a href="/tags/hexo/" style="font-size: 18.75px; color: #2e94e7">hexo</a> <a href="/tags/blog/" style="font-size: 22.5px; color: #3f97d0">blog</a> <a href="/tags/mac/" style="font-size: 15px; color: #1e90ff">mac</a> <a href="/tags/vim/" style="font-size: 15px; color: #1e90ff">vim</a> <a href="/tags/js/" style="font-size: 30px; color: #5f9ea0">js</a> <a href="/tags/closure/" style="font-size: 15px; color: #1e90ff">closure</a> <a href="/tags/regex/" style="font-size: 15px; color: #1e90ff">regex</a> <a href="/tags/redis/" style="font-size: 15px; color: #1e90ff">redis</a> <a href="/tags/linux/" style="font-size: 18.75px; color: #2e94e7">linux</a> <a href="/tags/php/" style="font-size: 26.25px; color: #4f9bb8">php</a> <a href="/tags/escape-str/" style="font-size: 15px; color: #1e90ff">escape_str</a> <a href="/tags/json/" style="font-size: 15px; color: #1e90ff">json</a> <a href="/tags/target/" style="font-size: 15px; color: #1e90ff">target</a> <a href="/tags/ref/" style="font-size: 15px; color: #1e90ff">ref</a> <a href="/tags/javascript编程全解/" style="font-size: 22.5px; color: #3f97d0">javascript编程全解</a> <a href="/tags/html5/" style="font-size: 18.75px; color: #2e94e7">html5</a> <a href="/tags/drag/" style="font-size: 18.75px; color: #2e94e7">drag</a> <a href="/tags/chrome/" style="font-size: 15px; color: #1e90ff">chrome</a> <a href="/tags/apache/" style="font-size: 15px; color: #1e90ff">apache</a> <a href="/tags/dropbox/" style="font-size: 15px; color: #1e90ff">dropbox</a> <a href="/tags/CI/" style="font-size: 15px; color: #1e90ff">CI</a> <a href="/tags/git/" style="font-size: 15px; color: #1e90ff">git</a>
+    </div>
+  </div>
+
+
+  
+    
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">二月 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">十二月 2014</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">友情链接</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://leo108.com" target="_blank">leo108</a>
+          </li>
+        
+          <li>
+            <a href="http://xiguabaobao.com" target="_blank">主题作者</a>
+          </li>
+        
+          <li>
+            <a href="http://reqianduan.com" target="_blank">热前端</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+</aside>
+
+      
+    </div>
+    <footer id="footer">
+ <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+ </script>
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 菜鸟Miao<br>
+     <p>
+     <span id="busuanzi_container_site_uv">
+  	您是本站第<span id="busuanzi_value_site_uv"> <i class="fa fa-spinner fa-spin"></i></span>个访问者
+     </span>
+     <span id="busuanzi_container_site_pv">
+        /本站总访问量<span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i> </span>次
+     </span>
+     </p>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      .
+      Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+  <script src="http://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<!-- totop start -->
+<div id="totop">
+<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+</div>
+
+<!-- totop end -->
+
+<!-- 多说公共js代码 start -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"NewbMiao"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共js代码 end -->
+
+
+<!-- 百度分享 start -->
+
+<div id="article-share-box" class="article-share-box">
+  <div id="bdshare" class="bdsharebuttonbox article-share-links">
+    <a class="article-share-weibo" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a class="article-share-weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a class="article-share-qq" data-cmd="sqq" title="分享到QQ"></a>
+    <a class="article-share-renren" data-cmd="renren" title="分享到人人网"></a>
+    <a class="article-share-more" data-cmd="more" title="更多"></a>
+  </div>
+</div>
+<script>window._bd_share_config={"common":{},"share":{"bdCustomStyle":"/css/bdshare.css"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<!-- 百度分享 end -->
+
+
+
+<link rel="stylesheet" href="//media.newbmiao.com/blog/asset/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="//media.newbmiao.com/blog/asset/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="//media.newbmiao.com/blog/asset/js/script.js"></script>
+
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','bqAniPPC1T7RV4MomxcE','2.0.0');
+</script>
+
+
+</div>
+</body>
+</html>
+

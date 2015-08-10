@@ -1,0 +1,423 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>大学-公司数据爬取 | 菜鸟Miao</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  <meta name="keywords" itemprop="keywords" content="newbmiao,php开发,web开发,javascript,jquery,linux,hexo,编程,typecho迁移" />
+  
+  
+  <meta name="description" content="今天需要搞大学数据库，目标是新浪高考网。仔细分析其页面的数据获取是使用Jsonp的js方式。于是在控制台能使用js爬取了大学数据源（1378条）》》需要大学数据可以这里拿
+这里要记录的是爬取中数组合并的问题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大学-公司数据爬取">
+<meta property="og:url" content="http://blog.newbmiao.com/2015/07/31/school-company-data-crawling.html">
+<meta property="og:site_name" content="菜鸟Miao">
+<meta property="og:description" content="今天需要搞大学数据库，目标是新浪高考网。仔细分析其页面的数据获取是使用Jsonp的js方式。于是在控制台能使用js爬取了大学数据源（1378条）》》需要大学数据可以这里拿
+这里要记录的是爬取中数组合并的问题">
+<meta property="og:image" content="http://media.newbmiao.com/blog/college.jpg">
+<meta property="og:updated_time" content="2015-08-10T02:10:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="大学-公司数据爬取">
+<meta name="twitter:description" content="今天需要搞大学数据库，目标是新浪高考网。仔细分析其页面的数据获取是使用Jsonp的js方式。于是在控制台能使用js爬取了大学数据源（1378条）》》需要大学数据可以这里拿
+这里要记录的是爬取中数组合并的问题">
+  
+    <link rel="alternative" href="/atom.xml" title="菜鸟Miao" type="application/atom+xml">
+  
+  
+    <link rel="icon"   href="http://media.newbmiao.com/blog/asset/favicon.ico">
+  
+  
+  <link rel="stylesheet" href="//media.newbmiao.com/blog/asset/css/style.css" type="text/css">
+  
+  <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+  
+
+</head>
+
+<body>
+<div id="container">
+  <div id="wrap">
+    <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">菜鸟Miao</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">start from a newb...</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+	  
+	
+		 <form action="/search/index.html" method="get" accept-charset="utf-8" class="search-form">
+		<input type="text" class="search-form-input">
+		<input type="button" value="" class="search-form-submit">
+		 </form>																		
+      </div>
+    </div>
+  </div>
+</header>
+
+    <div class="outer">
+      <section id="main"><article id="photo-school-company-data-crawling" class="article article-type-photo" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/31/school-company-data-crawling.html" class="article-date">
+  <time datetime="2015-07-31T12:11:39.000Z" itemprop="datePublished">2015-07-31</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/dataCrawl/">dataCrawl</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" href="http://media.newbmiao.com/blog/college.jpg" rel="gallery_cid5a9cnl000urr31i5tlleri">
+        <img src="http://media.newbmiao.com/blog/college.jpg" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      大学-公司数据爬取
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+	
+        <p>今天需要搞大学数据库，目标是新浪高考网。<br>仔细分析其页面的数据获取是使用Jsonp的js方式。于是在控制台能使用js爬取了大学数据源（1378条）<br>》》<a href="https://github.com/NewbMiao/webDataSource/tree/master/%E5%A4%A7%E5%AD%A6%E6%95%B0%E6%8D%AE%E5%BA%93_1378_20150731" target="_blank" rel="external">需要大学数据可以这里拿</a></p>
+<p>这里要记录的是爬取中数组合并的问题</p>
+<a id="more"></a>    
+<p>开始的时候，参考 ourjs的文章<a href="http://ourjs.com/detail/54a9f2ba5695544119000005" target="_blank" rel="external">^3</a>，cnblog上翻译的一篇文章<a href="http://blog.csdn.net/renfufei/article/details/39376311" target="_blank" rel="external">^4</a>  (原作<a href="http://davidwalsh.name/combining-js-arrays" target="_blank" rel="external">^5</a>)之后，打算尝试<code>reduce</code>。</p>
+<pre><code><span class="comment">//g,b为数组</span>
+g = b.reduce(<span class="function"><span class="keyword">function</span> <span class="params">(coll, item)</span> </span>{
+    coll.push(item);
+    <span class="keyword">return</span> coll;
+}, g);
+</code></pre><p>但是发现数据量大了之后，这个所谓的高效反而奇慢，后经同事帮助，我发现了问题<br>返回的数据格式为：Object { 1=[8],  2=[8],  3=[8],  更多…}<br>看到没是，json对象或者说是Map，不是数组，而<code>reduce</code>对<strong>数组内每个元素依次调用回调</strong>的方法。</p>
+<hr>
+<p>与此同时，我纳闷了为何 <strong>concat</strong> 就可以，去看了文档</p>
+<blockquote>
+<p>concat creates a new array consisting of the elements in the object on which it is called, followed in order by, for each argument, the elements of that argument (if the argument is an array) or the argument itself (if the argument is not an array).</p>
+<p>concat does not alter this or any of the arrays provided as arguments but instead returns a shallow copy that contains copies of the same elements combined from the original arrays. Elements of the original arrays are copied into the new array as follows:</p>
+<p>Object references (and not the actual object): concat copies object references into the new array. Both the original and new array refer to the same object. That is, if a referenced object is modified, the changes are visible to both the new and original arrays.</p>
+<p>Strings and numbers (not String and Number objects): concat copies the values of strings and numbers into the new array[^footer2].<br>引自:developer.mozilla.org<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat" target="_blank" rel="external">^6</a></p>
+</blockquote>
+<p>大致意思就是，合并中，如果是数组或者对象就直接复制（原数组对象和拷贝后的合并对象仍指向同一对象），如果是字符串或者数字就把值拷贝。</p>
+<p>还是概念没搞清啊。以后要注意了<br>配图尝试，只为装逼。</p>
+<p>2015.8.3 今天又去周伯通爬了公司，感谢互联网：）<br>》》<a href="https://github.com/NewbMiao/webDataSource/tree/master/%E5%85%AC%E5%8F%B8%E6%95%B0%E6%8D%AE%E5%BA%93_22966_20150803" target="_blank" rel="external">需要公司数据资源在这</a></p>
+<p><strong>这里记录一个二维数组去重的思路：</strong></p>
+<pre><code><span class="function"><span class="keyword">function</span> <span class="title">array_unique_deep</span><span class="params">(<span class="variable">$array2D</span>)</span> </span>{
+    <span class="keyword">foreach</span> (<span class="variable">$array2D</span> <span class="keyword">as</span> <span class="variable">$v</span>) {
+        <span class="comment">//$v['desc'] = mb_stristr($v['desc'], '企业招聘', true);</span>
+        <span class="variable">$v</span>         = join(<span class="string">","</span>, <span class="variable">$v</span>); <span class="comment">//降维,也可以用implode,将一维数组转换为用逗号连接的字符串</span>
+        <span class="variable">$temp</span>[]    = <span class="variable">$v</span>;
+
+    }
+    <span class="variable">$temp</span> = array_unique(<span class="variable">$temp</span>);    <span class="comment">//去掉重复的字符串,也就是重复的一维数组</span>
+    <span class="keyword">foreach</span> (<span class="variable">$temp</span> <span class="keyword">as</span> <span class="variable">$k</span> =&gt; <span class="variable">$v</span>) {
+        <span class="variable">$temp</span>[<span class="variable">$k</span>] = explode(<span class="string">","</span>, <span class="variable">$v</span>);   <span class="comment">//再将拆开的数组重新组装</span>
+    }
+
+    <span class="keyword">return</span> <span class="variable">$temp</span>;
+}
+</code></pre><p><strong>还有excel导入处理：</strong></p>
+<pre><code><span class="comment">/**
+ * csv_get_lines 读取CSV文件中的某几行数据
+ * <span class="doctag">@param</span> $csvfile csv文件路径
+ * <span class="doctag">@param</span> $lines 读取行数
+ * <span class="doctag">@param</span> $offset 起始行数
+ * <span class="doctag">@return</span> array
+ * */</span>
+<span class="function"><span class="keyword">function</span> <span class="title">csv_get_lines</span><span class="params">(<span class="variable">$csvfile</span>, <span class="variable">$lines</span>, <span class="variable">$offset</span> = <span class="number">0</span>)</span> </span>{
+    <span class="keyword">if</span>(!<span class="variable">$fp</span> = fopen(<span class="variable">$csvfile</span>, <span class="string">'r'</span>)) {
+        <span class="keyword">return</span> <span class="keyword">false</span>;
+    }
+    <span class="variable">$i</span> = <span class="variable">$j</span> = <span class="number">0</span>;
+    <span class="keyword">while</span> (<span class="keyword">false</span> !== (<span class="variable">$line</span> = fgets(<span class="variable">$fp</span>))) {<span class="comment">//从文件指针中读取一行</span>
+        <span class="keyword">if</span>(<span class="variable">$i</span>++ &lt; <span class="variable">$offset</span>) {
+            <span class="keyword">continue</span>;
+        }
+        <span class="keyword">break</span>;
+    }
+    <span class="variable">$data</span> = <span class="keyword">array</span>();
+    <span class="keyword">while</span>((<span class="variable">$j</span>++ &lt; <span class="variable">$lines</span>) &amp;&amp; !feof(<span class="variable">$fp</span>)) {
+        <span class="variable">$_tmp</span>=fgetcsv(<span class="variable">$fp</span>);<span class="comment">//从文件指针中读入一行并解析 CSV 字段</span>
+        <span class="keyword">if</span>(!<span class="keyword">empty</span>(<span class="variable">$_tmp</span>[<span class="number">0</span>])){
+            <span class="variable">$data</span>[] = <span class="variable">$_tmp</span>;
+        }
+    }
+    fclose(<span class="variable">$fp</span>);
+    <span class="keyword">return</span> <span class="variable">$data</span>;
+}
+</code></pre>
+	
+	<blockquote style="background: rgba(0, 0, 0, 0.06) none repeat scroll 0% 0%;border-left-color:green">
+	<p>如有疑问，请留言或邮件<a href="mailto:newbvirgil@gmail.com" title="newbvirgil@gmail.com">newbvirgil@gmail.com</a></p>
+	<p>本文链接:<a href="http://blog.newbmiao.com/2015/07/31/school-company-data-crawling.html" title="大学-公司数据爬取" target="_blank" rel="external">大学-公司数据爬取</a></p>
+	</blockquote>
+	
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://blog.newbmiao.com/2015/07/31/school-company-data-crawling.html" data-id="cid5a9cnl000urr31i5tlleri" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="http://blog.newbmiao.com/2015/07/31/school-company-data-crawling.html#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/closure/">closure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
+
+            
+	<span id="busuanzi_container_page_pv" style="color:#999">
+ 	 <i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"> <i class="fa fa-spinner fa-spin"></i></span>次阅读
+       </span>
+       
+     
+     <span style="color:#999">
+&nbsp; | &nbsp;最近更新 ：<time datetime="2015-08-10T02:10:10.000Z" itemprop="dateModify">2015-08-10</time>
+</span>
+
+     
+<!-- 无觅 -->
+<script type="text/javascript" id="wumiiRelatedItems"></script>
+
+    </footer>
+  </div>
+</article>
+
+
+
+  <section id="comments">
+    <div id="ds-thread" class="ds-thread" data-thread-key="2015/07/31/school-company-data-crawling.html" data-title="大学-公司数据爬取" data-url="http://blog.newbmiao.com/2015/07/31/school-company-data-crawling.html"></div>
+  </section>
+
+</section>
+      
+      <aside id="sidebar">
+  
+    
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/08/10/hello-world.html">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2015/08/08/auto-sync-your-mac-file-with-dropbox.html">dropbox同步你的mac文件</a>
+          </li>
+        
+          <li>
+            <a href="/2015/08/06/set-highlight-and-autoindent-in-vim-on-mac.html">mac vim高亮及缩进设置</a>
+          </li>
+        
+          <li>
+            <a href="/2015/08/01/use-limit-subquery-in-mysql.html">解决mysql不可用limit子查询</a>
+          </li>
+        
+          <li>
+            <a href="/2015/07/31/school-company-data-crawling.html">大学-公司数据爬取</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/dropbox/">dropbox</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/dataCrawl/">dataCrawl</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/html5/">html5</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/js/">js</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/">mac</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/">mysql</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/notes/">notes</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/">php</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/redis/">redis</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/random/" style="font-size: 15px; color: #1e90ff">random</a> <a href="/tags/phpdoc/" style="font-size: 15px; color: #1e90ff">phpdoc</a> <a href="/tags/mysql/" style="font-size: 18.75px; color: #2e94e7">mysql</a> <a href="/tags/limit/" style="font-size: 15px; color: #1e90ff">limit</a> <a href="/tags/hexo/" style="font-size: 18.75px; color: #2e94e7">hexo</a> <a href="/tags/blog/" style="font-size: 22.5px; color: #3f97d0">blog</a> <a href="/tags/mac/" style="font-size: 15px; color: #1e90ff">mac</a> <a href="/tags/vim/" style="font-size: 15px; color: #1e90ff">vim</a> <a href="/tags/js/" style="font-size: 30px; color: #5f9ea0">js</a> <a href="/tags/closure/" style="font-size: 15px; color: #1e90ff">closure</a> <a href="/tags/regex/" style="font-size: 15px; color: #1e90ff">regex</a> <a href="/tags/redis/" style="font-size: 15px; color: #1e90ff">redis</a> <a href="/tags/linux/" style="font-size: 18.75px; color: #2e94e7">linux</a> <a href="/tags/php/" style="font-size: 26.25px; color: #4f9bb8">php</a> <a href="/tags/escape-str/" style="font-size: 15px; color: #1e90ff">escape_str</a> <a href="/tags/json/" style="font-size: 15px; color: #1e90ff">json</a> <a href="/tags/target/" style="font-size: 15px; color: #1e90ff">target</a> <a href="/tags/ref/" style="font-size: 15px; color: #1e90ff">ref</a> <a href="/tags/javascript编程全解/" style="font-size: 22.5px; color: #3f97d0">javascript编程全解</a> <a href="/tags/html5/" style="font-size: 18.75px; color: #2e94e7">html5</a> <a href="/tags/drag/" style="font-size: 18.75px; color: #2e94e7">drag</a> <a href="/tags/chrome/" style="font-size: 15px; color: #1e90ff">chrome</a> <a href="/tags/apache/" style="font-size: 15px; color: #1e90ff">apache</a> <a href="/tags/dropbox/" style="font-size: 15px; color: #1e90ff">dropbox</a> <a href="/tags/CI/" style="font-size: 15px; color: #1e90ff">CI</a> <a href="/tags/git/" style="font-size: 15px; color: #1e90ff">git</a>
+    </div>
+  </div>
+
+
+  
+    
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">二月 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">十二月 2014</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">友情链接</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://leo108.com" target="_blank">leo108</a>
+          </li>
+        
+          <li>
+            <a href="http://xiguabaobao.com" target="_blank">主题作者</a>
+          </li>
+        
+          <li>
+            <a href="http://reqianduan.com" target="_blank">热前端</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+</aside>
+
+      
+    </div>
+    <footer id="footer">
+ <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+ </script>
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 菜鸟Miao<br>
+     <p>
+     <span id="busuanzi_container_site_uv">
+  	您是本站第<span id="busuanzi_value_site_uv"> <i class="fa fa-spinner fa-spin"></i></span>个访问者
+     </span>
+     <span id="busuanzi_container_site_pv">
+        /本站总访问量<span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i> </span>次
+     </span>
+     </p>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      .
+      Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+  <script src="http://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<!-- totop start -->
+<div id="totop">
+<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+</div>
+
+<!-- totop end -->
+
+<!-- 多说公共js代码 start -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"NewbMiao"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共js代码 end -->
+
+
+<!-- 百度分享 start -->
+
+<div id="article-share-box" class="article-share-box">
+  <div id="bdshare" class="bdsharebuttonbox article-share-links">
+    <a class="article-share-weibo" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a class="article-share-weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a class="article-share-qq" data-cmd="sqq" title="分享到QQ"></a>
+    <a class="article-share-renren" data-cmd="renren" title="分享到人人网"></a>
+    <a class="article-share-more" data-cmd="more" title="更多"></a>
+  </div>
+</div>
+<script>window._bd_share_config={"common":{},"share":{"bdCustomStyle":"/css/bdshare.css"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<!-- 百度分享 end -->
+
+
+
+<link rel="stylesheet" href="//media.newbmiao.com/blog/asset/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="//media.newbmiao.com/blog/asset/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="//media.newbmiao.com/blog/asset/js/script.js"></script>
+
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','bqAniPPC1T7RV4MomxcE','2.0.0');
+</script>
+
+
+</div>
+</body>
+</html>
+

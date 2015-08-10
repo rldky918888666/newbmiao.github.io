@@ -1,0 +1,1700 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  
+  <title><![CDATA[菜鸟Miao]]></title>
+  <subtitle><![CDATA[start from a newb...]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://blog.newbmiao.com//"/>
+  <updated>2015-08-10T02:07:41.000Z</updated>
+  <id>http://blog.newbmiao.com//</id>
+  
+  <author>
+    <name><![CDATA[菜鸟Miao]]></name>
+    <email><![CDATA[newbvirgil@gmail.com]]></email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <link href="http://blog.newbmiao.com/2015/08/10/hello-world.html"/>
+    <id>http://blog.newbmiao.com/2015/08/10/hello-world.html</id>
+    <published>2015-08-10T02:07:41.000Z</published>
+    <updated>2015-08-10T02:07:41.000Z</updated>
+    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[dropbox同步你的mac文件]]></title>
+    <link href="http://blog.newbmiao.com/2015/08/08/auto-sync-your-mac-file-with-dropbox.html"/>
+    <id>http://blog.newbmiao.com/2015/08/08/auto-sync-your-mac-file-with-dropbox.html</id>
+    <published>2015-08-08T02:05:04.000Z</published>
+    <updated>2015-08-08T03:30:04.000Z</updated>
+    <content type="html"><![CDATA[<p>相信弄Hexo博客的同仁们，费劲弄好的博客文章是不愿意出差错丢失、误删的。<br>于是，dropbox的自动同步就派上用场。</p>
+<h1 id="安装">安装</h1><p>dropbox采用在线安装，国内因为被墙，没法安装成功，可以去下边这个网址下载到离线安装包</p>
+<p><a href="http://www.inote.tw/dropbox-desktop-review" target="_blank" rel="external">http://www.inote.tw/dropbox-desktop-review</a></p>
+<p>安装过程中，可能会提示网络连接错误，这时是要连接dropbox服务器，没办法，添加翻墙代理吧。</p>
+<h1 id="注册&amp;登陆">注册&amp;登陆</h1><p>同样，翻墙然后点击下边链接去官网注册dropbox账号（是我的邀请链接，可以帮我扩充下容量，哈哈），用户安装成功后登陆，也可以网页登陆管理同步数据。</p>
+<p><a href="https://db.tt/3r59yQP2" target="_blank" rel="external">https://db.tt/3r59yQP2</a></p>
+<h1 id="同步任意文件夹">同步任意文件夹</h1><p>在终端中使用软链接文件到dropbox，操作如下</p>
+<pre><code>ln <span class="operator">-s</span> <span class="string">"/path/to/要同步的目录"</span> <span class="string">"/path/to/Dropbox/你要存放的目录"</span>
+<span class="comment">#比方说</span>
+ln <span class="operator">-s</span> ~/Document/blog ~/Dropbox/blog <span class="comment">#将blog目录同步到dropbox的blog目录</span>
+</code></pre><h1 id="技巧">技巧</h1><h2 id="精简同步子目录">精简同步子目录</h2><p>因为同步要翻墙，所以可以设置不进行同步的子目录，像.deploy_git,public这些目录是不需要同步的</p>
+<h2 id="取消上传速度的限制">取消上传速度的限制</h2>]]></content>
+    <summary type="html">
+    <![CDATA[dropbox同步你的mac文件]]>
+    
+    </summary>
+    
+      <category term="blog" scheme="http://blog.newbmiao.com/tags/blog/"/>
+    
+      <category term="dropbox" scheme="http://blog.newbmiao.com/tags/dropbox/"/>
+    
+      <category term="blog" scheme="http://blog.newbmiao.com/categories/blog/"/>
+    
+      <category term="dropbox" scheme="http://blog.newbmiao.com/categories/blog/dropbox/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[mac vim高亮及缩进设置]]></title>
+    <link href="http://blog.newbmiao.com/2015/08/06/set-highlight-and-autoindent-in-vim-on-mac.html"/>
+    <id>http://blog.newbmiao.com/2015/08/06/set-highlight-and-autoindent-in-vim-on-mac.html</id>
+    <published>2015-08-06T06:04:59.000Z</published>
+    <updated>2015-08-10T02:10:10.000Z</updated>
+    <content type="html"><![CDATA[<p>看着默认的vim显示效果不爽，查了下设置，搞起。</p>
+<p>将vim的环境文件copy到自己常用用户的主目录下</p>
+<pre><code>cp <span class="regexp">/usr/</span>share<span class="regexp">/vim/</span>vimrc     ~<span class="regexp">/.vimrc</span>
+</code></pre><p>修改.vimrc文件归读写属性</p>
+<pre><code><span class="tag">sudo</span>  <span class="tag">chmod</span> <span class="tag">o</span>+<span class="tag">w</span>  <span class="class">.vimrc</span>
+</code></pre><p><strong>语法高亮</strong></p>
+<p>用vim等打开.vimrc在文件最后加上</p>
+<pre><code>syntax <span class="function_start"><span class="keyword">on</span></span>
+</code></pre><a id="more"></a>
+<p><strong>缩进</strong></p>
+<p>以下为设置缩进，不需要可以跳过，直接保存退出。</p>
+<p>1）设置（软）制表符宽度为4：</p>
+<pre><code><span class="keyword">set</span> tabstop=<span class="number">4</span>
+<span class="keyword">set</span> softtabstop=<span class="number">4</span>
+</code></pre><p>2）设置缩进的空格数为4</p>
+<pre><code><span class="keyword">set</span> <span class="built_in">shiftwidth</span>=<span class="number">4</span>
+</code></pre><p>3）设置自动缩进：即每行的缩进值与上一行相等；使用 noautoindent 取消设置：</p>
+<pre><code><span class="keyword">set</span> autoindent
+</code></pre><p>4）设置 使用 C/C++ 语言的自动缩进方式：</p>
+<pre><code><span class="keyword">set</span> <span class="built_in">cindent</span>
+</code></pre><p>5）如果想在左侧显示文本的行号，可以用以下语句：</p>
+<pre><code><span class="keyword">set</span> <span class="keyword">nu</span>
+<span class="keyword">set</span> ruler 设置光标显示
+</code></pre><p>保存退出</p>
+<p>重新打开terminal，打开一个c/c++,perl,python,shell,php….文件，就能看到效果了</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>看着默认的vim显示效果不爽，查了下设置，搞起。</p>
+<p>将vim的环境文件copy到自己常用用户的主目录下</p>
+<pre><code>cp <span class="regexp">/usr/</span>share<span class="regexp">/vim/</span>vimrc     ~<span class="regexp">/.vimrc</span>
+</code></pre><p>修改.vimrc文件归读写属性</p>
+<pre><code><span class="tag">sudo</span>  <span class="tag">chmod</span> <span class="tag">o</span>+<span class="tag">w</span>  <span class="class">.vimrc</span>
+</code></pre><p><strong>语法高亮</strong></p>
+<p>用vim等打开.vimrc在文件最后加上</p>
+<pre><code>syntax <span class="function_start"><span class="keyword">on</span></span>
+</code></pre>]]>
+    
+    </summary>
+    
+      <category term="mac" scheme="http://blog.newbmiao.com/tags/mac/"/>
+    
+      <category term="vim" scheme="http://blog.newbmiao.com/tags/vim/"/>
+    
+      <category term="mac" scheme="http://blog.newbmiao.com/categories/mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[解决mysql不可用limit子查询]]></title>
+    <link href="http://blog.newbmiao.com/2015/08/01/use-limit-subquery-in-mysql.html"/>
+    <id>http://blog.newbmiao.com/2015/08/01/use-limit-subquery-in-mysql.html</id>
+    <published>2015-08-01T07:43:06.000Z</published>
+    <updated>2015-08-10T02:10:10.000Z</updated>
+    <content type="html"><![CDATA[<p>当你在mysql子查询中使用了limit，那么恭喜你，你会看到</p>
+<blockquote>
+<p>ERROR 1235 (42000): This version of MySQL doesn’t yet support ‘LIMIT &amp; IN/ALL/ANY/SOME subquery’</p>
+</blockquote>
+<p><code>limit</code>在mysql中本来的效率就不高，mysql于是也禁止在子查询中使用limit，可是如果非要用呢</p>
+<p>比方说需求是：</p>
+<ul>
+<li>一等奖5名</li>
+<li>二等奖15名</li>
+<li>获了一等奖的不能再获二等奖</li>
+</ul>
+<p>直觉告诉我们，下边的sql是可以的。</p>
+<a id="more"></a>    
+<pre><code><span class="operator"><span class="keyword">select</span> 获二等奖用户ID <span class="keyword">from</span> t <span class="keyword">where</span> 获二等奖的条件 <span class="keyword">and</span> 用户ID 
+<span class="keyword">not</span> <span class="keyword">in</span> 
+(<span class="keyword">select</span> 获一等奖用户ID <span class="keyword">from</span> t <span class="keyword">where</span> 获一等奖的条件 <span class="keyword">limit</span> <span class="number">5</span>) 
+<span class="keyword">limit</span> <span class="number">15</span>;</span>
+</code></pre><p>可是，上边的limit子查询是不被允许的啊，怎么办，目前我知道的有两种：</p>
+<h3 id="方法一：构造临时表">方法一：构造临时表</h3><pre><code><span class="operator"><span class="keyword">select</span> 获二等奖用户ID <span class="keyword">from</span> t <span class="keyword">where</span> 获二等奖的条件 <span class="keyword">and</span> 用户ID 
+<span class="keyword">not</span> <span class="keyword">in</span> 
+(<span class="keyword">select</span> * <span class="keyword">from</span> 
+    (<span class="keyword">select</span> 获一等奖用户ID <span class="keyword">from</span> t <span class="keyword">where</span> 获一等奖的条件 <span class="keyword">limit</span> <span class="number">5</span>) 
+<span class="keyword">as</span> t )
+<span class="keyword">limit</span> <span class="number">15</span>;</span>
+</code></pre><h3 id="方法二：连表查询">方法二：连表查询</h3><pre><code><span class="operator"><span class="keyword">select</span> * <span class="keyword">from</span> 
+(<span class="keyword">select</span> 获二等奖用户ID <span class="keyword">from</span> t <span class="keyword">where</span> 获二等奖的条件) 
+<span class="keyword">as</span> t1,
+    (<span class="keyword">select</span> 获一等奖用户ID <span class="keyword">from</span> t <span class="keyword">where</span> 获一等奖的条件 <span class="keyword">limit</span> <span class="number">5</span>) 
+    <span class="keyword">as</span> t2
+<span class="keyword">where</span> t1.用户ID&lt;&gt; t2.用户ID
+<span class="keyword">limit</span> <span class="number">15</span>;</span>
+</code></pre><p>经过explain查看两者的效率，没有差别，都用了filesort全表扫描。但是第一种更易书写。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>当你在mysql子查询中使用了limit，那么恭喜你，你会看到</p>
+<blockquote>
+<p>ERROR 1235 (42000): This version of MySQL doesn’t yet support ‘LIMIT &amp; IN/ALL/ANY/SOME subquery’</p>
+</blockquote>
+<p><code>limit</code>在mysql中本来的效率就不高，mysql于是也禁止在子查询中使用limit，可是如果非要用呢</p>
+<p>比方说需求是：</p>
+<ul>
+<li>一等奖5名</li>
+<li>二等奖15名</li>
+<li>获了一等奖的不能再获二等奖</li>
+</ul>
+<p>直觉告诉我们，下边的sql是可以的。</p>]]>
+    
+    </summary>
+    
+      <category term="limit" scheme="http://blog.newbmiao.com/tags/limit/"/>
+    
+      <category term="mysql" scheme="http://blog.newbmiao.com/tags/mysql/"/>
+    
+      <category term="mysql" scheme="http://blog.newbmiao.com/categories/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[大学-公司数据爬取]]></title>
+    <link href="http://blog.newbmiao.com/2015/07/31/school-company-data-crawling.html"/>
+    <id>http://blog.newbmiao.com/2015/07/31/school-company-data-crawling.html</id>
+    <published>2015-07-31T12:11:39.000Z</published>
+    <updated>2015-08-10T02:10:10.000Z</updated>
+    <content type="html"><![CDATA[<p>今天需要搞大学数据库，目标是新浪高考网。<br>仔细分析其页面的数据获取是使用Jsonp的js方式。于是在控制台能使用js爬取了大学数据源（1378条）<br>》》<a href="https://github.com/NewbMiao/webDataSource/tree/master/%E5%A4%A7%E5%AD%A6%E6%95%B0%E6%8D%AE%E5%BA%93_1378_20150731" target="_blank" rel="external">需要大学数据可以这里拿</a></p>
+<p>这里要记录的是爬取中数组合并的问题</p>
+<a id="more"></a>    
+<p>开始的时候，参考 ourjs的文章<a href="http://ourjs.com/detail/54a9f2ba5695544119000005" target="_blank" rel="external">^3</a>，cnblog上翻译的一篇文章<a href="http://blog.csdn.net/renfufei/article/details/39376311" target="_blank" rel="external">^4</a>  (原作<a href="http://davidwalsh.name/combining-js-arrays" target="_blank" rel="external">^5</a>)之后，打算尝试<code>reduce</code>。</p>
+<pre><code><span class="comment">//g,b为数组</span>
+g = b.reduce(<span class="function"><span class="keyword">function</span> <span class="params">(coll, item)</span> </span>{
+    coll.push(item);
+    <span class="keyword">return</span> coll;
+}, g);
+</code></pre><p>但是发现数据量大了之后，这个所谓的高效反而奇慢，后经同事帮助，我发现了问题<br>返回的数据格式为：Object { 1=[8],  2=[8],  3=[8],  更多…}<br>看到没是，json对象或者说是Map，不是数组，而<code>reduce</code>对<strong>数组内每个元素依次调用回调</strong>的方法。</p>
+<hr>
+<p>与此同时，我纳闷了为何 <strong>concat</strong> 就可以，去看了文档</p>
+<blockquote>
+<p>concat creates a new array consisting of the elements in the object on which it is called, followed in order by, for each argument, the elements of that argument (if the argument is an array) or the argument itself (if the argument is not an array).</p>
+<p>concat does not alter this or any of the arrays provided as arguments but instead returns a shallow copy that contains copies of the same elements combined from the original arrays. Elements of the original arrays are copied into the new array as follows:</p>
+<p>Object references (and not the actual object): concat copies object references into the new array. Both the original and new array refer to the same object. That is, if a referenced object is modified, the changes are visible to both the new and original arrays.</p>
+<p>Strings and numbers (not String and Number objects): concat copies the values of strings and numbers into the new array[^footer2].<br>引自:developer.mozilla.org<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat" target="_blank" rel="external">^6</a></p>
+</blockquote>
+<p>大致意思就是，合并中，如果是数组或者对象就直接复制（原数组对象和拷贝后的合并对象仍指向同一对象），如果是字符串或者数字就把值拷贝。</p>
+<p>还是概念没搞清啊。以后要注意了<br>配图尝试，只为装逼。</p>
+<p>2015.8.3 今天又去周伯通爬了公司，感谢互联网：）<br>》》<a href="https://github.com/NewbMiao/webDataSource/tree/master/%E5%85%AC%E5%8F%B8%E6%95%B0%E6%8D%AE%E5%BA%93_22966_20150803" target="_blank" rel="external">需要公司数据资源在这</a></p>
+<p><strong>这里记录一个二维数组去重的思路：</strong></p>
+<pre><code><span class="function"><span class="keyword">function</span> <span class="title">array_unique_deep</span><span class="params">(<span class="variable">$array2D</span>)</span> </span>{
+    <span class="keyword">foreach</span> (<span class="variable">$array2D</span> <span class="keyword">as</span> <span class="variable">$v</span>) {
+        <span class="comment">//$v['desc'] = mb_stristr($v['desc'], '企业招聘', true);</span>
+        <span class="variable">$v</span>         = join(<span class="string">","</span>, <span class="variable">$v</span>); <span class="comment">//降维,也可以用implode,将一维数组转换为用逗号连接的字符串</span>
+        <span class="variable">$temp</span>[]    = <span class="variable">$v</span>;
+
+    }
+    <span class="variable">$temp</span> = array_unique(<span class="variable">$temp</span>);    <span class="comment">//去掉重复的字符串,也就是重复的一维数组</span>
+    <span class="keyword">foreach</span> (<span class="variable">$temp</span> <span class="keyword">as</span> <span class="variable">$k</span> =&gt; <span class="variable">$v</span>) {
+        <span class="variable">$temp</span>[<span class="variable">$k</span>] = explode(<span class="string">","</span>, <span class="variable">$v</span>);   <span class="comment">//再将拆开的数组重新组装</span>
+    }
+
+    <span class="keyword">return</span> <span class="variable">$temp</span>;
+}
+</code></pre><p><strong>还有excel导入处理：</strong></p>
+<pre><code><span class="comment">/**
+ * csv_get_lines 读取CSV文件中的某几行数据
+ * <span class="doctag">@param</span> $csvfile csv文件路径
+ * <span class="doctag">@param</span> $lines 读取行数
+ * <span class="doctag">@param</span> $offset 起始行数
+ * <span class="doctag">@return</span> array
+ * */</span>
+<span class="function"><span class="keyword">function</span> <span class="title">csv_get_lines</span><span class="params">(<span class="variable">$csvfile</span>, <span class="variable">$lines</span>, <span class="variable">$offset</span> = <span class="number">0</span>)</span> </span>{
+    <span class="keyword">if</span>(!<span class="variable">$fp</span> = fopen(<span class="variable">$csvfile</span>, <span class="string">'r'</span>)) {
+        <span class="keyword">return</span> <span class="keyword">false</span>;
+    }
+    <span class="variable">$i</span> = <span class="variable">$j</span> = <span class="number">0</span>;
+    <span class="keyword">while</span> (<span class="keyword">false</span> !== (<span class="variable">$line</span> = fgets(<span class="variable">$fp</span>))) {<span class="comment">//从文件指针中读取一行</span>
+        <span class="keyword">if</span>(<span class="variable">$i</span>++ &lt; <span class="variable">$offset</span>) {
+            <span class="keyword">continue</span>;
+        }
+        <span class="keyword">break</span>;
+    }
+    <span class="variable">$data</span> = <span class="keyword">array</span>();
+    <span class="keyword">while</span>((<span class="variable">$j</span>++ &lt; <span class="variable">$lines</span>) &amp;&amp; !feof(<span class="variable">$fp</span>)) {
+        <span class="variable">$_tmp</span>=fgetcsv(<span class="variable">$fp</span>);<span class="comment">//从文件指针中读入一行并解析 CSV 字段</span>
+        <span class="keyword">if</span>(!<span class="keyword">empty</span>(<span class="variable">$_tmp</span>[<span class="number">0</span>])){
+            <span class="variable">$data</span>[] = <span class="variable">$_tmp</span>;
+        }
+    }
+    fclose(<span class="variable">$fp</span>);
+    <span class="keyword">return</span> <span class="variable">$data</span>;
+}
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>今天需要搞大学数据库，目标是新浪高考网。<br>仔细分析其页面的数据获取是使用Jsonp的js方式。于是在控制台能使用js爬取了大学数据源（1378条）<br>》》<a href="https://github.com/NewbMiao/webDataSource/tree/master/%E5%A4%A7%E5%AD%A6%E6%95%B0%E6%8D%AE%E5%BA%93_1378_20150731">需要大学数据可以这里拿</a></p>
+<p>这里要记录的是爬取中数组合并的问题</p>]]>
+    
+    </summary>
+    
+      <category term="closure" scheme="http://blog.newbmiao.com/tags/closure/"/>
+    
+      <category term="js" scheme="http://blog.newbmiao.com/tags/js/"/>
+    
+      <category term="php" scheme="http://blog.newbmiao.com/tags/php/"/>
+    
+      <category term="dataCrawl" scheme="http://blog.newbmiao.com/categories/dataCrawl/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[typecho to hexo]]></title>
+    <link href="http://blog.newbmiao.com/2015/07/18/typecho-to-hexo.html"/>
+    <id>http://blog.newbmiao.com/2015/07/18/typecho-to-hexo.html</id>
+    <published>2015-07-17T16:21:39.000Z</published>
+    <updated>2015-08-10T02:10:10.000Z</updated>
+    <content type="html"><![CDATA[<p>今天把typecho上的文章也迁移到Hexo上来，可以专注纯粹的创作学习了，哈哈。</p>
+<p>留下批处理文件，供需要者使用！<br><a href="https://github.com/NewbMiao/typecho2Hexo" target="_blank" rel="external">批处理文件地址</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>今天把typecho上的文章也迁移到Hexo上来，可以专注纯粹的创作学习了，哈哈。</p>
+<p>留下批处理文件，供需要者使用！<br><a href="https://github.com/NewbMiao/typecho2Hexo" target="_blank" re]]>
+    </summary>
+    
+      <category term="blog" scheme="http://blog.newbmiao.com/tags/blog/"/>
+    
+      <category term="hexo" scheme="http://blog.newbmiao.com/tags/hexo/"/>
+    
+      <category term="hexo" scheme="http://blog.newbmiao.com/categories/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[redis安装]]></title>
+    <link href="http://blog.newbmiao.com/2015/06/26/redis-installation-guide.html"/>
+    <id>http://blog.newbmiao.com/2015/06/26/redis-installation-guide.html</id>
+    <published>2015-06-26T09:43:23.000Z</published>
+    <updated>2015-08-10T02:10:10.000Z</updated>
+    <content type="html"><![CDATA[<h4 id="centos下安装redis">centos下安装redis</h4><ul>
+<li><a href="http://redis.io/download/" target="_blank" rel="external">下载redis</a></li>
+<li>安装</li>
+</ul>
+<hr>
+<pre><code>#解压
+tar -zxf redisXXX<span class="class">.tar</span><span class="class">.gz</span>
+cd redisXXX
+make
+make install
+</code></pre><ul>
+<li>设为服务项自启动<a id="more"></a>    
+</li>
+</ul>
+<hr>
+<pre><code>cp /pathto/redis/utils/redis_init_script /etc/rc.<span class="keyword">d</span>/init.<span class="keyword">d</span>/redis
+#修改使后台执行
+vim /etc/rc.<span class="keyword">d</span>/init.<span class="keyword">d</span>/redis
+#在开头注释下添加下行注释,使支持chkconfig
+# chkconfig:   2345 90 10 
+#<span class="label">$EXEC</span> <span class="label">$CONF</span> 替换为》<span class="label">$EXEC</span> <span class="label">$CONF</span> &amp;
+#还需要注意pid文件名与<span class="keyword">conf</span>里的一致，否则无法用于关闭redis-server
+
+#配置文件
+<span class="keyword">mkdir</span> /etc/redis     
+cp /pathto/redis/redis.<span class="keyword">conf</span> /etc/redis/6379.<span class="keyword">conf</span>
+#编辑配置使后台运行
+vim /etc/redis/6379.<span class="keyword">conf</span>
+daemonize yes   #修改<span class="keyword">no</span>为yes，后台运行redis
+
+#加入服务项
+chmod 755 /etc/init.<span class="keyword">d</span>/redis
+chkconfig --add redis 
+chkconfig --level 2345 redis <span class="keyword">on</span>
+chkconfig --<span class="keyword">list</span> redis
+</code></pre><ul>
+<li>启动</li>
+</ul>
+<hr>
+<pre><code><span class="keyword">service</span> redis <span class="literal">start</span>
+</code></pre><ul>
+<li>phpredis安装</li>
+</ul>
+<hr>
+<pre><code><span class="comment"># 下载</span>
+
+    <span class="keyword">https</span>://github.com/phpredis/phpredis
+<span class="comment"># 安装</span>
+
+    phpize
+    ./configure <span class="comment">--with-php-config=/usr/local/php/bin/php-config</span>
+    make
+    make install
+    <span class="comment">#在php.ini中添加</span>
+    extension=<span class="string">"redis.so"</span>
+</code></pre><ul>
+<li>issue</li>
+</ul>
+<hr>
+<h4 id="service_redis_does_not_support_chkconfig的解决办法">service redis does not support chkconfig的解决办法</h4><p>问题解决办法如下：</p>
+<p>必须把下面两行注释放在/etc/init.d/redis文件靠前的注释中：</p>
+<pre><code><span class="preprocessor"># chkconfig:   2345 90 10</span>
+<span class="preprocessor"># description:  Redis is a persistent key-value database</span>
+</code></pre><p>上面的注释的意思是，redis服务必须在运行级2，3，4，5下被启动或关闭，启动的优先级是90，关闭的优先级是10。</p>
+<p>附录：<br>linux 运行级别</p>
+<p>运行级别就是操作系统当前正在运行的功能级别。这个级别从0到6 ，具有不同的功能。这些级别在/etc/inittab文件里指定。这个文件是init程序寻找的主要文件，最先运行的服务是那些放在/etc/rc.d 目录下的文件。</p>
+<p>不同的运行级定义如下：(可以参考Linux里面的/etc/inittab)</p>
+<h5 id="缺省的运行级，RHS用到的级别如下：">缺省的运行级，RHS用到的级别如下：</h5><p>0：关机</p>
+<p>1：单用户模式</p>
+<p>2：无网络支持的多用户模式</p>
+<p>3：有网络支持的多用户模式</p>
+<p>4：保留，未使用</p>
+<p>5：有网络支持有X-Window支持的多用户模式</p>
+<p>6：重新引导系统，即重启</p>
+<p>对各个运行级的详细解释：</p>
+<p>0 为停机，机器关闭。</p>
+<p>1 为单用户模式，就像Win9x下的安全模式类似。</p>
+<p>2  为多用户模式，但是没有NFS支持。 </p>
+<p>3  为完整的多用户模式，是标准的运行级。</p>
+<p>4 一般不用，在一些特殊情况下可以用它来做一些事情。例如在笔记本 电脑的电池用尽时，可以切换到这个模式来做一些设置。</p>
+<p>5  就是X11，进到X Window系统了。</p>
+<p>6  为重启，运行init 6机器就会重启。</p>
+<p>chkconfig用法</p>
+<p>chkconfig命令可以用来检查、设置系统的各种服务</p>
+<p>使用语法：</p>
+<p>chkconfig [—add][—del][—list][系统服务] 或 chkconfig [—level &lt;等级代号&gt;][系统服务][on/off/reset]</p>
+<p>参数用法：</p>
+<p>–add 　增加所指定的系统服务，让chkconfig指令得以管理它，并同时在系统启动的叙述文件内增加相关数据。</p>
+<p>–del 　删除所指定的系统服务，不再由chkconfig指令管理，并同时在系统启动的叙述文件内删除相关数据。</p>
+<p>–level&lt;等级代号&gt; 　指定读系统服务要在哪一个执行等级中开启或关毕。</p>
+<p>使用范例：</p>
+<p>chkconfig –list                    列出所有的系统服务</p>
+<p>chkconfig –add redis               增加redis服务</p>
+<p>chkconfig –del redis                删除redis 服务</p>
+<p>chkconfig –level redis 2345 on     把redis在运行级别为2、3、4、5的情况下都是on（开启）的状态。    </p>
+<blockquote>
+<p>参考自<a href="http://blog.csdn.net/zqtsx/article/details/40894181?utm_source=tuicool" target="_blank" rel="external">redis安装+redis集群配置+phpredis扩展安装</a></p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h4 id="centos下安装redis">centos下安装redis</h4><ul>
+<li><a href="http://redis.io/download/">下载redis</a></li>
+<li>安装</li>
+</ul>
+<hr>
+<pre><code>#解压
+tar -zxf redisXXX<span class="class">.tar</span><span class="class">.gz</span>
+cd redisXXX
+make
+make install
+</code></pre><ul>
+<li>设为服务项自启动]]>
+    
+    </summary>
+    
+      <category term="linux" scheme="http://blog.newbmiao.com/tags/linux/"/>
+    
+      <category term="redis" scheme="http://blog.newbmiao.com/tags/redis/"/>
+    
+      <category term="redis" scheme="http://blog.newbmiao.com/categories/redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[phpdoc生成php文档]]></title>
+    <link href="http://blog.newbmiao.com/2015/06/17/use-phpdoc-to-render-api-document.html"/>
+    <id>http://blog.newbmiao.com/2015/06/17/use-phpdoc-to-render-api-document.html</id>
+    <published>2015-06-16T23:10:24.000Z</published>
+    <updated>2015-08-10T02:10:10.000Z</updated>
+    <content type="html"><![CDATA[<h4 id="安装">安装</h4><pre><code>pear channel-discover pear<span class="class">.phpdoc</span><span class="class">.org</span>
+pear install phpdoc/phpDocumentor
+</code></pre><h4 id="使用">使用</h4><pre><code><span class="comment">#对文件</span>
+phpdoc <span class="operator">-f</span> filename.php -t docs
+<span class="comment">#对目录</span>
+phpdoc <span class="operator">-d</span> directory -t docs
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<h4 id="安装">安装</h4><pre><code>pear channel-discover pear<span class="class">.phpdoc</span><span class="class">.org</span>
+pear install phpdo]]>
+    </summary>
+    
+      <category term="php" scheme="http://blog.newbmiao.com/tags/php/"/>
+    
+      <category term="phpdoc" scheme="http://blog.newbmiao.com/tags/phpdoc/"/>
+    
+      <category term="php" scheme="http://blog.newbmiao.com/categories/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[hexo on github]]></title>
+    <link href="http://blog.newbmiao.com/2015/06/16/hexo-on-your-github.html"/>
+    <id>http://blog.newbmiao.com/2015/06/16/hexo-on-your-github.html</id>
+    <published>2015-06-16T12:23:25.000Z</published>
+    <updated>2015-08-10T02:10:10.000Z</updated>
+    <content type="html"><![CDATA[<p><strong>Hexo</strong>基于node.js,可用于生成静态博客，结合github和Mac，可以专注创作了。<br>深入学习见文末引用。</p>
+<h4 id="hexo安装">hexo安装</h4><pre><code>brew <span class="keyword">install</span> node 
+npm <span class="keyword">install</span> hexo-cli -g  <span class="comment">#全局安装</span>
+</code></pre><h4 id="创建博客">创建博客</h4><p>Hexo使用命令:</p>
+<pre><code>hexo init <span class="variable">&lt;folder&gt;</span>  <span class="comment">#执行init命令初始化hexo到你指定的目录</span>
+hexo new [layout] <span class="variable">&lt;title&gt;</span> <span class="comment">#创建文章</span>
+hexo new page <span class="variable">&lt;title&gt;</span> <span class="comment">#生成新页面</span>
+hexo generate       <span class="comment">#自动根据当前目录下文件,生成静态网页</span>
+    -d <span class="comment">#deploy after</span>
+    -w <span class="comment">#查看文件变化</span>
+hexo publish [layout] <span class="variable">&lt;filename&gt;</span> <span class="comment">#发布草稿</span>
+hexo server         <span class="comment">#运行本地服务</span>
+    -p <span class="comment">#端口</span>
+    -s <span class="comment">#只生成静态文件</span>
+    -l <span class="comment">#生成log</span>
+    --draft 连草稿也生成预览
+hexo deploy
+    -g <span class="comment">#generate before</span>
+hexo render <span class="variable">&lt;file1&gt;</span> [file2] ...
+    -o <span class="comment">#output destination</span>
+hexo migrate <span class="variable">&lt;type&gt;</span> <span class="comment">#Migrates content from other blog systems.</span>
+hexo clean <span class="comment">#Cleans the cache file (db.json) and generated files (public).</span>
+hexo list <span class="variable">&lt;type&gt;</span> <span class="comment">#Lists all routes.</span>
+</code></pre><a id="more"></a>    
+<h4 id="hexo_landscape-plus主题">hexo landscape-plus主题</h4><pre><code>git clone <span class="symbol">https:</span>/<span class="regexp">/github.com/xiangming</span><span class="regexp">/landscape-plus.git themes/landscape</span>-plus
+<span class="comment">#修改hexo的配置文件_config.yml</span>
+<span class="symbol">theme:</span>landscape-plus
+</code></pre><h4 id="deploy">deploy</h4><pre><code><span class="comment">#使用git前先安装</span>
+npm install hexo-deployer-git <span class="comment">--save</span>
+</code></pre><h4 id="技巧">技巧</h4><ul>
+<li>标签/分类的别名<br>  在_config.yml里面配置<br>  category_map:<pre><code>工具集: tools
+技术集: technique
+</code></pre>  tag_map:<pre><code><span class="attribute">Java</span>: <span class="string">java</span>
+<span class="attribute">JavaScript</span>: <span class="string">js</span>
+<span class="attribute">css</span>: <span class="string">css</span>
+<span class="attribute">html5</span>: <span class="string">html5</span>
+</code></pre></li>
+</ul>
+<h4 id="plugin">plugin</h4><ul>
+<li>rss </li>
+</ul>
+<hr>
+<pre><code><span class="preprocessor">#安装</span>
+npm install hexo-migrator-rss --save
+npm install hexo-generator-sitemap
+npm install hexo-generator-feed     --save
+
+<span class="preprocessor">#根目录下_config.yml添加</span>
+<span class="preprocessor"># Extensions</span>
+plugins:
+- hexo-generator-feed
+- hexo-generator-sitemap
+
+<span class="preprocessor">#Feed Atom</span>
+feed:
+  type: atom
+  path: atom.xml
+  limit: <span class="number">20</span>
+
+<span class="preprocessor">#sitemap</span>
+sitemap:
+  path: sitemap.xml
+
+hexo-html-minifier https:<span class="comment">//github.com/hexojs/hexo-html-minifier</span>
+HTML压缩插件 (!安装会无法generate，最后还是卸载此插件)
+
+hexo-uglify https:<span class="comment">//github.com/hexojs/hexo-uglify</span>
+JavaScript压缩插件
+
+hexo-clean-css https:<span class="comment">//github.com/hexojs/hexo-clean-css</span>
+css压缩插件
+</code></pre><ul>
+<li><p>duoshuo 评论</p>
+<blockquote>
+<p><a href="http://duoshuo.com/create-site/" target="_blank" rel="external">duoshuo创建site</a></p>
+</blockquote>
+</li>
+<li><p>baidu统计</p>
+<blockquote>
+<p><a href="http://tongji.baidu.com/web/welcome/login" target="_blank" rel="external">创建百度统计网点</a></p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<pre><code>vim themes\modernist\layout\_partial\baidu_tongji.ejs
+<span class="preprocessor">#添加</span>
+&lt;% if (theme.baidu_tongji){ %&gt;
+&lt;script type=<span class="string">"text/javascript"</span>&gt;
+<span class="preprocessor">#你的百度统计代码</span>
+&lt;/script&gt;
+&lt;% } %&gt;
+
+<span class="preprocessor">#注册并登录百度统计获取你的统计代码。并设置关闭显示百度图标</span>
+
+ vim themes\modernist\layout\_partial\head.ejs
+ #在『/head』之前增加：
+
+&lt;%- partial(<span class="string">'baidu_tongji'</span>) %&gt;
+
+<span class="preprocessor">#重新生成并部署你的站点。</span>
+vim themes/landscape-plus/_config.yml
+<span class="preprocessor">#menu下加</span>
+rss: /atom.xml
+
+<span class="preprocessor"># Duoshuo</span>
+duoshuo_shortname: XXX
+
+<span class="preprocessor"># Baidu tongji</span>
+baidu_tongji: <span class="literal">true</span>
+</code></pre><hr>
+<ul>
+<li><p>不蒜子</p>
+<blockquote>
+<p><a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="external">参考</a></p>
+</blockquote>
+</li>
+<li><p>相关推荐：无觅</p>
+<blockquote>
+<p><a href="http://lukang.me/2014/optimization-of-hexo.html" target="_blank" rel="external">参考</a></p>
+</blockquote>
+</li>
+<li><p>站内搜索</p>
+<ul>
+<li>百度</li>
+<li>swiftype</li>
+</ul>
+</li>
+</ul>
+<p>相比较而言，swiftype更个性化，但是搜索结果只是基于页面内容是否包含，没有百度智能。<a href="http://lukang.me/2015/optimization-of-hexo-2.html" target="_blank" rel="external">参考</a></p>
+<ul>
+<li>hexo-console-optimize：html+css+js优化</li>
+</ul>
+<hr>
+<pre><code><span class="built_in">npm</span> install hexo-<span class="built_in">console</span>-optimize --save <span class="comment">#安装</span>
+hexo o <span class="comment">#优化,替代了 hexo g</span>
+</code></pre><blockquote>
+<p>参考自：<br><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">hexo-your-blog</a><br>深入学习，请看<a href="https://hexo.io/docs/" target="_blank" rel="external">官方文档</a></p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><strong>Hexo</strong>基于node.js,可用于生成静态博客，结合github和Mac，可以专注创作了。<br>深入学习见文末引用。</p>
+<h4 id="hexo安装">hexo安装</h4><pre><code>brew <span class="keyword">install</span> node 
+npm <span class="keyword">install</span> hexo-cli -g  <span class="comment">#全局安装</span>
+</code></pre><h4 id="创建博客">创建博客</h4><p>Hexo使用命令:</p>
+<pre><code>hexo init <span class="variable">&lt;folder&gt;</span>  <span class="comment">#执行init命令初始化hexo到你指定的目录</span>
+hexo new [layout] <span class="variable">&lt;title&gt;</span> <span class="comment">#创建文章</span>
+hexo new page <span class="variable">&lt;title&gt;</span> <span class="comment">#生成新页面</span>
+hexo generate       <span class="comment">#自动根据当前目录下文件,生成静态网页</span>
+    -d <span class="comment">#deploy after</span>
+    -w <span class="comment">#查看文件变化</span>
+hexo publish [layout] <span class="variable">&lt;filename&gt;</span> <span class="comment">#发布草稿</span>
+hexo server         <span class="comment">#运行本地服务</span>
+    -p <span class="comment">#端口</span>
+    -s <span class="comment">#只生成静态文件</span>
+    -l <span class="comment">#生成log</span>
+    --draft 连草稿也生成预览
+hexo deploy
+    -g <span class="comment">#generate before</span>
+hexo render <span class="variable">&lt;file1&gt;</span> [file2] ...
+    -o <span class="comment">#output destination</span>
+hexo migrate <span class="variable">&lt;type&gt;</span> <span class="comment">#Migrates content from other blog systems.</span>
+hexo clean <span class="comment">#Cleans the cache file (db.json) and generated files (public).</span>
+hexo list <span class="variable">&lt;type&gt;</span> <span class="comment">#Lists all routes.</span>
+</code></pre>]]>
+    
+    </summary>
+    
+      <category term="blog" scheme="http://blog.newbmiao.com/tags/blog/"/>
+    
+      <category term="hexo" scheme="http://blog.newbmiao.com/tags/hexo/"/>
+    
+      <category term="hexo" scheme="http://blog.newbmiao.com/categories/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[php的赋值与引用]]></title>
+    <link href="http://blog.newbmiao.com/2015/03/08/php-assignment-and-reference.html"/>
+    <id>http://blog.newbmiao.com/2015/03/08/php-assignment-and-reference.html</id>
+    <published>2015-03-08T00:56:59.000Z</published>
+    <updated>2015-08-10T02:10:10.000Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>针对php的引用，有时总会错误认为指向一块内存，修改也会影响到该内存数据，直到看到php的源码分析，有了更清楚的理解，部分出自&lt;<php核心技术和最佳实践>&gt;</php核心技术和最佳实践></p>
+</blockquote>
+<h2 id="写时复制">写时复制</h2><ul>
+<li>php变量有is_ref和refcount标志，用来标识是否引用和变量引用次数</li>
+<li>当两个变量<code>$a=$b;</code>,虽然不是引用，但是值相同，为了内存复用，$b 的refcount会加1</li>
+<li><p>只有当$b 的值改变，才会新开辟内存写入值，并置refcount为1</p>
+<a id="more"></a>    
+<hr>
+<pre><code>example：在xdebug下打印
+      $a=<span class="comment">'this is a val';</span>
+      xdebug_debug_zval(<span class="comment">'a');</span>
+
+      $b=$a;
+      xdebug_debug_zval(<span class="comment">'a');</span>
+
+          $a=<span class="comment">'this is another val';</span>
+      xdebug_debug_zval(<span class="comment">'a');</span>
+        <span class="preprocessor">#结果</span>
+      a: (refcount=<span class="number">1</span>, is_ref=<span class="number">0</span>)=<span class="comment">'this is a val'</span>
+      a: (refcount=<span class="number">2</span>, is_ref=<span class="number">0</span>)=<span class="comment">'this is a val'</span>
+      a: (refcount=<span class="number">1</span>, is_ref=<span class="number">0</span>)=<span class="comment">'this is another val'</span>
+</code></pre><h2 id="引用">引用</h2><pre><code>$a=<span class="comment">'this is a val';</span>
+xdebug_debug_zval(<span class="comment">'a');</span>
+$b=&amp;$a;
+xdebug_debug_zval(<span class="comment">'a');</span>
+xdebug_debug_zval(<span class="comment">'b');</span>
+unset($b);
+xdebug_debug_zval(<span class="comment">'a');</span>
+$b=<span class="comment">'b';</span>
+xdebug_debug_zval(<span class="comment">'a');</span>
+xdebug_debug_zval(<span class="comment">'b');</span>
+<span class="preprocessor">#结果</span>
+a: (refcount=<span class="number">1</span>, is_ref=<span class="number">0</span>)=<span class="comment">'this is a val'</span>
+a: (refcount=<span class="number">2</span>, is_ref=<span class="number">1</span>)=<span class="comment">'this is a val'</span>
+b: (refcount=<span class="number">2</span>, is_ref=<span class="number">1</span>)=<span class="comment">'this is a val'</span>
+a: (refcount=<span class="number">1</span>, is_ref=<span class="number">0</span>)=<span class="comment">'this is a val'</span>
+a: (refcount=<span class="number">1</span>, is_ref=<span class="number">0</span>)=<span class="comment">'this is a val'</span>
+b: (refcount=<span class="number">1</span>, is_ref=<span class="number">0</span>)=<span class="comment">'b'</span>
+</code></pre></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<blockquote>
+<p>针对php的引用，有时总会错误认为指向一块内存，修改也会影响到该内存数据，直到看到php的源码分析，有了更清楚的理解，部分出自&lt;<php核心技术和最佳实践>&gt;</p>
+</blockquote>
+<h2 id="写时复制">写时复制</h2><ul>
+<li>php变量有is_ref和refcount标志，用来标识是否引用和变量引用次数</li>
+<li>当两个变量<code>$a=$b;</code>,虽然不是引用，但是值相同，为了内存复用，$b 的refcount会加1</li>
+<li><p>只有当$b 的值改变，才会新开辟内存写入值，并置refcount为1</p>]]>
+    
+    </summary>
+    
+      <category term="php" scheme="http://blog.newbmiao.com/tags/php/"/>
+    
+      <category term="ref" scheme="http://blog.newbmiao.com/tags/ref/"/>
+    
+      <category term="php" scheme="http://blog.newbmiao.com/categories/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[jquery 和 html5]]></title>
+    <link href="http://blog.newbmiao.com/2015/02/28/jquery-html5.html"/>
+    <id>http://blog.newbmiao.com/2015/02/28/jquery-html5.html</id>
+    <published>2015-02-28T15:20:57.000Z</published>
+    <updated>2015-08-10T02:10:10.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="Jquery">Jquery</h2><h3 id="选择器">选择器</h3><ul>
+<li>prev&gt;child</li>
+<li>prev+next</li>
+<li>prev~siblings</li>
+<li>[attr^=”val”] : 开头为val的属性</li>
+<li>[attr*=”val”] : 包含val的属性</li>
+<li>[attr~=”val”] : 将attr以空格分隔后，含有val片段的属性</li>
+<li>[attr|=”val”] : 为val或val-开头的属性</li>
+</ul>
+<a id="more"></a>    
+<h3 id="事件">事件</h3><ul>
+<li><p>live VS delegate</p>
+<ul>
+<li>live是对document对象绑定事件，其会在事件冒泡中检查live所绑定的事件，如果匹配就会执行，使得执行live时未存在的元素也能产生效果</li>
+<li><p>delegate则不止限于document，另外避免元素筛选的过程</p>
+<pre><code><span class="comment">//此两句效果同</span>
+$(<span class="string">'.foo'</span>).live(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{});
+$(<span class="built_in">document</span>).delegate(<span class="string">'.foo'</span>,<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{});
+</code></pre></li>
+</ul>
+</li>
+<li><p>ajax全局事件</p>
+<ul>
+<li>由global属性设置是否关联全局事件</li>
+</ul>
+</li>
+<li><p>deferred对象</p>
+<ul>
+<li><p>then 按顺序执行异步</p>
+<pre><code><span class="function"><span class="keyword">function</span></span> A() {
+    var <span class="keyword">deferred</span> = $.<span class="keyword">Deferred</span>();
+    setTimeout(<span class="function"><span class="keyword">function</span><span class="params">()</span></span> {
+        <span class="keyword">deferred</span>.resolve(<span class="string">"A return!"</span>);        
+    }, <span class="number">1000</span>);
+    <span class="keyword">return</span> <span class="keyword">deferred</span>.promise();
+}
+
+<span class="function"><span class="keyword">function</span></span> B(<span class="keyword">value</span>) {
+    var <span class="keyword">deferred</span> = $.<span class="keyword">Deferred</span>();
+    setTimeout(<span class="function"><span class="keyword">function</span><span class="params">()</span></span> {
+        <span class="keyword">deferred</span>.resolve(<span class="keyword">value</span> + <span class="string">"B return!"</span>);        
+    }, <span class="number">1000</span>);
+    <span class="keyword">return</span> <span class="keyword">deferred</span>.promise();
+}
+
+<span class="function"><span class="keyword">function</span></span> C(<span class="keyword">value</span>) {
+    alert(<span class="keyword">value</span>+<span class="string">'c return '</span>)
+}
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<pre><code>        <span class="type">A</span><span class="literal">()</span>.<span class="keyword">then</span>(<span class="type">B</span>).<span class="keyword">then</span>(<span class="type">C</span>); 
+- <span class="keyword">when</span> 多个异步执行结束操作
+</code></pre><blockquote>
+<p><a href="http://www.ruanyifeng.com/blog/2011/08/a_detailed_explanation_of_jquery_deferred_object.html" title="deferred" target="_blank" rel="external">http://www.ruanyifeng.com/blog/2011/08/a_detailed_explanation_of_jquery_deferred_object.html</a></p>
+</blockquote>
+<h2 id="html5">html5</h2><h3 id="location-hash">location.hash</h3><ul>
+<li><p>不刷新前提下更改url</p>
+<pre><code><span class="keyword">var</span> p = <span class="built_in">console</span>.log;
+<span class="keyword">var</span> update = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{
+    <span class="keyword">var</span> _n = <span class="number">0</span>;
+    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">n</span>) </span>{
+        _n = <span class="built_in">isNaN</span>(<span class="built_in">Number</span>(n))?_n:n ;
+      <span class="keyword">return</span> {
+        page:++_n,
+        content:<span class="string">'content of page '</span>+_n
+      };
+    };
+})();
+<span class="function"><span class="keyword">function</span> <span class="title">go</span>(<span class="params">num</span>)</span>{
+    <span class="comment">//更新内容</span>
+    <span class="keyword">var</span> content=update(num).content;
+    <span class="comment">//...</span>
+    location.hash=<span class="string">'#!page='</span>+num;
+}
+
+<span class="built_in">window</span>.onhashchange=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
+    <span class="keyword">var</span> num=location.hash.match(<span class="regexp">/#!page=([0-9]+)/</span>)[<span class="number">1</span>];
+    <span class="comment">//更新内容</span>
+    <span class="keyword">var</span> content=update(num).content;
+    <span class="comment">//...</span>
+
+}
+go(<span class="number">1</span>);
+alert(update(<span class="number">2</span>).content);
+</code></pre><h3 id="history对象">history对象</h3></li>
+<li><p>pushState &amp; popState</p>
+<pre><code>//保存页面状态
+<span class="title">var</span> <span class="typedef"><span class="keyword">data</span>=<span class="container">{
+  <span class="title">prev_title</span>:<span class="title">document</span>.<span class="title">title</span>,
+  <span class="title">prev_url</span>:<span class="title">location</span>.<span class="title">pathname</span>
+}</span>;</span>
+<span class="title">history</span>.pushState(<span class="typedef"><span class="keyword">data</span>,null,'/search/test');</span>
+//history.state可获取<span class="typedef"><span class="keyword">data</span></span>
+</code></pre></li>
+</ul>
+<pre><code>----------
+
+    window.onload=updateContent;
+    window.onpopstate=updateContent;
+    //更新内容时
+    function gotoContent(data,title,pathname){
+      history.pushstate(data,title,pathname);
+      updateContent();
+    }
+    //更新内容
+    function updateContent(){
+      //引用url并更新内容
+
+      if(history.<span class="keyword">state</span> &amp;&amp; history.<span class="keyword">state</span>.pre_url){
+        var backLink;//后退链接元素
+        backLink.href=history.<span class="keyword">state</span>.pre_url;
+        backLink.textContent=history.<span class="keyword">state</span>.pre_title||'后退';
+        backLink.style.display='';
+      }else{
+        backLink.style.display='<span class="keyword">none</span>';
+      }
+    }
+</code></pre><ul>
+<li>replaceState 替换历史记录</li>
+</ul>
+<h3 id="applicationCache">applicationCache</h3><h3 id="online&amp;&amp;offline">online&amp;&amp;offline</h3><pre><code><span class="function"><span class="keyword">function</span> <span class="title">indicate</span>(<span class="params"></span>)</span>{
+  <span class="keyword">var</span> status=navigator.onLine?<span class="string">'online'</span>:<span class="string">'offline'</span>;
+  <span class="built_in">console</span>.log(status);
+}
+
+<span class="built_in">document</span>.body.onload=indicate;
+<span class="built_in">document</span>.body.ononline=indicate;
+<span class="built_in">document</span>.body.onoffline=indicate;
+
+indicate();
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="Jquery">Jquery</h2><h3 id="选择器">选择器</h3><ul>
+<li>prev&gt;child</li>
+<li>prev+next</li>
+<li>prev~siblings</li>
+<li>[attr^=”val”] : 开头为val的属性</li>
+<li>[attr*=”val”] : 包含val的属性</li>
+<li>[attr~=”val”] : 将attr以空格分隔后，含有val片段的属性</li>
+<li>[attr|=”val”] : 为val或val-开头的属性</li>
+</ul>]]>
+    
+    </summary>
+    
+      <category term="javascript编程全解" scheme="http://blog.newbmiao.com/tags/javascript%E7%BC%96%E7%A8%8B%E5%85%A8%E8%A7%A3/"/>
+    
+      <category term="js" scheme="http://blog.newbmiao.com/tags/js/"/>
+    
+      <category term="notes" scheme="http://blog.newbmiao.com/categories/notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[js数据类型]]></title>
+    <link href="http://blog.newbmiao.com/2015/02/28/js-data-structure.html"/>
+    <id>http://blog.newbmiao.com/2015/02/28/js-data-structure.html</id>
+    <published>2015-02-28T15:19:25.000Z</published>
+    <updated>2015-08-10T02:10:10.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="数据类型">数据类型</h3><ul>
+<li><p>字符串对象和字符串    </p>
+<ul>
+<li><p>字符串可隐式转化为字符串对象</p>
+<pre><code><span class="keyword">var</span> a=<span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'a'</span>);
+<span class="keyword">var</span> b=<span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'a'</span>);
+a==b;    <span class="comment">//false,引用不同</span>
+a===b;    <span class="comment">//false,引用不同</span>
+a==<span class="string">'a'</span>;    <span class="comment">//true,内部转换</span>
+a===<span class="string">'a'</span>;<span class="comment">//false,值相同，类型不同</span>
+<span class="built_in">String</span>(<span class="string">'a'</span>)===<span class="string">'a'</span>;<span class="comment">//true，显式转换为字符串</span>
+</code></pre></li>
+<li><p>是不可变的，其方法是非破坏性的，不能改写其内容。</p>
+<pre><code><span class="reserved">var</span> a=<span class="string">'abc'</span>;
+a[<span class="number">0</span>]=<span class="string">'A'</span>;
+<span class="built_in">console</span>.log(a);<span class="regexp">//</span>结果仍是<span class="string">'abc'</span>;
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>    
+<ul>
+<li><p>数值型</p>
+<ul>
+<li><p>内部使用浮点数运算</p>
+<pre><code><span class="number">0.1</span>+<span class="number">0.2</span> !== <span class="number">0.3</span>;
+<span class="literal">NaN</span>不与任何值相等，判定用 <span class="built_in">isNaN</span>()
+正常数字（除<span class="literal">NaN</span>与正负无穷大）判定用<span class="built_in">isFinite</span>()
+</code></pre></li>
+</ul>
+</li>
+<li>null 是字面量，代表没有引用任何对象，是object但是没有对应的类</li>
+<li>undefined 是预定义全局变量</li>
+<li>object</li>
+<li><p>boolean</p>
+<ul>
+<li><p>object类型都是true</p>
+<pre><code><span class="variable"><span class="keyword">var</span> b</span>=new <span class="typename">Boolean</span>(<span class="literal">false</span>);
+!!b;<span class="comment">//object对象，true</span>
+<span class="variable"><span class="keyword">var</span> b</span>=<span class="typename">Boolean</span>(<span class="literal">false</span>);
+!!b;<span class="comment">//函数内建类型，false;</span>
+</code></pre></li>
+</ul>
+</li>
+<li><p>array</p>
+<ul>
+<li>数组赋值是引用赋值，修改被赋值数组也会破坏原数组</li>
+<li><p>要实现非破坏数组，用concat</p>
+<pre><code><span class="comment">//浅复制，若遇到数组中有引用部分也会被破坏</span>
+<span class="keyword">var</span> arr=[<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];
+<span class="keyword">var</span> arr2=[].concat(arr); 
+
+<span class="comment">//遍历</span>
+<span class="keyword">var</span> p=<span class="built_in">console</span>.log;
+<span class="keyword">var</span> a=<span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>);
+p(<span class="built_in">Object</span>.keys(a),<span class="built_in">Object</span>.getOwnPropertyNames(a));
+</code></pre></li>
+<li><p>删除用delete会留下空隙，用splice(index,num)删除更合适</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="语句&amp;表达式">语句&amp;表达式</h3><ul>
+<li>switch中case比较是用 === 判定的</li>
+<li><p>do-while</p>
+<pre><code><span class="comment">//从右向左打印数字</span>
+function printFromRight(<span class="keyword">n</span>){
+  <span class="keyword">do</span>{
+    console.<span class="literal">log</span>(~~<span class="keyword">n</span>%10);
+    <span class="keyword">n</span>=~~(<span class="keyword">n</span>/10);<span class="comment">//数字取整</span>
+  }<span class="keyword">while</span>(<span class="keyword">n</span>&gt;0);
+}
+</code></pre></li>
+<li><p>try-catch</p>
+<pre><code><span class="reserved">var</span> p=<span class="built_in">console</span>.log;
+<span class="keyword">try</span>{
+  p(<span class="string">'start'</span>);
+  <span class="literal">null</span>.x;
+  p(<span class="string">'here'</span>);
+}<span class="keyword">catch</span>(e){<span class="regexp">//</span>只会有一个<span class="keyword">catch</span>捕获
+  p(<span class="string">'info: ['</span>+e+<span class="string">']'</span>)
+}<span class="keyword">finally</span>{
+  p(<span class="string">'end'</span>);
+}
+</code></pre></li>
+<li><p>for vs for each</p>
+<pre><code><span class="keyword">for</span>...<span class="keyword">in</span>遍历对象的属性名和值
+<span class="keyword">for</span> <span class="keyword">each</span>只能遍历属性值
+</code></pre></li>
+</ul>
+<h3 id="变量&amp;对象">变量&amp;对象</h3><ul>
+<li>对象和变量的赋值运算，是将对象的引用复制给变量</li>
+<li><p>函数的的参数是对其引用的赋值，实际是值得传递，并不会更改其引用所指向的对象</p>
+<pre><code><span class="keyword">var</span> p=console.log;
+<span class="function"><span class="keyword">function</span> <span class="title">no_swap</span><span class="params">(a,b)</span><span class="comment">{
+    a^=b;
+    b^=a;
+    a^=b;
+}</span>
+<span class="title">var</span> <span class="title">a</span>=6,<span class="title">b</span>=8;</span>
+no_swap(a,b);
+p(a,b);<span class="comment">//6,8并不改变原对象值</span>
+
+<span class="comment">//利用返回值赋值改变</span>
+<span class="function"><span class="keyword">function</span> <span class="title">swap</span><span class="params">(a,b)</span><span class="comment">{
+  return [b,a];
+}</span>
+
+[<span class="title">a</span>,<span class="title">b</span>]=<span class="title">swap</span><span class="params">(a,b)</span>;</span>
+p(a,b);
+</code></pre></li>
+<li><p>通过原型链继承的属性无法delete</p>
+<pre><code><span class="function"><span class="keyword">function</span> <span class="title">MyClass</span><span class="params">()</span></span>{}
+MyClass.prototype.x=<span class="number">5</span>;
+<span class="keyword">var</span> obj=<span class="keyword">new</span> MyClass();
+<span class="keyword">delete</span> obj.x;<span class="comment">//返回true但删除失败</span>
+p(obj.x);
+</code></pre></li>
+<li><p>实现不可变对象</p>
+<pre><code>preventExtensions    <span class="comment">---    不可新增属性</span>
+seal                <span class="comment">---    不可新增，删除属性</span>
+freeze                <span class="comment">---    不可新增、删除、变更属性</span>
+</code></pre></li>
+</ul>
+<h3 id="JSON">JSON</h3><pre><code><span class="variable"><span class="keyword">var</span> p</span>=console.log;
+<span class="comment">//字符串转对象</span>
+<span class="variable"><span class="keyword">var</span> s</span>='{<span class="string">"x"</span>:<span class="number">1</span>,<span class="string">"y"</span>:<span class="number">2</span>,<span class="string">"z"</span>:<span class="number">3</span>}';
+<span class="variable"><span class="keyword">var</span> obj1</span>=eval('['+s+']');
+<span class="variable"><span class="keyword">var</span> obj2</span>=JSON.parse(s);
+<span class="comment">//对象转字符串</span>
+<span class="variable"><span class="keyword">var</span> str2</span>=JSON.stringify(obj);
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="数据类型">数据类型</h3><ul>
+<li><p>字符串对象和字符串    </p>
+<ul>
+<li><p>字符串可隐式转化为字符串对象</p>
+<pre><code><span class="keyword">var</span> a=<span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'a'</span>);
+<span class="keyword">var</span> b=<span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'a'</span>);
+a==b;    <span class="comment">//false,引用不同</span>
+a===b;    <span class="comment">//false,引用不同</span>
+a==<span class="string">'a'</span>;    <span class="comment">//true,内部转换</span>
+a===<span class="string">'a'</span>;<span class="comment">//false,值相同，类型不同</span>
+<span class="built_in">String</span>(<span class="string">'a'</span>)===<span class="string">'a'</span>;<span class="comment">//true，显式转换为字符串</span>
+</code></pre></li>
+<li><p>是不可变的，其方法是非破坏性的，不能改写其内容。</p>
+<pre><code><span class="reserved">var</span> a=<span class="string">'abc'</span>;
+a[<span class="number">0</span>]=<span class="string">'A'</span>;
+<span class="built_in">console</span>.log(a);<span class="regexp">//</span>结果仍是<span class="string">'abc'</span>;
+</code></pre></li>
+</ul>
+</li>
+</ul>]]>
+    
+    </summary>
+    
+      <category term="javascript编程全解" scheme="http://blog.newbmiao.com/tags/javascript%E7%BC%96%E7%A8%8B%E5%85%A8%E8%A7%A3/"/>
+    
+      <category term="js" scheme="http://blog.newbmiao.com/tags/js/"/>
+    
+      <category term="notes" scheme="http://blog.newbmiao.com/categories/notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[js函数和闭包]]></title>
+    <link href="http://blog.newbmiao.com/2015/02/28/js-function-closure.html"/>
+    <id>http://blog.newbmiao.com/2015/02/28/js-function-closure.html</id>
+    <published>2015-02-28T15:16:04.000Z</published>
+    <updated>2015-08-10T02:10:10.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="作用域">作用域</h2><h3 id="函数作用域">函数作用域</h3><ul>
+<li>在函数中，无论变量、函数声明先后，都会在调用时优先选择<h3 id="块级作用域">块级作用域</h3></li>
+<li><p>js中不存在块级作用域，局部变量作用域并不会局限于块级</p>
+<pre><code>{
+    for<span class="comment">(var i=0;i&lt;10;i++)</span>{
+        <span class="comment">//...    </span>
+    }
+    <span class="comment">//这里i值为10</span>
+}
+</code></pre></li>
+<li>但let声明的变量可实现块级作用域</li>
+</ul>
+<a id="more"></a>    
+<h3 id="闭包">闭包</h3><ul>
+<li>闭包函数返回值指向一个函数引用，所以闭包函数所赋给的变量不销毁的情况下，其对应的函数对象就不销毁，而且内部处在作用域链上的局部变量也就不会消失，达到具有状态的函数效果</li>
+</ul>
+<h3 id="回调">回调</h3><ul>
+<li><p>回调函数没有状态，可以用bind(只绑定不立即执行，区别于call、apply)确定内部this引用</p>
+<pre><code><span class="comment">//回调函数</span>
+<span class="keyword">var</span> emitter={ 
+    callbacks:[],
+    register:<span class="function"><span class="keyword">function</span><span class="params">(fn)</span></span>{
+        <span class="keyword">this</span>.callbacks.push(fn);
+    },
+    onOpen:<span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+            <span class="keyword">for</span> <span class="keyword">each</span>(<span class="keyword">var</span> f <span class="keyword">in</span> <span class="keyword">this</span>.callbacks){
+        f();
+            }
+    }
+};
+
+<span class="comment">//待注册函数</span>
+<span class="function"><span class="keyword">function</span> <span class="title">MyClass</span><span class="params">(msg)</span></span>{
+    <span class="keyword">this</span>.msg=msg;
+    <span class="keyword">this</span>.show=<span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+    console.log(<span class="keyword">this</span>.msg+<span class="string">' is called.'</span>);
+  };
+}
+
+<span class="keyword">var</span> obj1=<span class="keyword">new</span> MyClass(<span class="string">'listener1'</span>);
+<span class="keyword">var</span> obj2=<span class="keyword">new</span> MyClass(<span class="string">'listener2'</span>);
+emitter.register(obj1.show.bind(obj1));
+emitter.register(obj1.show.bind(obj2));
+emitter.onOpen();
+</code></pre></li>
+<li><p>使用匿名函数注册 </p>
+<h3 id="加载">加载</h3></li>
+<li><p>DomContentLoaded（Dom解析完就执行，load还需等待图片加载）</p>
+<p>  <a href="http://www.cnblogs.com/haogj/archive/2013/01/15/2861950.html" title="jquery中ready的实现" target="_blank" rel="external">http://www.cnblogs.com/haogj/archive/2013/01/15/2861950.html</a></p>
+</li>
+<li><p>动态加载</p>
+</li>
+</ul>
+<h3 id="跳转">跳转</h3><ul>
+<li>location.href改写 : 会记录到history</li>
+<li>location.assign(url) : 同href改写</li>
+<li>location.replace(url) : 不会记录到history</li>
+</ul>
+<h3 id="刷新">刷新</h3><ul>
+<li>location.reload(true) : 忽略缓存刷新</li>
+<li>location.reload(false) : 不忽略缓存刷新</li>
+<li>location.reload() : 同false</li>
+</ul>
+<h3 id="Dom">Dom</h3><ul>
+<li>live对象，始终具有Dom树的实体引用</li>
+<li>若遍历大量dom结果集（nodelist），转换为数组会更快 ：Array.slice(结果集)</li>
+<li>DocumentFragment对重复添加createElement，减少重绘次数</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="作用域">作用域</h2><h3 id="函数作用域">函数作用域</h3><ul>
+<li>在函数中，无论变量、函数声明先后，都会在调用时优先选择<h3 id="块级作用域">块级作用域</h3></li>
+<li><p>js中不存在块级作用域，局部变量作用域并不会局限于块级</p>
+<pre><code>{
+    for<span class="comment">(var i=0;i&lt;10;i++)</span>{
+        <span class="comment">//...    </span>
+    }
+    <span class="comment">//这里i值为10</span>
+}
+</code></pre></li>
+<li>但let声明的变量可实现块级作用域</li>
+</ul>]]>
+    
+    </summary>
+    
+      <category term="javascript编程全解" scheme="http://blog.newbmiao.com/tags/javascript%E7%BC%96%E7%A8%8B%E5%85%A8%E8%A7%A3/"/>
+    
+      <category term="js" scheme="http://blog.newbmiao.com/tags/js/"/>
+    
+      <category term="notes" scheme="http://blog.newbmiao.com/categories/notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[正则速查]]></title>
+    <link href="http://blog.newbmiao.com/2015/02/28/regex-notes.html"/>
+    <id>http://blog.newbmiao.com/2015/02/28/regex-notes.html</id>
+    <published>2015-02-28T11:40:00.000Z</published>
+    <updated>2015-08-10T02:10:10.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="正则表达式">正则表达式</h2><ul>
+<li><p>元字符</p>
+<ul>
+<li><code>.        [匹配除换行符以外的任意字符]</code></li>
+<li><code>\w    [匹配字母数字下划线或汉字]</code></li>
+<li><code>\s    [匹配任意空白符]</code></li>
+<li><code>\b    [匹配单词的开始或结束]</code></li>
+<li><code>*        [匹配0-n次连续出现的字符]</code></li>
+<li><code>+        [匹配1-n次连续出现的字符]</code></li>
+<li><code>?        [匹配0-1次出现的字符]</code></li>
+<li><code>^        [匹配相反的字符]</code></li>
+</ul>
+<hr>
+<pre><code>example：非（提取a标签内容）
+        <span class="char">$r</span>eg=<span class="string">'#&lt;a[^&gt;]*&gt;([^&lt;&gt;]*)&lt;\/a&gt;#'</span>;
+        <span class="char">$s</span>tr=<span class="comment">"&lt;a href='ssss'&gt;some&lt;/a&gt;other&lt;a href='ddd'&gt;some&lt;/a&gt;"</span>;
+        <span class="char">$r</span>es=preg_match_all(<span class="char">$r</span>eg,<span class="char">$s</span>tr,<span class="char">$m</span>);
+</code></pre></li>
+</ul>
+<a id="more"></a>    
+<ul>
+<li>字符组<ul>
+<li><code>[]    [匹配单个字符，故？ *  . {}等不需在其中转义]</code></li>
+</ul>
+</li>
+<li>分支<ul>
+<li><code>|        [匹配可能存在的多种情况（可以多字符）]*需注意顺序*</code> </li>
+</ul>
+</li>
+<li><p>分组</p>
+<ul>
+<li><code>(exp)        [匹配exp，并捕获文本到自动命名的组里]</code></li>
+<li><code>(?&lt;name&gt;exp)    [匹配exp，捕获到名称为name的组里 | 反向引用中\k&lt;name&gt;]</code></li>
+<li><p><code>(?:exp)    [匹配exp，但不捕获也不分配组号]</code></p>
+<blockquote>
+<p>组号分配中，从左到右，先分配无组名的，在分配有组名的</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<ul>
+<li><code>(?=exp)    [匹配exp前面的位置]</code></li>
+<li><code>(?&lt;=exp)    [匹配exp后面的位置]</code></li>
+<li><code>(?!exp)    [匹配后面不是exp的位置]</code></li>
+<li><p><code>(?&lt;!exp)    [匹配前面不是exp的位置]</code></p>
+<blockquote>
+<p>断言匹配的是一个<strong>事实</strong>，不是内容</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<pre><code>example:数字加千分位 同number_format
+        <span class="variable">$reg</span>=<span class="string">"#\\d{1,3}(?=(\\d{3})+(?:[.|$]))#"</span>;
+        <span class="variable">$str</span>=<span class="string">"1234567891238.5646656567"</span>;
+        <span class="variable">$res</span>=preg_replace_callback(<span class="variable">$reg</span>,
+                <span class="function"><span class="keyword">function</span><span class="params">(<span class="variable">$matches</span>)</span></span>{
+                <span class="keyword">return</span> (<span class="variable">$matches</span>[<span class="number">0</span>].<span class="string">','</span>);
+                },<span class="variable">$str</span>);
+example:否定环视,提取非p标签内的内容
+        <span class="variable">$reg</span>=<span class="string">'#&lt;(?!p)([^&gt;\s]+)\s*(?:[^&gt;]+)?&gt;(.*?)&lt;/\1&gt;#'</span>;
+        <span class="variable">$str</span>=<span class="string">"&lt;p&gt;sdfd&lt;/p&gt;&lt;div&gt;dddiv&lt;/div&gt;dom&lt;img src='aaa'/&gt;&lt;a href='ssss'&gt;some&lt;/a&gt;other"</span>;
+        <span class="variable">$res</span>=preg_match_all(<span class="variable">$reg</span>,<span class="variable">$str</span>,<span class="variable">$m</span>);
+</code></pre><hr>
+<ul>
+<li><code>(?#comment)    [提供注释以供阅读]</code>    </li>
+</ul>
+</li>
+<li><p>反向引用</p>
+<ul>
+<li><code>\1,\2 ...     [用于重复前边匹配到的对应分组内容]</code></li>
+<li><code>\k&lt;name&gt;或(?P=name)    [有组名的反向引用]</code></li>
+</ul>
+<hr>
+<pre><code>example：为了匹配到内容不是 <span class="string">"this is a '
+        <span class="variable">$reg</span>="</span><span class="comment">#(\"|').*?\\1#";</span>
+        //<span class="variable">$reg</span>=<span class="string">"#(?P&lt;quote&gt;\"|').*?(?P=quote)#"</span>;
+        <span class="variable">$str</span>=<span class="string">"\"this is a 'string'\""</span>;
+        preg_match(<span class="variable">$reg</span>,<span class="variable">$str</span>,<span class="variable">$m</span>);
+</code></pre></li>
+<li><p>懒惰匹配</p>
+<ul>
+<li><code>*?    重复任意次，但尽可能少</code></li>
+</ul>
+<hr>
+<pre><code>example:若无 ？,会一直匹配到结尾的[/url]
+        <span class="variable">$reg</span>=<span class="string">"#\\[url\\](.*?)\\[\\/url\\]#"</span>;
+        <span class="variable">$str</span>=<span class="string">"[url]1.png[/url][url]2.png[/url][url]3.png[/url]"</span>;
+        <span class="variable">$res</span>=preg_replace(<span class="variable">$reg</span>,<span class="string">"&lt;img src='<span class="variable">$1</span>'/&gt;"</span>,<span class="variable">$str</span>);
+</code></pre></li>
+<li><p>模式</p>
+<ul>
+<li>忽略大小写<ul>
+<li><code>#...#i        [全局]</code></li>
+<li><code>(?i)c         [局部，对其后字符影响]</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>多行模式</p>
+<ul>
+<li><code>#...#m        [每一行都单独去匹配，另外，$默认表示最后一行]</code><br>-点号通配模式</li>
+<li><code>#...#s        [使其中的.可以通配换行符，达到跨行效果，多用于大段文字匹配]</code></li>
+</ul>
+</li>
+<li>懒惰模式<ul>
+<li><code>#...#U        [同懒惰字符？]</code></li>
+</ul>
+</li>
+<li>结尾限制<ul>
+<li><code>#...#D        [有$存在是结尾不可有\n]</code></li>
+</ul>
+</li>
+<li><p>支持UTF-8转义表达</p>
+<ul>
+<li><code>#...#u        [对模式中字符串当做utf8]</code></li>
+</ul>
+<hr>
+<pre><code>example：utf8中文检测
+        <span class="variable">$str</span>=<span class="string">"php百度"</span>;
+        <span class="variable">$reg</span>=<span class="string">'#^[\x{4e00}-\x{9fa5}]+$#u'</span>;
+        <span class="keyword">if</span>(preg_match(<span class="variable">$reg</span>,<span class="variable">$str</span>,<span class="variable">$m</span>)){
+            <span class="built_in">echo</span> <span class="string">'全部为中文'</span>;
+        }<span class="keyword">else</span>{
+            <span class="built_in">echo</span> <span class="string">'不全是中文'</span>;
+        }
+</code></pre><p><strong>优化正则</strong></p>
+</li>
+<li>使用字符组代替分支条件    <ul>
+<li>[a-c]比（a|b|c）效率高</li>
+</ul>
+</li>
+<li>相同开头分支条件，优先放有不同处的分支在前边<ul>
+<li>如邮编匹配，三位或四位区号</li>
+</ul>
+</li>
+<li>标准量词是匹配优先的<ul>
+<li><code>\w*(\d+)去匹配copy2003y，匹配结果会是3，因为\w*贪婪匹配到整个字符串，然后\d+匹配不到，会书到3才结束，要改为懒惰模式\w*?</code> </li>
+</ul>
+</li>
+<li>能确定范围就不要用 <strong>“.”</strong>,能确定重复次数就不要用 “<em>“ 或 <em>*”+”</em></em>,能用懒惰就不用贪婪模式</li>
+<li>合理使用<strong>()</strong>,对于不需要捕获的尽量使用<strong>(?:…)</strong></li>
+<li>起始、行描点优化，加上^,$,并尽量与分组分离</li>
+<li>对大而全的正则拆分</li>
+<li>优先使用php内置函数代替正则<ul>
+<li>输入的校验用filter更合理filter_var(‘admin@qq.com’,FILTER_VALIDATE_EMAIL)</li>
+<li>分析源代码tokenizer </li>
+</ul>
+</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="正则表达式">正则表达式</h2><ul>
+<li><p>元字符</p>
+<ul>
+<li><code>.        [匹配除换行符以外的任意字符]</code></li>
+<li><code>\w    [匹配字母数字下划线或汉字]</code></li>
+<li><code>\s    [匹配任意空白符]</code></li>
+<li><code>\b    [匹配单词的开始或结束]</code></li>
+<li><code>*        [匹配0-n次连续出现的字符]</code></li>
+<li><code>+        [匹配1-n次连续出现的字符]</code></li>
+<li><code>?        [匹配0-1次出现的字符]</code></li>
+<li><code>^        [匹配相反的字符]</code></li>
+</ul>
+<hr>
+<pre><code>example：非（提取a标签内容）
+        <span class="char">$r</span>eg=<span class="string">'#&lt;a[^&gt;]*&gt;([^&lt;&gt;]*)&lt;\/a&gt;#'</span>;
+        <span class="char">$s</span>tr=<span class="comment">"&lt;a href='ssss'&gt;some&lt;/a&gt;other&lt;a href='ddd'&gt;some&lt;/a&gt;"</span>;
+        <span class="char">$r</span>es=preg_match_all(<span class="char">$r</span>eg,<span class="char">$s</span>tr,<span class="char">$m</span>);
+</code></pre></li>
+</ul>]]>
+    
+    </summary>
+    
+      <category term="php" scheme="http://blog.newbmiao.com/tags/php/"/>
+    
+      <category term="regex" scheme="http://blog.newbmiao.com/tags/regex/"/>
+    
+      <category term="notes" scheme="http://blog.newbmiao.com/categories/notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[对数组元素打乱输出（不重复随机串）]]></title>
+    <link href="http://blog.newbmiao.com/2015/02/28/random-element-of-array-js.html"/>
+    <id>http://blog.newbmiao.com/2015/02/28/random-element-of-array-js.html</id>
+    <published>2015-02-28T11:27:15.000Z</published>
+    <updated>2015-08-10T02:10:10.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="回顾2014的一个笔试题">回顾2014的一个笔试题</h2><p>Q:对一个数组（如[1,2,3,4,5]）的元素顺序打乱输出，到要求100次内不重复</p>
+<blockquote>
+<p>我当时的思路是Math.random()随机打乱+闭包函数保存已随机过的数组键拼接字符串用于唯一判断<br>但回来想保存值序列不更好么，另查了大神的打乱数组方式，综合一下，和大家分享</p>
+</blockquote>
+<p>A:</p>
+<pre><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
+<span class="function"><span class="keyword">function</span> <span class="title">random</span>(<span class="params">a, b</span>)</span>{
+<span class="comment">//用于打乱数组的排序函数</span>
+   <span class="keyword">return</span> <span class="built_in">Math</span>.random()&gt;.<span class="number">5</span> ? -<span class="number">1</span> : <span class="number">1</span>;
+}
+<span class="comment">//闭包函数</span>
+<span class="keyword">var</span> uniqueArr=(<span class="function"><span class="keyword">function</span>(<span class="params">uniqueStr</span>)</span>{
+       <span class="keyword">var</span> arr=[];
+       <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">uniqueStr</span>)</span>{
+           <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,len=arr.length;i&lt;len;i++){
+               <span class="keyword">if</span>(arr[i]==uniqueStr){
+                   <span class="keyword">return</span> <span class="literal">false</span>;
+               }
+           }
+           arr.push(uniqueStr);
+           <span class="keyword">return</span> arr;
+       };
+   })(<span class="literal">null</span>);
+<span class="comment">//打乱数组函数</span>
+<span class="function"><span class="keyword">function</span> <span class="title">randomSort</span>(<span class="params">arr</span>)</span>{
+   <span class="keyword">var</span> res=arr.sort(random);<span class="comment">//打乱的数组</span>
+   <span class="keyword">var</span> keys=res.join(<span class="string">''</span>);<span class="comment">//数组值串</span>
+
+   <span class="keyword">if</span>(un=uniqueArr(keys)){<span class="comment">//不重复</span>
+       <span class="comment">//console.log(un,res);//测试用</span>
+       <span class="keyword">return</span> res;
+   }<span class="keyword">else</span>{
+       <span class="keyword">return</span> randomSort(arr);
+   }
+}
+<span class="comment">//测试一下</span>
+<span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];
+randomSort(arr);
+randomSort(arr);
+randomSort(arr);
+randomSort(arr);
+randomSort(arr);
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre><hr>
+<p>翻出来放这里，其实也是希望能够抛砖引玉，希望大家提点改进！</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="回顾2014的一个笔试题">回顾2014的一个笔试题</h2><p>Q:对一个数组（如[1,2,3,4,5]）的元素顺序打乱输出，到要求100次内不重复</p>
+<blockquote>
+<p>我当时的思路是Math.random()随机打乱+闭包函数保存已随机过]]>
+    </summary>
+    
+      <category term="js" scheme="http://blog.newbmiao.com/tags/js/"/>
+    
+      <category term="random" scheme="http://blog.newbmiao.com/tags/random/"/>
+    
+      <category term="js" scheme="http://blog.newbmiao.com/categories/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[html5拖拽2-chrome拖拽下载]]></title>
+    <link href="http://blog.newbmiao.com/2015/02/22/html5-drag-api2-chrome-drag-to-download.html"/>
+    <id>http://blog.newbmiao.com/2015/02/22/html5-drag-api2-chrome-drag-to-download.html</id>
+    <published>2015-02-22T14:39:00.000Z</published>
+    <updated>2015-08-10T02:10:10.000Z</updated>
+    <content type="html"><![CDATA[<ol>
+<li><p>接着上一文章，chrome中实现了文件的拖拽下载，和桌面互动的效果非常好。<br>   主要要求是在dataTransfer中设定文件的信息，信息需按以下格式：</p>
+<pre><code><span class="string">'MIMETYPE:文件名:文件URL'</span>
+</code></pre><p>   我们可以这样设置文件元素：</p>
+<pre><code>&lt;<span class="operator">a</span> id=<span class="string">"mp3"</span> 
+    href=<span class="string">"http://e.com/f.mp3"</span> 
+    draggable=<span class="string">'true'</span> 
+    data-downloadurl=<span class="string">"audio/mpeg:f.mp3:http://e.com/f.mp3"</span>&gt;you can download this mp3 <span class="built_in">to</span> desktop <span class="operator">in</span> chrome <span class="keyword">by</span> drag
+&lt;/<span class="operator">a</span>&gt;
+</code></pre></li>
+<li><p>接下来问题是获取自定义属性，即data-*,使用dataset（html5属性）</p>
+<pre><code><span class="reserved">var</span> url=<span class="built_in">document</span>.getElementById(<span class="string">"mp3"</span>).dataset.downloadurl;
+</code></pre></li>
+<li><p>最后就是绑定数据了：</p>
+<pre><code><span class="built_in">document</span>.getElementById(<span class="string">"mp3"</span>).ondragstart=<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>{
+            e.dataTransfer.setData(<span class="string">'DownloadURL'</span>,e.target.dataset.downloadurl);
+        };
+</code></pre><p>可以拖动下载到桌面了，记得是在chrome中啊。</p>
+</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<ol>
+<li><p>接着上一文章，chrome中实现了文件的拖拽下载，和桌面互动的效果非常好。<br>   主要要求是在dataTransfer中设定文件的信息，信息需按以下格式：</p>
+<pre><code><span class="string">'MIMETYPE:文]]>
+    </summary>
+    
+      <category term="chrome" scheme="http://blog.newbmiao.com/tags/chrome/"/>
+    
+      <category term="drag" scheme="http://blog.newbmiao.com/tags/drag/"/>
+    
+      <category term="html5" scheme="http://blog.newbmiao.com/tags/html5/"/>
+    
+      <category term="html5" scheme="http://blog.newbmiao.com/categories/html5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[html5的拖拽api]]></title>
+    <link href="http://blog.newbmiao.com/2015/02/22/html5-drag-api.html"/>
+    <id>http://blog.newbmiao.com/2015/02/22/html5-drag-api.html</id>
+    <published>2015-02-22T10:29:00.000Z</published>
+    <updated>2015-08-10T02:10:10.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="概要">概要</h2><p>首先拖拽分两种：</p>
+<ul>
+<li>网页资源拖拽</li>
+<li>本地资源拖拽</li>
+</ul>
+<p>然后拖拽实现需要：</p>
+<ul>
+<li>拖动放的设定</li>
+<li>释放方的设定<br>知道这两点就好弄了。</li>
+</ul>
+<a id="more"></a>    
+<h2 id="拖动元素设定">拖动元素设定</h2><p>对于网页元素，设定为可拖拽如下：</p>
+<pre><code><span class="tag">&lt;<span class="title">li</span> <span class="attribute">draggable</span>=<span class="value">"true"</span>&gt;</span>drag li1<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+</code></pre><h2 id="拖动放的设定">拖动放的设定</h2><p>元素有拖动事件可以设置（对于网页元素而言，本地的自然无法设定）：</p>
+<ul>
+<li><p>dragstart：要被拖拽的元素开始拖拽时触发，这个事件对象是被拖拽元素</p>
+</li>
+<li><p>dragend：在drop之后触发，就是拖拽完毕时触发，这个事件对象是被拖拽元素</p>
+<h3 id="绑定数据">绑定数据</h3><p>如果我们想在拖动的对象中绑定一些数据，那么就可以在这些事件中调用一下方法设定（还有其余方法可查文档）</p>
+<ul>
+<li>dataTransfer.setData(format, data)：为元素添加指定数据</li>
+<li>dataTransfer.setDragImage(element, x, y)：制定拖拽元素时跟随鼠标移动的图片，x、y分别是相对于鼠标的坐标</li>
+<li>dataTransfer.addElement(element)：添加一起跟随拖拽的元素，如果你想让某个元素跟随被拖拽元素一同被拖拽，则使用</li>
+</ul>
+</li>
+</ul>
+<h2 id="释放方的设定">释放方的设定</h2><ul>
+<li>dragenter：拖拽元素进入目标元素时触发，这个事件对象是目标元素</li>
+<li>dragover：拖拽某元素在目标元素上移动时触发，这个事件对象是目标元素</li>
+<li>dragleave：拖拽某元素离开目标元素时触发，这个事件对象是目标元素</li>
+<li>ondrop释放函数</li>
+</ul>
+<blockquote>
+<p>此时需要注意的是，浏览器有默认对拖拽资源的操作，如新建一页打开文件或查找当前拖拽元素，对此需在释放方的ondragover和ondrop中用<code>e.preventDefault()</code>取消默认行为</p>
+</blockquote>
+<h3 id="数据操作">数据操作</h3><ul>
+<li>dataTransfer.types：返回在dragstart事件出发时为元素存储数据的格式，如果是外部文件的拖拽，则返回”files”</li>
+<li>dataTransfer.clearData ( [ format ] )：删除指定格式的数据，如果未指定格式，则删除当前</li>
+<li>dataTransfer.getData(format)：返回指定数据，如果数据不存在，则返回空字符串</li>
+<li>dataTransfer.files：如果是拖拽文件，则返回正在拖拽的文件列表FileList</li>
+<li>dataTransfer.setDragImage(element, x, y)：制定拖拽元素时跟随鼠标移动的图片，x、y分别是相对于鼠标的坐标</li>
+</ul>
+<p>然后利用这些api就可以组合出一些拖拽读取的效果，如图片拖拽预览</p>
+<blockquote>
+<p>附： <a href="http://jsfiddle.net/newbmiao/8x1hsnvy/1/" target="_blank" rel="external">代码实例戳进来</a>    |   <a href="http://blog.bingo929.com/google-enjoy-html5-drag-drop-filereaderenren.html" target="_blank" rel="external">更详细的介绍</a></p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="概要">概要</h2><p>首先拖拽分两种：</p>
+<ul>
+<li>网页资源拖拽</li>
+<li>本地资源拖拽</li>
+</ul>
+<p>然后拖拽实现需要：</p>
+<ul>
+<li>拖动放的设定</li>
+<li>释放方的设定<br>知道这两点就好弄了。</li>
+</ul>]]>
+    
+    </summary>
+    
+      <category term="drag" scheme="http://blog.newbmiao.com/tags/drag/"/>
+    
+      <category term="html5" scheme="http://blog.newbmiao.com/tags/html5/"/>
+    
+      <category term="js" scheme="http://blog.newbmiao.com/tags/js/"/>
+    
+      <category term="html5" scheme="http://blog.newbmiao.com/categories/html5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[隐藏服务器信息]]></title>
+    <link href="http://blog.newbmiao.com/2015/02/13/hide-lamp-server-info.html"/>
+    <id>http://blog.newbmiao.com/2015/02/13/hide-lamp-server-info.html</id>
+    <published>2015-02-13T03:34:00.000Z</published>
+    <updated>2015-08-10T02:10:10.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="隐藏_Apache_版本信息">隐藏 Apache 版本信息</h3><p> /etc/httpd/conf/httpd.conf(找不到可查看apache配置目录下的extra/httpd-default.conf,记得修改后引入此文件)</p>
+<pre><code><span class="keyword">ServerTokens</span> Prod
+<span class="keyword">ServerSignature</span> <span class="literal">Off</span>
+</code></pre><h3 id="隐藏_php_版本">隐藏 php 版本</h3><p>php.ini</p>
+<pre><code>expose_php <span class="keyword">On</span>
+改成
+expose_php <span class="keyword">Off</span>
+</code></pre><p>重启apache后，php版本和apache版本在http头中隐藏了。</p>
+<hr>
+<blockquote>
+<p>详解 ：<br>ServerTokens<br>用于控制服务器是否响应来自客户端的请求，向客户端输出服务器系统类型或内置模块等重要的系统信息。<br>在主配置文件中提供全局控制默认阀值为”Full”(ServerTokens Full），所以，如果你的Linux发行版本没有更改过这个阀值的话，所有与你的系统有关的敏感信息都会向全世界公开。比如RHEL会将该 阀值更改为”ServerTokens OS”，而Debian依然使用默认的”Full”阀值</p>
+<pre><code> 以apache-<span class="number">2.0</span>.<span class="number">55</span>为例，阀值可以设定为以下某项（后面为相对应的<span class="constant">Banner</span> <span class="constant">Header</span>)：
+<span class="constant">Prod</span> <span class="prompt">&gt;&gt;</span><span class="constant">Server</span><span class="symbol">:</span> <span class="constant">Apache</span>
+<span class="constant">Major</span> <span class="prompt">&gt;&gt;</span><span class="constant">Server</span><span class="symbol">:</span> <span class="constant">Apache</span>/<span class="number">2</span>
+<span class="constant">Minor</span> <span class="prompt">&gt;&gt;</span><span class="constant">Server</span><span class="symbol">:</span> <span class="constant">Apache</span>/<span class="number">2.0</span>
+<span class="constant">Minimal</span> <span class="prompt">&gt;&gt;</span><span class="constant">Server</span><span class="symbol">:</span> <span class="constant">Apache</span>/<span class="number">2.0</span>.<span class="number">55</span>
+<span class="constant">OS</span> <span class="prompt">&gt;&gt;</span><span class="constant">Server</span><span class="symbol">:</span> <span class="constant">Apache</span>/<span class="number">2.0</span>.<span class="number">55</span> (<span class="constant">Debian</span>)
+<span class="constant">Full</span> (<span class="keyword">or</span> <span class="keyword">not</span> specified) default <span class="prompt">&gt;&gt;</span><span class="constant">Server</span><span class="symbol">:</span> <span class="constant">Apache</span>/<span class="number">2.0</span>.<span class="number">55</span> (<span class="constant">Debian</span>) php/<span class="number">5.1</span>.<span class="number">2</span>-<span class="number">1</span>+b1 mod_ssl/<span class="number">2.0</span>.<span class="number">55</span> <span class="constant">OpenSSL</span>/<span class="number">0</span>.<span class="number">9.8</span>b
+</code></pre><p>ServerSignature<br>控制由系统生成的页面（错误信息，mod_proxy ftp directory listing等等）的页脚中如何显示信息。<br>可在全局设置文件中控制，或是通过.htaccess文件控制<br>默认为”off”(ServerSignature Off),有些Linux发行版本可能会打开这个阀门，比如Debian在默认的虚拟主机上默认将这个阀门设置为开放<br>全局阀门的阀值会被虚拟主机或目录单位的配置文件中的阀值所覆盖，所以，必须确保这样的事情不应该发生 .</p>
+<p>参考自：<a href="http://www.path8.net/tn/archives/5074" target="_blank" rel="external">http://www.path8.net/tn/archives/5074</a></p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="隐藏_Apache_版本信息">隐藏 Apache 版本信息</h3><p> /etc/httpd/conf/httpd.conf(找不到可查看apache配置目录下的extra/httpd-default.conf,记得修改后引入此文件)</p>
+<pre><c]]>
+    </summary>
+    
+      <category term="apache" scheme="http://blog.newbmiao.com/tags/apache/"/>
+    
+      <category term="php" scheme="http://blog.newbmiao.com/tags/php/"/>
+    
+      <category term="php" scheme="http://blog.newbmiao.com/categories/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[php后台跳出框架集]]></title>
+    <link href="http://blog.newbmiao.com/2015/01/11/php-jump-out-of-the-frameset.html"/>
+    <id>http://blog.newbmiao.com/2015/01/11/php-jump-out-of-the-frameset.html</id>
+    <published>2015-01-11T14:14:00.000Z</published>
+    <updated>2015-08-10T02:10:10.000Z</updated>
+    <content type="html"><![CDATA[<p>在后台管理系统中，一般使用框架集来分隔显示管理页面，但是若检测到session过期需要跳出框架集时，php后台要怎么操作？</p>
+<pre><code>if(no_login()){
+    exit("<span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="ocaml">top.location.href=<span class="symbol">'login</span>.php';</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>");
+}
+</code></pre><blockquote>
+<p>这里的top其实就是a标签的target=’_top’的对应。</p>
+</blockquote>
+<h3 id="补充">补充</h3><p>2015.7.28<br>无独有偶，今天又遇到了跳转没反应，这回是登陆跳转，怎么会，我也不信，先看代码！</p>
+<pre><code><span class="php"><span class="preprocessor">&lt;?php</span>
+<span class="keyword">if</span> (!<span class="keyword">empty</span>(<span class="variable">$_POST</span>)) {
+    header(<span class="string">'location: http://blog.newbmiao.com'</span>);
+    <span class="keyword">exit</span>;
+}
+<span class="preprocessor">?&gt;</span></span>
+
+
+<span class="tag">&lt;<span class="title">form</span> <span class="attribute">method</span>=<span class="value">'post'</span> <span class="attribute">target</span>=<span class="value">'hiddenwin'</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">table</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">th</span>&gt;</span>用户名<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">'text'</span> <span class="attribute">name</span>=<span class="value">'account'</span> <span class="attribute">id</span>=<span class="value">'account'</span>/&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">th</span>&gt;</span>密码<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">'password'</span> <span class="attribute">name</span>=<span class="value">'password'</span>/&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">th</span>&gt;</span><span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">td</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">'submit'</span> <span class="attribute">id</span>=<span class="value">'submit'</span>&gt;</span>登录<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+            <span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">table</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">form</span>&gt;</span>
+<span class="tag">&lt;<span class="title">iframe</span> <span class="attribute">frameborder</span>=<span class="value">'0'</span> <span class="attribute">name</span>=<span class="value">'hiddenwin'</span> <span class="attribute">id</span>=<span class="value">'hiddenwin'</span> <span class="attribute">scrolling</span>=<span class="value">'no'</span>&gt;</span><span class="tag">&lt;/<span class="title">iframe</span>&gt;</span>
+</code></pre><p>看到没，<code>form</code>里的那个<code>target</code>，请求内容要呈现的目标容器指定，所以header请求的跳转是生效了，但是放到了，那个隐藏的<code>iframe</code>里，所以感觉没有跳转。坑爹的<code>iframe</code>伪装不刷新！</p>
+<p>要解决，还是要用<code>top</code>或者<code>parent</code>去作为目标容器。</p>
+<hr>
+<blockquote>
+<p>附target列表：</p>
+<ul>
+<li>_blank     在新窗口中打开被链接文档。</li>
+<li>_self     默认。在相同的框架中打开被链接文档。</li>
+<li>_parent     在父框架集中打开被链接文档。</li>
+<li>_top     在整个窗口中打开被链接文档。 framename     在指定的框架中打开被链接文档。</li>
+</ul>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>在后台管理系统中，一般使用框架集来分隔显示管理页面，但是若检测到session过期需要跳出框架集时，php后台要怎么操作？</p>
+<pre><code>if(no_login()){
+    exit("<span class="tag">&lt;<span class=]]>
+    </summary>
+    
+      <category term="js" scheme="http://blog.newbmiao.com/tags/js/"/>
+    
+      <category term="target" scheme="http://blog.newbmiao.com/tags/target/"/>
+    
+      <category term="php" scheme="http://blog.newbmiao.com/categories/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[php去掉json字符串的“\”]]></title>
+    <link href="http://blog.newbmiao.com/2015/01/08/php-remove-json-string-slash.html"/>
+    <id>http://blog.newbmiao.com/2015/01/08/php-remove-json-string-slash.html</id>
+    <published>2015-01-08T14:46:00.000Z</published>
+    <updated>2015-08-10T02:10:10.000Z</updated>
+    <content type="html"><![CDATA[<p>今天做微信接口开发时，拿access_token去获取菜单，发现久违的<code>{&quot;errcode&quot;:40001,&quot;errmsg&quot;:&quot;invalid credential&quot;}</code>，之前也常遇到，总不知道为什么，这下研究了下，发现原因了：</p>
+<p>一般而言：</p>
+<blockquote>
+<p>通过AJAX传到php的json字符串有时候加上反斜杠”\”来转义，php处理时需要先去掉反斜杠，然后再json_decode.<br>example：</p>
+</blockquote>
+<pre><code><span class="variable">$str</span> = stripslashes(<span class="variable">$_POST</span>[<span class="string">'json'</span>]);  
+<span class="variable">$arr</span> = json_decode(<span class="variable">$str</span>);  
+</code></pre><p>但是这次遇到的不是：<br>为了防止注入，在数据插入数据库前做了escape_like_str操作,而其又调用了escape_str（CI中mysql官方驱动代码如下）</p>
+<a id="more"></a>    
+<pre><code><span class="comment">/**
+ * Escape String
+ *
+ * <span class="doctag">@access</span>    public
+ * <span class="doctag">@param</span>    string
+ * <span class="doctag">@param</span>    bool    whether or not the string will be used in a LIKE condition
+ * <span class="doctag">@return</span>    string
+ */</span>
+<span class="function"><span class="keyword">function</span> <span class="title">escape_str</span><span class="params">(<span class="variable">$str</span>, <span class="variable">$like</span> = FALSE)</span>
+</span>{
+    <span class="keyword">if</span> (is_array(<span class="variable">$str</span>))
+    {
+        <span class="keyword">foreach</span> (<span class="variable">$str</span> <span class="keyword">as</span> <span class="variable">$key</span> =&gt; <span class="variable">$val</span>)
+           {
+            <span class="variable">$str</span>[<span class="variable">$key</span>] = <span class="variable">$this</span>-&gt;escape_str(<span class="variable">$val</span>, <span class="variable">$like</span>);
+           }
+
+           <span class="keyword">return</span> <span class="variable">$str</span>;
+       }
+
+    <span class="keyword">if</span> (function_exists(<span class="string">'mysql_real_escape_string'</span>) <span class="keyword">AND</span> is_resource(<span class="variable">$this</span>-&gt;conn_id))
+    {
+        <span class="variable">$str</span> = mysql_real_escape_string(<span class="variable">$str</span>, <span class="variable">$this</span>-&gt;conn_id);
+    }
+    <span class="keyword">elseif</span> (function_exists(<span class="string">'mysql_escape_string'</span>))
+    {
+        <span class="variable">$str</span> = mysql_escape_string(<span class="variable">$str</span>);
+    }
+    <span class="keyword">else</span>
+    {
+        <span class="variable">$str</span> = addslashes(<span class="variable">$str</span>);
+    }
+
+    <span class="comment">// escape LIKE condition wildcards</span>
+    <span class="keyword">if</span> (<span class="variable">$like</span> === <span class="keyword">TRUE</span>)
+    {
+        <span class="variable">$str</span> = str_replace(<span class="keyword">array</span>(<span class="string">'%'</span>, <span class="string">'_'</span>), <span class="keyword">array</span>(<span class="string">'\\%'</span>, <span class="string">'\\_'</span>), <span class="variable">$str</span>);
+    }
+
+    <span class="keyword">return</span> <span class="variable">$str</span>;
+}
+</code></pre><p>看到没，最后的替换将 <code>&#39;_&#39;</code> 替换为 <code>&#39;\\_&#39;</code> ,为什么呢？<br>因为文档说：</p>
+<blockquote>
+<p> mysql<em>real_escape_string does not escape % and </em>. These are wildcards in MySQL if combined with LIKE（其只处理类似 \x00, \n, \r, \, ‘, “ and \x1a字符）</p>
+</blockquote>
+<p>所以accesstoken获取没问题，存入却多了一个转义符，遂改为直接调用escape_str(也是没注意使用函数引发的问题啊)</p>
+<blockquote>
+<p>转义还真是个问题，以后要好好关注一下！</p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>今天做微信接口开发时，拿access_token去获取菜单，发现久违的<code>{&quot;errcode&quot;:40001,&quot;errmsg&quot;:&quot;invalid credential&quot;}</code>，之前也常遇到，总不知道为什么，这下研究了下，发现原因了：</p>
+<p>一般而言：</p>
+<blockquote>
+<p>通过AJAX传到php的json字符串有时候加上反斜杠”\”来转义，php处理时需要先去掉反斜杠，然后再json_decode.<br>example：</p>
+</blockquote>
+<pre><code><span class="variable">$str</span> = stripslashes(<span class="variable">$_POST</span>[<span class="string">'json'</span>]);  
+<span class="variable">$arr</span> = json_decode(<span class="variable">$str</span>);  
+</code></pre><p>但是这次遇到的不是：<br>为了防止注入，在数据插入数据库前做了escape_like_str操作,而其又调用了escape_str（CI中mysql官方驱动代码如下）</p>]]>
+    
+    </summary>
+    
+      <category term="escape_str" scheme="http://blog.newbmiao.com/tags/escape-str/"/>
+    
+      <category term="json" scheme="http://blog.newbmiao.com/tags/json/"/>
+    
+      <category term="mysql" scheme="http://blog.newbmiao.com/tags/mysql/"/>
+    
+      <category term="php" scheme="http://blog.newbmiao.com/categories/php/"/>
+    
+  </entry>
+  
+</feed>
