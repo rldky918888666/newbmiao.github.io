@@ -53,7 +53,7 @@ ln <span class="operator">-s</span> ~/Document/blog ~/Dropbox/blog <span class="
     <link href="http://blog.newbmiao.com/2015/08/06/set-highlight-and-autoindent-in-vim-on-mac.html"/>
     <id>http://blog.newbmiao.com/2015/08/06/set-highlight-and-autoindent-in-vim-on-mac.html</id>
     <published>2015-08-06T06:04:59.000Z</published>
-    <updated>2015-08-10T02:10:10.000Z</updated>
+    <updated>2015-08-10T14:22:06.000Z</updated>
     <content type="html"><![CDATA[<p>看着默认的vim显示效果不爽，查了下设置，搞起。</p>
 <p>将vim的环境文件copy到自己常用用户的主目录下</p>
 <pre><code>cp <span class="regexp">/usr/</span>share<span class="regexp">/vim/</span>vimrc     ~<span class="regexp">/.vimrc</span>
@@ -81,15 +81,7 @@ ln <span class="operator">-s</span> ~/Document/blog ~/Dropbox/blog <span class="
 <p>重新打开terminal，打开一个c/c++,perl,python,shell,php….文件，就能看到效果了</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>看着默认的vim显示效果不爽，查了下设置，搞起。</p>
-<p>将vim的环境文件copy到自己常用用户的主目录下</p>
-<pre><code>cp <span class="regexp">/usr/</span>share<span class="regexp">/vim/</span>vimrc     ~<span class="regexp">/.vimrc</span>
-</code></pre><p>修改.vimrc文件归读写属性</p>
-<pre><code><span class="tag">sudo</span>  <span class="tag">chmod</span> <span class="tag">o</span>+<span class="tag">w</span>  <span class="class">.vimrc</span>
-</code></pre><p><strong>语法高亮</strong></p>
-<p>用vim等打开.vimrc在文件最后加上</p>
-<pre><code>syntax <span class="function_start"><span class="keyword">on</span></span>
-</code></pre>]]>
+    <![CDATA[mac]]>
     
     </summary>
     
@@ -106,7 +98,7 @@ ln <span class="operator">-s</span> ~/Document/blog ~/Dropbox/blog <span class="
     <link href="http://blog.newbmiao.com/2015/08/01/use-limit-subquery-in-mysql.html"/>
     <id>http://blog.newbmiao.com/2015/08/01/use-limit-subquery-in-mysql.html</id>
     <published>2015-08-01T07:43:06.000Z</published>
-    <updated>2015-08-10T02:10:10.000Z</updated>
+    <updated>2015-08-10T14:22:06.000Z</updated>
     <content type="html"><![CDATA[<p>当你在mysql子查询中使用了limit，那么恭喜你，你会看到</p>
 <blockquote>
 <p>ERROR 1235 (42000): This version of MySQL doesn’t yet support ‘LIMIT &amp; IN/ALL/ANY/SOME subquery’</p>
@@ -141,18 +133,7 @@ ln <span class="operator">-s</span> ~/Document/blog ~/Dropbox/blog <span class="
 </code></pre><p>经过explain查看两者的效率，没有差别，都用了filesort全表扫描。但是第一种更易书写。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>当你在mysql子查询中使用了limit，那么恭喜你，你会看到</p>
-<blockquote>
-<p>ERROR 1235 (42000): This version of MySQL doesn’t yet support ‘LIMIT &amp; IN/ALL/ANY/SOME subquery’</p>
-</blockquote>
-<p><code>limit</code>在mysql中本来的效率就不高，mysql于是也禁止在子查询中使用limit，可是如果非要用呢</p>
-<p>比方说需求是：</p>
-<ul>
-<li>一等奖5名</li>
-<li>二等奖15名</li>
-<li>获了一等奖的不能再获二等奖</li>
-</ul>
-<p>直觉告诉我们，下边的sql是可以的。</p>]]>
+    <![CDATA[解决mysql不可用limit子查询]]>
     
     </summary>
     
@@ -169,7 +150,7 @@ ln <span class="operator">-s</span> ~/Document/blog ~/Dropbox/blog <span class="
     <link href="http://blog.newbmiao.com/2015/07/31/school-company-data-crawling.html"/>
     <id>http://blog.newbmiao.com/2015/07/31/school-company-data-crawling.html</id>
     <published>2015-07-31T12:11:39.000Z</published>
-    <updated>2015-08-10T02:10:10.000Z</updated>
+    <updated>2015-08-10T14:22:06.000Z</updated>
     <content type="html"><![CDATA[<p>今天需要搞大学数据库，目标是新浪高考网。<br>仔细分析其页面的数据获取是使用Jsonp的js方式。于是在控制台能使用js爬取了大学数据源（1378条）<br>》》<a href="https://github.com/NewbMiao/webDataSource/tree/master/%E5%A4%A7%E5%AD%A6%E6%95%B0%E6%8D%AE%E5%BA%93_1378_20150731" target="_blank" rel="external">需要大学数据可以这里拿</a></p>
 <p>这里要记录的是爬取中数组合并的问题</p>
 <a id="more"></a>    
@@ -237,8 +218,7 @@ g = b.reduce(<span class="function"><span class="keyword">function</span> <span 
 }
 </code></pre>]]></content>
     <summary type="html">
-    <![CDATA[<p>今天需要搞大学数据库，目标是新浪高考网。<br>仔细分析其页面的数据获取是使用Jsonp的js方式。于是在控制台能使用js爬取了大学数据源（1378条）<br>》》<a href="https://github.com/NewbMiao/webDataSource/tree/master/%E5%A4%A7%E5%AD%A6%E6%95%B0%E6%8D%AE%E5%BA%93_1378_20150731">需要大学数据可以这里拿</a></p>
-<p>这里要记录的是爬取中数组合并的问题</p>]]>
+    <![CDATA[大学-公司数据爬取]]>
     
     </summary>
     
@@ -257,13 +237,13 @@ g = b.reduce(<span class="function"><span class="keyword">function</span> <span 
     <link href="http://blog.newbmiao.com/2015/07/18/typecho-to-hexo.html"/>
     <id>http://blog.newbmiao.com/2015/07/18/typecho-to-hexo.html</id>
     <published>2015-07-17T16:21:39.000Z</published>
-    <updated>2015-08-10T02:10:10.000Z</updated>
+    <updated>2015-08-10T14:22:06.000Z</updated>
     <content type="html"><![CDATA[<p>今天把typecho上的文章也迁移到Hexo上来，可以专注纯粹的创作学习了，哈哈。</p>
 <p>留下批处理文件，供需要者使用！<br><a href="https://github.com/NewbMiao/typecho2Hexo" target="_blank" rel="external">批处理文件地址</a></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>今天把typecho上的文章也迁移到Hexo上来，可以专注纯粹的创作学习了，哈哈。</p>
-<p>留下批处理文件，供需要者使用！<br><a href="https://github.com/NewbMiao/typecho2Hexo" target="_blank" re]]>
+    <![CDATA[typecho]]>
+    
     </summary>
     
       <category term="blog" scheme="http://blog.newbmiao.com/tags/blog/"/>
@@ -279,7 +259,7 @@ g = b.reduce(<span class="function"><span class="keyword">function</span> <span 
     <link href="http://blog.newbmiao.com/2015/06/26/redis-installation-guide.html"/>
     <id>http://blog.newbmiao.com/2015/06/26/redis-installation-guide.html</id>
     <published>2015-06-26T09:43:23.000Z</published>
-    <updated>2015-08-10T02:10:10.000Z</updated>
+    <updated>2015-08-10T14:22:06.000Z</updated>
     <content type="html"><![CDATA[<h4 id="centos下安装redis">centos下安装redis</h4><ul>
 <li><a href="http://redis.io/download/" target="_blank" rel="external">下载redis</a></li>
 <li>安装</li>
@@ -380,18 +360,7 @@ chkconfig --<span class="keyword">list</span> redis
 </blockquote>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h4 id="centos下安装redis">centos下安装redis</h4><ul>
-<li><a href="http://redis.io/download/">下载redis</a></li>
-<li>安装</li>
-</ul>
-<hr>
-<pre><code>#解压
-tar -zxf redisXXX<span class="class">.tar</span><span class="class">.gz</span>
-cd redisXXX
-make
-make install
-</code></pre><ul>
-<li>设为服务项自启动]]>
+    <![CDATA[redis安装]]>
     
     </summary>
     
@@ -408,7 +377,7 @@ make install
     <link href="http://blog.newbmiao.com/2015/06/17/use-phpdoc-to-render-api-document.html"/>
     <id>http://blog.newbmiao.com/2015/06/17/use-phpdoc-to-render-api-document.html</id>
     <published>2015-06-16T23:10:24.000Z</published>
-    <updated>2015-08-10T02:10:10.000Z</updated>
+    <updated>2015-08-10T14:22:06.000Z</updated>
     <content type="html"><![CDATA[<h4 id="安装">安装</h4><pre><code>pear channel-discover pear<span class="class">.phpdoc</span><span class="class">.org</span>
 pear install phpdoc/phpDocumentor
 </code></pre><h4 id="使用">使用</h4><pre><code><span class="comment">#对文件</span>
@@ -417,8 +386,8 @@ phpdoc <span class="operator">-f</span> filename.php -t docs
 phpdoc <span class="operator">-d</span> directory -t docs
 </code></pre>]]></content>
     <summary type="html">
-    <![CDATA[<h4 id="安装">安装</h4><pre><code>pear channel-discover pear<span class="class">.phpdoc</span><span class="class">.org</span>
-pear install phpdo]]>
+    <![CDATA[phpdoc生成php文档]]>
+    
     </summary>
     
       <category term="php" scheme="http://blog.newbmiao.com/tags/php/"/>
@@ -434,7 +403,7 @@ pear install phpdo]]>
     <link href="http://blog.newbmiao.com/2015/06/16/hexo-on-your-github.html"/>
     <id>http://blog.newbmiao.com/2015/06/16/hexo-on-your-github.html</id>
     <published>2015-06-16T12:23:25.000Z</published>
-    <updated>2015-08-10T02:10:10.000Z</updated>
+    <updated>2015-08-10T14:23:00.000Z</updated>
     <content type="html"><![CDATA[<p><strong>Hexo</strong>基于node.js,可用于生成静态博客，结合github和Mac，可以专注创作了。<br>深入学习见文末引用。</p>
 <h4 id="hexo安装">hexo安装</h4><pre><code>brew <span class="keyword">install</span> node 
 npm <span class="keyword">install</span> hexo-cli -g  <span class="comment">#全局安装</span>
@@ -575,30 +544,7 @@ hexo o <span class="comment">#优化,替代了 hexo g</span>
 </blockquote>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p><strong>Hexo</strong>基于node.js,可用于生成静态博客，结合github和Mac，可以专注创作了。<br>深入学习见文末引用。</p>
-<h4 id="hexo安装">hexo安装</h4><pre><code>brew <span class="keyword">install</span> node 
-npm <span class="keyword">install</span> hexo-cli -g  <span class="comment">#全局安装</span>
-</code></pre><h4 id="创建博客">创建博客</h4><p>Hexo使用命令:</p>
-<pre><code>hexo init <span class="variable">&lt;folder&gt;</span>  <span class="comment">#执行init命令初始化hexo到你指定的目录</span>
-hexo new [layout] <span class="variable">&lt;title&gt;</span> <span class="comment">#创建文章</span>
-hexo new page <span class="variable">&lt;title&gt;</span> <span class="comment">#生成新页面</span>
-hexo generate       <span class="comment">#自动根据当前目录下文件,生成静态网页</span>
-    -d <span class="comment">#deploy after</span>
-    -w <span class="comment">#查看文件变化</span>
-hexo publish [layout] <span class="variable">&lt;filename&gt;</span> <span class="comment">#发布草稿</span>
-hexo server         <span class="comment">#运行本地服务</span>
-    -p <span class="comment">#端口</span>
-    -s <span class="comment">#只生成静态文件</span>
-    -l <span class="comment">#生成log</span>
-    --draft 连草稿也生成预览
-hexo deploy
-    -g <span class="comment">#generate before</span>
-hexo render <span class="variable">&lt;file1&gt;</span> [file2] ...
-    -o <span class="comment">#output destination</span>
-hexo migrate <span class="variable">&lt;type&gt;</span> <span class="comment">#Migrates content from other blog systems.</span>
-hexo clean <span class="comment">#Cleans the cache file (db.json) and generated files (public).</span>
-hexo list <span class="variable">&lt;type&gt;</span> <span class="comment">#Lists all routes.</span>
-</code></pre>]]>
+    <![CDATA[hexo-on-your-github]]>
     
     </summary>
     
@@ -615,7 +561,7 @@ hexo list <span class="variable">&lt;type&gt;</span> <span class="comment">#List
     <link href="http://blog.newbmiao.com/2015/03/08/php-assignment-and-reference.html"/>
     <id>http://blog.newbmiao.com/2015/03/08/php-assignment-and-reference.html</id>
     <published>2015-03-08T00:56:59.000Z</published>
-    <updated>2015-08-10T02:10:10.000Z</updated>
+    <updated>2015-08-10T14:22:06.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>针对php的引用，有时总会错误认为指向一块内存，修改也会影响到该内存数据，直到看到php的源码分析，有了更清楚的理解，部分出自&lt;<php核心技术和最佳实践>&gt;</php核心技术和最佳实践></p>
 </blockquote>
@@ -659,13 +605,7 @@ b: (refcount=<span class="number">1</span>, is_ref=<span class="number">0</span>
 </ul>
 ]]></content>
     <summary type="html">
-    <![CDATA[<blockquote>
-<p>针对php的引用，有时总会错误认为指向一块内存，修改也会影响到该内存数据，直到看到php的源码分析，有了更清楚的理解，部分出自&lt;<php核心技术和最佳实践>&gt;</p>
-</blockquote>
-<h2 id="写时复制">写时复制</h2><ul>
-<li>php变量有is_ref和refcount标志，用来标识是否引用和变量引用次数</li>
-<li>当两个变量<code>$a=$b;</code>,虽然不是引用，但是值相同，为了内存复用，$b 的refcount会加1</li>
-<li><p>只有当$b 的值改变，才会新开辟内存写入值，并置refcount为1</p>]]>
+    <![CDATA[php的赋值与引用]]>
     
     </summary>
     
@@ -682,7 +622,7 @@ b: (refcount=<span class="number">1</span>, is_ref=<span class="number">0</span>
     <link href="http://blog.newbmiao.com/2015/02/28/jquery-html5.html"/>
     <id>http://blog.newbmiao.com/2015/02/28/jquery-html5.html</id>
     <published>2015-02-28T15:20:57.000Z</published>
-    <updated>2015-08-10T02:10:10.000Z</updated>
+    <updated>2015-08-10T14:22:06.000Z</updated>
     <content type="html"><![CDATA[<h2 id="Jquery">Jquery</h2><h3 id="选择器">选择器</h3><ul>
 <li>prev&gt;child</li>
 <li>prev+next</li>
@@ -817,15 +757,7 @@ alert(update(<span class="number">2</span>).content);
 indicate();
 </code></pre>]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="Jquery">Jquery</h2><h3 id="选择器">选择器</h3><ul>
-<li>prev&gt;child</li>
-<li>prev+next</li>
-<li>prev~siblings</li>
-<li>[attr^=”val”] : 开头为val的属性</li>
-<li>[attr*=”val”] : 包含val的属性</li>
-<li>[attr~=”val”] : 将attr以空格分隔后，含有val片段的属性</li>
-<li>[attr|=”val”] : 为val或val-开头的属性</li>
-</ul>]]>
+    <![CDATA[jquery]]>
     
     </summary>
     
@@ -842,7 +774,7 @@ indicate();
     <link href="http://blog.newbmiao.com/2015/02/28/js-data-structure.html"/>
     <id>http://blog.newbmiao.com/2015/02/28/js-data-structure.html</id>
     <published>2015-02-28T15:19:25.000Z</published>
-    <updated>2015-08-10T02:10:10.000Z</updated>
+    <updated>2015-08-10T14:22:06.000Z</updated>
     <content type="html"><![CDATA[<h3 id="数据类型">数据类型</h3><ul>
 <li><p>字符串对象和字符串    </p>
 <ul>
@@ -976,26 +908,7 @@ freeze                <span class="comment">---    不可新增、删除、变�
 <span class="variable"><span class="keyword">var</span> str2</span>=JSON.stringify(obj);
 </code></pre>]]></content>
     <summary type="html">
-    <![CDATA[<h3 id="数据类型">数据类型</h3><ul>
-<li><p>字符串对象和字符串    </p>
-<ul>
-<li><p>字符串可隐式转化为字符串对象</p>
-<pre><code><span class="keyword">var</span> a=<span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'a'</span>);
-<span class="keyword">var</span> b=<span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'a'</span>);
-a==b;    <span class="comment">//false,引用不同</span>
-a===b;    <span class="comment">//false,引用不同</span>
-a==<span class="string">'a'</span>;    <span class="comment">//true,内部转换</span>
-a===<span class="string">'a'</span>;<span class="comment">//false,值相同，类型不同</span>
-<span class="built_in">String</span>(<span class="string">'a'</span>)===<span class="string">'a'</span>;<span class="comment">//true，显式转换为字符串</span>
-</code></pre></li>
-<li><p>是不可变的，其方法是非破坏性的，不能改写其内容。</p>
-<pre><code><span class="reserved">var</span> a=<span class="string">'abc'</span>;
-a[<span class="number">0</span>]=<span class="string">'A'</span>;
-<span class="built_in">console</span>.log(a);<span class="regexp">//</span>结果仍是<span class="string">'abc'</span>;
-</code></pre></li>
-</ul>
-</li>
-</ul>]]>
+    <![CDATA[js数据类型]]>
     
     </summary>
     
@@ -1012,7 +925,7 @@ a[<span class="number">0</span>]=<span class="string">'A'</span>;
     <link href="http://blog.newbmiao.com/2015/02/28/js-function-closure.html"/>
     <id>http://blog.newbmiao.com/2015/02/28/js-function-closure.html</id>
     <published>2015-02-28T15:16:04.000Z</published>
-    <updated>2015-08-10T02:10:10.000Z</updated>
+    <updated>2015-08-10T14:22:06.000Z</updated>
     <content type="html"><![CDATA[<h2 id="作用域">作用域</h2><h3 id="函数作用域">函数作用域</h3><ul>
 <li>在函数中，无论变量、函数声明先后，都会在调用时优先选择<h3 id="块级作用域">块级作用域</h3></li>
 <li><p>js中不存在块级作用域，局部变量作用域并不会局限于块级</p>
@@ -1083,18 +996,7 @@ emitter.onOpen();
 </ul>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="作用域">作用域</h2><h3 id="函数作用域">函数作用域</h3><ul>
-<li>在函数中，无论变量、函数声明先后，都会在调用时优先选择<h3 id="块级作用域">块级作用域</h3></li>
-<li><p>js中不存在块级作用域，局部变量作用域并不会局限于块级</p>
-<pre><code>{
-    for<span class="comment">(var i=0;i&lt;10;i++)</span>{
-        <span class="comment">//...    </span>
-    }
-    <span class="comment">//这里i值为10</span>
-}
-</code></pre></li>
-<li>但let声明的变量可实现块级作用域</li>
-</ul>]]>
+    <![CDATA[js函数和闭包]]>
     
     </summary>
     
@@ -1111,7 +1013,7 @@ emitter.onOpen();
     <link href="http://blog.newbmiao.com/2015/02/28/regex-notes.html"/>
     <id>http://blog.newbmiao.com/2015/02/28/regex-notes.html</id>
     <published>2015-02-28T11:40:00.000Z</published>
-    <updated>2015-08-10T02:10:10.000Z</updated>
+    <updated>2015-08-10T14:22:06.000Z</updated>
     <content type="html"><![CDATA[<h2 id="正则表达式">正则表达式</h2><ul>
 <li><p>元字符</p>
 <ul>
@@ -1263,25 +1165,7 @@ example:否定环视,提取非p标签内的内容
 </ul>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="正则表达式">正则表达式</h2><ul>
-<li><p>元字符</p>
-<ul>
-<li><code>.        [匹配除换行符以外的任意字符]</code></li>
-<li><code>\w    [匹配字母数字下划线或汉字]</code></li>
-<li><code>\s    [匹配任意空白符]</code></li>
-<li><code>\b    [匹配单词的开始或结束]</code></li>
-<li><code>*        [匹配0-n次连续出现的字符]</code></li>
-<li><code>+        [匹配1-n次连续出现的字符]</code></li>
-<li><code>?        [匹配0-1次出现的字符]</code></li>
-<li><code>^        [匹配相反的字符]</code></li>
-</ul>
-<hr>
-<pre><code>example：非（提取a标签内容）
-        <span class="char">$r</span>eg=<span class="string">'#&lt;a[^&gt;]*&gt;([^&lt;&gt;]*)&lt;\/a&gt;#'</span>;
-        <span class="char">$s</span>tr=<span class="comment">"&lt;a href='ssss'&gt;some&lt;/a&gt;other&lt;a href='ddd'&gt;some&lt;/a&gt;"</span>;
-        <span class="char">$r</span>es=preg_match_all(<span class="char">$r</span>eg,<span class="char">$s</span>tr,<span class="char">$m</span>);
-</code></pre></li>
-</ul>]]>
+    <![CDATA[正则速查]]>
     
     </summary>
     
@@ -1298,7 +1182,7 @@ example:否定环视,提取非p标签内的内容
     <link href="http://blog.newbmiao.com/2015/02/28/random-element-of-array-js.html"/>
     <id>http://blog.newbmiao.com/2015/02/28/random-element-of-array-js.html</id>
     <published>2015-02-28T11:27:15.000Z</published>
-    <updated>2015-08-10T02:10:10.000Z</updated>
+    <updated>2015-08-10T14:22:06.000Z</updated>
     <content type="html"><![CDATA[<h2 id="回顾2014的一个笔试题">回顾2014的一个笔试题</h2><p>Q:对一个数组（如[1,2,3,4,5]）的元素顺序打乱输出，到要求100次内不重复</p>
 <blockquote>
 <p>我当时的思路是Math.random()随机打乱+闭包函数保存已随机过的数组键拼接字符串用于唯一判断<br>但回来想保存值序列不更好么，另查了大神的打乱数组方式，综合一下，和大家分享</p>
@@ -1346,9 +1230,8 @@ randomSort(arr);
 <p>翻出来放这里，其实也是希望能够抛砖引玉，希望大家提点改进！</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="回顾2014的一个笔试题">回顾2014的一个笔试题</h2><p>Q:对一个数组（如[1,2,3,4,5]）的元素顺序打乱输出，到要求100次内不重复</p>
-<blockquote>
-<p>我当时的思路是Math.random()随机打乱+闭包函数保存已随机过]]>
+    <![CDATA[对数组元素打乱输出（不重复随机串）]]>
+    
     </summary>
     
       <category term="js" scheme="http://blog.newbmiao.com/tags/js/"/>
@@ -1361,10 +1244,10 @@ randomSort(arr);
   
   <entry>
     <title><![CDATA[html5拖拽2-chrome拖拽下载]]></title>
-    <link href="http://blog.newbmiao.com/2015/02/22/html5-drag-api2-chrome-drag-to-download.html"/>
-    <id>http://blog.newbmiao.com/2015/02/22/html5-drag-api2-chrome-drag-to-download.html</id>
+    <link href="http://blog.newbmiao.com/2015/02/22/html5-drag-api2-chrome-drag-to-downloa.html"/>
+    <id>http://blog.newbmiao.com/2015/02/22/html5-drag-api2-chrome-drag-to-downloa.html</id>
     <published>2015-02-22T14:39:00.000Z</published>
-    <updated>2015-08-10T02:10:10.000Z</updated>
+    <updated>2015-08-10T14:22:06.000Z</updated>
     <content type="html"><![CDATA[<ol>
 <li><p>接着上一文章，chrome中实现了文件的拖拽下载，和桌面互动的效果非常好。<br>   主要要求是在dataTransfer中设定文件的信息，信息需按以下格式：</p>
 <pre><code><span class="string">'MIMETYPE:文件名:文件URL'</span>
@@ -1387,9 +1270,8 @@ randomSort(arr);
 </ol>
 ]]></content>
     <summary type="html">
-    <![CDATA[<ol>
-<li><p>接着上一文章，chrome中实现了文件的拖拽下载，和桌面互动的效果非常好。<br>   主要要求是在dataTransfer中设定文件的信息，信息需按以下格式：</p>
-<pre><code><span class="string">'MIMETYPE:文]]>
+    <![CDATA[html5拖拽2-chrome拖拽下载]]>
+    
     </summary>
     
       <category term="chrome" scheme="http://blog.newbmiao.com/tags/chrome/"/>
@@ -1407,7 +1289,7 @@ randomSort(arr);
     <link href="http://blog.newbmiao.com/2015/02/22/html5-drag-api.html"/>
     <id>http://blog.newbmiao.com/2015/02/22/html5-drag-api.html</id>
     <published>2015-02-22T10:29:00.000Z</published>
-    <updated>2015-08-10T02:10:10.000Z</updated>
+    <updated>2015-08-10T14:22:06.000Z</updated>
     <content type="html"><![CDATA[<h2 id="概要">概要</h2><p>首先拖拽分两种：</p>
 <ul>
 <li>网页资源拖拽</li>
@@ -1456,16 +1338,7 @@ randomSort(arr);
 </blockquote>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="概要">概要</h2><p>首先拖拽分两种：</p>
-<ul>
-<li>网页资源拖拽</li>
-<li>本地资源拖拽</li>
-</ul>
-<p>然后拖拽实现需要：</p>
-<ul>
-<li>拖动放的设定</li>
-<li>释放方的设定<br>知道这两点就好弄了。</li>
-</ul>]]>
+    <![CDATA[html5的拖拽api]]>
     
     </summary>
     
@@ -1484,7 +1357,7 @@ randomSort(arr);
     <link href="http://blog.newbmiao.com/2015/02/13/hide-lamp-server-info.html"/>
     <id>http://blog.newbmiao.com/2015/02/13/hide-lamp-server-info.html</id>
     <published>2015-02-13T03:34:00.000Z</published>
-    <updated>2015-08-10T02:10:10.000Z</updated>
+    <updated>2015-08-10T14:22:06.000Z</updated>
     <content type="html"><![CDATA[<h3 id="隐藏_Apache_版本信息">隐藏 Apache 版本信息</h3><p> /etc/httpd/conf/httpd.conf(找不到可查看apache配置目录下的extra/httpd-default.conf,记得修改后引入此文件)</p>
 <pre><code><span class="keyword">ServerTokens</span> Prod
 <span class="keyword">ServerSignature</span> <span class="literal">Off</span>
@@ -1508,8 +1381,8 @@ expose_php <span class="keyword">Off</span>
 </blockquote>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h3 id="隐藏_Apache_版本信息">隐藏 Apache 版本信息</h3><p> /etc/httpd/conf/httpd.conf(找不到可查看apache配置目录下的extra/httpd-default.conf,记得修改后引入此文件)</p>
-<pre><c]]>
+    <![CDATA[隐藏服务器信息]]>
+    
     </summary>
     
       <category term="apache" scheme="http://blog.newbmiao.com/tags/apache/"/>
@@ -1525,7 +1398,7 @@ expose_php <span class="keyword">Off</span>
     <link href="http://blog.newbmiao.com/2015/01/11/php-jump-out-of-the-frameset.html"/>
     <id>http://blog.newbmiao.com/2015/01/11/php-jump-out-of-the-frameset.html</id>
     <published>2015-01-11T14:14:00.000Z</published>
-    <updated>2015-08-10T02:10:10.000Z</updated>
+    <updated>2015-08-10T14:22:06.000Z</updated>
     <content type="html"><![CDATA[<p>在后台管理系统中，一般使用框架集来分隔显示管理页面，但是若检测到session过期需要跳出框架集时，php后台要怎么操作？</p>
 <pre><code>if(no_login()){
     exit("<span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="ocaml">top.location.href=<span class="symbol">'login</span>.php';</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>");
@@ -1575,9 +1448,8 @@ expose_php <span class="keyword">Off</span>
 </blockquote>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>在后台管理系统中，一般使用框架集来分隔显示管理页面，但是若检测到session过期需要跳出框架集时，php后台要怎么操作？</p>
-<pre><code>if(no_login()){
-    exit("<span class="tag">&lt;<span class=]]>
+    <![CDATA[php后台跳出框架集]]>
+    
     </summary>
     
       <category term="js" scheme="http://blog.newbmiao.com/tags/js/"/>
@@ -1593,7 +1465,7 @@ expose_php <span class="keyword">Off</span>
     <link href="http://blog.newbmiao.com/2015/01/08/php-remove-json-string-slash.html"/>
     <id>http://blog.newbmiao.com/2015/01/08/php-remove-json-string-slash.html</id>
     <published>2015-01-08T14:46:00.000Z</published>
-    <updated>2015-08-10T02:10:10.000Z</updated>
+    <updated>2015-08-10T14:22:06.000Z</updated>
     <content type="html"><![CDATA[<p>今天做微信接口开发时，拿access_token去获取菜单，发现久违的<code>{&quot;errcode&quot;:40001,&quot;errmsg&quot;:&quot;invalid credential&quot;}</code>，之前也常遇到，总不知道为什么，这下研究了下，发现原因了：</p>
 <p>一般而言：</p>
 <blockquote>
@@ -1654,14 +1526,7 @@ expose_php <span class="keyword">Off</span>
 </blockquote>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>今天做微信接口开发时，拿access_token去获取菜单，发现久违的<code>{&quot;errcode&quot;:40001,&quot;errmsg&quot;:&quot;invalid credential&quot;}</code>，之前也常遇到，总不知道为什么，这下研究了下，发现原因了：</p>
-<p>一般而言：</p>
-<blockquote>
-<p>通过AJAX传到php的json字符串有时候加上反斜杠”\”来转义，php处理时需要先去掉反斜杠，然后再json_decode.<br>example：</p>
-</blockquote>
-<pre><code><span class="variable">$str</span> = stripslashes(<span class="variable">$_POST</span>[<span class="string">'json'</span>]);  
-<span class="variable">$arr</span> = json_decode(<span class="variable">$str</span>);  
-</code></pre><p>但是这次遇到的不是：<br>为了防止注入，在数据插入数据库前做了escape_like_str操作,而其又调用了escape_str（CI中mysql官方驱动代码如下）</p>]]>
+    <![CDATA[php去掉json字符串的“\”]]>
     
     </summary>
     
@@ -1680,7 +1545,7 @@ expose_php <span class="keyword">Off</span>
     <link href="http://blog.newbmiao.com/2015/01/08/ci-load-class-source-code-analysis.html"/>
     <id>http://blog.newbmiao.com/2015/01/08/ci-load-class-source-code-analysis.html</id>
     <published>2015-01-08T09:20:00.000Z</published>
-    <updated>2015-08-10T02:10:10.000Z</updated>
+    <updated>2015-08-10T14:22:06.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>今天用到CI的library加载，发现同一controller多次load同一library，并期望传入的参数（构造函数接收的参数）生效是不行的，没搞明白，就看了下他的源码</p>
 </blockquote>
@@ -1817,11 +1682,7 @@ expose_php <span class="keyword">Off</span>
 }
 </code></pre>]]></content>
     <summary type="html">
-    <![CDATA[<blockquote>
-<p>今天用到CI的library加载，发现同一controller多次load同一library，并期望传入的参数（构造函数接收的参数）生效是不行的，没搞明白，就看了下他的源码</p>
-</blockquote>
-<p>原来CI在load类初始化前，先判断CI这个全局对象已加载的类实例有无已加载过的，若有，便忽略不再加载，期望多次加载的以构造函数构造不同实例自然是不可得。<br>于是将构造函数修改属性替换为公有方法去操作。</p>
-<p><strong>总之，CI加载类只加载一次，不会重复加载，也就像单例模式了，应避免构造传参式修改类属性。</strong></p>]]>
+    <![CDATA[CI加载类源码分析]]>
     
     </summary>
     
