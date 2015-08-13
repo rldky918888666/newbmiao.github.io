@@ -23,6 +23,7 @@
     <updated>2015-08-10T01:30:00.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>然而,dropbox需翻墙又过于慢，已转投<a href="https://git.oschina.net/" target="_blank" rel="external">git@OSC</a>,可以免费设置公有私有仓库，git管理，还不错！</p>
+<p>如果非要同步，试试<a href="https://jianguoyun.com/" target="_blank" rel="external">坚果云</a></p>
 </blockquote>
 <p>相信弄Hexo博客的同仁们，费劲弄好的博客文章是不愿意出差错丢失、误删的。<br>于是，dropbox的自动同步就派上用场。</p>
 <h1 id="安装">安装</h1><p>dropbox采用在线安装，国内因为被墙，没法安装成功，可以去下边这个网址下载到离线安装包</p>
