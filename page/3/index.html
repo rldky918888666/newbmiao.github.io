@@ -83,74 +83,6 @@
     <div class="outer">
       <section id="main">
   
-    <article id="post-ci-load-class-source-code-analysis" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/01/08/ci-load-class-source-code-analysis.html" class="article-date">
-  <time datetime="2015-01-08T09:20:00.000Z" itemprop="datePublished">2015-01-08</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/php/">php</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/08/ci-load-class-source-code-analysis.html">CI加载类源码分析</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>今天用到CI的library加载，发现同一controller多次load同一library，并期望传入的参数（构造函数接收的参数）生效是不行的，没搞明白，就看了下他的源码</p>
-</blockquote>
-<p>原来CI在load类初始化前，先判断CI这个全局对象已加载的类实例有无已加载过的，若有，便忽略不再加载，期望多次加载的以构造函数构造不同实例自然是不可得。<br>于是将构造函数修改属性替换为公有方法去操作。</p>
-<p><strong>总之，CI加载类只加载一次，不会重复加载，也就像单例模式了，应避免构造传参式修改类属性。</strong></p>
-        
-          <p class="article-more-link">
-            <a href="/2015/01/08/ci-load-class-source-code-analysis.html#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="http://blog.newbmiao.com/2015/01/08/ci-load-class-source-code-analysis.html" data-id="cidcn3pjg003hlis65524cq54" class="article-share-link" data-share="baidu">分享到</a>
-      
-
-      
-        <a href="http://blog.newbmiao.com/2015/01/08/ci-load-class-source-code-analysis.html#ds-thread" class="article-comment-link">评论</a>
-      
-
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CI/">CI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
-
-      
-     
-     <span style="color:#999">
-&nbsp; | &nbsp;最近更新 ：<time datetime="2015-08-10T14:22:06.000Z" itemprop="dateModify">2015-08-10</time>
-</span>
-
-     
-<!-- 无觅 -->
-<script type="text/javascript" id="wumiiRelatedItems"></script>
-
-    </footer>
-  </div>
-</article>
-
-
-
-
-  
     <article id="post-build-your-git-server-on-linux" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2014/12/28/build-your-git-server-on-linux.html" class="article-date">
@@ -208,7 +140,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://blog.newbmiao.com/2014/12/28/build-your-git-server-on-linux.html" data-id="cidcn3pj4003blis69izex1k5" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="http://blog.newbmiao.com/2014/12/28/build-your-git-server-on-linux.html" data-id="cidcn58hu003ands6y2tnkh1m" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
@@ -252,10 +184,6 @@
       <ul>
         
           <li>
-            <a href="/2015/08/15/test.html">test</a>
-          </li>
-        
-          <li>
             <a href="/2015/08/08/auto-sync-your-mac-file-with-dropbox.html">dropbox同步你的mac文件</a>
           </li>
         
@@ -269,6 +197,10 @@
         
           <li>
             <a href="/2015/07/31/school-company-data-crawling.html">大学-公司数据爬取</a>
+          </li>
+        
+          <li>
+            <a href="/2015/07/18/typecho-to-hexo.html">typecho to hexo</a>
           </li>
         
       </ul>
@@ -299,7 +231,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">二月 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">十二月 2014</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">二月 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">十二月 2014</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 

@@ -3,21 +3,6 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/08/15/test.html</loc>
-    <lastmod>2015-08-15T05:45:18.000Z</lastmod>
-    <data>
-        <display>
-        <title>test</title>
-        <pubTime>2015-08-15T05:45:18.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://blog.newbmiao.com/2015/06/16/hexo-on-your-github.html</loc>
     <lastmod>2015-08-10T14:23:00.000Z</lastmod>
     <data>
@@ -55,6 +40,28 @@
            
              
               <breadCrumb title="mac" url="http://blog.newbmiao.com/categories/mac/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/02/28/regex-notes.html</loc>
+    <lastmod>2015-08-10T14:22:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>正则速查</title>
+        <pubTime>2015-02-28T11:40:00.000Z</pubTime>
+        
+        <tag>php </tag>
+         
+        <tag>regex </tag>
+         
+         
+           
+             
+              <breadCrumb title="notes" url="http://blog.newbmiao.com/categories/notes/"/>
           
         </display>
     </data>
@@ -123,28 +130,6 @@
            
              
               <breadCrumb title="hexo" url="http://blog.newbmiao.com/categories/hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.newbmiao.com/2015/02/13/hide-lamp-server-info.html</loc>
-    <lastmod>2015-08-10T14:22:06.000Z</lastmod>
-    <data>
-        <display>
-        <title>隐藏服务器信息</title>
-        <pubTime>2015-02-13T03:34:00.000Z</pubTime>
-        
-        <tag>apache </tag>
-         
-        <tag>php </tag>
-         
-         
-           
-             
-              <breadCrumb title="php" url="http://blog.newbmiao.com/categories/php/"/>
           
         </display>
     </data>
@@ -400,21 +385,21 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/02/28/regex-notes.html</loc>
+    <loc>http://blog.newbmiao.com/2015/02/13/hide-lamp-server-info.html</loc>
     <lastmod>2015-08-10T14:22:06.000Z</lastmod>
     <data>
         <display>
-        <title>正则速查</title>
-        <pubTime>2015-02-28T11:40:00.000Z</pubTime>
+        <title>隐藏服务器信息</title>
+        <pubTime>2015-02-13T03:34:00.000Z</pubTime>
         
-        <tag>php </tag>
+        <tag>apache </tag>
          
-        <tag>regex </tag>
+        <tag>php </tag>
          
          
            
              
-              <breadCrumb title="notes" url="http://blog.newbmiao.com/categories/notes/"/>
+              <breadCrumb title="php" url="http://blog.newbmiao.com/categories/php/"/>
           
         </display>
     </data>
