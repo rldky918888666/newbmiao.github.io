@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.newbmiao.com/2015/08/15/test.html</loc>
+    <lastmod>2015-08-15T05:48:21.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://blog.newbmiao.com/2015/06/16/hexo-on-your-github.html</loc>
     <lastmod>2015-08-10T14:23:00.000Z</lastmod>
   </url>
   
   <url>
     <loc>http://blog.newbmiao.com/2015/08/06/set-highlight-and-autoindent-in-vim-on-mac.html</loc>
-    <lastmod>2015-08-10T14:22:06.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://blog.newbmiao.com/2015/02/28/regex-notes.html</loc>
     <lastmod>2015-08-10T14:22:06.000Z</lastmod>
   </url>
   
@@ -28,6 +28,11 @@
   
   <url>
     <loc>http://blog.newbmiao.com/2015/07/18/typecho-to-hexo.html</loc>
+    <lastmod>2015-08-10T14:22:06.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.newbmiao.com/2015/02/13/hide-lamp-server-info.html</loc>
     <lastmod>2015-08-10T14:22:06.000Z</lastmod>
   </url>
   
@@ -87,7 +92,7 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/02/13/hide-lamp-server-info.html</loc>
+    <loc>http://blog.newbmiao.com/2015/02/28/regex-notes.html</loc>
     <lastmod>2015-08-10T14:22:06.000Z</lastmod>
   </url>
   
