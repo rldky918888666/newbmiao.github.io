@@ -5,7 +5,7 @@
   <subtitle><![CDATA[start from a newb...]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.newbmiao.com//"/>
-  <updated>2015-08-10T01:30:00.000Z</updated>
+  <updated>2015-08-15T05:43:22.000Z</updated>
   <id>http://blog.newbmiao.com//</id>
   
   <author>
@@ -14,6 +14,19 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[test]]></title>
+    <link href="http://blog.newbmiao.com/2015/08/15/test.html"/>
+    <id>http://blog.newbmiao.com/2015/08/15/test.html</id>
+    <published>2015-08-15T05:43:22.000Z</published>
+    <updated>2015-08-15T05:43:22.000Z</updated>
+    <content type="html"></content>
+    <summary type="html">
+    
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[dropbox同步你的mac文件]]></title>
@@ -1539,160 +1552,6 @@ expose_php <span class="keyword">Off</span>
       <category term="json" scheme="http://blog.newbmiao.com/tags/json/"/>
     
       <category term="mysql" scheme="http://blog.newbmiao.com/tags/mysql/"/>
-    
-      <category term="php" scheme="http://blog.newbmiao.com/categories/php/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[CI加载类源码分析]]></title>
-    <link href="http://blog.newbmiao.com/2015/01/08/ci-load-class-source-code-analysis.html"/>
-    <id>http://blog.newbmiao.com/2015/01/08/ci-load-class-source-code-analysis.html</id>
-    <published>2015-01-08T09:20:00.000Z</published>
-    <updated>2015-08-10T14:22:06.000Z</updated>
-    <content type="html"><![CDATA[<blockquote>
-<p>今天用到CI的library加载，发现同一controller多次load同一library，并期望传入的参数（构造函数接收的参数）生效是不行的，没搞明白，就看了下他的源码</p>
-</blockquote>
-<p>原来CI在load类初始化前，先判断CI这个全局对象已加载的类实例有无已加载过的，若有，便忽略不再加载，期望多次加载的以构造函数构造不同实例自然是不可得。<br>于是将构造函数修改属性替换为公有方法去操作。</p>
-<p><strong>总之，CI加载类只加载一次，不会重复加载，也就像单例模式了，应避免构造传参式修改类属性。</strong></p>
-<a id="more"></a>    
-<p><strong>附源码：</strong></p>
-<p>在system/loader.php</p>
-<pre><code><span class="comment">/**
- * Load class
- *
- * This function loads the requested class.
- *
- * <span class="doctag">@param</span>    string    the item that is being loaded
- * <span class="doctag">@param</span>    mixed    any additional parameters
- * <span class="doctag">@param</span>    string    an optional object name
- * <span class="doctag">@return</span>    void
- */</span>
-<span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">_ci_load_class</span><span class="params">(<span class="variable">$class</span>, <span class="variable">$params</span> = NULL, <span class="variable">$object_name</span> = NULL)</span>
-</span>{
-    <span class="comment">// Get the class name, and while we're at it trim any slashes.</span>
-    <span class="comment">// The directory path can be included as part of the class name,</span>
-    <span class="comment">// but we don't want a leading slash</span>
-    <span class="variable">$class</span> = str_replace(<span class="string">'.php'</span>, <span class="string">''</span>, trim(<span class="variable">$class</span>, <span class="string">'/'</span>));
-
-    <span class="comment">// Was the path included with the class name?</span>
-    <span class="comment">// We look for a slash to determine this</span>
-    <span class="variable">$subdir</span> = <span class="string">''</span>;
-    <span class="keyword">if</span> ((<span class="variable">$last_slash</span> = strrpos(<span class="variable">$class</span>, <span class="string">'/'</span>)) !== <span class="keyword">FALSE</span>)
-    {
-        <span class="comment">// Extract the path</span>
-        <span class="variable">$subdir</span> = substr(<span class="variable">$class</span>, <span class="number">0</span>, <span class="variable">$last_slash</span> + <span class="number">1</span>);
-
-        <span class="comment">// Get the filename from the path</span>
-        <span class="variable">$class</span> = substr(<span class="variable">$class</span>, <span class="variable">$last_slash</span> + <span class="number">1</span>);
-    }
-
-    <span class="comment">// We'll test for both lowercase and capitalized versions of the file name</span>
-    <span class="keyword">foreach</span> (<span class="keyword">array</span>(ucfirst(<span class="variable">$class</span>), strtolower(<span class="variable">$class</span>)) <span class="keyword">as</span> <span class="variable">$class</span>)
-    {
-        <span class="variable">$subclass</span> = APPPATH.<span class="string">'libraries/'</span>.<span class="variable">$subdir</span>.config_item(<span class="string">'subclass_prefix'</span>).<span class="variable">$class</span>.<span class="string">'.php'</span>;
-
-        <span class="comment">// Is this a class extension request?</span>
-        <span class="keyword">if</span> (file_exists(<span class="variable">$subclass</span>))
-        {
-            <span class="variable">$baseclass</span> = BASEPATH.<span class="string">'libraries/'</span>.ucfirst(<span class="variable">$class</span>).<span class="string">'.php'</span>;
-
-            <span class="keyword">if</span> ( ! file_exists(<span class="variable">$baseclass</span>))
-            {
-                log_message(<span class="string">'error'</span>, <span class="string">"Unable to load the requested class: "</span>.<span class="variable">$class</span>);
-                show_error(<span class="string">"Unable to load the requested class: "</span>.<span class="variable">$class</span>);
-            }
-
-            <span class="comment">// Safety:  Was the class already loaded by a previous call?</span>
-            <span class="keyword">if</span> (in_array(<span class="variable">$subclass</span>, <span class="variable">$this</span>-&gt;_ci_loaded_files))
-            {
-                <span class="comment">// Before we deem this to be a duplicate request, let's see</span>
-                <span class="comment">// if a custom object name is being supplied.  If so, we'll</span>
-                <span class="comment">// return a new instance of the object</span>
-                <span class="keyword">if</span> ( ! is_null(<span class="variable">$object_name</span>))
-                {
-                    <span class="variable">$CI</span> =&amp; get_instance();
-                    <span class="keyword">if</span> ( ! <span class="keyword">isset</span>(<span class="variable">$CI</span>-&gt;<span class="variable">$object_name</span>))
-                    {
-                        <span class="keyword">return</span> <span class="variable">$this</span>-&gt;_ci_init_class(<span class="variable">$class</span>, config_item(<span class="string">'subclass_prefix'</span>), <span class="variable">$params</span>, <span class="variable">$object_name</span>);
-                    }
-                }
-
-                <span class="variable">$is_duplicate</span> = <span class="keyword">TRUE</span>;
-                log_message(<span class="string">'debug'</span>, <span class="variable">$class</span>.<span class="string">" class already loaded. Second attempt ignored."</span>);
-                <span class="keyword">return</span>;
-            }
-
-            <span class="keyword">include_once</span>(<span class="variable">$baseclass</span>);
-            <span class="keyword">include_once</span>(<span class="variable">$subclass</span>);
-            <span class="variable">$this</span>-&gt;_ci_loaded_files[] = <span class="variable">$subclass</span>;
-
-            <span class="keyword">return</span> <span class="variable">$this</span>-&gt;_ci_init_class(<span class="variable">$class</span>, config_item(<span class="string">'subclass_prefix'</span>), <span class="variable">$params</span>, <span class="variable">$object_name</span>);
-        }
-
-        <span class="comment">// Lets search for the requested library file and load it.</span>
-        <span class="variable">$is_duplicate</span> = <span class="keyword">FALSE</span>;
-        <span class="keyword">foreach</span> (<span class="variable">$this</span>-&gt;_ci_library_paths <span class="keyword">as</span> <span class="variable">$path</span>)
-        {
-            <span class="variable">$filepath</span> = <span class="variable">$path</span>.<span class="string">'libraries/'</span>.<span class="variable">$subdir</span>.<span class="variable">$class</span>.<span class="string">'.php'</span>;
-
-            <span class="comment">// Does the file exist?  No?  Bummer...</span>
-            <span class="keyword">if</span> ( ! file_exists(<span class="variable">$filepath</span>))
-            {
-                <span class="keyword">continue</span>;
-            }
-
-            <span class="comment">// Safety:  Was the class already loaded by a previous call?</span>
-            <span class="keyword">if</span> (in_array(<span class="variable">$filepath</span>, <span class="variable">$this</span>-&gt;_ci_loaded_files))
-            {
-                <span class="comment">// Before we deem this to be a duplicate request, let's see</span>
-                <span class="comment">// if a custom object name is being supplied.  If so, we'll</span>
-                <span class="comment">// return a new instance of the object</span>
-                <span class="keyword">if</span> ( ! is_null(<span class="variable">$object_name</span>))
-                {
-                    <span class="variable">$CI</span> =&amp; get_instance();
-                    <span class="keyword">if</span> ( ! <span class="keyword">isset</span>(<span class="variable">$CI</span>-&gt;<span class="variable">$object_name</span>))
-                    {
-                        <span class="keyword">return</span> <span class="variable">$this</span>-&gt;_ci_init_class(<span class="variable">$class</span>, <span class="string">''</span>, <span class="variable">$params</span>, <span class="variable">$object_name</span>);
-                    }
-                }
-
-                <span class="variable">$is_duplicate</span> = <span class="keyword">TRUE</span>;
-                log_message(<span class="string">'debug'</span>, <span class="variable">$class</span>.<span class="string">" class already loaded. Second attempt ignored."</span>);
-                <span class="keyword">return</span>;
-            }
-
-            <span class="keyword">include_once</span>(<span class="variable">$filepath</span>);
-            <span class="variable">$this</span>-&gt;_ci_loaded_files[] = <span class="variable">$filepath</span>;
-            <span class="keyword">return</span> <span class="variable">$this</span>-&gt;_ci_init_class(<span class="variable">$class</span>, <span class="string">''</span>, <span class="variable">$params</span>, <span class="variable">$object_name</span>);
-        }
-
-    } <span class="comment">// END FOREACH</span>
-
-    <span class="comment">// One last attempt.  Maybe the library is in a subdirectory, but it wasn't specified?</span>
-    <span class="keyword">if</span> (<span class="variable">$subdir</span> == <span class="string">''</span>)
-    {
-        <span class="variable">$path</span> = strtolower(<span class="variable">$class</span>).<span class="string">'/'</span>.<span class="variable">$class</span>;
-        <span class="keyword">return</span> <span class="variable">$this</span>-&gt;_ci_load_class(<span class="variable">$path</span>, <span class="variable">$params</span>);
-    }
-
-    <span class="comment">// If we got this far we were unable to find the requested class.</span>
-    <span class="comment">// We do not issue errors if the load call failed due to a duplicate request</span>
-    <span class="keyword">if</span> (<span class="variable">$is_duplicate</span> == <span class="keyword">FALSE</span>)
-    {
-        log_message(<span class="string">'error'</span>, <span class="string">"Unable to load the requested class: "</span>.<span class="variable">$class</span>);
-        show_error(<span class="string">"Unable to load the requested class: "</span>.<span class="variable">$class</span>);
-    }
-}
-</code></pre>]]></content>
-    <summary type="html">
-    <![CDATA[CI加载类源码分析]]>
-    
-    </summary>
-    
-      <category term="CI" scheme="http://blog.newbmiao.com/tags/CI/"/>
-    
-      <category term="php" scheme="http://blog.newbmiao.com/tags/php/"/>
     
       <category term="php" scheme="http://blog.newbmiao.com/categories/php/"/>
     
