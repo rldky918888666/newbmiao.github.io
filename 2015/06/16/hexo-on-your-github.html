@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://blog.newbmiao.com/2015/06/16/hexo-on-your-github.html">
 <meta property="og:site_name" content="菜鸟Miao">
 <meta property="og:description" content="hexo-on-your-github">
-<meta property="og:updated_time" content="2016-07-07T13:09:18.000Z">
+<meta property="og:updated_time" content="2016-07-08T14:17:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建你自己的Hexo博客">
 <meta name="twitter:description" content="hexo-on-your-github">
@@ -114,33 +114,14 @@
 	
         <div id="toc" class="toc-article">
          <h3>文章目录</h3>
-         <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#hexo安装"><span class="toc-number">1.</span> <span class="toc-text">hexo安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#创建博客"><span class="toc-number">2.</span> <span class="toc-text">创建博客</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#hexo-landscape-plus主题"><span class="toc-number">3.</span> <span class="toc-text">hexo landscape-plus主题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#deploy"><span class="toc-number">4.</span> <span class="toc-text">deploy</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#技巧"><span class="toc-number">5.</span> <span class="toc-text">技巧</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#plugin"><span class="toc-number">6.</span> <span class="toc-text">plugin</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#其他插件"><span class="toc-number">6.1.</span> <span class="toc-text">其他插件</span></a></li></ol></li></ol>
+         <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#hexo安装"><span class="toc-number">1.</span> <span class="toc-text">hexo安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#创建博客"><span class="toc-number">2.</span> <span class="toc-text">创建博客</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#hexo-landscape-plus主题"><span class="toc-number">3.</span> <span class="toc-text">hexo landscape-plus主题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#deploy"><span class="toc-number">4.</span> <span class="toc-text">deploy</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#技巧"><span class="toc-number">5.</span> <span class="toc-text">技巧</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#plugin"><span class="toc-number">6.</span> <span class="toc-text">plugin</span></a></li></ol>
         </div>
         
         <p><strong>Hexo</strong>基于node.js,可用于生成静态博客，结合github和Mac，可以专注创作了。<br>深入学习见文末引用。</p>
 <h4 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h4><pre><code>brew install node
 sudo npm install hexo-cli -g  #全局安装
-</code></pre><h4 id="创建博客"><a href="#创建博客" class="headerlink" title="创建博客"></a>创建博客</h4><p>Hexo使用命令:</p>
-<pre><code>hexo init &lt;folder&gt;  #执行init命令初始化hexo到你指定的目录
-hexo new [layout] &lt;title&gt; #创建文章
-hexo new page &lt;title&gt; #生成新页面
-hexo generate       #自动根据当前目录下文件,生成静态网页
-    -d #deploy after
-    -w #查看文件变化
-hexo publish [layout] &lt;filename&gt; #发布草稿
-hexo server         #运行本地服务
-    -p #端口
-    -s #只生成静态文件
-    -l #生成log
-    --draft 连草稿也生成预览
-hexo deploy
-    -g #generate before
-hexo render &lt;file1&gt; [file2] ...
-    -o #output destination
-hexo migrate &lt;type&gt; #Migrates content from other blog systems.
-hexo clean #Cleans the cache file (db.json) and generated files (public).
-hexo list &lt;type&gt; #Lists all routes.
-</code></pre><a id="more"></a>
+</code></pre><h4 id="创建博客"><a href="#创建博客" class="headerlink" title="创建博客"></a>创建博客</h4><p>Hexo使用命令:<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">hexo init <span class="variable">&lt;folder&gt;</span>  <span class="comment">#执行init命令初始化hexo到你指定的目录</span></div><div class="line">hexo new [layout] <span class="variable">&lt;title&gt;</span> <span class="comment">#创建文章</span></div><div class="line">hexo new page <span class="variable">&lt;title&gt;</span> <span class="comment">#生成新页面</span></div><div class="line">hexo generate       <span class="comment">#自动根据当前目录下文件,生成静态网页</span></div><div class="line">	-d <span class="comment">#deploy after</span></div><div class="line">	-w <span class="comment">#查看文件变化</span></div><div class="line">hexo publish [layout] <span class="variable">&lt;filename&gt;</span> <span class="comment">#发布草稿</span></div><div class="line">hexo server         <span class="comment">#运行本地服务</span></div><div class="line">	-p <span class="comment">#端口</span></div><div class="line">	-s <span class="comment">#只生成静态文件</span></div><div class="line">	-l <span class="comment">#生成log</span></div><div class="line">	--draft 连草稿也生成预览</div><div class="line">hexo deploy</div><div class="line">	-g <span class="comment">#generate before</span></div><div class="line">hexo render <span class="variable">&lt;file1&gt;</span> [file2] ...</div><div class="line">	-o <span class="comment">#output destination</span></div><div class="line">hexo migrate <span class="variable">&lt;type&gt;</span> <span class="comment">#Migrates content from other blog systems.</span></div><div class="line">hexo clean <span class="comment">#Cleans the cache file (db.json) and generated files (public).</span></div><div class="line">hexo list <span class="variable">&lt;type&gt;</span> <span class="comment">#Lists all routes.</span></div></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <h4 id="hexo-landscape-plus主题"><a href="#hexo-landscape-plus主题" class="headerlink" title="hexo landscape-plus主题"></a>hexo landscape-plus主题</h4><pre><code>git clone https://github.com/xiangming/landscape-plus.git themes/landscape-plus
 #修改hexo的配置文件_config.yml
 theme:landscape-plus
@@ -163,47 +144,14 @@ tag_map:
   css: css
   html5: html5
 </code></pre><h4 id="plugin"><a href="#plugin" class="headerlink" title="plugin"></a>plugin</h4><ul>
-<li>hexo-migrator-rss</li>
 <li>hexo-generator-sitemap</li>
 <li>hexo-generator-feed</li>
-<li>hexo-html-minifier</li>
-<li>hexo-uglify</li>
-<li>hexo-clean-css</li>
-<li>hexo-console-optimize：html+css+js优化<ul>
-<li>hexo o #优化,替代了 hexo g</li>
-</ul>
-</li>
 </ul>
 <hr>
-<pre><code>#安装
-npm install hexo-migrator-rss --save
-npm install hexo-generator-sitemap
-npm install hexo-generator-baidu-sitemap --save #针对baidusitemap的优化
-npm install hexo-generator-feed     --save
-npm install hexo-console-optimize --save #安装
-</code></pre><hr>
-<pre><code>#根目录下_config.yml添加
-#Extensions
-plugins:
-- hexo-generator-feed
-- hexo-generator-sitemap
-- hexo-generator-baidu-sitemap
-- hexo-console-optimize
-#Feed Atom
-feed:
-  type: atom
-  path: atom.xml
-  limit: 20
-#sitemap
-#sitemap:
-#  path: sitemap.xml #要与baidusitemap.xml共存时需注释
-
-baidusitemap:
-  path:                 #默认 baidusitemap.xml，不需设置：
-</code></pre><hr>
-<h5 id="其他插件"><a href="#其他插件" class="headerlink" title="其他插件"></a>其他插件</h5><p><del>hexo-html-minifier <a href="https://github.com/hexojs/hexo-html-minifier" target="_blank" rel="external">https://github.com/hexojs/hexo-html-minifier</a></del><br><del>HTML压缩插件 (!安装会无法generate，最后还是卸载此插件)</del></p>
-<p>hexo-uglify <a href="https://github.com/hexojs/hexo-uglify" target="_blank" rel="external">https://github.com/hexojs/hexo-uglify</a><br>JavaScript压缩插件</p>
-<p>hexo-clean-css <a href="https://github.com/hexojs/hexo-clean-css" target="_blank" rel="external">https://github.com/hexojs/hexo-clean-css</a><br>css压缩插件</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#安装</span></div><div class="line"><span class="built_in">npm</span> install hexo-generator-sitemap --save</div><div class="line"><span class="built_in">npm</span> install hexo-generator-baidu-sitemap --save <span class="comment">#针对baidusitemap的优化</span></div><div class="line"><span class="built_in">npm</span> install hexo-generator-feed	 --save <span class="comment">#3.2.2版本会有错误提示但不影响使用</span></div><div class="line"><span class="built_in">npm</span> install hexo-<span class="built_in">console</span>-optimize --save <span class="comment">#安装 3.2.2版本会加载失败</span></div></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#根目录下_config.yml添加</span></div><div class="line"><span class="meta">#Extensions</span></div><div class="line"><span class="symbol">plugins:</span> <span class="meta">#目前最新版3.2.2不需设置此节点，不然连server等plugin也要写这</span></div><div class="line">- hexo-generator-feed</div><div class="line">- hexo-generator-sitemap</div><div class="line">- hexo-generator-baidu-sitemap</div><div class="line">- hexo-console-optimize</div><div class="line"><span class="meta">#Feed Atom</span></div><div class="line"><span class="symbol">feed:</span></div><div class="line"><span class="symbol">	 type:</span> atom</div><div class="line"><span class="symbol">	 path:</span> atom.xml</div><div class="line"><span class="symbol">  limit:</span> <span class="number">20</span></div><div class="line"></div><div class="line"><span class="meta">#sitemap:</span></div><div class="line"><span class="meta">#  path: sitemap.xml #要与baidusitemap.xml共存时需注释</span></div><div class="line"><span class="symbol"></span></div><div class="line">baidusitemap:</div><div class="line"><span class="symbol">     path:</span> 				<span class="meta">#默认 baidusitemap.xml，不需设置：</span></div></pre></td></tr></table></figure>
+<hr>
 <ul>
 <li><p>duoshuo 评论</p>
 <blockquote>
@@ -217,30 +165,8 @@ baidusitemap:
 </li>
 </ul>
 <hr>
-<pre><code>vim themes\modernist\layout\_partial\baidu_tongji.ejs
-# 添加
-&lt;% if (theme.baidu_tongji){ %&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-# 你的百度统计代码
-&lt;/script&gt;
-&lt;% } %&gt;
-# 注册并登录百度统计获取你的统计代码。并设置关闭显示百度图标
-
- vim themes\modernist\layout\_partial\head.ejs
-# 在『/head』之前增加：
-
-&lt;%- partial(&apos;baidu_tongji&apos;) %&gt;
-# 重新生成并部署你的站点。
-vim themes/landscape-plus/_config.yml
-# menu下加
-rss: /atom.xml
-
-# Duoshuo
-duoshuo_shortname: XXX
-
-# Baidu tongji
-baidu_tongji: true
-</code></pre><hr>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">vim themes\modernist\layout\_partial\baidu_tongji.ejs</div><div class="line"><span class="meta"># 添加</span></div><div class="line">&lt;% <span class="keyword">if</span> (theme.baidu_tongji)&#123; %&gt;</div><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line"><span class="meta"># 你的百度统计代码</span></div><div class="line">&lt;/script&gt;</div><div class="line">&lt;% &#125; %&gt;</div><div class="line"><span class="meta"># 注册并登录百度统计获取你的统计代码。并设置关闭显示百度图标</span></div><div class="line"></div><div class="line">	vim themes\modernist\layout\_partial\head.ejs</div><div class="line"><span class="meta"># 在『/head』之前增加：</span></div><div class="line"></div><div class="line">&lt;%- partial(<span class="string">'baidu_tongji'</span>) %&gt;</div><div class="line"><span class="meta"># 重新生成并部署你的站点。</span></div><div class="line">vim themes/landscape-plus/_config.yml</div><div class="line"><span class="meta"># menu下加</span></div><div class="line">rss: /atom.xml</div><div class="line"></div><div class="line"><span class="meta"># Duoshuo</span></div><div class="line">duoshuo_shortname: XXX</div><div class="line"></div><div class="line"><span class="meta"># Baidu tongji</span></div><div class="line">baidu_tongji: <span class="literal">true</span></div></pre></td></tr></table></figure>
+<hr>
 <ul>
 <li><p>不蒜子</p>
 <blockquote>
@@ -266,66 +192,27 @@ baidu_tongji: true
 </blockquote>
 </li>
 </ul>
-<p>脚本批量修改下吧~~</p>
-<pre><code>&lt;?php
-//标题和 #中间要有空格
-function listDir($dir) {
-    static $res = array();
-    if (!file_exists($dir) || !is_dir($dir)) {
-        return array();
-    }
-    $dirHandle = opendir($dir);
-    while ($file = readdir($dirHandle)) {
-        if ($file !== &apos;.&apos; &amp;&amp; $file !== &apos;..&apos;) {
-            $tmp = $dir . &quot;/&quot; . $file;
-            if (is_dir($tmp)) {
-                listDir($tmp);
-            } else if (stripos($file, &quot;.md&quot;) !== false) {
-                $res[] = $tmp;
-            }
-        };
-    };
-    closedir($dirHandle);
-    return $res;
-}
-
-$path  = &apos;/pathto/blog/source/_posts&apos;;
-$files = listDir($path);
-foreach ($files as $file) {
-    file_put_contents($file,
-        preg_replace(&apos;/^(#+)([^#\s]+)/m&apos;, &apos;$1 $2&apos;, file_get_contents($file)));
-}
-echo &apos;ok&apos;;
-</code></pre><ul>
-<li>不升级</li>
+<p>脚本批量修改下吧~~<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?php</span></span></div><div class="line"><span class="comment">//标题和 #中间要有空格</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">listDir</span><span class="params">($dir)</span> </span>&#123;</div><div class="line">    <span class="keyword">static</span> $res = <span class="keyword">array</span>();</div><div class="line">    <span class="keyword">if</span> (!file_exists($dir) || !is_dir($dir)) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">array</span>();</div><div class="line">    &#125;</div><div class="line">    $dirHandle = opendir($dir);</div><div class="line">    <span class="keyword">while</span> ($file = readdir($dirHandle)) &#123;</div><div class="line">        <span class="keyword">if</span> ($file !== <span class="string">'.'</span> &amp;&amp; $file !== <span class="string">'..'</span>) &#123;</div><div class="line">            $tmp = $dir . <span class="string">"/"</span> . $file;</div><div class="line">            <span class="keyword">if</span> (is_dir($tmp)) &#123;</div><div class="line">                listDir($tmp);</div><div class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (stripos($file, <span class="string">".md"</span>) !== <span class="keyword">false</span>) &#123;</div><div class="line">                $res[] = $tmp;</div><div class="line">            &#125;</div><div class="line">        &#125;;</div><div class="line">    &#125;;</div><div class="line">    closedir($dirHandle);</div><div class="line">    <span class="keyword">return</span> $res;</div><div class="line">&#125;</div><div class="line"></div><div class="line">$path  = <span class="string">'/pathto/blog/source/_posts'</span>;</div><div class="line">$files = listDir($path);</div><div class="line"><span class="keyword">foreach</span> ($files <span class="keyword">as</span> $file) &#123;</div><div class="line">    file_put_contents($file,</div><div class="line">        preg_replace(<span class="string">'/^(#+)([^#\s]+)/m'</span>, <span class="string">'$1 $2'</span>, file_get_contents($file)));</div><div class="line">&#125;</div><div class="line"><span class="keyword">echo</span> <span class="string">'ok'</span>;</div></pre></td></tr></table></figure></p>
+<ul>
+<li>升级错误（至3.2.2）<blockquote>
+<p>－ hexo-console-optimize<br>3.2.2开始hexo-console-optimize却少依赖不能成功，按提示缺少的安装可以成功，但已放弃使用<br>－ hexo-generator-feed<br>另外hexo-generator-feed会有报错提示，但不影响使用</p>
+<ul>
+<li>plugin配置不需设置<br>3.2.2不需设置此节点，不然所有plugin也要写</li>
 </ul>
-<p>hexo 升级会有很多麻烦，避免出现错误，用于记录plugin版本的package.json记录在这</p>
-<pre><code>{
-  &quot;name&quot;: &quot;hexo-site&quot;,
-  &quot;version&quot;: &quot;0.0.0&quot;,
-  &quot;private&quot;: true,
-  &quot;hexo&quot;: {
-    &quot;version&quot;: &quot;3.1.1&quot;
-  },
-  &quot;dependencies&quot;: {
-    &quot;hexo&quot;: &quot;^3.1.1&quot;,
-    &quot;hexo-console-optimize&quot;: &quot;0.0.5&quot;,
-    &quot;hexo-deployer-git&quot;: &quot;0.0.4&quot;,
-    &quot;hexo-generator-archive&quot;: &quot;^0.1.2&quot;,
-    &quot;hexo-generator-baidu-sitemap&quot;: &quot;^0.1.1&quot;,
-    &quot;hexo-generator-category&quot;: &quot;^0.1.2&quot;,
-    &quot;hexo-generator-feed&quot;: &quot;~1.0.3&quot;,
-    &quot;hexo-generator-index&quot;: &quot;^0.1.2&quot;,
-    &quot;hexo-generator-tag&quot;: &quot;^0.1.1&quot;,
-    &quot;hexo-renderer-ejs&quot;: &quot;^0.1.0&quot;,
-    &quot;hexo-renderer-marked&quot;: &quot;^0.2.4&quot;,
-    &quot;hexo-renderer-stylus&quot;: &quot;^0.2.0&quot;,
-    &quot;hexo-server&quot;: &quot;^0.1.2&quot;
-  }
-}
-</code></pre><ul>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>hexo3.2.2 package.json</p>
+</blockquote>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"name"</span>: <span class="string">"hexo-site"</span>,</div><div class="line">  <span class="attr">"version"</span>: <span class="string">"0.0.0"</span>,</div><div class="line">  <span class="attr">"private"</span>: <span class="literal">true</span>,</div><div class="line">  <span class="attr">"hexo"</span>: &#123;</div><div class="line">    <span class="attr">"version"</span>: <span class="string">"3.2.2"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"dependencies"</span>: &#123;</div><div class="line">    <span class="attr">"hexo"</span>: <span class="string">"^3.2.2"</span>,</div><div class="line">    <span class="attr">"hexo-deployer-git"</span>: <span class="string">"^0.2.0"</span>,</div><div class="line">    <span class="attr">"hexo-generator-archive"</span>: <span class="string">"^0.1.4"</span>,</div><div class="line">    <span class="attr">"hexo-generator-baidu-sitemap"</span>: <span class="string">"^0.1.2"</span>,</div><div class="line">    <span class="attr">"hexo-generator-category"</span>: <span class="string">"^0.1.3"</span>,</div><div class="line">    <span class="attr">"hexo-generator-feed"</span>: <span class="string">"^1.1.0"</span>,</div><div class="line">    <span class="attr">"hexo-generator-index"</span>: <span class="string">"^0.2.0"</span>,</div><div class="line">    <span class="attr">"hexo-generator-sitemap"</span>: <span class="string">"^1.1.2"</span>,</div><div class="line">    <span class="attr">"hexo-generator-tag"</span>: <span class="string">"^0.2.0"</span>,</div><div class="line">    <span class="attr">"hexo-migrator-rss"</span>: <span class="string">"^0.1.2"</span>,</div><div class="line">    <span class="attr">"hexo-renderer-ejs"</span>: <span class="string">"^0.2.0"</span>,</div><div class="line">    <span class="attr">"hexo-renderer-marked"</span>: <span class="string">"^0.2.11"</span>,</div><div class="line">    <span class="attr">"hexo-renderer-stylus"</span>: <span class="string">"^0.3.1"</span>,</div><div class="line">    <span class="attr">"hexo-server"</span>: <span class="string">"^0.2.0"</span>,</div><div class="line">    <span class="attr">"hexo-tag-bootstrap"</span>: <span class="string">"0.0.8"</span>,</div><div class="line">    <span class="attr">"minimatch"</span>: <span class="string">"^3.0.2"</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>update</p>
+<ul>
 <li>atom编辑器+atom-hexo</li>
 </ul>
+</blockquote>
 <p>好用不多说！<br><a href="https://github.com/atom/atom/releases" target="_blank" rel="external">atom</a><br><a href="https://github.com/heroicyang/atom-hexo" target="_blank" rel="external">atom-hexo</a></p>
 <blockquote>
 <p>参考自：<br><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">hexo-your-blog</a><br>深入学习，请看<a href="https://hexo.io/docs/" target="_blank" rel="external">官方文档</a></p>
@@ -359,7 +246,7 @@ echo &apos;ok&apos;;
        
      
      <span style="color:#999">
-&nbsp; | &nbsp;最近更新 ：<time datetime="2016-07-07T13:09:18.000Z" itemprop="dateModify">2016-07-07</time>
+&nbsp; | &nbsp;最近更新 ：<time datetime="2016-07-08T14:17:36.000Z" itemprop="dateModify">2016-07-08</time>
 </span>
 
      

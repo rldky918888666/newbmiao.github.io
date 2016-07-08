@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.newbmiao.com/2015/06/16/hexo-on-your-github.html</loc>
+    
+    <lastmod>2016-07-08T14:17:36.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.newbmiao.com/2015/10/16/gearman-beginer-guide.html</loc>
     
     <lastmod>2016-07-07T13:45:11.000Z</lastmod>
@@ -10,13 +17,6 @@
   
   <url>
     <loc>http://blog.newbmiao.com/2015/02/13/hide-lamp-server-info.html</loc>
-    
-    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.newbmiao.com/add-ons/index.html</loc>
     
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
     
@@ -107,6 +107,13 @@
   </url>
   
   <url>
+    <loc>http://blog.newbmiao.com/add-ons/index.html</loc>
+    
+    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.newbmiao.com/2015/09/01/use-fastcgi_finish_request-speed-up-your-page.html</loc>
     
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
@@ -142,7 +149,7 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-bash.html</loc>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-basis.html</loc>
     
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     
@@ -177,13 +184,6 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-quota.html</loc>
-    
-    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.newbmiao.com/2015/11/28/shadowsocks-polipo-vps.html</loc>
     
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
@@ -198,7 +198,7 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/16/Niaoge-Linux-Desktop-Guide-notes-daemon.html</loc>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-quota.html</loc>
     
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     
@@ -226,6 +226,13 @@
   </url>
   
   <url>
+    <loc>http://blog.newbmiao.com/2015/09/16/Niaoge-Linux-Desktop-Guide-notes-daemon.html</loc>
+    
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-process.html</loc>
     
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
@@ -240,7 +247,7 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-ACL.html</loc>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-bash.html</loc>
     
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     
@@ -254,7 +261,7 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-basis.html</loc>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-ACL.html</loc>
     
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     
@@ -283,13 +290,6 @@
   
   <url>
     <loc>http://blog.newbmiao.com/2015/07/18/typecho-to-hexo.html</loc>
-    
-    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.newbmiao.com/2015/06/16/hexo-on-your-github.html</loc>
     
     <lastmod>2016-07-07T13:09:18.000Z</lastmod>
     

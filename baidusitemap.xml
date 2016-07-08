@@ -4,6 +4,31 @@
 
     
   <url>
+    <loc>http://blog.newbmiao.com/2015/06/16/hexo-on-your-github.html</loc>
+    <lastmod>2016-07-08T14:17:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>搭建你自己的Hexo博客</title>
+        <pubTime>2015-06-16T12:23:25.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>blog</tag>
+         
+         
+           
+             
+              <breadCrumb title="blog" url="http://blog.newbmiao.com/categories/blog/"/>
+          
+             
+              <breadCrumb title="hexo" url="http://blog.newbmiao.com/categories/blog/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.newbmiao.com/2015/10/16/gearman-beginer-guide.html</loc>
     <lastmod>2016-07-07T13:45:11.000Z</lastmod>
     <data>
@@ -44,7 +69,6 @@
     </data>
     </url>
 
-    
     
     
     
@@ -251,6 +275,7 @@
     </url>
 
     
+    
   <url>
     <loc>http://blog.newbmiao.com/2015/09/01/use-fastcgi_finish_request-speed-up-your-page.html</loc>
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
@@ -360,12 +385,12 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-bash.html</loc>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-basis.html</loc>
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     <data>
         <display>
-        <title>鸟哥的Linux私房菜笔记-bash</title>
-        <pubTime>2015-09-15T09:28:15.000Z</pubTime>
+        <title>鸟哥的Linux私房菜笔记-基础</title>
+        <pubTime>2015-09-15T09:16:16.000Z</pubTime>
         
         <tag>linux</tag>
          
@@ -473,31 +498,6 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-quota.html</loc>
-    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>鸟哥的Linux私房菜笔记-配额</title>
-        <pubTime>2015-09-15T09:37:30.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-        <tag>notes</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="http://blog.newbmiao.com/categories/linux/"/>
-          
-             
-              <breadCrumb title="notes" url="http://blog.newbmiao.com/categories/linux/notes/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://blog.newbmiao.com/2015/11/28/shadowsocks-polipo-vps.html</loc>
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     <data>
@@ -545,12 +545,12 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/16/Niaoge-Linux-Desktop-Guide-notes-daemon.html</loc>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-quota.html</loc>
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     <data>
         <display>
-        <title>鸟哥的Linux私房菜笔记-系统服务</title>
-        <pubTime>2015-09-16T09:41:50.000Z</pubTime>
+        <title>鸟哥的Linux私房菜笔记-配额</title>
+        <pubTime>2015-09-15T09:37:30.000Z</pubTime>
         
         <tag>linux</tag>
          
@@ -639,6 +639,31 @@
 
     
   <url>
+    <loc>http://blog.newbmiao.com/2015/09/16/Niaoge-Linux-Desktop-Guide-notes-daemon.html</loc>
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>鸟哥的Linux私房菜笔记-系统服务</title>
+        <pubTime>2015-09-16T09:41:50.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>notes</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://blog.newbmiao.com/categories/linux/"/>
+          
+             
+              <breadCrumb title="notes" url="http://blog.newbmiao.com/categories/linux/notes/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-process.html</loc>
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     <data>
@@ -689,12 +714,12 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-ACL.html</loc>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-bash.html</loc>
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     <data>
         <display>
-        <title>鸟哥的Linux私房菜笔记-权限管理</title>
-        <pubTime>2015-09-15T09:34:48.000Z</pubTime>
+        <title>鸟哥的Linux私房菜笔记-bash</title>
+        <pubTime>2015-09-15T09:28:15.000Z</pubTime>
         
         <tag>linux</tag>
          
@@ -736,12 +761,12 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-basis.html</loc>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-ACL.html</loc>
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     <data>
         <display>
-        <title>鸟哥的Linux私房菜笔记-基础</title>
-        <pubTime>2015-09-15T09:16:16.000Z</pubTime>
+        <title>鸟哥的Linux私房菜笔记-权限管理</title>
+        <pubTime>2015-09-15T09:34:48.000Z</pubTime>
         
         <tag>linux</tag>
          
@@ -839,31 +864,6 @@
         <display>
         <title>typecho to hexo</title>
         <pubTime>2015-07-17T16:21:39.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>blog</tag>
-         
-         
-           
-             
-              <breadCrumb title="blog" url="http://blog.newbmiao.com/categories/blog/"/>
-          
-             
-              <breadCrumb title="hexo" url="http://blog.newbmiao.com/categories/blog/hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.newbmiao.com/2015/06/16/hexo-on-your-github.html</loc>
-    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
-    <data>
-        <display>
-        <title>搭建你自己的Hexo博客</title>
-        <pubTime>2015-06-16T12:23:25.000Z</pubTime>
         
         <tag>hexo</tag>
          
