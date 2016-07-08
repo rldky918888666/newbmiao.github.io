@@ -16,21 +16,7 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/demo/index.html</loc>
-    
-    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.newbmiao.com/demo/jquery-upload-preview.html</loc>
-    
-    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.newbmiao.com/demo/iframe-tabs.html</loc>
+    <loc>http://blog.newbmiao.com/add-ons/index.html</loc>
     
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
     
@@ -44,7 +30,21 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/add-ons/index.html</loc>
+    <loc>http://blog.newbmiao.com/demo/jquery-upload-preview.html</loc>
+    
+    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.newbmiao.com/demo/index.html</loc>
+    
+    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.newbmiao.com/demo/iframe-tabs.html</loc>
     
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
     
@@ -58,14 +58,14 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/10/25/how-to-use-php-signal.html</loc>
+    <loc>http://blog.newbmiao.com/2015/01/08/ci-load-class-source-code-analysis.html</loc>
     
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/01/08/ci-load-class-source-code-analysis.html</loc>
+    <loc>http://blog.newbmiao.com/2015/10/25/how-to-use-php-signal.html</loc>
     
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
     
@@ -79,13 +79,6 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/10/14/jquery-tabs-with-iframe.html</loc>
-    
-    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.newbmiao.com/2015/10/25/jQuery-code-record.html</loc>
     
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
@@ -93,7 +86,7 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/06/26/redis-installation-guide.html</loc>
+    <loc>http://blog.newbmiao.com/2015/10/14/jquery-tabs-with-iframe.html</loc>
     
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
     
@@ -101,6 +94,13 @@
   
   <url>
     <loc>http://blog.newbmiao.com/2015/02/28/regex-notes.html</loc>
+    
+    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.newbmiao.com/2015/06/26/redis-installation-guide.html</loc>
     
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
     
@@ -156,7 +156,7 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/08/01/use-limit-subquery-in-mysql.html</loc>
+    <loc>http://blog.newbmiao.com/2015/09/23/mysql-common-function-accumulation.html</loc>
     
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     
@@ -191,13 +191,6 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/08/06/set-highlight-and-autoindent-in-vim-on-mac.html</loc>
-    
-    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.newbmiao.com/2014/12/28/build-your-git-server-on-linux.html</loc>
     
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
@@ -205,14 +198,21 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/03/28/maintainable-javascript-note.html</loc>
+    <loc>http://blog.newbmiao.com/2015/09/16/Niaoge-Linux-Desktop-Guide-notes-daemon.html</loc>
     
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/16/Niaoge-Linux-Desktop-Guide-notes-daemon.html</loc>
+    <loc>http://blog.newbmiao.com/2015/08/06/set-highlight-and-autoindent-in-vim-on-mac.html</loc>
+    
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.newbmiao.com/2015/03/28/maintainable-javascript-note.html</loc>
     
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     
@@ -233,13 +233,6 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-ACL.html</loc>
-    
-    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-cron.html</loc>
     
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
@@ -247,7 +240,14 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/23/mysql-common-function-accumulation.html</loc>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-ACL.html</loc>
+    
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.newbmiao.com/2015/08/01/use-limit-subquery-in-mysql.html</loc>
     
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     
@@ -261,7 +261,14 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/02/22/html5-drag-api.html</loc>
+    <loc>http://blog.newbmiao.com/2015/02/22/html5-drag-api2-chrome-drag-to-downloa.html</loc>
+    
+    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.newbmiao.com/2015/09/23/some-code-when-use-jquery-fileupload.html</loc>
     
     <lastmod>2016-07-07T13:09:18.000Z</lastmod>
     
@@ -275,13 +282,6 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/02/28/jquery-html5.html</loc>
-    
-    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.newbmiao.com/2015/07/18/typecho-to-hexo.html</loc>
     
     <lastmod>2016-07-07T13:09:18.000Z</lastmod>
@@ -289,7 +289,7 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/08/18/hexo-with-gitcafe-and-github.html</loc>
+    <loc>http://blog.newbmiao.com/2015/06/16/hexo-on-your-github.html</loc>
     
     <lastmod>2016-07-07T13:09:18.000Z</lastmod>
     
@@ -310,7 +310,7 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/23/some-code-when-use-jquery-fileupload.html</loc>
+    <loc>http://blog.newbmiao.com/2015/02/28/jquery-html5.html</loc>
     
     <lastmod>2016-07-07T13:09:18.000Z</lastmod>
     
@@ -324,7 +324,7 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/02/22/html5-drag-api2-chrome-drag-to-downloa.html</loc>
+    <loc>http://blog.newbmiao.com/2015/02/22/html5-drag-api.html</loc>
     
     <lastmod>2016-07-07T13:09:18.000Z</lastmod>
     
@@ -345,7 +345,7 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/06/16/hexo-on-your-github.html</loc>
+    <loc>http://blog.newbmiao.com/2015/08/18/hexo-with-gitcafe-and-github.html</loc>
     
     <lastmod>2016-07-07T13:09:18.000Z</lastmod>
     
