@@ -1,0 +1,1822 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>菜鸟Miao</title>
+  <subtitle>start from a newb...</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://blog.newbmiao.com/"/>
+  <updated>2016-07-07T13:09:20.000Z</updated>
+  <id>http://blog.newbmiao.com/</id>
+  
+  <author>
+    <name>菜鸟Miao</name>
+    <email>newbvirgil@gmail.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mac工具集</title>
+    <link href="http://blog.newbmiao.com/2016/03/15/mac-tool.html"/>
+    <id>http://blog.newbmiao.com/2016/03/15/mac-tool.html</id>
+    <published>2016-03-15T02:50:23.000Z</published>
+    <updated>2016-07-07T13:09:20.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;brew&quot;&gt;&lt;a href=&quot;#brew&quot; class=&quot;headerlink&quot; title=&quot;brew&quot;&gt;&lt;/a&gt;brew&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;ruby &lt;span class=&quot;_&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;variable&quot;&gt;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&lt;/span&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;iterm2&quot;&gt;&lt;a href=&quot;#iterm2&quot; class=&quot;headerlink&quot; title=&quot;iterm2&quot;&gt;&lt;/a&gt;iterm2&lt;/h2&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;symbol&quot;&gt;https:&lt;/span&gt;/&lt;span class=&quot;regexp&quot;&gt;/iterm2.com/downloads&lt;/span&gt;&lt;span class=&quot;regexp&quot;&gt;/stable/i&lt;/span&gt;Term2_v2_&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;.zip&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;运行iterm2之后按cmd+,调出设置界面，在&lt;span class=&quot;string&quot;&gt;&#39;profile&#39;&lt;/span&gt; -&amp;gt; &lt;span class=&quot;string&quot;&gt;&quot;Terminal Type&quot;&lt;/span&gt;改成xterm-new。&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;zsh&quot;&gt;&lt;a href=&quot;#zsh&quot; class=&quot;headerlink&quot; title=&quot;zsh&quot;&gt;&lt;/a&gt;zsh&lt;/h2&gt;&lt;figure class=&quot;highlight dts&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;brew install zsh&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo vim &lt;span class=&quot;meta-keyword&quot;&gt;/etc/&lt;/span&gt;shells&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;meta&quot;&gt;#在最后面加上一行&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;meta-keyword&quot;&gt;/usr/&lt;/span&gt;local/Cellar&lt;span class=&quot;meta-keyword&quot;&gt;/zsh/&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;5.0&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;.8&lt;/span&gt;&lt;span class=&quot;meta-keyword&quot;&gt;/bin/&lt;/span&gt;zsh&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;chsh -s &lt;span class=&quot;meta-keyword&quot;&gt;/usr/&lt;/span&gt;local/Cellar&lt;span class=&quot;meta-keyword&quot;&gt;/zsh/&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;5.0&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;.8&lt;/span&gt;&lt;span class=&quot;meta-keyword&quot;&gt;/bin/&lt;/span&gt;zsh&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#重启终端即可&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;oh-my-zsh&quot;&gt;&lt;a href=&quot;#oh-my-zsh&quot; class=&quot;headerlink&quot; title=&quot;oh-my-zsh&quot;&gt;&lt;/a&gt;oh-my-zsh&lt;/h2&gt;&lt;figure class=&quot;highlight vim&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;curl -L http&lt;span class=&quot;variable&quot;&gt;s:&lt;/span&gt;//raw.github.&lt;span class=&quot;keyword&quot;&gt;com&lt;/span&gt;/robbyrussell/oh-my-zsh/master/tools/install.&lt;span class=&quot;keyword&quot;&gt;sh&lt;/span&gt; | &lt;span class=&quot;keyword&quot;&gt;sh&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;dash-文档工具&quot;&gt;&lt;a href=&quot;#dash-文档工具&quot; class=&quot;headerlink&quot; title=&quot;dash 文档工具&quot;&gt;&lt;/a&gt;dash 文档工具&lt;/h2&gt;&lt;h2 id=&quot;alfred-快捷调用&quot;&gt;&lt;a href=&quot;#alfred-快捷调用&quot; class=&quot;headerlink&quot; title=&quot;alfred 快捷调用&quot;&gt;&lt;/a&gt;alfred 快捷调用&lt;/h2&gt;&lt;h2 id=&quot;lrzsz-服务器和本机传输工具&quot;&gt;&lt;a href=&quot;#lrzsz-服务器和本机传输工具&quot; class=&quot;headerlink&quot; title=&quot;lrzsz-服务器和本机传输工具&quot;&gt;&lt;/a&gt;lrzsz-服务器和本机传输工具&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/mmastrac/iterm2-zmodem&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iterm2-zmodem&lt;/a&gt;&lt;br&gt;item2 ssh远程服务器，就能上传下载文件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;sz 想要本机接收的文件&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;rz 想让远程收到的文件&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;issue：ssl证书验证失败无法下载&lt;/strong&gt;&lt;br&gt;原因是brew https连接失败&lt;br&gt;解决方法：&lt;br&gt;&lt;figure class=&quot;highlight vim&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;sudo &lt;span class=&quot;keyword&quot;&gt;vim&lt;/span&gt; /usr/local/Library/Homebrew/utils.rb&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;修改下面的行加一个-&lt;span class=&quot;keyword&quot;&gt;k&lt;/span&gt; 参数，让 curl 忽略 https 验证&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;args&lt;/span&gt; = [HOMEBREW_CURL_ARGS, HOMEBREW_USER_AGENT,&lt;span class=&quot;string&quot;&gt;&#39;-k&#39;&lt;/span&gt;, *&lt;span class=&quot;keyword&quot;&gt;args&lt;/span&gt;]&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;tldr&quot;&gt;&lt;a href=&quot;#tldr&quot; class=&quot;headerlink&quot; title=&quot;tldr&quot;&gt;&lt;/a&gt;tldr&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/tldr-pages/tldr&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;tldr查询命令如何用&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;how2&quot;&gt;&lt;a href=&quot;#how2&quot; class=&quot;headerlink&quot; title=&quot;how2&quot;&gt;&lt;/a&gt;how2&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/santinic/how2&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;stackoverflow命令行查询工具&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;git-credential-osxkeychain&quot;&gt;&lt;a href=&quot;#git-credential-osxkeychain&quot; class=&quot;headerlink&quot; title=&quot;git-credential-osxkeychain&quot;&gt;&lt;/a&gt;git-credential-osxkeychain&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://help.github.com/articles/caching-your-github-password-in-git/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;免密码提交&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight stylus&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;curl -s -O https:&lt;span class=&quot;comment&quot;&gt;//github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;chmod u+x git-credential-osxkeychain&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo mv git-credential-osxkeychain &lt;span class=&quot;string&quot;&gt;&quot;$(dirname $(which git))/git-credential-osxkeychain&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;git config --global credential&lt;span class=&quot;selector-class&quot;&gt;.helper&lt;/span&gt; osxkeychain&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      mac,tool
+    
+    </summary>
+    
+      <category term="mac" scheme="http://blog.newbmiao.com/categories/mac/"/>
+    
+      <category term="tool" scheme="http://blog.newbmiao.com/categories/mac/tool/"/>
+    
+    
+      <category term="mac" scheme="http://blog.newbmiao.com/tags/mac/"/>
+    
+      <category term="tool" scheme="http://blog.newbmiao.com/tags/tool/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于phpstorm和vagrant环境的xdebug远程调试</title>
+    <link href="http://blog.newbmiao.com/2015/12/04/xdebug-remote-debug-with-phpstorm-and-vagrant.html"/>
+    <id>http://blog.newbmiao.com/2015/12/04/xdebug-remote-debug-with-phpstorm-and-vagrant.html</id>
+    <published>2015-12-04T06:01:09.000Z</published>
+    <updated>2016-07-07T13:09:22.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;网页调试-本地调试&quot;&gt;&lt;a href=&quot;#网页调试-本地调试&quot; class=&quot;headerlink&quot; title=&quot;网页调试/本地调试&quot;&gt;&lt;/a&gt;网页调试/本地调试&lt;/h2&gt;&lt;p&gt;流程是啥&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;开发环境安装xdebug，配置监听client端（安装phpstorm那端）&lt;/li&gt;
+&lt;li&gt;配置phpstorm-debug，重点要用path-map，不然对于单一入口的网页调试找不到哦&lt;/li&gt;
+&lt;li&gt;断点跟踪吧&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;详细网上资料很多，下边三个都可以用，我就不赘述了&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://xrong.net/2014/09/09/phpstorm%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;phpstorm远程调试&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://confluence.jetbrains.com/display/PhpStorm/Zero-configuration+Web+Application+Debugging+with+Xdebug+and+PhpStorm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Zero-configuration Web Application Debugging with Xdebug and PhpStorm&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://stackoverflow.com/questions/15339165/cannot-debug-with-phpstorm-vagrant-xdebug&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;cannot-debug-with-phpstorm-vagrant-xdebug&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;远程cli调试&quot;&gt;&lt;a href=&quot;#远程cli调试&quot; class=&quot;headerlink&quot; title=&quot;远程cli调试&quot;&gt;&lt;/a&gt;远程cli调试&lt;/h2&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;上边的不适用于远程cli调试，为什么？&lt;/p&gt;
+&lt;figure class=&quot;highlight stylus&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;原理是一样，远程主机的xdebug监听client的phpstorm，但是命令行调试， $_SERVER 中没有serverName和IDE_KEY的值.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;另外当只起用  xdebug&lt;span class=&quot;selector-class&quot;&gt;.remote_connect_back&lt;/span&gt; = on  不监听指定ip，是需要提供  xdebug&lt;span class=&quot;selector-class&quot;&gt;.remote_host&lt;/span&gt; 的值的。&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;明白了这些，只要配置环境变量值就可以了&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;主要就是 XDEBUG_CONFIG  和 PHP_IDE_CONFIG  （serverName要对应你在phpstorm中配置的server别名）&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#添加下边命令到 ~/.bashrc&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;_phpdebug&lt;/span&gt;&lt;/span&gt;()&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt; XDEBUG_CONFIG=&lt;span class=&quot;string&quot;&gt;&quot;remote_host=&lt;span class=&quot;variable&quot;&gt;$(echo $SSH_CLIENT | awk &#39;&amp;#123;print $1&amp;#125;&#39;)&lt;/span&gt; idekey=PHPSTORM&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;       &lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt; PHP_IDE_CONFIG=&lt;span class=&quot;string&quot;&gt;&quot;serverName=cli&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;       &lt;span class=&quot;built_in&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;set XDEBUG_CONFIG=&lt;span class=&quot;variable&quot;&gt;$&amp;#123;XDEBUG_CONFIG&amp;#125;&lt;/span&gt;; PHP_IDE_CONFIG=&lt;span class=&quot;variable&quot;&gt;$&amp;#123;PHP_IDE_CONFIG&amp;#125;&lt;/span&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;alias&lt;/span&gt; phpdebug=&lt;span class=&quot;string&quot;&gt;&quot;_phpdebug&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;alias&lt;/span&gt; phpdebugoff=&lt;span class=&quot;string&quot;&gt;&quot;unset PHP_IDE_CONFIG &amp;amp;&amp;amp; unset XDEBUG_CONFIG&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#执行&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;source&lt;/span&gt; ~/.bashrc&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;以后调试前只要在vagrant或远程主机先执行 &lt;code&gt;phpdebug&lt;/code&gt; 就行&lt;br&gt;需要取消的话 &lt;code&gt;phpdebugoff&lt;/code&gt; 就可以了&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;参考自：&lt;br&gt;&lt;a href=&quot;http://stackoverflow.com/questions/16518262/xdebug-how-to-debug-remote-console-application&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;xdebug-how-to-debug-remote-console-application&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.adayinthelifeof.nl/2012/12/20/debugging-remote-cli-with-phpstorm/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;debugging-remote-cli-with-phpstorm&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      基于phpstorm和vagrant环境的xdebug远程调试
+    
+    </summary>
+    
+      <category term="php" scheme="http://blog.newbmiao.com/categories/php/"/>
+    
+      <category term="tool" scheme="http://blog.newbmiao.com/categories/php/tool/"/>
+    
+    
+      <category term="php" scheme="http://blog.newbmiao.com/tags/php/"/>
+    
+      <category term="xdebug" scheme="http://blog.newbmiao.com/tags/xdebug/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>让影梭和搬瓦工帮你科学上网</title>
+    <link href="http://blog.newbmiao.com/2015/11/28/shadowsocks-polipo-vps.html"/>
+    <id>http://blog.newbmiao.com/2015/11/28/shadowsocks-polipo-vps.html</id>
+    <published>2015-11-28T14:11:31.000Z</published>
+    <updated>2016-07-07T13:09:20.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;环境：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;server:shadowsocks(Linux)&lt;/li&gt;
+&lt;li&gt;client:shadowsocks(Mac) , polipo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;硬广：&lt;a href=&quot;https://bandwagonhost.com/aff.php?aff=5640&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;推荐VPS“搬瓦工”&lt;/a&gt;&lt;br&gt;理由有3：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;shadowsocks server： 一键安装（后续可自定义配置）&lt;/li&gt;
+&lt;li&gt;性价比高：目前比较便宜的是 &lt;strong&gt;$19.99&lt;/strong&gt; 一年,256MB内存的VPS，而且可以用 &lt;strong&gt;支付宝&lt;/strong&gt; 支付&lt;/li&gt;
+&lt;li&gt;操作不能在简单了！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;Shadowsocks具体干啥的，都懂得，介绍详见&lt;a href=&quot;https://wiki.archlinux.org/index.php/Shadowsocks&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Shadowsocks&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;准备工作：&lt;br&gt;去&lt;a href=&quot;https://bandwagonhost.com/aff.php?aff=5640&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;VPS“搬瓦工”&lt;/a&gt;买一个合适的VPS，然后用支付宝支付！&lt;/p&gt;
+&lt;p&gt;接下来走安装流程，需要linux一些基础(server_ip和port,password请自行替换自己的)&lt;br&gt;利用ssh登陆VPS&lt;br&gt;&lt;figure class=&quot;highlight nginx&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;ssh&lt;/span&gt; root&lt;span class=&quot;variable&quot;&gt;@your_ip&lt;/span&gt; -p your_port&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#替换你的ip和端口（系统会邮件发给你）&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#输入你的密码&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h1 id=&quot;server&quot;&gt;&lt;a href=&quot;#server&quot; class=&quot;headerlink&quot; title=&quot;server&quot;&gt;&lt;/a&gt;server&lt;/h1&gt;&lt;h2 id=&quot;shadowsocks&quot;&gt;&lt;a href=&quot;#shadowsocks&quot; class=&quot;headerlink&quot; title=&quot;shadowsocks&quot;&gt;&lt;/a&gt;shadowsocks&lt;/h2&gt;&lt;p&gt;不推荐自己安装，依赖解决太麻烦：&lt;br&gt;&lt;del&gt;&lt;a href=&quot;https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-libev.sh&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;centos6一键安装脚本&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;利用官方一键安装：&lt;br&gt;KiwiVM （进入管理平台）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install new OS 》 选择Centos 6 x86 minimal 或者 Centos 6 x86_64 minimal安装即可，别作死安装centos7啊&lt;/li&gt;
+&lt;li&gt;Shadowsocks Server 》安装Shadowsocks 》默认生成的已经可以用了，但是我们要自己可配端口和密码&lt;/li&gt;
+&lt;li&gt;自定义配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight crmsh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;vi /etc/shadowsocks.json&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&quot;server&quot;&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&quot;0.0.0.0&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&quot;local_port&quot;&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;1080&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&quot;port_password&quot;&lt;/span&gt;:&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;port1&quot;&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&quot;password1&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;port2&quot;&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&quot;password2&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&quot;timeout&quot;&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;300&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&quot;method&quot;&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&quot;aes-256-cfb&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&quot;fast_open&quot;&lt;/span&gt;:&lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&quot;workers&quot;&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#结束掉系统安装的shadowsocks server&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;killall ssserver&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#启用自己配置的shadowsocks server&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;/usr/bin/ssserver -c  /etc/shadowsocks.json --&lt;span class=&quot;keyword&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;nobody&lt;/span&gt; -d &lt;span class=&quot;literal&quot;&gt;start&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;client&quot;&gt;&lt;a href=&quot;#client&quot; class=&quot;headerlink&quot; title=&quot;client&quot;&gt;&lt;/a&gt;client&lt;/h1&gt;&lt;h2 id=&quot;Mac-shadowsocks&quot;&gt;&lt;a href=&quot;#Mac-shadowsocks&quot; class=&quot;headerlink&quot; title=&quot;Mac-shadowsocks&quot;&gt;&lt;/a&gt;Mac-shadowsocks&lt;/h2&gt;&lt;figure class=&quot;highlight stata&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;brew install python3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;pip3 install shadowsocks&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;brew install openssl swig libevent&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;pip3 install m2crypto gevent&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;vi /usr/&lt;span class=&quot;keyword&quot;&gt;local&lt;/span&gt;/etc/shadowsocks-libev.json&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&quot;server&quot;&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&quot;my_server_ip&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&quot;server_port&quot;&lt;/span&gt;: your_port,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&quot;local_address&quot;&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&quot;127.0.0.1&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&quot;local_port&quot;&lt;/span&gt;:1080,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&quot;password&quot;&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&quot;*****&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&quot;timeout&quot;&lt;/span&gt;: 600,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&quot;method&quot;&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&quot;aes-256-cfb&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;# 启动&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo touch /&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt;/&lt;span class=&quot;keyword&quot;&gt;run&lt;/span&gt;/sslocal.pid /&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt;/&lt;span class=&quot;keyword&quot;&gt;log&lt;/span&gt;/sslocal.&lt;span class=&quot;built_in&quot;&gt;log&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo sslocal -c /usr/&lt;span class=&quot;keyword&quot;&gt;local&lt;/span&gt;/etc/shadowsocks-libev.json --user root --pid-&lt;span class=&quot;keyword&quot;&gt;file&lt;/span&gt; /&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt;/&lt;span class=&quot;keyword&quot;&gt;run&lt;/span&gt;/sslocal.pid --&lt;span class=&quot;keyword&quot;&gt;log&lt;/span&gt;-&lt;span class=&quot;keyword&quot;&gt;file&lt;/span&gt; /&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt;/&lt;span class=&quot;keyword&quot;&gt;log&lt;/span&gt;/sslocal.&lt;span class=&quot;keyword&quot;&gt;log&lt;/span&gt; -&lt;span class=&quot;keyword&quot;&gt;d&lt;/span&gt; start&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;polipo&quot;&gt;&lt;a href=&quot;#polipo&quot; class=&quot;headerlink&quot; title=&quot;polipo&quot;&gt;&lt;/a&gt;polipo&lt;/h2&gt;&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;29&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;30&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;31&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;32&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;33&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;34&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;35&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;36&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;37&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;38&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;39&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;40&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;41&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;brew install polipo&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;# 设置开机启动，并添加shadowsocks转换&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;vim /usr/local/opt/polipo/homebrew.mxcl.polipo.plist&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;-----------------------------------&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;php&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;lt;?&lt;/span&gt;xml version=&lt;span class=&quot;string&quot;&gt;&quot;1.0&quot;&lt;/span&gt; encoding=&lt;span class=&quot;string&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;&lt;span class=&quot;meta&quot;&gt;?&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;plist&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;version&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;1.0&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;dict&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;key&lt;/span&gt;&amp;gt;&lt;/span&gt;Label&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;key&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;string&lt;/span&gt;&amp;gt;&lt;/span&gt;homebrew.mxcl.polipo&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;string&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;key&lt;/span&gt;&amp;gt;&lt;/span&gt;RunAtLoad&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;key&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;true&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;key&lt;/span&gt;&amp;gt;&lt;/span&gt;KeepAlive&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;key&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;true&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;key&lt;/span&gt;&amp;gt;&lt;/span&gt;ProgramArguments&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;key&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;array&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;string&lt;/span&gt;&amp;gt;&lt;/span&gt;/usr/local/opt/polipo/bin/polipo&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;string&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;string&lt;/span&gt;&amp;gt;&lt;/span&gt;socksParentProxy=127.0.0.1:1080&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;string&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;array&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- Set `ulimit -n 20480`. The default OS X limit is 256, that&#39;s&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;         not enough for Polipo (displays &#39;too many files open&#39; errors).&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;         It seems like you have no reason to lower this limit&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;         (and unlikely will want to raise it). --&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;key&lt;/span&gt;&amp;gt;&lt;/span&gt;SoftResourceLimits&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;key&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;dict&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;key&lt;/span&gt;&amp;gt;&lt;/span&gt;NumberOfFiles&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;key&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;integer&lt;/span&gt;&amp;gt;&lt;/span&gt;20480&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;integer&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;dict&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;dict&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;plist&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;-----------------------------------&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;ln -sfv /usr/local/opt/polipo/*.plist ~/Library/LaunchAgents&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;launchctl load ~/Library/LaunchAgents/homebrew.mxcl.polipo.plist&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;#这样开机回自动运行 :polipo socksParentProxy=127.0.0.1:1080&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;** 命令行执行番羽墙加上下边两句 **&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;https_proxy=http://127.0.0.1:8123 http_proxy=http://127.0.0.1:8123&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;** 建议设置alias **&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;alias fq=&quot;https_proxy=http://127.0.0.1:8123 http_proxy=http://127.0.0.1:8123&quot;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;Android-shadowsocks&quot;&gt;&lt;a href=&quot;#Android-shadowsocks&quot; class=&quot;headerlink&quot; title=&quot;Android shadowsocks&quot;&gt;&lt;/a&gt;Android shadowsocks&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;温馨提示：不用ROOT！！！&lt;br&gt;&lt;a href=&quot;https://github.com/shadowsocks/shadowsocks-android/releases&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;shadowsocks-android(目前最新V2.9.1)&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;IOS&quot;&gt;&lt;a href=&quot;#IOS&quot; class=&quot;headerlink&quot; title=&quot;IOS&quot;&gt;&lt;/a&gt;IOS&lt;/h2&gt;&lt;p&gt;没有找到能用的IOS版本，知道的告我下！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;到这里祝贺你科学上网了，google吧！&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      影梭，番羽墙，VPS，搬瓦工
+    
+    </summary>
+    
+      <category term="mac" scheme="http://blog.newbmiao.com/categories/mac/"/>
+    
+      <category term="shadowsocks" scheme="http://blog.newbmiao.com/categories/mac/shadowsocks/"/>
+    
+    
+      <category term="mac" scheme="http://blog.newbmiao.com/tags/mac/"/>
+    
+      <category term="shadowsocks" scheme="http://blog.newbmiao.com/tags/shadowsocks/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何更新别人apple-id购买的应用</title>
+    <link href="http://blog.newbmiao.com/2015/11/20/how-to-update-apps-apple-id.html"/>
+    <id>http://blog.newbmiao.com/2015/11/20/how-to-update-apps-apple-id.html</id>
+    <published>2015-11-20T09:30:11.000Z</published>
+    <updated>2016-07-07T13:09:20.000Z</updated>
+    
+    <content type="html">&lt;p&gt;Mac的应用比如Xcode太大，一般不会自己下，别人airdrop给你，方便吧！&lt;br&gt;可是，升级时你就发现没有传给那个人的apple id密码你都没法升级了，而为了安全，除了appstore你别无选择&lt;/p&gt;
+&lt;p&gt;不过方法还是有的，为了自己不用蛋疼，记录在这&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;清除apple-id信息&quot;&gt;&lt;a href=&quot;#清除apple-id信息&quot; class=&quot;headerlink&quot; title=&quot;清除apple id信息&quot;&gt;&lt;/a&gt;清除apple id信息&lt;/h2&gt;&lt;p&gt;右键Xcode.app &amp;gt;&amp;gt; 显示包内容 &amp;gt;&amp;gt; 找到_MASReceipt &amp;gt;&amp;gt; 删除recept&lt;/p&gt;
+&lt;h2 id=&quot;更新文件缓存&quot;&gt;&lt;a href=&quot;#更新文件缓存&quot; class=&quot;headerlink&quot; title=&quot;更新文件缓存&quot;&gt;&lt;/a&gt;更新文件缓存&lt;/h2&gt;&lt;p&gt;第一步,&lt;br&gt;下载 &lt;a href=&quot;https://www.macupdate.com/app/mac/11582/onyx&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Download OnyX for Mac&lt;/a&gt;&lt;br&gt;第二步,&lt;br&gt;打开应用(需要管理员权限),&lt;br&gt;选择  维护 -&amp;gt; 重建 ,&lt;br&gt;把 “LaunchServices”, “dyld 的共享内存”,  “Spotlight索引” 选中,&lt;br&gt;最后点击 “执行”.&lt;/p&gt;
+&lt;p&gt;参考：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/ixxonline/p/4087582.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;使用新的AppleID更新Xcode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.zhihu.com/question/21448755&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;如何删除别人 apple id 购买的应用, 改用自己的 apple id 安装?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      如何更新别人apple-id购买的应用
+    
+    </summary>
+    
+      <category term="mac" scheme="http://blog.newbmiao.com/categories/mac/"/>
+    
+    
+      <category term="software" scheme="http://blog.newbmiao.com/tags/software/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jQuery应用杂记</title>
+    <link href="http://blog.newbmiao.com/2015/10/25/jQuery-code-record.html"/>
+    <id>http://blog.newbmiao.com/2015/10/25/jQuery-code-record.html</id>
+    <published>2015-10-25T14:15:38.000Z</published>
+    <updated>2016-07-07T13:09:22.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;strong&gt; 工作中常用的一些代码片段 &lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;全选&quot;&gt;&lt;a href=&quot;#全选&quot; class=&quot;headerlink&quot; title=&quot;全选&quot;&gt;&lt;/a&gt;全选&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$(&lt;span class=&quot;string&quot;&gt;&quot;#ckAll&quot;&lt;/span&gt;).click(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $(&lt;span class=&quot;string&quot;&gt;&quot;input[name=&#39;sub&#39;]&quot;&lt;/span&gt;).prop(&lt;span class=&quot;string&quot;&gt;&quot;checked&quot;&lt;/span&gt;, &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.checked);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;//全部checkbox选中后 全选框也选中&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  $(&lt;span class=&quot;string&quot;&gt;&quot;input[name=&#39;sub&#39;]&quot;&lt;/span&gt;).click(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; $subs = $(&lt;span class=&quot;string&quot;&gt;&quot;input[name=&#39;sub&#39;]&quot;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $(&lt;span class=&quot;string&quot;&gt;&quot;#ckAll&quot;&lt;/span&gt;).prop(&lt;span class=&quot;string&quot;&gt;&quot;checked&quot;&lt;/span&gt; , $subs.length == $subs.filter(&lt;span class=&quot;string&quot;&gt;&quot;:checked&quot;&lt;/span&gt;).length ? &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt; :&lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;获取选择内容&quot;&gt;&lt;a href=&quot;#获取选择内容&quot; class=&quot;headerlink&quot; title=&quot;获取选择内容&quot;&gt;&lt;/a&gt;获取选择内容&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; uids = $(&lt;span class=&quot;string&quot;&gt;&#39;[name=subCk]:checked&#39;&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;          .map(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;              &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; $(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;).data(&lt;span class=&quot;string&quot;&gt;&#39;id&#39;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;          &amp;#125;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;          .get()&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;          .join();&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;全选和其他选项不能同时选中&quot;&gt;&lt;a href=&quot;#全选和其他选项不能同时选中&quot; class=&quot;headerlink&quot; title=&quot;全选和其他选项不能同时选中&quot;&gt;&lt;/a&gt;全选和其他选项不能同时选中&lt;/h2&gt;&lt;figure class=&quot;highlight typescript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;29&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;30&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;31&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;32&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;33&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;34&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;35&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;36&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;37&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;/*&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	 *@ckName checkbox-name&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	 *@i 对应index&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	*/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;checkToggle&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;ckName,i&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(&lt;span class=&quot;built_in&quot;&gt;arguments&lt;/span&gt;.length==&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	        i=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	    $(&lt;span class=&quot;string&quot;&gt;&quot;[name=&#39;&quot;&lt;/span&gt;+ckName+&lt;span class=&quot;string&quot;&gt;&quot;&#39;]:eq(&quot;&lt;/span&gt;+i+&lt;span class=&quot;string&quot;&gt;&quot;)&quot;&lt;/span&gt;).change(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ($(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;).prop(&lt;span class=&quot;string&quot;&gt;&#39;checked&#39;&lt;/span&gt;)) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	            $(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;).parent().nextAll().children().prop(&lt;span class=&quot;string&quot;&gt;&#39;checked&#39;&lt;/span&gt;, &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	        &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	    &amp;#125;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	    $(&lt;span class=&quot;string&quot;&gt;&quot;[name=&#39;&quot;&lt;/span&gt;+ckName+&lt;span class=&quot;string&quot;&gt;&quot;&#39;]&quot;&lt;/span&gt;).not(&lt;span class=&quot;string&quot;&gt;&quot;:eq(&quot;&lt;/span&gt;+i+&lt;span class=&quot;string&quot;&gt;&quot;)&quot;&lt;/span&gt;).change(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ($(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;).prop(&lt;span class=&quot;string&quot;&gt;&#39;checked&#39;&lt;/span&gt;)) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	            $(&lt;span class=&quot;string&quot;&gt;&quot;[name=&#39;&quot;&lt;/span&gt;+ckName+&lt;span class=&quot;string&quot;&gt;&quot;&#39;]:eq(&quot;&lt;/span&gt;+i+&lt;span class=&quot;string&quot;&gt;&quot;)&quot;&lt;/span&gt;).prop(&lt;span class=&quot;string&quot;&gt;&#39;checked&#39;&lt;/span&gt;, &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	        &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	    &amp;#125;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;## 切换条数&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	 &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; pageData=&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	     limit:&amp;lt;?=$limit;?&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	 &amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	 $(&lt;span class=&quot;string&quot;&gt;&quot;[value=&quot;&lt;/span&gt;+pageData.limit+&lt;span class=&quot;string&quot;&gt;&quot;]:radio&quot;&lt;/span&gt;).prop(&lt;span class=&quot;string&quot;&gt;&#39;checked&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;true&#39;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	    $(&lt;span class=&quot;string&quot;&gt;&#39;[name=limit]:radio&#39;&lt;/span&gt;).change(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	        &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; limit=$(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;).val();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(&lt;span class=&quot;built_in&quot;&gt;parseInt&lt;/span&gt;(limit)&amp;lt;&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;)&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	        &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(location.search.indexOf(&lt;span class=&quot;string&quot;&gt;&#39;limit=&#39;&lt;/span&gt;)!==&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;)&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	            location.search=location.search.replace(&lt;span class=&quot;regexp&quot;&gt;/limit=(\d*)?/&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;limit=&#39;&lt;/span&gt;+limit);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	        &amp;#125;&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	            &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log((location.search==&lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;)?&lt;span class=&quot;string&quot;&gt;&#39;limit=&#39;&lt;/span&gt;+limit:&lt;span class=&quot;string&quot;&gt;&#39;&amp;amp;limit=&#39;&lt;/span&gt;+limit);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	            location.search=(location.search==&lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;)?&lt;span class=&quot;string&quot;&gt;&#39;limit=&#39;&lt;/span&gt;+limit:location.search+&lt;span class=&quot;string&quot;&gt;&#39;&amp;amp;limit=&#39;&lt;/span&gt;+limit;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	        &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&amp;#125;);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;重置表单&quot;&gt;&lt;a href=&quot;#重置表单&quot; class=&quot;headerlink&quot; title=&quot;重置表单&quot;&gt;&lt;/a&gt;重置表单&lt;/h2&gt;&lt;p&gt;jQuery中没有重置表单的方法,如果需要，可以使用Dom的reset方法&lt;br&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;variable&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&#39;#myform&#39;&lt;/span&gt;)[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;].reset()&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;select选择显示隐藏相关元素&quot;&gt;&lt;a href=&quot;#select选择显示隐藏相关元素&quot; class=&quot;headerlink&quot; title=&quot;select选择显示隐藏相关元素&quot;&gt;&lt;/a&gt;select选择显示隐藏相关元素&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;29&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;30&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;31&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;32&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;33&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;34&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;35&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;36&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;37&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;38&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;39&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;40&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;41&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;42&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;43&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//选中与否select对应值，进行相应显示切换&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; selectMap = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&#39;#ddtype&#39;&lt;/span&gt;: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;: &amp;#123;show: &lt;span class=&quot;string&quot;&gt;&#39;input[name=deadline]&#39;&lt;/span&gt;, hide: &lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&#39;#aliasType&#39;&lt;/span&gt;: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;: &amp;#123;show: &lt;span class=&quot;string&quot;&gt;&#39;.divAlias&#39;&lt;/span&gt;, hide: &lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&#39;#type&#39;&lt;/span&gt;: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;: &amp;#123;show: &lt;span class=&quot;string&quot;&gt;&#39;#sceneId&#39;&lt;/span&gt;, hide: &lt;span class=&quot;string&quot;&gt;&#39;.divExtra&#39;&lt;/span&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;selectShow.register(selectMap);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//函数&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; selectShow = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    register: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;selectMap&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; me = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; select &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; selectMap) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; _select = selectMap[select];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            (&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;select, _select&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                $(select).change(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; option &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; _select) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ($(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;).val() == option) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                            me.toggle(_select[option][&lt;span class=&quot;string&quot;&gt;&#39;show&#39;&lt;/span&gt;], _select[option][&lt;span class=&quot;string&quot;&gt;&#39;hide&#39;&lt;/span&gt;])&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                        &amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                            me.toggle(_select[option][&lt;span class=&quot;string&quot;&gt;&#39;hide&#39;&lt;/span&gt;], _select[option][&lt;span class=&quot;string&quot;&gt;&#39;show&#39;&lt;/span&gt;])&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                        &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                &amp;#125;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                $(select).change();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &amp;#125;)(select, _select);&lt;span class=&quot;comment&quot;&gt;//闭包注册&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    toggle: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;show, hide&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (show != &lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            $(show).removeClass(&lt;span class=&quot;string&quot;&gt;&#39;hide&#39;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (hide != &lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            $(hide).addClass(&lt;span class=&quot;string&quot;&gt;&#39;hide&#39;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;输入框字数检测&quot;&gt;&lt;a href=&quot;#输入框字数检测&quot; class=&quot;headerlink&quot; title=&quot;输入框字数检测&quot;&gt;&lt;/a&gt;输入框字数检测&lt;/h2&gt;&lt;figure class=&quot;highlight actionscript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;29&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;30&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;31&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;32&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;33&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;34&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;35&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;36&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;37&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;38&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;39&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;40&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;41&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;42&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;textarea id=&lt;span class=&quot;string&quot;&gt;&quot;msg&quot;&lt;/span&gt; name=&lt;span class=&quot;string&quot;&gt;&quot;msg&quot;&lt;/span&gt; cols=&lt;span class=&quot;string&quot;&gt;&quot;40&quot;&lt;/span&gt; rows=&lt;span class=&quot;string&quot;&gt;&quot;4&quot;&lt;/span&gt; data-max-len=&lt;span class=&quot;string&quot;&gt;&quot;50&quot;&lt;/span&gt; placeholder=&lt;span class=&quot;string&quot;&gt;&quot;内容字数不超过50个字&quot;&lt;/span&gt;&amp;gt;&amp;lt;/textarea&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;还可输入&amp;lt;span id=&lt;span class=&quot;string&quot;&gt;&quot;showLeft&quot;&lt;/span&gt;&amp;gt;&lt;span class=&quot;number&quot;&gt;50&lt;/span&gt;&amp;lt;/span&amp;gt;字&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//注册&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$(document).on(&lt;span class=&quot;string&quot;&gt;&#39;keyup&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;#msg&#39;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;		_maxlen.isMax(&lt;span class=&quot;string&quot;&gt;&#39;#msg&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;#showLeft&#39;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;).focus(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;		_maxlen.disabledRightMouse();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;).blur(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;		_maxlen.enabledRightMouse();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/*&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; *监控输入字数&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; * content:textarea[data-max-len] 输入框&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; * container:span 显示剩余字数&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; * */&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; _maxlen = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    isMax: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;(content, container)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; textarea = (&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; content == &lt;span class=&quot;string&quot;&gt;&#39;string&#39;&lt;/span&gt;) &amp;amp;&amp;amp; content.constructor == String ? $(content) : content;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        container = (&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; container == &lt;span class=&quot;string&quot;&gt;&#39;string&#39;&lt;/span&gt;) &amp;amp;&amp;amp; container.constructor == String ? $(container) : container;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; max_length = parseInt(textarea.data(&lt;span class=&quot;string&quot;&gt;&#39;max-len&#39;&lt;/span&gt;));&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; _val = $.trim(textarea.val());&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; _leftLen = max_length;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (twttr.txt.getTweetLength(_val) &amp;gt; max_length) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            textarea.val(_val.substring(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, max_length));&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            _leftLen = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            _leftLen = max_length - twttr.txt.getTweetLength(textarea.val());&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        container.text(_leftLen);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    disabledRightMouse: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        document.oncontextmenu = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    enabledRightMouse: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        document.oncontextmenu = &lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      jQuery应用杂记
+    
+    </summary>
+    
+      <category term="web" scheme="http://blog.newbmiao.com/categories/web/"/>
+    
+      <category term="practice" scheme="http://blog.newbmiao.com/categories/web/practice/"/>
+    
+    
+      <category term="js" scheme="http://blog.newbmiao.com/tags/js/"/>
+    
+      <category term="jquery" scheme="http://blog.newbmiao.com/tags/jquery/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>php信号处理</title>
+    <link href="http://blog.newbmiao.com/2015/10/25/how-to-use-php-signal.html"/>
+    <id>http://blog.newbmiao.com/2015/10/25/how-to-use-php-signal.html</id>
+    <published>2015-10-25T14:10:33.000Z</published>
+    <updated>2016-07-07T13:09:22.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;pcntl&quot;&gt;&lt;a href=&quot;#pcntl&quot; class=&quot;headerlink&quot; title=&quot;pcntl&quot;&gt;&lt;/a&gt;pcntl&lt;/h1&gt;&lt;h2 id=&quot;pcntl-signal&quot;&gt;&lt;a href=&quot;#pcntl-signal&quot; class=&quot;headerlink&quot; title=&quot;pcntl_signal&quot;&gt;&lt;/a&gt;pcntl_signal&lt;/h2&gt;&lt;p&gt;信号注册函数&lt;/p&gt;
+&lt;h2 id=&quot;pcntl-alarm&quot;&gt;&lt;a href=&quot;#pcntl-alarm&quot; class=&quot;headerlink&quot; title=&quot;pcntl_alarm&quot;&gt;&lt;/a&gt;pcntl_alarm&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;指定秒数中断程序执行任务。&lt;/li&gt;
+&lt;li&gt;每次执行只会有一个定时器生效，若之前计时器还没结束就定义新定时器，会替代之前定时器并返回之前定时器结束前秒数，若之前计时器已完成返回0&lt;/li&gt;
+&lt;li&gt;参数设为0，会清空当前所有定时器，并不发起调用&lt;/li&gt;
+&lt;li&gt;定时器会中断系统，即便是sleep执行中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+declare(ticks = 1);
+
+function signal_handler($signal) {
+    print &amp;quot;Caught SIGALRM\n&amp;quot;;
+    echo pcntl_alarm(3).PHP_EOL;//再次调用
+}
+
+pcntl_signal(SIGALRM, &amp;quot;signal_handler&amp;quot;, true);
+echo pcntl_alarm(5).PHP_EOL;//只会调用一次
+
+echo pcntl_alarm(3).PHP_EOL;//提示5，因为上一个计时器完成还剩5s
+
+while(1) {
+    //
+}
+?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;pcntl-fork&quot;&gt;&lt;a href=&quot;#pcntl-fork&quot; class=&quot;headerlink&quot; title=&quot;pcntl_fork&quot;&gt;&lt;/a&gt;pcntl_fork&lt;/h2&gt;&lt;p&gt;创建子进程&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;unix创建进程效率要比线程高，但需考虑进程数和内存等限制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+$pid = pcntl_fork();
+
+switch($pid) {
+    case -1:
+        print &amp;quot;Could not fork!\n&amp;quot;;
+        exit;
+    case 0://子进程
+        print &amp;quot;In child!\n&amp;quot;;
+        break;
+    default://父进程，值代表子进程PID
+        print &amp;quot;In parent!\n&amp;quot;;
+}
+?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;pcntl-waitpid&quot;&gt;&lt;a href=&quot;#pcntl-waitpid&quot; class=&quot;headerlink&quot; title=&quot;pcntl_waitpid&quot;&gt;&lt;/a&gt;pcntl_waitpid&lt;/h2&gt;&lt;p&gt;等待或返回fork的子进程状态&lt;br&gt;挂起当前进程的执行直到参数pid指定的进程号的进程退出， 或接收到一个信号要求中断当前进程或调用一个信号处理函数。&lt;br&gt;如果pid指定的子进程在此函数调用时已经退出（俗称僵尸进程），此函数 将立刻返回。&lt;br&gt;&lt;strong&gt;pid可选值&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;小于-1     等待任意进程组ID等于参数pid给定值的绝对值的进程。&lt;/li&gt;
+&lt;li&gt;-1     等待任意子进程;与pcntl_wait函数行为一致。&lt;/li&gt;
+&lt;li&gt;0     等待任意与调用进程组ID相同的子进程。&lt;/li&gt;
+&lt;li&gt;大于0     等待进程号等于参数pid值的子进程。 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;options&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;WNOHANG     如果没有子进程退出立刻返回。&lt;/li&gt;
+&lt;li&gt;WUNTRACED     子进程已经退出并且其状态未报告时返回。 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.hackingwithphp.com/16/1/7/other-ways-to-evaluate-pcntl_waitpids-return-value&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;其他方式去计算本函数的返回值&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;pcntl-wexitstatus&quot;&gt;&lt;a href=&quot;#pcntl-wexitstatus&quot; class=&quot;headerlink&quot; title=&quot;pcntl_wexitstatus&quot;&gt;&lt;/a&gt;pcntl_wexitstatus&lt;/h2&gt;&lt;p&gt;检查状态代码是否代表一个正常的退出。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;进程共享内容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+for ($i = 1; $i &amp;lt;= 5; ++$i) {
+    $pid = pcntl_fork();
+
+    if (!$pid) {
+        sleep(1);
+        print &amp;quot;In child $i\n&amp;quot;;
+        exit($i);
+    }
+}
+while (pcntl_waitpid(0, $status) != -1) {
+    $status = pcntl_wexitstatus($status);
+    echo &amp;quot;Child $status completed\n&amp;quot;;
+}
+?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;SIGCHLD-父进程不阻塞&quot;&gt;&lt;a href=&quot;#SIGCHLD-父进程不阻塞&quot; class=&quot;headerlink&quot; title=&quot;SIGCHLD: 父进程不阻塞&quot;&gt;&lt;/a&gt;SIGCHLD: 父进程不阻塞&lt;/h2&gt;&lt;p&gt;SIGCHLD信号会在&lt;strong&gt;一个或多个&lt;/strong&gt;子进程结束时向父进程通知&lt;br&gt;此时再加上pcntl_waitpid loop来让父进程及时回收全部结束的子进程&lt;/p&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+declare(ticks = 1);
+
+pcntl_signal(SIGCHLD, &amp;quot;signal_handler&amp;quot;);
+
+function signal_handler($signal) {
+    switch($signal) {
+        case SIGCHLD:
+            while (pcntl_waitpid(0, $status) != -1) {
+                $status = pcntl_wexitstatus($status);
+                echo &amp;quot;Child $status completed\n&amp;quot;;
+            }
+
+            exit;
+    }
+}
+
+for ($i = 1; $i &amp;lt;= 5; ++$i) {
+    $pid = pcntl_fork();
+
+    if (!$pid) {
+        sleep(3);
+        print &amp;quot;In child $i\n&amp;quot;;
+        exit($i);
+    }
+}
+
+while(1) {
+    //下面的代码会在父进程执行
+    echo &amp;quot;parent processing here&amp;quot;.PHP_EOL;
+    sleep(1);
+}
+?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;pcntl-exec&quot;&gt;&lt;a href=&quot;#pcntl-exec&quot; class=&quot;headerlink&quot; title=&quot;pcntl_exec&quot;&gt;&lt;/a&gt;pcntl_exec&lt;/h2&gt;&lt;p&gt;调用程序执行，并取代自身&lt;/p&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+print &amp;quot;Before\n&amp;quot;;
+pcntl_exec(&amp;quot;/usr/bin/uptime&amp;quot;);
+//下边不会输出
+print &amp;quot;After\n&amp;quot;; 
+?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;</content>
+    
+    <summary type="html">
+    
+      php信号处理
+    
+    </summary>
+    
+      <category term="php" scheme="http://blog.newbmiao.com/categories/php/"/>
+    
+      <category term="signal" scheme="http://blog.newbmiao.com/categories/php/signal/"/>
+    
+    
+      <category term="php" scheme="http://blog.newbmiao.com/tags/php/"/>
+    
+      <category term="pcntl" scheme="http://blog.newbmiao.com/tags/pcntl/"/>
+    
+      <category term="signal" scheme="http://blog.newbmiao.com/tags/signal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>gearman分布式任务服务器学习记录</title>
+    <link href="http://blog.newbmiao.com/2015/10/16/gearman-beginer-guide.html"/>
+    <id>http://blog.newbmiao.com/2015/10/16/gearman-beginer-guide.html</id>
+    <published>2015-10-16T13:18:33.000Z</published>
+    <updated>2016-07-07T13:45:11.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;以下是强大的gearman学习及安装记录，代码demo下边的来自网络的附录有很多可以参考。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Gearman 是一套用来把程式需求委派给机器，提供通用的程序框架来将任务分发在机器运算。&lt;br&gt;它同时具备并行工作的能力、负载均衡处理的能力，以及在不同程序语言之间沟通的能力。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;h3 id=&quot;gearmand&quot;&gt;&lt;a href=&quot;#gearmand&quot; class=&quot;headerlink&quot; title=&quot;gearmand&quot;&gt;&lt;/a&gt;gearmand&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://launchpad.net/gearmand&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;gearmand-job server&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;安装gearmand依赖的库&quot;&gt;&lt;a href=&quot;#安装gearmand依赖的库&quot; class=&quot;headerlink&quot; title=&quot;安装gearmand依赖的库&quot;&gt;&lt;/a&gt;安装gearmand依赖的库&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;yum install -y boost-devel gperf libevent-devel libuuid-devel
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&quot;安装gearmand服务&quot;&gt;&lt;a href=&quot;#安装gearmand服务&quot; class=&quot;headerlink&quot; title=&quot;安装gearmand服务&quot;&gt;&lt;/a&gt;安装gearmand服务&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;tar xzf gearmand-1.1.12.tar.gz
+cd gearmand-1.1.12
+./configure
+make
+make install
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;gearman&quot;&gt;&lt;a href=&quot;#gearman&quot; class=&quot;headerlink&quot; title=&quot;gearman&quot;&gt;&lt;/a&gt;gearman&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://pecl.php.net/package/gearman&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;php扩展&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;安装php扩展&quot;&gt;&lt;a href=&quot;#安装php扩展&quot; class=&quot;headerlink&quot; title=&quot;安装php扩展&quot;&gt;&lt;/a&gt;安装php扩展&lt;/h4&gt;&lt;pre&gt;&lt;code&gt; tar xzf gearman-1.1.2.tgz
+cd gearman-1.1.2
+phpize
+./configure
+make
+make install   
+
+# 在php.ini中添加
+extension=&amp;quot;gearman.so&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;gearman启动&quot;&gt;&lt;a href=&quot;#gearman启动&quot; class=&quot;headerlink&quot; title=&quot;gearman启动&quot;&gt;&lt;/a&gt;gearman启动&lt;/h3&gt;&lt;pre&gt;&lt;code&gt; 1) 创建日志gearmand.log
+# touch /pathto/logs/gearmand.log
+
+2）启动
+# /usr/local/sbin/gearmand -d -u root -L 192.168.142.130 --log-file=/pathto/logs/gearmand.log
+
+3）参数详解
+-b，--backlog= 储备的监听连接数量
+-d, --daemon 后台运行
+-f, --file-descriptors= 文件描述符的数量
+-h, --help 帮助
+-j, --job-retries= 在ob server移除不可用job之前运行的次数，防止不断运行导致其他可用worker崩溃。默认没有限制
+-l, -log-file= 日志文件存放位置(默认记录最简单日志)
+-L, --listen= 监听的IP，默认全部接受
+-p, --port= 指定监听端口
+-P, --pid-file= 指定进程ID写入位置
+-r, --protocol= 加载协议模块
+-q, --queue-type= 指定持久化队列
+-t, --threads= 使用的I/9线程数量。默认为0
+-u, --user= 启动后，切换到指定用户
+-v, --verbose 增加一级详细程度
+-V, --version 显示版本信息
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt; issue &lt;/strong&gt;: /usr/local/sbin/gearmand: error while loading shared libraries: libmysqlclient.so.18: cannot open shared object file: No such file or directory&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;解决方案：将对应lib链接到/usr/lib&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ln -s /home/vagrant/online/mysql5.6/lib/libmysqlclient.so.18  /usr/lib
+ldconfig -v
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;gearman部署&quot;&gt;&lt;a href=&quot;#gearman部署&quot; class=&quot;headerlink&quot; title=&quot;gearman部署&quot;&gt;&lt;/a&gt;gearman部署&lt;/h3&gt;&lt;h4 id=&quot;启动gearmand&quot;&gt;&lt;a href=&quot;#启动gearmand&quot; class=&quot;headerlink&quot; title=&quot;启动gearmand&quot;&gt;&lt;/a&gt;启动gearmand&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;启动&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/usr/local/sbin/gearmand -d -u root -L 0.0.0.0 --log-file=/pathto/logs/gearmand.log
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;对应配置修改 common.conf &amp;gt; gearman配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;启动worker&quot;&gt;&lt;a href=&quot;#启动worker&quot; class=&quot;headerlink&quot; title=&quot;启动worker&quot;&gt;&lt;/a&gt;启动worker&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;后台运行&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;nohup php scripts/gearman_job/job.php &amp;gt;/log/gearman.log &amp;amp;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;supervisor守护worker进程（推荐）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;yum install supervisor
+service supervisor start
+service supervisor stop
+#创建配置文件
+/etc/supervisor/conf.d/gearmanwoker.conf:
+
+[program:gearmanwoker]
+command=php scripts/gearman_job/job.php
+numprocs=12
+directory=/dir_path/to/woker/
+autostart=true
+autorestart=true
+stdout_logfile=/path/to/project/log/gearmanwoker.log
+stdout_logfile_maxbytes=1MB
+stderr_logfile=/path/to/project/log/gearmanwoker.log
+stderr_logfile_maxbytes=1MB
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;参见&lt;a href=&quot;http://www.daredevel.com/php-jobs-with-gearman-and-supervisor/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;php-jobs-with-gearman-and-supervisor&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;update 2015 12-13&lt;/p&gt;
+&lt;h2 id=&quot;worker管理：gearman-manager-（pecl-manger）&quot;&gt;&lt;a href=&quot;#worker管理：gearman-manager-（pecl-manger）&quot; class=&quot;headerlink&quot; title=&quot;worker管理：gearman manager （pecl_manger）&quot;&gt;&lt;/a&gt;worker管理：gearman manager （pecl_manger）&lt;/h2&gt;&lt;h3 id=&quot;gearmanManager&quot;&gt;&lt;a href=&quot;#gearmanManager&quot; class=&quot;headerlink&quot; title=&quot;gearmanManager&quot;&gt;&lt;/a&gt;gearmanManager&lt;/h3&gt;&lt;p&gt;&lt;strong&gt; 配置中需指定host，pid及log等 &lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;启动manager-daemon&quot;&gt;&lt;a href=&quot;#启动manager-daemon&quot; class=&quot;headerlink&quot; title=&quot;启动manager daemon&quot;&gt;&lt;/a&gt;启动manager daemon&lt;/h4&gt;&lt;figure class=&quot;highlight stylus&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;scripts/gearmanManager/bin/pecl_manager&lt;span class=&quot;selector-class&quot;&gt;.php&lt;/span&gt; -c scripts/gearmanManager/etc/config&lt;span class=&quot;selector-class&quot;&gt;.ini&lt;/span&gt;  -d -vvv&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;关闭&quot;&gt;&lt;a href=&quot;#关闭&quot; class=&quot;headerlink&quot; title=&quot;关闭&quot;&gt;&lt;/a&gt;关闭&lt;/h4&gt;&lt;figure class=&quot;highlight perl&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#SIGINT&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;kill&lt;/span&gt; -&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;`cat gearman-manager.pid`&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;重启child（worker）&quot;&gt;&lt;a href=&quot;#重启child（worker）&quot; class=&quot;headerlink&quot; title=&quot;重启child（worker）&quot;&gt;&lt;/a&gt;重启child（worker）&lt;/h4&gt;&lt;figure class=&quot;highlight perl&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# SIGHUP&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;kill&lt;/span&gt; -&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;`cat gearman-manager.pid`&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;gearmand-queue-持久化（针对background任务）&quot;&gt;&lt;a href=&quot;#gearmand-queue-持久化（针对background任务）&quot; class=&quot;headerlink&quot; title=&quot;gearmand queue 持久化（针对background任务）&quot;&gt;&lt;/a&gt;gearmand queue 持久化（针对background任务）&lt;/h2&gt;&lt;p&gt;对于大量访问压力及server宕机都有好处&lt;/p&gt;
+&lt;figure class=&quot;highlight haml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;sudo /usr/local/sbin/gearmand -d -u root -L 0.0.0.0 --log-file=/pathto/gearmand.log   --queue-type=MySQL \&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;          -&lt;span class=&quot;ruby&quot;&gt;-mysql-host=localhost \&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;          -&lt;span class=&quot;ruby&quot;&gt;-mysql-port=&lt;span class=&quot;number&quot;&gt;3306&lt;/span&gt; \&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;          -&lt;span class=&quot;ruby&quot;&gt;-mysql-user=root \&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;          -&lt;span class=&quot;ruby&quot;&gt;-mysql-password=YOUR_PASSWORD \&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;          -&lt;span class=&quot;ruby&quot;&gt;-mysql-db=qsc \&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;          -&lt;span class=&quot;ruby&quot;&gt;-mysql-table=gearman_queue&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;参考&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;phpboy&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.phpboy.net/2014-05/40-gearman-instruction.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Gearman调研/测试/原理分析&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;gearman&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://gearman.info/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;gearman.info&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://gearman.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;gearman.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://groups.google.com/group/gearman&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;gearman google group&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      gearman分布式任务服务器学习记录
+    
+    </summary>
+    
+      <category term="gearman" scheme="http://blog.newbmiao.com/categories/gearman/"/>
+    
+    
+      <category term="gearman" scheme="http://blog.newbmiao.com/tags/gearman/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iframe实现的无刷tab页</title>
+    <link href="http://blog.newbmiao.com/2015/10/14/jquery-tabs-with-iframe.html"/>
+    <id>http://blog.newbmiao.com/2015/10/14/jquery-tabs-with-iframe.html</id>
+    <published>2015-10-14T01:29:19.000Z</published>
+    <updated>2016-07-07T13:09:22.000Z</updated>
+    
+    <content type="html">&lt;p&gt;为了实现tab页无刷，又不想全部用ajax动态生成，同时需要在tab页内有相关操作，简单的话就是用iframe了&lt;/p&gt;
+&lt;p&gt;先来看个demo: &lt;a href=&quot;http://blog.newbmiao.com/demo/iframe-tabs.html&quot;&gt;iframe-tabs&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;参考自&lt;a href=&quot;http://deano.me/2011/08/jquery-tabs-iframes/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;jquery-tabs-iframes&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这个demo实现了基本的需求，使用中发现还有两点问题&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;iframe 高度自适应&lt;/li&gt;
+&lt;li&gt;如果在iframe页内 &lt;code&gt;history.back(-1)&lt;/code&gt; 历史返回时要记录之前选择的tab页&lt;/li&gt;
+&lt;li&gt;如果tab页要求实时性，还需要每次点击都请求页面，同时也可以只加载一个iframe并替换其src来复用，而不必每个tab都加载一个iframe&lt;/li&gt;
+&lt;/ol&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;对于问题1：&quot;&gt;&lt;a href=&quot;#对于问题1：&quot; class=&quot;headerlink&quot; title=&quot;对于问题1：&quot;&gt;&lt;/a&gt;对于问题1：&lt;/h3&gt;&lt;p&gt;tabs的高度有统一设置，原demo的高度设置就可以使用，如果是单独针对外部iframe可使用&lt;/p&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    function iFrameHeight(id) {
+        var ifm= document.getElementById(id);
+        var subWeb = document.frames ? document.frames[id].document : ifm.contentDocument;
+        if(ifm != null &amp;amp;&amp;amp; subWeb != null) {
+            ifm.height = subWeb.body.scrollHeight;
+            ifm.width = subWeb.body.scrollWidth;
+            //动态设置高度后。避免滚动条滑到最下，要设置滑到顶端
+            document.body.scrollTop = document.documentElement.scrollTop = 0;
+        }
+    }
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;对于问题2：&quot;&gt;&lt;a href=&quot;#对于问题2：&quot; class=&quot;headerlink&quot; title=&quot;对于问题2：&quot;&gt;&lt;/a&gt;对于问题2：&lt;/h3&gt;&lt;p&gt;使用localStorage或者sessionStorage可以记录tab选中状态，如果页面有其他唯一性标志，也可以和tab状态一同记录，便于判断是否要还原tab选中状态&lt;/p&gt;
+&lt;p&gt;下边两个封装好的store.js都便于多平台兼容&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/nbubna/store&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;nbubna/store&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/marcuswestin/store.js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;marcuswestin/store.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;//返回时，将记录的tab状态还原
+var tabIndex =  0;
+//#subContainer为iframe，pageData.unique为页面唯一标识
+if ($(&amp;quot;#subContainer&amp;quot;).length == 0 &amp;amp;&amp;amp; store.get(&amp;apos;tab&amp;apos;)) {
+    tabIndex=store.get(&amp;apos;tab&amp;apos;) ;
+    if(tabIndex.split(&amp;apos;-&amp;apos;)[0]==pageData.unique){
+        tabIndex=tabIndex.split(&amp;apos;-&amp;apos;)[1];
+    }
+}
+var $tabs = $(&amp;apos;#tabs&amp;apos;).tabs();
+$(&amp;apos;#tabs&amp;apos;).tabs( &amp;quot;option&amp;quot;, &amp;quot;active&amp;quot;, tabIndex );
+
+//在loadTabFrame()后
+store.set(&amp;apos;tab&amp;apos;, pageData.unique+&amp;quot;-&amp;quot;+(parseInt(tab.split(&amp;apos;-&amp;apos;)[1])-1));
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;对于问题3：&quot;&gt;&lt;a href=&quot;#对于问题3：&quot; class=&quot;headerlink&quot; title=&quot;对于问题3：&quot;&gt;&lt;/a&gt;对于问题3：&lt;/h3&gt;&lt;p&gt;将loadTabFrame中添加&lt;/p&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;if ($(&amp;quot;#subContainer&amp;quot;).length != 0) {
+    $(&amp;apos;#subContainer&amp;apos;).prop(&amp;apos;src&amp;apos;, url);
+    $(&amp;apos;#aOpenOut&amp;apos;).prop(&amp;apos;href&amp;apos;, url);
+    //detach来复用
+    $(tab).append($(&amp;apos;.tabIframeWrapper&amp;apos;).detach());
+    $(tab).find(&amp;quot;iframe&amp;quot;).height($(window).height() - 80);
+    store.set(&amp;apos;tab&amp;apos;, pageData.unique+&amp;quot;-&amp;quot;+(parseInt(tab.split(&amp;apos;-&amp;apos;)[1])-1));
+    return;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt; 如此，完美解决无刷tab页需求。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      iframe实现的无刷tab页
+    
+    </summary>
+    
+      <category term="web" scheme="http://blog.newbmiao.com/categories/web/"/>
+    
+      <category term="practice" scheme="http://blog.newbmiao.com/categories/web/practice/"/>
+    
+    
+      <category term="jquery" scheme="http://blog.newbmiao.com/tags/jquery/"/>
+    
+      <category term="iframe" scheme="http://blog.newbmiao.com/tags/iframe/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>中秋举牌</title>
+    <link href="http://blog.newbmiao.com/2015/09/27/up-up-in-mid-autumn-day.html"/>
+    <id>http://blog.newbmiao.com/2015/09/27/up-up-in-mid-autumn-day.html</id>
+    <published>2015-09-27T03:07:08.000Z</published>
+    <updated>2016-07-07T13:09:18.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;舉牌是一種支持的態度，是一種相信希望的精神，每隻可愛的小人都代表著支持你的人，鼓舞著你。舉牌世界沒有人是孤獨的，有時你需要獨自面對眼前的難關，舉牌小人會陪伴與鼓勵你，用舉牌挺你走向希望。我們相信有許多美好的事都等著我們高舉著，並將這樣的精神與鼓勵不斷地蔓延下去。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;img src=&quot;http://media.newbmiao.com/blog/zhongqiu2.jpg&quot; alt=&quot;码农们，中秋快乐！&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://media.newbmiao.com/blog/zhongqiu3.jpg&quot; alt=&quot;还有那句：Hello World&quot;&gt;&lt;/p&gt;
+&lt;p&gt;DIY?&lt;br&gt;SEE HERE: &lt;a href=&quot;http://upuptoyou.com/#&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;upup-play&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      中秋举牌
+    
+    </summary>
+    
+      <category term="journal" scheme="http://blog.newbmiao.com/categories/journal/"/>
+    
+    
+      <category term="journal" scheme="http://blog.newbmiao.com/tags/journal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>php银行卡校验</title>
+    <link href="http://blog.newbmiao.com/2015/09/25/use-luhm-to-validate-bank-card.html"/>
+    <id>http://blog.newbmiao.com/2015/09/25/use-luhm-to-validate-bank-card.html</id>
+    <published>2015-09-25T07:54:54.000Z</published>
+    <updated>2016-07-07T13:09:22.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;前言&lt;/strong&gt;&lt;br&gt;银行金卡，维萨和万事达、银联品牌，如果是贷记卡或准贷记卡，一定为16位卡号。而借记卡可以16-19位不等。&lt;br&gt;美国运通卡则不论金卡或是白金卡、普通卡，都是15位卡号。&lt;br&gt;16-19 位卡号校验位采用 Luhm 校验方法计算&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;银行卡的校验方式&quot;&gt;&lt;a href=&quot;#银行卡的校验方式&quot; class=&quot;headerlink&quot; title=&quot;银行卡的校验方式&quot;&gt;&lt;/a&gt;银行卡的校验方式&lt;/h1&gt;&lt;h2 id=&quot;Luhm校验&quot;&gt;&lt;a href=&quot;#Luhm校验&quot; class=&quot;headerlink&quot; title=&quot;Luhm校验&quot;&gt;&lt;/a&gt;Luhm校验&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;将未带校验位的 15 位卡号从右依次编号 1 到 15，位于奇数位号上的数字乘以 2&lt;/li&gt;
+&lt;li&gt;将奇位乘积的个十位全部相加，再加上所有偶数位上的数字&lt;/li&gt;
+&lt;li&gt;将加法和加上校验位能被 10 整除。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+/*
+  16-19 位卡号校验位采用 Luhm 校验方法计算：
+    1，将未带校验位的 15 位卡号从右依次编号 1 到 15，位于奇数位号上的数字乘以 2
+    2，将奇位乘积的个十位全部相加，再加上所有偶数位上的数字
+    3，将加法和加上校验位能被 10 整除。
+*/
+function luhm($s) {
+    $n = 0;
+    for ($i = strlen($s); $i &amp;gt;= 1; $i--) {
+        $index=$i-1;
+        //偶数位
+        if ($i % 2==0) {
+            $n += $s{$index};
+        } else {//奇数位
+            $t = $s{$index} * 2;
+            if ($t &amp;gt; 9) {
+                $t = (int)($t/10)+ $t%10;
+            }
+            $n += $t;
+        }
+    }
+    return ($n % 10) == 0;
+}
+
+$r = luhm(&amp;apos;6225881414207430&amp;apos;);
+var_dump($r);
+?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;准确率怎么样，附文一片&lt;br&gt;&lt;a href=&quot;http://xiangkg.blog.163.com/blog/static/56688504201269112417414/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;银行卡校验规则(Luhn算法)&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      php银行卡校验
+    
+    </summary>
+    
+      <category term="php" scheme="http://blog.newbmiao.com/categories/php/"/>
+    
+    
+      <category term="php" scheme="http://blog.newbmiao.com/tags/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>记一次mysql优化操作</title>
+    <link href="http://blog.newbmiao.com/2015/09/25/remember-once-mysql-optimize-operations.html"/>
+    <id>http://blog.newbmiao.com/2015/09/25/remember-once-mysql-optimize-operations.html</id>
+    <published>2015-09-25T06:14:20.000Z</published>
+    <updated>2016-07-07T13:09:20.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;这次操作，起因是需要获取用户来源及用户性别，而用户的性别信息在第三方授权的中有，存为JSON格式，&lt;br&gt;不想用php去解析获取，所以试试mysql操作&lt;br&gt;如果你有更好的解决方案，请留言告诉我！&lt;/p&gt;
+&lt;h1 id=&quot;情景简化&quot;&gt;&lt;a href=&quot;#情景简化&quot; class=&quot;headerlink&quot; title=&quot;情景简化&quot;&gt;&lt;/a&gt;情景简化&lt;/h1&gt;&lt;h2 id=&quot;表结构&quot;&gt;&lt;a href=&quot;#表结构&quot; class=&quot;headerlink&quot; title=&quot;表结构&quot;&gt;&lt;/a&gt;表结构&lt;/h2&gt;&lt;p&gt;记录用户授权信息，有微博、QQ、微信，个人信息存为user_info&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;user_platform&lt;ul&gt;
+&lt;li&gt;weibo_id,qq_id,weixin_id,user_info,uid,user_platform_id&lt;h2 id=&quot;性别格式&quot;&gt;&lt;a href=&quot;#性别格式&quot; class=&quot;headerlink&quot; title=&quot;性别格式&quot;&gt;&lt;/a&gt;性别格式&lt;/h2&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;微博 【gender】(‘m’ =&amp;gt;男,’f’ =&amp;gt; 女,’n’ =&amp;gt; 未知)&lt;/li&gt;
+&lt;li&gt;QQ 【gender】 (‘男’ ,’女’ )&lt;/li&gt;
+&lt;li&gt;微信 【sex】(1 =&amp;gt;男,2 =&amp;gt; 女)&lt;h2 id=&quot;附加条件&quot;&gt;&lt;a href=&quot;#附加条件&quot; class=&quot;headerlink&quot; title=&quot;附加条件&quot;&gt;&lt;/a&gt;附加条件&lt;/h2&gt;&lt;/li&gt;
+&lt;li&gt;数据量近百万行，处理不能太耗时&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;用户来源&quot;&gt;&lt;a href=&quot;#用户来源&quot; class=&quot;headerlink&quot; title=&quot;用户来源&quot;&gt;&lt;/a&gt;用户来源&lt;/h1&gt;&lt;p&gt;先来个简单的，因为授权账户不是和用户一一对应，所以就是判断相关第三方id不为空则为对应用户来源，没有涉及绑定所以第三方信息实际唯一（表设计不是很合理，这个略过）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;SELECT IF((ISNULL(weixin_id) || weixin_id != &amp;apos;&amp;apos;, IF((ISNULL(weibo_id) || weibo_id != &amp;apos;&amp;apos;, IF((ISNULL(qq_id) || qq_id != &amp;apos;&amp;apos;, &amp;apos;手机&amp;apos;, &amp;apos;QQ&amp;apos;), &amp;apos;微博&amp;apos;), &amp;apos;微信&amp;apos;) AS user_source, uid
+FROM user_platform
+WHERE uid != 0
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;其中 &lt;code&gt;ISNULL(weixin_id) || weixin_id != &amp;#39;&amp;#39;&lt;/code&gt; 用来判断null和空字符串两种情况 也可以用 &lt;code&gt;ISNULL(weixin_id) || LENGTH(TRIM(weixin_id)) &amp;lt; 1&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&quot;性别获取&quot;&gt;&lt;a href=&quot;#性别获取&quot; class=&quot;headerlink&quot; title=&quot;性别获取&quot;&gt;&lt;/a&gt;性别获取&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;分两类（gender，sex）去截取性别，&lt;/li&gt;
+&lt;li&gt;然后放到临时表中，处理为统一格式的sex（1=&amp;gt;男,2=&amp;gt;女,0=&amp;gt;未知）&lt;/li&gt;
+&lt;li&gt;在用户表中加一列sex并利用临时表更新&lt;h2 id=&quot;字符替换判断&quot;&gt;&lt;a href=&quot;#字符替换判断&quot; class=&quot;headerlink&quot; title=&quot;字符替换判断&quot;&gt;&lt;/a&gt;字符替换判断&lt;/h2&gt;使用mysql函数&lt;/li&gt;
+&lt;li&gt;locate&lt;/li&gt;
+&lt;li&gt;mid&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以微信为例，判断是否包含性别&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;SELECT locate(&amp;apos;sex&amp;quot;:&amp;apos;, user_info, 50) AS is_sex
+FROM user_platform
+WHERE user_info != &amp;apos;&amp;apos;    
+HAVING is_sex != 0
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后截取性别，开始用&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;SELECT locate(&amp;apos;sex&amp;quot;:&amp;apos;, user_info, 50) AS is_sex, mid(user_info, locate(&amp;apos;sex&amp;quot;:&amp;apos;, user_info, 50) + 5, 1) AS sex
+FROM user_platform
+WHERE user_info != &amp;apos;&amp;apos;
+HAVING is_sex != 0
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;发现特变慢，而且locate一样的判断执行两次，不如换做一次&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;SELECT mid(user_info, is_sex + 5, 1) AS sex, uid
+FROM user_platform p, (SELECT locate(&amp;apos;sex&amp;quot;:&amp;apos;, user_info, 50) AS is_sex, user_platform_id
+    FROM user_platform
+    WHERE user_info != &amp;apos;&amp;apos;
+        AND uid != 0
+    HAVING is_sex != 0
+    ) t
+WHERE t.user_platform_id = p.user_platform_id
+GROUP BY uid
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;既然判断index，那如果先知道从哪开始判断&lt;/strong&gt;,那就先获取最小位置，再利用locate第三个参数pos加快查找&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;SELECT MIN(is_sex)
+FROM (SELECT locate(&amp;apos;sex&amp;quot;:&amp;apos;, user_info) AS is_sex
+    FROM user_platform
+    WHERE user_info != &amp;apos;&amp;apos;
+
+    HAVING is_sex != 0
+    ) t
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;获取到最小位置为：57，那就 locate(‘sex”:’, user_info,55) ,其实可以用57，保险起见小点啦&lt;/p&gt;
+&lt;p&gt;效率提升,主要时间上 （本地PC测试）： 10.17 sec 》》》7.36 sec&lt;/p&gt;
+&lt;p&gt;然后插入到临时表，mysql不能直接select into，所以先创建表载insert into&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;CREATE TABLE user_sex (
+    uid int(11) NOT NULL,
+    sex char(1) NOT NULL,
+    PRIMARY KEY (uid)
+)ENGINE = InnoDB DEFAULT CHARSET = `utf8`;
+
+INSERT INTO user_sex
+    (uid, sex)
+SELECT uid, sex
+FROM (SELECT mid(user_info, is_sex + 5, 1) AS sex, uid
+    FROM user_platform p, (SELECT locate(&amp;apos;sex&amp;quot;:&amp;apos;, user_info, 55) AS is_sex, user_platform_id
+        FROM user_platform
+        WHERE user_info != &amp;apos;&amp;apos;
+            AND uid != 0
+        HAVING is_sex != 0
+        ) t
+    WHERE t.user_platform_id = p.user_platform_id GROUP BY uid
+    ) tmp
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;微博和QQ的相同处理，只不过判断的是gender&lt;br&gt;最后需要处理的是sex字段的统一，用replace搞定&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;UPDATE user_sex
+SET sex = replace(sex, &amp;apos;男&amp;apos;, 1);
+UPDATE user_sex
+SET sex = replace(sex, &amp;apos;女&amp;apos;, 2);
+UPDATE user_sex
+SET sex = replace(sex, &amp;apos;m&amp;apos;, 1);
+UPDATE user_sex
+SET sex = replace(sex, &amp;apos;f&amp;apos;, 2);
+UPDATE user_sex
+SET sex = replace(sex, &amp;apos;&amp;quot;&amp;apos;, 0);
+# 最后一个是发现`gender:&amp;quot;&amp;quot;`情况
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;最后的最后，把临时表删了吧&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;DROP TABLE user_sex
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;到这里，可优化的部分还是有的，根据业务，还可以加一些判断减少待处理数据，比方说 uid为0：非注册用户 等等&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;总结一下，除了在添加user表sex列会锁表比较长时间，&lt;br&gt;最后的用临时表更新和其余查询操作的锁表时间几乎微乎其微，&lt;br&gt;把统一操作放临时表也可以避免查询操作等待的时间，&lt;br&gt;优化无非就是做了大化小的工作。&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;另外备注下 mysql的sql文件注释符”–”错了,需要一个空格,应该是”– “.&lt;br&gt;如果想发现更多，请使用mysql slow query log&lt;/p&gt;
+&lt;p&gt;  #慢查询设置&lt;br&gt;    set GLOBAL long_query_time=1&lt;br&gt;    set GLOBAL log_slow_queries=ON&lt;br&gt;        set GLOBAL log_queries_not_using_indexes=1&lt;br&gt;    show variables like ‘%slow%’&lt;br&gt;    show variables like ‘%long_query%’&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 以table查看
+set global log_output=&amp;apos;TABLE&amp;apos;;
+select * from mysql.slow_log;
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      记一次mysql优化操作
+    
+    </summary>
+    
+      <category term="mysql" scheme="http://blog.newbmiao.com/categories/mysql/"/>
+    
+      <category term="optimize" scheme="http://blog.newbmiao.com/categories/mysql/optimize/"/>
+    
+    
+      <category term="mysql" scheme="http://blog.newbmiao.com/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>向php大神致敬</title>
+    <link href="http://blog.newbmiao.com/2015/09/24/a-tribute-to-the-great-god-of-php.html"/>
+    <id>http://blog.newbmiao.com/2015/09/24/a-tribute-to-the-great-god-of-php.html</id>
+    <published>2015-09-24T04:59:24.000Z</published>
+    <updated>2016-07-07T13:09:18.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;strong&gt;向鸟哥（laruence）致敬，向所有php大神致敬&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;PHP7正式版就要发布了，鸟哥2015在Qcon中演讲&lt;a href=&quot;http://pan.baidu.com/s/1o6lCXRk&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;PHP7 – The New Engine for old good train .pdf&lt;/a&gt; 已经透露了许多性能提升。&lt;/p&gt;
+&lt;p&gt;今天才看了一些，虽然目前还不能get到很多点，但是内心还是很受鼓舞。附文一篇帮助了解。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://hansionxu.blog.163.com/blog/static/24169810920158704014772/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;PHP 7 的革新与性能优化&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;关于鸟哥 ,再附一文与phper共勉&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.oschina.net/news/59059/laruence-interview&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;PHP 鸟哥：我也曾经是“不适合”编程的人&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      向php大神致敬
+    
+    </summary>
+    
+      <category term="journal" scheme="http://blog.newbmiao.com/categories/journal/"/>
+    
+    
+      <category term="journal" scheme="http://blog.newbmiao.com/tags/journal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mysql常用函数积累</title>
+    <link href="http://blog.newbmiao.com/2015/09/23/mysql-common-function-accumulation.html"/>
+    <id>http://blog.newbmiao.com/2015/09/23/mysql-common-function-accumulation.html</id>
+    <published>2015-09-23T13:56:47.000Z</published>
+    <updated>2016-07-07T13:09:20.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;时间处理&quot;&gt;&lt;a href=&quot;#时间处理&quot; class=&quot;headerlink&quot; title=&quot;时间处理&quot;&gt;&lt;/a&gt;时间处理&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;FROM_UNIXTIME&lt;/p&gt;
+&lt;figure class=&quot;highlight cs&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;UNIX时间戳转换为日期用函数：&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;FROM_UNIXTIME&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;span class=&quot;number&quot;&gt;1156219870&lt;/span&gt;&lt;/span&gt;)&lt;/span&gt;;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;UNIX_TIMESTAMP&lt;/p&gt;
+&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;日期转换为UNIX时间戳用函数：&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;UNIX_TIMESTAMP&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;2006-11-04 12:23:00&#39;&lt;/span&gt;);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;date_format&lt;/p&gt;
+&lt;figure class=&quot;highlight cos&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;查询当天的记录数：&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	DATE_FORMAT(FROM_UNIXTIME(ctime),&#39;&lt;span class=&quot;built_in&quot;&gt;%Y&lt;/span&gt;-&lt;span class=&quot;built_in&quot;&gt;%m&lt;/span&gt;-&lt;span class=&quot;built_in&quot;&gt;%d&lt;/span&gt;&#39;) = curdate()&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;N天内记录&lt;/p&gt;
+&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;select&lt;/span&gt; *  &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; table_name &lt;span class=&quot;keyword&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;datediff&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;curdate&lt;/span&gt;(),from_unixtime(timestamp_colname,&lt;span class=&quot;string&quot;&gt;&#39;%Y-%m-%d&#39;&lt;/span&gt;))&amp;gt;=N;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;字符串处理&quot;&gt;&lt;a href=&quot;#字符串处理&quot; class=&quot;headerlink&quot; title=&quot;字符串处理&quot;&gt;&lt;/a&gt;字符串处理&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;IF&lt;/p&gt;
+&lt;figure class=&quot;highlight gauss&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;IF&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;expr&lt;/span&gt;,val1,val2) &lt;span class=&quot;meta&quot;&gt;#判断expr，为真则val1，否则val2&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;IFNULL&lt;/p&gt;
+&lt;figure class=&quot;highlight autoit&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;select&lt;/span&gt; IFNULL(expr1,expr2) &lt;span class=&quot;meta&quot;&gt;#非expr1则expr2&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ISNULL&lt;/p&gt;
+&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;ISNULL&lt;/span&gt;(&lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt;)&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;MID&lt;/p&gt;
+&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;截取字符串&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;MID&lt;/span&gt;(expr1,&lt;span class=&quot;keyword&quot;&gt;start&lt;/span&gt;,&lt;span class=&quot;keyword&quot;&gt;length&lt;/span&gt;) #&lt;span class=&quot;keyword&quot;&gt;start&lt;/span&gt;从&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;开始&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;LOCATE&lt;/p&gt;
+&lt;figure class=&quot;highlight perl&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;判断字符位置&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;select&lt;/span&gt; LOCATE(&lt;span class=&quot;string&quot;&gt;&#39;ab&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;efgabc&#39;&lt;/span&gt;[,&lt;span class=&quot;keyword&quot;&gt;pos&lt;/span&gt;]) &lt;span class=&quot;comment&quot;&gt;#返回字符位置，从1开始，未找到返回0；pos参数可提供需要越过的查找offset&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;INSTR&lt;/p&gt;
+&lt;figure class=&quot;highlight hsp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;判断字符位置,参数与LOCATE相反，无&lt;span class=&quot;keyword&quot;&gt;pos&lt;/span&gt;参数&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	select &lt;span class=&quot;keyword&quot;&gt;INSTR&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;efgabc&#39;&lt;/span&gt;，&lt;span class=&quot;string&quot;&gt;&#39;ab&#39;&lt;/span&gt;)&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;concat &amp;amp; concat_ws&lt;/p&gt;
+&lt;figure class=&quot;highlight stylus&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(str1,str2,[str3]...)&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;concat_ws&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(separator,str1,str2,[str3])&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;group_concat&lt;/p&gt;
+&lt;figure class=&quot;highlight applescript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;列转行，默认,号分隔&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	group_concat(&lt;span class=&quot;built_in&quot;&gt;name&lt;/span&gt; separator &#39;;&#39;)  &lt;span class=&quot;comment&quot;&gt;#指定分隔符&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	group_concat(&lt;span class=&quot;built_in&quot;&gt;name&lt;/span&gt; order &lt;span class=&quot;keyword&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;name&lt;/span&gt; desc) &lt;span class=&quot;comment&quot;&gt;#指定排序&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#这里有个坑，默认返回是有长度限制的，一般是1024&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	show variables like &lt;span class=&quot;string&quot;&gt;&quot;group_concat_max_len&quot;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#按需调整，当前生效&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;set&lt;/span&gt; GLOBAL group_concat_max_len=&lt;span class=&quot;number&quot;&gt;2048&lt;/span&gt;;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ELT&lt;/p&gt;
+&lt;figure class=&quot;highlight cs&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;根据N的值选择第N个字符串&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	ELT(N,str1,str2,str3,...)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	eg: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;elt&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;男&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;女&#39;&lt;/span&gt;&lt;/span&gt;)&lt;/span&gt;; &lt;span class=&quot;meta&quot;&gt;#枚举性别&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;FIND_IN_SET&lt;/p&gt;
+&lt;figure class=&quot;highlight stylus&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;FIND_IN_SET&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(str,strlist)&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;QUOTE&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;安全转义&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;trim&lt;/p&gt;
+&lt;figure class=&quot;highlight ruleslanguage&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;mysql&amp;gt; &lt;span class=&quot;keyword&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;TRIM&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;  bar   &#39;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        -&amp;gt; &lt;span class=&quot;string&quot;&gt;&#39;bar&#39;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;mysql&amp;gt; &lt;span class=&quot;keyword&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;TRIM&lt;/span&gt;(LEADING &lt;span class=&quot;string&quot;&gt;&#39;x&#39;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;xxxbarxxx&#39;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        -&amp;gt; &lt;span class=&quot;string&quot;&gt;&#39;barxxx&#39;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;mysql&amp;gt; &lt;span class=&quot;keyword&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;TRIM&lt;/span&gt;(BOTH &lt;span class=&quot;string&quot;&gt;&#39;x&#39;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;xxxbarxxx&#39;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        -&amp;gt; &lt;span class=&quot;string&quot;&gt;&#39;bar&#39;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;mysql&amp;gt; &lt;span class=&quot;keyword&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;TRIM&lt;/span&gt;(TRAILING &lt;span class=&quot;string&quot;&gt;&#39;xyz&#39;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;barxxyz&#39;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        -&amp;gt; &lt;span class=&quot;string&quot;&gt;&#39;barx&#39;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;未完待续。。。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      mysql常用函数积累
+    
+    </summary>
+    
+      <category term="mysql" scheme="http://blog.newbmiao.com/categories/mysql/"/>
+    
+    
+      <category term="mysql" scheme="http://blog.newbmiao.com/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jquery图片上传</title>
+    <link href="http://blog.newbmiao.com/2015/09/23/some-code-when-use-jquery-fileupload.html"/>
+    <id>http://blog.newbmiao.com/2015/09/23/some-code-when-use-jquery-fileupload.html</id>
+    <published>2015-09-23T03:58:21.000Z</published>
+    <updated>2016-07-07T13:09:18.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;图片上传在web中也是经常用到，这里整理下&lt;/p&gt;
+&lt;h1 id=&quot;jquery-fileupload&quot;&gt;&lt;a href=&quot;#jquery-fileupload&quot; class=&quot;headerlink&quot; title=&quot;jquery-fileupload&quot;&gt;&lt;/a&gt;jquery-fileupload&lt;/h1&gt;&lt;p&gt;File Upload widget with multiple file selection, drag&amp;amp;drop support, progress bars, validation and preview images, audio and video for jQuery.&lt;br&gt;Supports cross-domain, chunked and resumable file uploads and client-side image resizing. Works with any server-side platform (PHP, Python, Ruby on Rails, Java, Node.js, Go etc.) that supports standard HTML form file uploads.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;异步上传&quot;&gt;&lt;a href=&quot;#异步上传&quot; class=&quot;headerlink&quot; title=&quot;异步上传&quot;&gt;&lt;/a&gt;异步上传&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;最小支持文件&lt;/p&gt;
+&lt;p&gt;  jquery.fileupload.css&lt;br&gt;  jquery.min.js&lt;br&gt;  jquery.ui.widget.js&lt;br&gt;  jquery.iframe-transport.js&lt;br&gt;  jquery.fileupload.js&lt;/p&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;form-group&amp;quot;&amp;gt;
+    &amp;lt;label class=&amp;quot;col-sm-2 control-label&amp;quot;&amp;gt;图片&amp;lt;/label&amp;gt;
+    &amp;lt;div class=&amp;quot;col-sm-4 form-control-static&amp;quot;&amp;gt;
+        &amp;lt;a target=&amp;quot;_blank&amp;quot; href=&amp;quot;&amp;quot; id=&amp;quot;pic&amp;quot; style=&amp;quot;display: none&amp;quot;&amp;gt;
+            &amp;lt;img width=&amp;quot;128px&amp;quot; height=&amp;quot;63px&amp;quot; src=&amp;quot;&amp;quot;/&amp;gt;
+        &amp;lt;/a&amp;gt;
+        &amp;lt;span class=&amp;quot;btn btn-success fileinput-button btn-sm&amp;quot;&amp;gt;
+             &amp;lt;i class=&amp;quot;glyphicon glyphicon-plus&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;
+        &amp;lt;span&amp;gt;上传&amp;lt;/span&amp;gt;
+            &amp;lt;input class=&amp;quot;uploadPicBtn&amp;quot; type=&amp;quot;file&amp;quot; name=&amp;quot;file&amp;quot;&amp;gt;
+        &amp;lt;/span&amp;gt;
+        &amp;lt;input type=&amp;quot;hidden&amp;quot; name=&amp;quot;pic&amp;quot; &amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+//自定义processbar
+var processHtml = &amp;apos;&amp;lt;div id=&amp;quot;progress&amp;quot; class=&amp;quot;progress&amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;progress-bar progress-bar-success&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;apos;;
+$(&amp;apos;.uploadPicBtn&amp;apos;).fileupload({
+    url: &amp;apos;/upload/push&amp;apos;,
+    dataType: &amp;apos;json&amp;apos;,
+    start: function (e) {
+        $(e.target).parent().after(processHtml);
+    },
+    done: function (e, data) {
+        if (data.result.result == false) {
+            alert(data.result.msg);
+            return;
+        }
+        var img_url = data.result.data[0].src;
+        $(&amp;apos;input[name=pic]&amp;apos;).val(img_url);
+        $(&amp;apos;#pic&amp;apos;).attr(&amp;apos;href&amp;apos;, img_url).show().find(&amp;apos;img&amp;apos;).attr(&amp;apos;src&amp;apos;, img_url);
+        $(&amp;apos;#progress&amp;apos;).remove();
+    },
+    progressall: function (e, data) {
+        var progress = parseInt(data.loaded / data.total * 100, 10);
+        $(&amp;apos;#progress .progress-bar&amp;apos;).css(
+            &amp;apos;width&amp;apos;,
+            progress + &amp;apos;%&amp;apos;
+        );
+    }
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;预览&quot;&gt;&lt;a href=&quot;#预览&quot; class=&quot;headerlink&quot; title=&quot;预览&quot;&gt;&lt;/a&gt;预览&lt;/h2&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;使用imgeload &lt;a href=&quot;https://github.com/blueimp/JavaScript-Load-Image/blob/master/js/load-image.all.min.js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;load-image.all.min.js&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$(&amp;apos;.fileupload&amp;apos;).fileupload({
+        disableImageResize: false,
+        previewMaxWidth: 320,
+        previewMaxHeight: 320
+    }).bind(&amp;apos;fileuploadprocessalways&amp;apos;, function(e, data)
+    {
+        var canvas = data.files[0].preview;
+        var dataURL = canvas.toDataURL();
+        $(&amp;quot;#test&amp;quot;).attr(&amp;quot;src&amp;quot;, &amp;apos;&amp;apos; + dataURL +&amp;apos;&amp;apos;).show();
+    });
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;使用filereader&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;function readURL(input) {
+        if (input.files &amp;amp;&amp;amp; input.files[0]) {
+            var reader = new FileReader();            
+            reader.onload = function (e) {
+                $(&amp;apos;#target&amp;apos;).attr(&amp;apos;src&amp;apos;, e.target.result);
+            }      
+            reader.readAsDataURL(input.files[0]);
+        }
+}
+# 或
+$(&amp;apos;.uploadPicBtn&amp;apos;).fileupload({
+    disableImageResize: false,
+    previewMaxWidth: 320,
+    previewMaxHeight: 320
+}).bind(&amp;apos;fileuploadprocessalways&amp;apos;, function(e, data)
+{
+    var canvas = data.files[0].preview;
+    var dataURL = canvas.toDataURL();
+    $(&amp;quot;#img-element&amp;quot;).attr(&amp;quot;src&amp;quot;, &amp;apos;&amp;apos; + dataURL +&amp;apos;&amp;apos;).show();
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;demo： &lt;a href=&quot;http://blog.newbmiao.com/demo/jquery-upload-preview.html&quot;&gt;jquery-upload-preview&lt;/a&gt; 查看源码了解&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;客户端裁剪&quot;&gt;&lt;a href=&quot;#客户端裁剪&quot; class=&quot;headerlink&quot; title=&quot;客户端裁剪&quot;&gt;&lt;/a&gt;客户端裁剪&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/blueimp/jQuery-File-Upload/wiki/Client-side-Image-Resizing&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Client-side-Image-Resizing&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$(&amp;apos;.uploadPicBtn&amp;apos;).fileupload({
+    url: &amp;apos;/upload/push&amp;apos;,
+    dataType: &amp;apos;json&amp;apos;,
+    // Enable image resizing, except for Android and Opera,
+    // which actually support image resizing, but fail to
+    // send Blob objects via XHR requests:
+    disableImageResize: /Android(?!.*Chrome)|Opera/.test(window.navigator &amp;amp;&amp;amp; navigator.userAgent),
+    imageMaxWidth: 800,
+    imageMaxHeight: 800,
+    imageCrop: true // Force cropped images
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;附&lt;a href=&quot;https://github.com/blueimp/jQuery-File-Upload/wiki/Options&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;jquery-fileupload文档&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      jquery图片上传
+    
+    </summary>
+    
+      <category term="js" scheme="http://blog.newbmiao.com/categories/js/"/>
+    
+      <category term="jquery" scheme="http://blog.newbmiao.com/categories/js/jquery/"/>
+    
+    
+      <category term="js" scheme="http://blog.newbmiao.com/tags/js/"/>
+    
+      <category term="jquery" scheme="http://blog.newbmiao.com/tags/jquery/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>鸟哥的Linux私房菜笔记-系统服务</title>
+    <link href="http://blog.newbmiao.com/2015/09/16/Niaoge-Linux-Desktop-Guide-notes-daemon.html"/>
+    <id>http://blog.newbmiao.com/2015/09/16/Niaoge-Linux-Desktop-Guide-notes-daemon.html</id>
+    <published>2015-09-16T09:41:50.000Z</published>
+    <updated>2016-07-07T13:09:20.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;笔记记录于《鸟哥的Linux私房菜-第三版》,以备多看。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;系统服务-daemon&quot;&gt;&lt;a href=&quot;#系统服务-daemon&quot; class=&quot;headerlink&quot; title=&quot;系统服务-daemon&quot;&gt;&lt;/a&gt;系统服务-daemon&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;方式&lt;ul&gt;
+&lt;li&gt;stand alone #独立启动常驻内存  &lt;code&gt;/etc/init.d/*&lt;/code&gt; (httpd,vsftpd)&lt;/li&gt;
+&lt;li&gt;super daemon #常驻内存的 &lt;strong&gt;xinetd&lt;/strong&gt; 统一管理 &lt;code&gt;/etc/xinetd.d/*&lt;/code&gt; (telnet)&lt;ul&gt;
+&lt;li&gt;multi-threaded #一个服务负责多个程序&lt;/li&gt;
+&lt;li&gt;single-threaded #一个一个处理，多的排队&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;服务&lt;ul&gt;
+&lt;li&gt;signal control&lt;/li&gt;
+&lt;li&gt;interval control #排程等服务&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;/etc/services #记录服务端口&lt;/li&gt;
+&lt;li&gt;super daemon的参数档案[/etc/xinetd.d/*]&lt;ul&gt;
+&lt;li&gt;socket_type stream：tcp；dgram：udp；raw：直接和IP连接&lt;/li&gt;
+&lt;li&gt;wait yes：single-control；no：multi-control&lt;/li&gt;
+&lt;li&gt;instances 最大连接数&lt;/li&gt;
+&lt;li&gt;per_source 同一IP最多可连接数&lt;/li&gt;
+&lt;li&gt;cps num1 num2 1秒内能接受新连接数 超过则暂时关闭该服务的秒数&lt;/li&gt;
+&lt;li&gt;redirect ip port #服务转址&lt;/li&gt;
+&lt;li&gt;only-from [0.0.0.0,192.186.1.0/24,hostname,domainname] #防火墙机制&lt;/li&gt;
+&lt;li&gt;no-access&lt;/li&gt;
+&lt;li&gt;sccess_times [HH:MM-HH:MM] #时间控管&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;ldd&quot;&gt;&lt;a href=&quot;#ldd&quot; class=&quot;headerlink&quot; title=&quot;ldd&quot;&gt;&lt;/a&gt;ldd&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;产看执行文件的动态链接库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;tcp-wraper&quot;&gt;&lt;a href=&quot;#tcp-wraper&quot; class=&quot;headerlink&quot; title=&quot;tcp wraper&quot;&gt;&lt;/a&gt;tcp wraper&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;支援libwrap.so 的可以使用 /etc/hosts.{allow,deny} 来做防火墙（httpd没有此功能）&lt;/li&gt;
+&lt;li&gt;rsync：127.0.0.100：deny &lt;code&gt;hosts.deny&lt;/code&gt;第三栏默认为 deny，可不写&lt;/li&gt;
+&lt;li&gt;第一、二栏&lt;ul&gt;
+&lt;li&gt;ALL 全部程序或ip&lt;/li&gt;
+&lt;li&gt;LOCAL 来自本机&lt;/li&gt;
+&lt;li&gt;UNKNOWN 不知道的IP、domain、服务&lt;/li&gt;
+&lt;li&gt;KNOWN 可解析的IP、domain、服务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;第三栏&lt;ul&gt;
+&lt;li&gt;spawn %d(hostname),%a(address),%d(daemon)&lt;/li&gt;
+&lt;li&gt;twist 执行后续命令后终止该连接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;service&quot;&gt;&lt;a href=&quot;#service&quot; class=&quot;headerlink&quot; title=&quot;service&quot;&gt;&lt;/a&gt;service&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;service –status-all #查看所有服务状态,同 &lt;code&gt;netstat -anl&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;chkconfig&quot;&gt;&lt;a href=&quot;#chkconfig&quot; class=&quot;headerlink&quot; title=&quot;chkconfig&quot;&gt;&lt;/a&gt;chkconfig&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;–list [服务名称] #列出服务状态&lt;/li&gt;
+&lt;li&gt;–add 服务名称&lt;/li&gt;
+&lt;li&gt;–del 服务名称&lt;/li&gt;
+&lt;li&gt;–level [0-6] 服务名称 [on|off]&lt;/li&gt;
+&lt;li&gt;chkconfig –level 345 atd on #atd在run level为3，4，5时启动&lt;blockquote&gt;
+&lt;p&gt;=&amp;gt;&lt;strong&gt;run level&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;0 halt (系统直接关机)&lt;/li&gt;
+&lt;li&gt;1 single user mode (单人维护模式,用在系统出问题时的维护)&lt;/li&gt;
+&lt;li&gt;2 Multi-user, without NFS (类似底下的 runlevel 3,但无 NFS 服务)&lt;/li&gt;
+&lt;li&gt;3 Full multi-user mode (完整含有网络功能的纯文本模式)&lt;/li&gt;
+&lt;li&gt;4 unused (系统保留功能)&lt;/li&gt;
+&lt;li&gt;5 X11 (与 runlevel 3 类似,但加载使用 X Window)&lt;/li&gt;
+&lt;li&gt;6 reboot (重新启动)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;0,6系统启动相关，不应设置为预设&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;runlevel&quot;&gt;&lt;a href=&quot;#runlevel&quot; class=&quot;headerlink&quot; title=&quot;runlevel&quot;&gt;&lt;/a&gt;runlevel&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;查看前一个与当前level&lt;h3 id=&quot;init&quot;&gt;&lt;a href=&quot;#init&quot; class=&quot;headerlink&quot; title=&quot;init&quot;&gt;&lt;/a&gt;init&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;N 切换run level&lt;h3 id=&quot;ntsysv&quot;&gt;&lt;a href=&quot;#ntsysv&quot; class=&quot;headerlink&quot; title=&quot;ntsysv&quot;&gt;&lt;/a&gt;ntsysv&lt;/h3&gt;&lt;h2 id=&quot;登陆档案-log&quot;&gt;&lt;a href=&quot;#登陆档案-log&quot; class=&quot;headerlink&quot; title=&quot;登陆档案-log&quot;&gt;&lt;/a&gt;登陆档案-log&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;vim /etc/rsyslog.conf #配置log&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;log&quot;&gt;&lt;a href=&quot;#log&quot; class=&quot;headerlink&quot; title=&quot;log&quot;&gt;&lt;/a&gt;log&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;cron: /var/log/cron&lt;/li&gt;
+&lt;li&gt;dmesg: /var/log/dmesg&lt;/li&gt;
+&lt;li&gt;系统账号最后登录资讯: /var/log/lastlog&lt;/li&gt;
+&lt;li&gt;mail: /var/log/maillog或/var/log/mail/*&lt;/li&gt;
+&lt;li&gt;系统错误: /var/log/messages&lt;/li&gt;
+&lt;li&gt;密码错误等: /var/log/secure&lt;/li&gt;
+&lt;li&gt;登陆正确 | 错误: /var/log/wtmp (last) | faillog&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;level&quot;&gt;&lt;a href=&quot;#level&quot; class=&quot;headerlink&quot; title=&quot;level&quot;&gt;&lt;/a&gt;level&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;info,notice,warning,err,crit,alert,emerg [denug,none]&lt;/li&gt;
+&lt;li&gt;. #大于等于后边等级的登陆记录 &lt;code&gt;mail.info&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;.= #指定为后边设置等级&lt;/li&gt;
+&lt;li&gt;.! #除后边的等级都记录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;logrotate&quot;&gt;&lt;a href=&quot;#logrotate&quot; class=&quot;headerlink&quot; title=&quot;logrotate&quot;&gt;&lt;/a&gt;logrotate&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;-v #显示过程&lt;/li&gt;
+&lt;li&gt;-f #强制rotate&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;操作syslog&quot;&gt;&lt;a href=&quot;#操作syslog&quot; class=&quot;headerlink&quot; title=&quot;操作syslog&quot;&gt;&lt;/a&gt;操作syslog&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;#防止用户修改log导致log不能正常记录
+chattr -a /var/log/messages
+
+#利用prerotate和postrotate使logrotate正常进行
+vi /etc/logrotate.d/syslog
+
+/var/log/messages
+/var/log/secure
+/var/log/maillog
+/var/log/spooler
+/var/log/boot.log
+/var/log/cron
+{
+    sharedscripts
+    prerotate
+    /usr/bin/chattr -a /var/log/messages
+    endscript
+
+    sharedscripts
+    postrotate
+    /bin/kill -HUP `cat /var/run/syslogd.pid 2&amp;gt; /dev/null` 2&amp;gt; /dev/null || true
+    #下边这条在有rsyslogd.pid处使用
+    /bin/kill -HUP `cat /var/run/rsyslogd.pid 2&amp;gt; /dev/null` 2&amp;gt; /dev/null || true
+    /usr/bin/chattr +a /var/log/message
+    endscript
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;logrotate&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;/var/log/log_name.log 有log文件&lt;/li&gt;
+&lt;li&gt;/etc/logrotate.d/log_name 有对应配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;depmod&quot;&gt;&lt;a href=&quot;#depmod&quot; class=&quot;headerlink&quot; title=&quot;depmod&quot;&gt;&lt;/a&gt;depmod&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;-A 新的模块写入&lt;/li&gt;
+&lt;li&gt;-n 不写入，输出屏幕&lt;/li&gt;
+&lt;li&gt;-e 显示已加载的不可执行模块&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;lsmod&quot;&gt;&lt;a href=&quot;#lsmod&quot; class=&quot;headerlink&quot; title=&quot;lsmod&quot;&gt;&lt;/a&gt;lsmod&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;显示加载模块&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;modinfo&quot;&gt;&lt;a href=&quot;#modinfo&quot; class=&quot;headerlink&quot; title=&quot;modinfo&quot;&gt;&lt;/a&gt;modinfo&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;-a [module_name|filename] :仅列出作者名称;&lt;/li&gt;
+&lt;li&gt;-d :仅列出该 modules 的说明 (description);&lt;/li&gt;
+&lt;li&gt;-l :仅列出授权 (license);&lt;/li&gt;
+&lt;li&gt;-n :仅列出该模块的详细路径。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;insmod，rmmod，modprobe&quot;&gt;&lt;a href=&quot;#insmod，rmmod，modprobe&quot; class=&quot;headerlink&quot; title=&quot;insmod，rmmod，modprobe&quot;&gt;&lt;/a&gt;insmod，rmmod，modprobe&lt;/h3&gt;&lt;h3 id=&quot;rpm&quot;&gt;&lt;a href=&quot;#rpm&quot; class=&quot;headerlink&quot; title=&quot;rpm&quot;&gt;&lt;/a&gt;rpm&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;rpm -ivh *.rpm #安装&lt;/li&gt;
+&lt;li&gt;rpm -Uvh #安装的更新，未安装的安装&lt;/li&gt;
+&lt;li&gt;rpm -Fvh #已安装的才升级&lt;/li&gt;
+&lt;li&gt;rpm -qa #列出已安装软件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;yum&quot;&gt;&lt;a href=&quot;#yum&quot; class=&quot;headerlink&quot; title=&quot;yum&quot;&gt;&lt;/a&gt;yum&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;yum install xxx&lt;/li&gt;
+&lt;li&gt;yum list xxx #列出package详情&lt;/li&gt;
+&lt;li&gt;yum search rpm #&lt;/li&gt;
+&lt;li&gt;yum update xxx&lt;/li&gt;
+&lt;li&gt;yum -y upgrade #更新&lt;/li&gt;
+&lt;li&gt;yum clean [packages|headers|all] #清除相关rpm文件&lt;/li&gt;
+&lt;li&gt;yum remove xxx&lt;/li&gt;
+&lt;li&gt;LANG=C yum grouplist #列出可用软件群组&lt;/li&gt;
+&lt;li&gt;yum groupinfo 软件群组名&lt;/li&gt;
+&lt;li&gt;yum groupinstall [–installtoot=/path/]&lt;/li&gt;
+&lt;li&gt;yum groupremove 软件群组名&lt;/li&gt;
+&lt;li&gt;yum repolist all #列出源&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      鸟哥的Linux私房菜笔记-程序管理
+    
+    </summary>
+    
+      <category term="linux" scheme="http://blog.newbmiao.com/categories/linux/"/>
+    
+      <category term="notes" scheme="http://blog.newbmiao.com/categories/linux/notes/"/>
+    
+    
+      <category term="linux" scheme="http://blog.newbmiao.com/tags/linux/"/>
+    
+      <category term="notes" scheme="http://blog.newbmiao.com/tags/notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>鸟哥的Linux私房菜笔记-程序管理</title>
+    <link href="http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-process.html"/>
+    <id>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-process.html</id>
+    <published>2015-09-15T09:41:50.000Z</published>
+    <updated>2016-07-07T13:09:20.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;笔记记录于《鸟哥的Linux私房菜-第三版》,以备多看。&lt;/p&gt;
+&lt;h1 id=&quot;程序管理&quot;&gt;&lt;a href=&quot;#程序管理&quot; class=&quot;headerlink&quot; title=&quot;程序管理&quot;&gt;&lt;/a&gt;程序管理&lt;/h1&gt;&lt;h3 id=&quot;amp&quot;&gt;&lt;a href=&quot;#amp&quot; class=&quot;headerlink&quot; title=&quot;&amp;amp;&quot;&gt;&lt;/a&gt;&amp;amp;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;后台执行&lt;/li&gt;
+&lt;li&gt;试试这个 &lt;code&gt;:(){ :|:&amp;amp; };:&lt;/code&gt;&lt;h3 id=&quot;ctrl-z&quot;&gt;&lt;a href=&quot;#ctrl-z&quot; class=&quot;headerlink&quot; title=&quot;ctrl+z&quot;&gt;&lt;/a&gt;ctrl+z&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;程序stop，并切到后台&lt;h3 id=&quot;bg&quot;&gt;&lt;a href=&quot;#bg&quot; class=&quot;headerlink&quot; title=&quot;bg&quot;&gt;&lt;/a&gt;bg&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;查看后台程序&lt;h3 id=&quot;fg&quot;&gt;&lt;a href=&quot;#fg&quot; class=&quot;headerlink&quot; title=&quot;fg&quot;&gt;&lt;/a&gt;fg&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;查看前台程序,job前有+的会被调到前台&lt;/li&gt;
+&lt;li&gt;fg [%]num #指定job切换&lt;/li&gt;
+&lt;li&gt;fg - #切换到-对应的job&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;jobs&quot;&gt;&lt;a href=&quot;#jobs&quot; class=&quot;headerlink&quot; title=&quot;jobs&quot;&gt;&lt;/a&gt;jobs&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;-l #列出指令及PID&lt;/li&gt;
+&lt;li&gt;-r #仅列出正在背景run的工作&lt;/li&gt;
+&lt;li&gt;-s #仅列出正在背景stop的工作&lt;h3 id=&quot;kill&quot;&gt;&lt;a href=&quot;#kill&quot; class=&quot;headerlink&quot; title=&quot;kill&quot;&gt;&lt;/a&gt;kill&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;-l #列出signal&lt;/li&gt;
+&lt;li&gt;-SIGHUP  # 1:reload&lt;/li&gt;
+&lt;li&gt;-SIGINT  # 2:ctrl+c&lt;/li&gt;
+&lt;li&gt;-SIGKILL # 9:强制关闭&lt;/li&gt;
+&lt;li&gt;-SIGTERM # 15:正常关闭&lt;/li&gt;
+&lt;li&gt;-SIGSTOP # 17:ctrl+z&lt;/li&gt;
+&lt;li&gt;kill -SIGKILL %1 #管理bash的job_num前要加%,否则为PID&lt;h3 id=&quot;nohup&quot;&gt;&lt;a href=&quot;#nohup&quot; class=&quot;headerlink&quot; title=&quot;nohup&quot;&gt;&lt;/a&gt;nohup&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;nohup 指令 #前端离线管理&lt;/li&gt;
+&lt;li&gt;nohup 指令 &amp;amp; #背景中管理 &lt;h3 id=&quot;ps&quot;&gt;&lt;a href=&quot;#ps&quot; class=&quot;headerlink&quot; title=&quot;ps&quot;&gt;&lt;/a&gt;ps&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;-A #所有的process都显示，同 -e&lt;/li&gt;
+&lt;li&gt;-a #不与terminal有关的所有process&lt;/li&gt;
+&lt;li&gt;-u #有效使用者相关的process&lt;/li&gt;
+&lt;li&gt;-x #同a使用列出详细资讯&lt;/li&gt;
+&lt;li&gt;-l #详细列出自己bash程序的，含PID资讯&lt;ul&gt;
+&lt;li&gt;F #process flags 4：root；1：子程序只fork而没有exec&lt;/li&gt;
+&lt;li&gt;S #STAT R:running;S:sleep;D:不可被唤醒的睡眠状态（idle);T:stop;Z:zombie&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;-j #工作的格式 job&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;-f 做一个更完整的输出&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;aux #显示全部，&lt;strong&gt;注意没有 - &lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;axjf #程序树 同 &lt;code&gt;pstree&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;-lA #同上&lt;h3 id=&quot;top&quot;&gt;&lt;a href=&quot;#top&quot; class=&quot;headerlink&quot; title=&quot;top&quot;&gt;&lt;/a&gt;top&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;-d seconds #更新秒数,预设5s&lt;/li&gt;
+&lt;li&gt;-bn num #以指定num为批次执行top&lt;/li&gt;
+&lt;li&gt;-p #指定PID&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;? 帮助&lt;/li&gt;
+&lt;li&gt;P CPU使用资源排序，消耗资源程度&lt;/li&gt;
+&lt;li&gt;M Memory使用资源排序&lt;/li&gt;
+&lt;li&gt;N 以PID排序&lt;/li&gt;
+&lt;li&gt;T CPU时间累计（TIME+）排序&lt;/li&gt;
+&lt;li&gt;k 给某个PID一个信号&lt;/li&gt;
+&lt;li&gt;r 重订一个nice值 &lt;ul&gt;
+&lt;li&gt;PRI(new)=PRI(old)+nice,PRI越低越优先，root取值范围：-20~19，其余：0~19&lt;h3 id=&quot;nice&quot;&gt;&lt;a href=&quot;#nice&quot; class=&quot;headerlink&quot; title=&quot;nice&quot;&gt;&lt;/a&gt;nice&lt;/h3&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;n num #一开始执行就给与nice值&lt;h3 id=&quot;renice&quot;&gt;&lt;a href=&quot;#renice&quot; class=&quot;headerlink&quot; title=&quot;renice&quot;&gt;&lt;/a&gt;renice&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;renice num PID #对已存在程序调整nice&lt;/li&gt;
+&lt;li&gt;nice值会在父子程序间传递&lt;h3 id=&quot;pstree&quot;&gt;&lt;a href=&quot;#pstree&quot; class=&quot;headerlink&quot; title=&quot;pstree&quot;&gt;&lt;/a&gt;pstree&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;-A  #各程序树之间连接以ASCII连接&lt;/li&gt;
+&lt;li&gt;-U  #以万国码&lt;/li&gt;
+&lt;li&gt;-p  #列出PID &lt;/li&gt;
+&lt;li&gt;-u  #列出所属账号&lt;h3 id=&quot;killall&quot;&gt;&lt;a href=&quot;#killall&quot; class=&quot;headerlink&quot; title=&quot;killall&quot;&gt;&lt;/a&gt;killall&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;-i #交互,选择性执行killall&lt;/li&gt;
+&lt;li&gt;-e #exact指定cmd&lt;/li&gt;
+&lt;li&gt;-I #忽略大小写&lt;h3 id=&quot;free&quot;&gt;&lt;a href=&quot;#free&quot; class=&quot;headerlink&quot; title=&quot;free&quot;&gt;&lt;/a&gt;free&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;-b #bytes ;m:Mbytes; k:kbytes; g:Gbytes&lt;/li&gt;
+&lt;li&gt;-t #最终结果显示实体记忆体和swap的总量&lt;h3 id=&quot;uname&quot;&gt;&lt;a href=&quot;#uname&quot; class=&quot;headerlink&quot; title=&quot;uname&quot;&gt;&lt;/a&gt;uname&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;-a #所有资讯&lt;/li&gt;
+&lt;li&gt;-s #系统核心名称&lt;/li&gt;
+&lt;li&gt;-r #核心版本&lt;/li&gt;
+&lt;li&gt;-m #系统硬件名称&lt;/li&gt;
+&lt;li&gt;-p #cpu类型&lt;/li&gt;
+&lt;li&gt;-i #硬件平台&lt;h3 id=&quot;uptime&quot;&gt;&lt;a href=&quot;#uptime&quot; class=&quot;headerlink&quot; title=&quot;uptime&quot;&gt;&lt;/a&gt;uptime&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;显示开机时间和1，5，15分钟的平均负载&lt;h3 id=&quot;netstat&quot;&gt;&lt;a href=&quot;#netstat&quot; class=&quot;headerlink&quot; title=&quot;netstat&quot;&gt;&lt;/a&gt;netstat&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;-a #列出系统所有连接、监听和socket&lt;/li&gt;
+&lt;li&gt;-t #列出tcp封包&lt;/li&gt;
+&lt;li&gt;-u #udp&lt;/li&gt;
+&lt;li&gt;-n #以ip &amp;amp; port number列出，替代hostname &amp;amp; service_name&lt;/li&gt;
+&lt;li&gt;-l #列出监听的服务&lt;/li&gt;
+&lt;li&gt;-p #PID&lt;/li&gt;
+&lt;li&gt;netstat -tlnp #列出已在监听的连接及其PID&lt;ul&gt;
+&lt;li&gt;grep ‘rsync’ /etc/services #查看服务端口 &lt;h3 id=&quot;dmesg&quot;&gt;&lt;a href=&quot;#dmesg&quot; class=&quot;headerlink&quot; title=&quot;dmesg&quot;&gt;&lt;/a&gt;dmesg&lt;/h3&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;显示开机时核心产生的讯息&lt;/li&gt;
+&lt;li&gt;dmesg | more #分页阅读&lt;h3 id=&quot;vmstat&quot;&gt;&lt;a href=&quot;#vmstat&quot; class=&quot;headerlink&quot; title=&quot;vmstat&quot;&gt;&lt;/a&gt;vmstat&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;-a #使用inactive/active取代buffer/cache输出资讯&lt;/li&gt;
+&lt;li&gt;-f #开机到现在fork的程序数&lt;/li&gt;
+&lt;li&gt;-S 单位（K，M） #指定单位&lt;/li&gt;
+&lt;li&gt;-d #列出磁碟读写总量统计&lt;/li&gt;
+&lt;li&gt;-p #列出分隔槽可显示其读写总量统计表&lt;/li&gt;
+&lt;li&gt;vmstat 1 3 #每1秒统计一次，共3次&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      鸟哥的Linux私房菜笔记-程序管理
+    
+    </summary>
+    
+      <category term="linux" scheme="http://blog.newbmiao.com/categories/linux/"/>
+    
+      <category term="notes" scheme="http://blog.newbmiao.com/categories/linux/notes/"/>
+    
+    
+      <category term="linux" scheme="http://blog.newbmiao.com/tags/linux/"/>
+    
+      <category term="notes" scheme="http://blog.newbmiao.com/tags/notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>鸟哥的Linux私房菜笔记-排程</title>
+    <link href="http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-cron.html"/>
+    <id>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-cron.html</id>
+    <published>2015-09-15T09:39:47.000Z</published>
+    <updated>2016-07-07T13:09:20.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;笔记记录于《鸟哥的Linux私房菜-第三版》,以备多看。&lt;/p&gt;
+&lt;h2 id=&quot;排程&quot;&gt;&lt;a href=&quot;#排程&quot; class=&quot;headerlink&quot; title=&quot;排程&quot;&gt;&lt;/a&gt;排程&lt;/h2&gt;&lt;h3 id=&quot;at&quot;&gt;&lt;a href=&quot;#at&quot; class=&quot;headerlink&quot; title=&quot;at&quot;&gt;&lt;/a&gt;at&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;启动服务 /etc/init.d/atd restart chkconfig atd on&lt;/li&gt;
+&lt;li&gt;-m #完成后email通知&lt;/li&gt;
+&lt;li&gt;-l #相当于atq，列出该使用者排程&lt;/li&gt;
+&lt;li&gt;-d num #相当于atrm，取消一个排程&lt;/li&gt;
+&lt;li&gt;-v #以时间格式列出排程&lt;/li&gt;
+&lt;li&gt;-c num #列出该指令内容&lt;h3 id=&quot;batch&quot;&gt;&lt;a href=&quot;#batch&quot; class=&quot;headerlink&quot; title=&quot;batch&quot;&gt;&lt;/a&gt;batch&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;在系统负载小于0.8时进行排程&lt;/li&gt;
+&lt;li&gt;HH:MM YYYY-M-DD #指定时间执行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;crontab&quot;&gt;&lt;a href=&quot;#crontab&quot; class=&quot;headerlink&quot; title=&quot;crontab&quot;&gt;&lt;/a&gt;crontab&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;-u uname #root可使用&lt;/li&gt;
+&lt;li&gt;-e #编辑crontab内容&lt;/li&gt;
+&lt;li&gt;-l #查阅&lt;/li&gt;
+&lt;li&gt;-r #移除所有&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;格式：tab 分隔&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) 
+# |  |  |  |  |            OR sun,mon,tue,wed,thu,fri,sat
+# *  *  *  *  * user-name command to be executed
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  特殊符号|意义&lt;br&gt;  -|-&lt;br&gt;  &lt;em&gt;|任意时刻&lt;br&gt;  ,|分隔时段; 3,6 3点和6点&lt;br&gt;  -|时间范围; 3-6&lt;br&gt;  /n|每隔n个单位间隔; `&lt;/em&gt;/5` 每5分钟&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;/etc/crontab #系统排程设置&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/etc/init.d/crond restart #修改后确保进入排程
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;anacron&quot;&gt;&lt;a href=&quot;#anacron&quot; class=&quot;headerlink&quot; title=&quot;anacron&quot;&gt;&lt;/a&gt;anacron&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;唤醒停机期间的工作任务,其判断 &lt;code&gt;/var/spool/anacron&lt;/code&gt; 中对应的时间戳记&lt;/li&gt;
+&lt;li&gt;-s cron.daily #开始执行未进行job&lt;/li&gt;
+&lt;li&gt;-f job #强制执行而不判断记录档时间戳记&lt;/li&gt;
+&lt;li&gt;-n job #立即进行，不延迟等待时间&lt;/li&gt;
+&lt;li&gt;-u job #仅更新时间记录档的时间戳记，不进行任何工作&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      鸟哥的Linux私房菜笔记-排程
+    
+    </summary>
+    
+      <category term="linux" scheme="http://blog.newbmiao.com/categories/linux/"/>
+    
+      <category term="notes" scheme="http://blog.newbmiao.com/categories/linux/notes/"/>
+    
+    
+      <category term="linux" scheme="http://blog.newbmiao.com/tags/linux/"/>
+    
+      <category term="notes" scheme="http://blog.newbmiao.com/tags/notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>鸟哥的Linux私房菜笔记-配额</title>
+    <link href="http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-quota.html"/>
+    <id>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-quota.html</id>
+    <published>2015-09-15T09:37:30.000Z</published>
+    <updated>2016-07-07T13:09:20.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;笔记记录于《鸟哥的Linux私房菜-第三版》,以备多看。&lt;/p&gt;
+&lt;h2 id=&quot;配额&quot;&gt;&lt;a href=&quot;#配额&quot; class=&quot;headerlink&quot; title=&quot;配额&quot;&gt;&lt;/a&gt;配额&lt;/h2&gt;&lt;p&gt;单次生效：&lt;br&gt;    mount -o remount,usrquota,grpquota 单独的filesystem  #对应/etc/mtab&lt;/p&gt;
+&lt;p&gt;每次开机有效 编辑/etc/fstab&lt;br&gt;    UUID=&lt;del&gt;XXX&lt;/del&gt; 单独的filesystem                      ext4    defaults,&lt;strong&gt;usrquota,grpquota&lt;/strong&gt;       0 0&lt;br&gt;    umount 单独的filesystem&lt;br&gt;    mount -a&lt;br&gt;   mount|grep 单独的filesystem #确认是否添加quota&lt;/p&gt;
+&lt;h3 id=&quot;quota&quot;&gt;&lt;a href=&quot;#quota&quot; class=&quot;headerlink&quot; title=&quot;quota&quot;&gt;&lt;/a&gt;quota&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;-auvg #扫描需要quota的filesystem [a-/etc/mtab中找需要quota的filesystem;u-user;g-group]&lt;/li&gt;
+&lt;li&gt;-mf #强制执行检查写入&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;quotaon&quot;&gt;&lt;a href=&quot;#quotaon&quot; class=&quot;headerlink&quot; title=&quot;quotaon&quot;&gt;&lt;/a&gt;quotaon&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;-avug #第一次启动quota &lt;h3 id=&quot;quotaoff&quot;&gt;&lt;a href=&quot;#quotaoff&quot; class=&quot;headerlink&quot; title=&quot;quotaoff&quot;&gt;&lt;/a&gt;quotaoff&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;-aug&lt;/p&gt;
+&lt;h3 id=&quot;edquota&quot;&gt;&lt;a href=&quot;#edquota&quot; class=&quot;headerlink&quot; title=&quot;edquota&quot;&gt;&lt;/a&gt;edquota&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;-u user #用户配额&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;-g group #组配额&lt;/li&gt;
+&lt;li&gt;-t #修改宽限时间&lt;/li&gt;
+&lt;li&gt;-p 范本账号 -u 新账号 #复制配额&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;单位kb&lt;/p&gt;
+&lt;h3 id=&quot;quota-1&quot;&gt;&lt;a href=&quot;#quota-1&quot; class=&quot;headerlink&quot; title=&quot;quota&quot;&gt;&lt;/a&gt;quota&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;-u  user #显示用户配额&lt;/li&gt;
+&lt;li&gt;-v #显示所有用户配额&lt;/li&gt;
+&lt;li&gt;-g group #显示用户配额&lt;/li&gt;
+&lt;li&gt;-s #按M显示配额&lt;h3 id=&quot;repquota&quot;&gt;&lt;a href=&quot;#repquota&quot; class=&quot;headerlink&quot; title=&quot;repquota&quot;&gt;&lt;/a&gt;repquota&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;-auvgs #显示整个filesystem配额&lt;h3 id=&quot;warnquota&quot;&gt;&lt;a href=&quot;#warnquota&quot; class=&quot;headerlink&quot; title=&quot;warnquota&quot;&gt;&lt;/a&gt;warnquota&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;执行会判断是否需要邮件提醒，需要则会发给root和目标用户邮件&lt;/li&gt;
+&lt;li&gt;每日自动执行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;echo &amp;quot;/usr/sbin/warnquota&amp;quot;&amp;gt; /etc/cron.daily/warnquota
+chmod 755 /etc/cron.daily/warnquota
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;setquota&quot;&gt;&lt;a href=&quot;#setquota&quot; class=&quot;headerlink&quot; title=&quot;setquota&quot;&gt;&lt;/a&gt;setquota&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;setquota [-u|-g] [-rm] [-F quotaformat] &amp;lt;user|group&amp;gt; &amp;lt;block-softlimit&amp;gt; &amp;lt;block-hardlimit&amp;gt; &amp;lt;inode-softlimit&amp;gt; &amp;lt;inode-hardlimit&amp;gt; -a|&amp;lt;filesystem&amp;gt;...
+setquota [-u|-g] [-rm] [-F quotaformat] &amp;lt;-p protouser|protogroup&amp;gt; &amp;lt;user|group&amp;gt; -a|&amp;lt;filesystem&amp;gt;...
+setquota [-u|-g] [-rm] [-F quotaformat] -b [-c] -a|&amp;lt;filesystem&amp;gt;...
+setquota [-u|-g] [-F quotaformat] -t &amp;lt;blockgrace&amp;gt; &amp;lt;inodegrace&amp;gt; -a|&amp;lt;filesystem&amp;gt;...
+setquota [-u|-g] [-F quotaformat] &amp;lt;user|group&amp;gt; -T &amp;lt;blockgrace&amp;gt; &amp;lt;inodegrace&amp;gt; -a|&amp;lt;filesystem&amp;gt;...
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;journaled-quota&quot;&gt;&lt;a href=&quot;#journaled-quota&quot; class=&quot;headerlink&quot; title=&quot;journaled quota&quot;&gt;&lt;/a&gt;journaled quota&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;quotacheck: Your kernel probably supports journaled quota but you are not using it. Consider switching to journaled quota to avoid running quotacheck after an unclean shutdown.&lt;br&gt;    yum install quota&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Edit: /etc/fstab   &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;vi /etc/fstab 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;replace “defaults” with “usrjquota=quota.user,jqfmt=vfsv0” for / mount point&lt;/p&gt;
+&lt;p&gt;Before:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;UUID=ac567666-9385-4ef5-885c-80f61ec64647       /       ext3    defaults        1       1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After Replace:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;UUID=ac567666-9385-4ef5-885c-80f61ec64647       /       ext3    usrjquota=quota.user,jqfmt=vfsv0        1       1
+
+mount -o remount /
+quotacheck -avugm
+quotaon -avug
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If you have /home in /etc/fstab then you will need to edit line matching /home&lt;br&gt;replace “defaults” with “usrjquota=quota.user,jqfmt=vfsv0” for /home mount point&lt;/p&gt;
+&lt;p&gt;Before:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;UUID=ac567666-9385-4ef5-885c-80f61ec64647       /home       ext3    defaults        1       1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After Replace:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;UUID=ac567666-9385-4ef5-885c-80f61ec64647       /home       ext3    usrjquota=quota.user,jqfmt=vfsv0        1       1
+
+mount -o remount /home
+quotacheck -avugm
+quotaon -avug
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now you need to add this into the CWP Configuration&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mkdir -p /usr/local/cwp/.conf/
+echo &amp;quot;/home&amp;quot; &amp;gt; /usr/local/cwp/.conf/quota_part.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;How to check if quota works ?&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;repquota -a
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This will display you user limits&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;附&lt;/strong&gt;[添加组配额要加上]： grpjquota=aquota.group&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://forum.centos-webpanel.com/centos-configuration/how-to-setup-user-quotas/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;参考自：How to setup user quotas&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;mdadm&quot;&gt;&lt;a href=&quot;#mdadm&quot; class=&quot;headerlink&quot; title=&quot;mdadm&quot;&gt;&lt;/a&gt;mdadm&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;RAID&lt;h3 id=&quot;LVM&quot;&gt;&lt;a href=&quot;#LVM&quot; class=&quot;headerlink&quot; title=&quot;LVM&quot;&gt;&lt;/a&gt;LVM&lt;/h3&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      鸟哥的Linux私房菜笔记-配额
+    
+    </summary>
+    
+      <category term="linux" scheme="http://blog.newbmiao.com/categories/linux/"/>
+    
+      <category term="notes" scheme="http://blog.newbmiao.com/categories/linux/notes/"/>
+    
+    
+      <category term="linux" scheme="http://blog.newbmiao.com/tags/linux/"/>
+    
+      <category term="notes" scheme="http://blog.newbmiao.com/tags/notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>鸟哥的Linux私房菜笔记-权限管理</title>
+    <link href="http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-ACL.html"/>
+    <id>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-ACL.html</id>
+    <published>2015-09-15T09:34:48.000Z</published>
+    <updated>2016-07-07T13:09:20.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;笔记记录于《鸟哥的Linux私房菜-第三版》,以备多看。&lt;/p&gt;
+&lt;h1 id=&quot;权限管理&quot;&gt;&lt;a href=&quot;#权限管理&quot; class=&quot;headerlink&quot; title=&quot;权限管理&quot;&gt;&lt;/a&gt;权限管理&lt;/h1&gt;&lt;h2 id=&quot;用户权限&quot;&gt;&lt;a href=&quot;#用户权限&quot; class=&quot;headerlink&quot; title=&quot;用户权限&quot;&gt;&lt;/a&gt;用户权限&lt;/h2&gt;&lt;h3 id=&quot;etc-shadow理解&quot;&gt;&lt;a href=&quot;#etc-shadow理解&quot; class=&quot;headerlink&quot; title=&quot;/etc/shadow理解&quot;&gt;&lt;/a&gt;/etc/shadow理解&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cyberciti.biz/faq/understanding-etcshadow-file/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;参考文章&lt;/a&gt;&lt;h3 id=&quot;useradd&quot;&gt;&lt;a href=&quot;#useradd&quot; class=&quot;headerlink&quot; title=&quot;useradd&quot;&gt;&lt;/a&gt;useradd&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;-u UID&lt;/li&gt;
+&lt;li&gt;-c ‘msg’&lt;/li&gt;
+&lt;li&gt;-g 初始群组&lt;/li&gt;
+&lt;li&gt;-G 附加次要群组&lt;/li&gt;
+&lt;li&gt;-d 指定家目录&lt;/li&gt;
+&lt;li&gt;-s 指定shell&lt;/li&gt;
+&lt;li&gt;-e YYYY-MM-DD #指定密码失效日期&lt;/li&gt;
+&lt;li&gt;-f num #密码失效多少天内账号还可以使用，-1永久可以；0立马不能使用&lt;/li&gt;
+&lt;li&gt;-D #显示预设&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;usermod&quot;&gt;&lt;a href=&quot;#usermod&quot; class=&quot;headerlink&quot; title=&quot;usermod&quot;&gt;&lt;/a&gt;usermod&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;-L #lock&lt;/li&gt;
+&lt;li&gt;-U #unlock&lt;/li&gt;
+&lt;li&gt;-aG group_name #附加次要群组，而不是替换&lt;/li&gt;
+&lt;li&gt;其余参数同useradd&lt;h3 id=&quot;userdel&quot;&gt;&lt;a href=&quot;#userdel&quot; class=&quot;headerlink&quot; title=&quot;userdel&quot;&gt;&lt;/a&gt;userdel&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;-r #删除家目录&lt;h3 id=&quot;passwd&quot;&gt;&lt;a href=&quot;#passwd&quot; class=&quot;headerlink&quot; title=&quot;passwd&quot;&gt;&lt;/a&gt;passwd&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;-l #锁定用户&lt;/li&gt;
+&lt;li&gt;-u #解锁&lt;/li&gt;
+&lt;li&gt;-S #显示账户密码资讯&lt;/li&gt;
+&lt;li&gt;-n num #多少天不可修改密码&lt;/li&gt;
+&lt;li&gt;-x num #多少天必须修改密码&lt;/li&gt;
+&lt;li&gt;-w num #deadline多少天前提醒&lt;/li&gt;
+&lt;li&gt;-i YYYY-MM-DD #指定密码失效日期&lt;/li&gt;
+&lt;li&gt;–stdin #利用管线修改密码 &lt;h3 id=&quot;chage&quot;&gt;&lt;a href=&quot;#chage&quot; class=&quot;headerlink&quot; title=&quot;chage&quot;&gt;&lt;/a&gt;chage&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;-l #显示账户密码资讯&lt;/li&gt;
+&lt;li&gt;-d YYYY-MM-DD #指定密码最近修改日期; 若指定为0，下次登录必须改密码&lt;/li&gt;
+&lt;li&gt;-m num #多少天不可修改密码&lt;/li&gt;
+&lt;li&gt;-M num #多少天必须修改密码&lt;/li&gt;
+&lt;li&gt;-w num #deadline多少天前提醒&lt;/li&gt;
+&lt;li&gt;-I YYYY-MM-DD #指定密码失效日期&lt;/li&gt;
+&lt;li&gt;-E YYYY-MM-DD #指定账号失效日期&lt;h2 id=&quot;组权限&quot;&gt;&lt;a href=&quot;#组权限&quot; class=&quot;headerlink&quot; title=&quot;组权限&quot;&gt;&lt;/a&gt;组权限&lt;/h2&gt;&lt;h3 id=&quot;groupadd&quot;&gt;&lt;a href=&quot;#groupadd&quot; class=&quot;headerlink&quot; title=&quot;groupadd&quot;&gt;&lt;/a&gt;groupadd&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;-g GID&lt;/li&gt;
+&lt;li&gt;-r 系统群组&lt;h3 id=&quot;groupmod&quot;&gt;&lt;a href=&quot;#groupmod&quot; class=&quot;headerlink&quot; title=&quot;groupmod&quot;&gt;&lt;/a&gt;groupmod&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;-g GID&lt;/li&gt;
+&lt;li&gt;-n 群组名称&lt;h3 id=&quot;groupdel&quot;&gt;&lt;a href=&quot;#groupdel&quot; class=&quot;headerlink&quot; title=&quot;groupdel&quot;&gt;&lt;/a&gt;groupdel&lt;/h3&gt;&lt;h3 id=&quot;groups&quot;&gt;&lt;a href=&quot;#groups&quot; class=&quot;headerlink&quot; title=&quot;groups&quot;&gt;&lt;/a&gt;groups&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;第一个显示的是有效群组&lt;h3 id=&quot;gpasswd&quot;&gt;&lt;a href=&quot;#gpasswd&quot; class=&quot;headerlink&quot; title=&quot;gpasswd&quot;&gt;&lt;/a&gt;gpasswd&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;gpasswd group #修改密码&lt;/li&gt;
+&lt;li&gt;-A user group #设管理员&lt;/li&gt;
+&lt;li&gt;-a user group #添加成员&lt;h3 id=&quot;newgrp&quot;&gt;&lt;a href=&quot;#newgrp&quot; class=&quot;headerlink&quot; title=&quot;newgrp&quot;&gt;&lt;/a&gt;newgrp&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;切换有效群组&lt;h3 id=&quot;finger&quot;&gt;&lt;a href=&quot;#finger&quot; class=&quot;headerlink&quot; title=&quot;finger&quot;&gt;&lt;/a&gt;finger&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;finger  user #其中用户的plan 可以 &lt;code&gt;echo &amp;#39;str&amp;#39; &amp;gt;~/.plan&lt;/code&gt; 创建&lt;h3 id=&quot;chfn&quot;&gt;&lt;a href=&quot;#chfn&quot; class=&quot;headerlink&quot; title=&quot;chfn&quot;&gt;&lt;/a&gt;chfn&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;-f #名字&lt;/li&gt;
+&lt;li&gt;-o #office&lt;/li&gt;
+&lt;li&gt;-p #phone&lt;/li&gt;
+&lt;li&gt;-h #home-phone&lt;h3 id=&quot;chsh&quot;&gt;&lt;a href=&quot;#chsh&quot; class=&quot;headerlink&quot; title=&quot;chsh&quot;&gt;&lt;/a&gt;chsh&lt;/h3&gt;-l #list&lt;br&gt;-s #改变自己的shell&lt;h3 id=&quot;id&quot;&gt;&lt;a href=&quot;#id&quot; class=&quot;headerlink&quot; title=&quot;id&quot;&gt;&lt;/a&gt;id&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;id newbmiao &amp;lt;==查阅 newbmiao 账号的属性&lt;h2 id=&quot;ACL控制&quot;&gt;&lt;a href=&quot;#ACL控制&quot; class=&quot;headerlink&quot; title=&quot;ACL控制&quot;&gt;&lt;/a&gt;ACL控制&lt;/h2&gt;&lt;h3 id=&quot;setfacl&quot;&gt;&lt;a href=&quot;#setfacl&quot; class=&quot;headerlink&quot; title=&quot;setfacl&quot;&gt;&lt;/a&gt;setfacl&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;-m u:[user列表]:rwx file&lt;/li&gt;
+&lt;li&gt;-m d:u:[user列表]:rwx dir #设置子目录可继承acl&lt;/li&gt;
+&lt;li&gt;-m g:[group列表]:rwx file&lt;/li&gt;
+&lt;li&gt;-m m:rwx file #设置mask,权限与之交集才是有效权限 【规范最大权限】&lt;/li&gt;
+&lt;li&gt;-b file #移除acl&lt;h3 id=&quot;getfacl&quot;&gt;&lt;a href=&quot;#getfacl&quot; class=&quot;headerlink&quot; title=&quot;getfacl&quot;&gt;&lt;/a&gt;getfacl&lt;/h3&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      鸟哥的Linux私房菜笔记-权限管理
+    
+    </summary>
+    
+      <category term="linux" scheme="http://blog.newbmiao.com/categories/linux/"/>
+    
+      <category term="notes" scheme="http://blog.newbmiao.com/categories/linux/notes/"/>
+    
+    
+      <category term="linux" scheme="http://blog.newbmiao.com/tags/linux/"/>
+    
+      <category term="notes" scheme="http://blog.newbmiao.com/tags/notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>鸟哥的Linux私房菜笔记-bash</title>
+    <link href="http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-bash.html"/>
+    <id>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-bash.html</id>
+    <published>2015-09-15T09:28:15.000Z</published>
+    <updated>2016-07-07T13:09:20.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;笔记记录于《鸟哥的Linux私房菜-第三版》,以备多看。&lt;/p&gt;
+&lt;h2 id=&quot;bash&quot;&gt;&lt;a href=&quot;#bash&quot; class=&quot;headerlink&quot; title=&quot;bash&quot;&gt;&lt;/a&gt;bash&lt;/h2&gt;&lt;h3 id=&quot;type&quot;&gt;&lt;a href=&quot;#type&quot; class=&quot;headerlink&quot; title=&quot;type&quot;&gt;&lt;/a&gt;type&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;-t #查看指令类型&lt;/li&gt;
+&lt;li&gt;-a #显示PATH中所有指令&lt;h3 id=&quot;env&quot;&gt;&lt;a href=&quot;#env&quot; class=&quot;headerlink&quot; title=&quot;env&quot;&gt;&lt;/a&gt;env&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;查看当前环境变量&lt;h3 id=&quot;export&quot;&gt;&lt;a href=&quot;#export&quot; class=&quot;headerlink&quot; title=&quot;export&quot;&gt;&lt;/a&gt;export&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;将自定义变量导入当前环境(子程序)&lt;h3 id=&quot;declare&quot;&gt;&lt;a href=&quot;#declare&quot; class=&quot;headerlink&quot; title=&quot;declare&quot;&gt;&lt;/a&gt;declare&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;declare -i num=$RANDOM*10/32768 #选取0-9随机数&lt;/li&gt;
+&lt;li&gt;-x variable #将变量导入环境变量&lt;/li&gt;
+&lt;li&gt;-r variable #只读变量&lt;/li&gt;
+&lt;li&gt;+x variable #取消导入到环境变量(除 a,r 不会取消)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;ulimit&quot;&gt;&lt;a href=&quot;#ulimit&quot; class=&quot;headerlink&quot; title=&quot;ulimit&quot;&gt;&lt;/a&gt;ulimit&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;-a 显示配额&lt;h3 id=&quot;read&quot;&gt;&lt;a href=&quot;#read&quot; class=&quot;headerlink&quot; title=&quot;read&quot;&gt;&lt;/a&gt;read&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;-p “提示信息” variable&lt;/li&gt;
+&lt;li&gt;-t 30 variable #限定时间&lt;h3 id=&quot;删除&quot;&gt;&lt;a href=&quot;#删除&quot; class=&quot;headerlink&quot; title=&quot;删除&quot;&gt;&lt;/a&gt;删除&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;echo ${PATH#/*:} #从左向右删最短&lt;/li&gt;
+&lt;li&gt;echo ${PATH##/*:} #从左向右删最长&lt;/li&gt;
+&lt;li&gt;echo ${PATH%/*bin} #从右向左删最短&lt;/li&gt;
+&lt;li&gt;echo ${PATH%%/*bin} #从右向左删最长&lt;h3 id=&quot;替换&quot;&gt;&lt;a href=&quot;#替换&quot; class=&quot;headerlink&quot; title=&quot;替换&quot;&gt;&lt;/a&gt;替换&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;echo ${PATH/sbin/SBIN} #从左到右替换第一个匹配&lt;/li&gt;
+&lt;li&gt;echo ${PATH//sbin/SBIN} #从左到右替换全部匹配&lt;h3 id=&quot;初始化&quot;&gt;&lt;a href=&quot;#初始化&quot; class=&quot;headerlink&quot; title=&quot;初始化&quot;&gt;&lt;/a&gt;初始化&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;new_var=${old_var-default_var} #old_var未赋值则赋值为default_var&lt;/li&gt;
+&lt;li&gt;new_var=${old_var:-default_var} #old_var &lt;strong&gt;未赋值或赋值为空字符串&lt;/strong&gt; 则赋值为default_var&lt;/li&gt;
+&lt;li&gt;new_var=${old_var=default_var} #效果同上，只是old_var也会被修改&lt;/li&gt;
+&lt;li&gt;new_var=${old_var:=default_var} #效果同上，只是old_var也会被修改&lt;h3 id=&quot;alias-amp-unalias&quot;&gt;&lt;a href=&quot;#alias-amp-unalias&quot; class=&quot;headerlink&quot; title=&quot;alias&amp;amp;unalias&quot;&gt;&lt;/a&gt;alias&amp;amp;unalias&lt;/h3&gt;&lt;h3 id=&quot;history&quot;&gt;&lt;a href=&quot;#history&quot; class=&quot;headerlink&quot; title=&quot;history&quot;&gt;&lt;/a&gt;history&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;!num #第几条历史操作&lt;/li&gt;
+&lt;li&gt;!! #上一条操作&lt;/li&gt;
+&lt;li&gt;!cmd #最近一条cmd开头操作&lt;h3 id=&quot;PS1&quot;&gt;&lt;a href=&quot;#PS1&quot; class=&quot;headerlink&quot; title=&quot;PS1&quot;&gt;&lt;/a&gt;PS1&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;PS1=’[\u@\h \t \W]\$ ‘ #用户状态&lt;h3 id=&quot;登陆&quot;&gt;&lt;a href=&quot;#登陆&quot; class=&quot;headerlink&quot; title=&quot;登陆&quot;&gt;&lt;/a&gt;登陆&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;/etc/issue #进站信息&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;/etc/motd #欢迎信息&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;/etc/profile #系统配置&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;~/.bash_profile | ~/.bash_login | ~/.profile #个人配置&lt;/li&gt;
+&lt;li&gt;最终操作的文件是 ~/.bashrc ,所以个人设置可以放里边&lt;h3 id=&quot;source&quot;&gt;&lt;a href=&quot;#source&quot; class=&quot;headerlink&quot; title=&quot;source&quot;&gt;&lt;/a&gt;source&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;source ~/.bashrc #读取配置当前环境&lt;/li&gt;
+&lt;li&gt;. ~/.bashrc #同上&lt;h3 id=&quot;grep&quot;&gt;&lt;a href=&quot;#grep&quot; class=&quot;headerlink&quot; title=&quot;grep&quot;&gt;&lt;/a&gt;grep&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;cat file | grep -n -A2 -B3 ‘str’ #连搜索结果的前3行和后2行一起显示出来&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;cat file | grep -vn ‘str’ #反向搜索&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;cat file | grep -in ‘str’ #不分大小写&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;cat file | grep -n ‘[^[:lower:]]ar’ #非小写字母+ar; [:lower:]同[a-z]&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;grep -l ‘*‘  $(find /etc/ -type f) #查找/etc下包含*的文件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;find /etc/ -type f|xargs -n 10 grep ‘*‘ #改良版，每次处理十个文件查找&lt;/p&gt;
+&lt;h3 id=&quot;egrep&quot;&gt;&lt;a href=&quot;#egrep&quot; class=&quot;headerlink&quot; title=&quot;egrep&quot;&gt;&lt;/a&gt;egrep&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;egrep -v ‘^$|^#’ file #列出非注释与非空白行&lt;/p&gt;
+&lt;h3 id=&quot;sed&quot;&gt;&lt;a href=&quot;#sed&quot; class=&quot;headerlink&quot; title=&quot;sed&quot;&gt;&lt;/a&gt;sed&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;cat -n file|sed ‘2,5d’  #删除2-5行&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;cat -n file|sed ‘2a 添加到第2行后’  #&lt;strong&gt;行后添加&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;cat -n file|sed ‘2i 添加到第2行前再加一行’ # &lt;strong&gt;行前添加&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;sed -n ‘2 w output.txt’ file #将内容 &lt;strong&gt;写入&lt;/strong&gt; output.txt&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;cat -n file|sed ‘2,5c 替换文字’  # &lt;strong&gt;替换&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;sed -n ‘2,5p’ file #按行打印&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;cat -n t |sed -n ‘2~5p’ #按范围打印，第2行开始每隔5行&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;cat -n t |sed -n ‘/search/,+5p’ #匹配到search，再多打印5行&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;cat -n t |sed ‘s/搜索字符串/替换字符串/g’ #替换字符串&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;cat -n t |sed ‘/^$/d’ #删除空白行&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;sed -i ‘s/.$/!/g’ file #直接修改源文件，替换行尾的.为!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;sed ‘s/^/ls -l /e’ files #替换并 &lt;strong&gt;执行&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;sed -i ‘$a 新增内容’ file #在文件末尾附加内容&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;sed -n -f sed-cmd-file file #执行文件中sed命令&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;cat file|sed -e ‘4d’ -e ‘6c replace 6th line’ #多条指令&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;sed ‘{&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;s/Google/Github/
+s/Git/git/
+}&amp;apos; file #同上
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;sed ‘s/^.&lt;em&gt;/&amp;lt;&amp;amp;&amp;gt;/‘ file   # “&amp;lt;&amp;gt;”包裹行   &lt;em&gt;*&amp;amp;&lt;/em&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;sed ‘s/Paul|Addy/[&amp;amp;]/g’ file # &lt;strong&gt;|需转义&lt;/strong&gt;,sed中正则需转义字符&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;echo “string”|sed  ‘s/string/S\LTRING/‘ # \L将后边字符小写;\l将后边第一个字符小写&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;echo “string”|sed  ‘s/string/\Ustring/‘ # \U将后边字符大写;\u将后边第一个字符大写&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;echo “string”|sed  ‘s/string/\Us\Etring/‘ # \E能打断\L或者\U改变大小写&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;sed –in-place=bak ‘s/Ian/IAN/‘ source.txt # 边替换边备份&lt;br&gt;  sed -ibak ‘s/Ian/IAN/‘ source.txt&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;sed ‘y/AB/ab/‘ file # &lt;strong&gt;转换字符&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;awk&quot;&gt;&lt;a href=&quot;#awk&quot; class=&quot;headerlink&quot; title=&quot;awk&quot;&gt;&lt;/a&gt;awk&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;last -5|awk &amp;#39;{print  $1 &amp;quot;\t&amp;quot;&lt;/code&gt; $3}’ #截取用户和ip格式化显示&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;last -5|awk &amp;#39;{print  $1 &amp;quot;\t&amp;quot; line:&amp;quot;NR&amp;quot; &amp;quot;\t&amp;quot; col:&amp;quot;NF&amp;quot;}&amp;#39;&lt;/code&gt; #截取用户和ip格式化显示&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;last -5|awk &amp;#39;{print  $1 &amp;quot;\t line:&amp;quot;NR &amp;quot;\t col:&amp;quot;NF &amp;quot;\t delimiter:&amp;quot;FS}&amp;#39;&lt;/code&gt; #内置变数&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;cat /etc/passwd|awk &amp;#39;BEGIN{FS=&amp;quot;:&amp;quot;} $3&amp;lt;10 {print $1 &amp;quot;\t&amp;quot; $3}&amp;#39;&lt;/code&gt; #预设分隔符，并取出UID&amp;lt;10的用户名&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;cat pay.txt|awk &amp;#39;NR==1{printf &amp;quot;%10s %10s %10s %10s %10s\n&amp;quot;,$1,$2,$3,$4,&amp;quot;Total&amp;quot;};NR&amp;gt;=2{total=$2+$3+$4;printf &amp;quot;%10s %10s %10s %10s %10s\n&amp;quot;,$1,$2,$3,$4,total}&amp;#39;&lt;/code&gt; #计算总合,”;”可用 enter 替换&lt;/p&gt;
+&lt;h3 id=&quot;cut&quot;&gt;&lt;a href=&quot;#cut&quot; class=&quot;headerlink&quot; title=&quot;cut&quot;&gt;&lt;/a&gt;cut&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;-d ‘分隔符’ -fN #默认tab分隔，N为第几列&lt;h3 id=&quot;diff&quot;&gt;&lt;a href=&quot;#diff&quot; class=&quot;headerlink&quot; title=&quot;diff&quot;&gt;&lt;/a&gt;diff&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;-b #只是空白不同不列出&lt;h3 id=&quot;cmp&quot;&gt;&lt;a href=&quot;#cmp&quot; class=&quot;headerlink&quot; title=&quot;cmp&quot;&gt;&lt;/a&gt;cmp&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;-s #不同位置都列出来&lt;h3 id=&quot;patch&quot;&gt;&lt;a href=&quot;#patch&quot; class=&quot;headerlink&quot; title=&quot;patch&quot;&gt;&lt;/a&gt;patch&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;diff -Naur t t2 &amp;gt;t.patch #生成patch&lt;/li&gt;
+&lt;li&gt;patch  -pN  &amp;lt; file.patch #更新旧档案,N代表要去掉几个 &lt;code&gt;&amp;quot;/&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;patch -R -pN  &amp;lt; file.patch #还原旧档案&lt;h2 id=&quot;shell-script&quot;&gt;&lt;a href=&quot;#shell-script&quot; class=&quot;headerlink&quot; title=&quot;shell script&quot;&gt;&lt;/a&gt;shell script&lt;/h2&gt;&lt;h3 id=&quot;test&quot;&gt;&lt;a href=&quot;#test&quot; class=&quot;headerlink&quot; title=&quot;test&quot;&gt;&lt;/a&gt;test&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;test -z str&lt;/code&gt; #判断字符串是否为空&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[ -z  &amp;quot;$HOME&amp;quot; ];echo $?&lt;/code&gt; #注意空格&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;test -e filename &amp;amp;&amp;amp; echo &amp;#39;exist&amp;#39; || echo &amp;#39;not exist&amp;#39;&lt;/code&gt; #判断文件是否存在&lt;h3 id=&quot;seq&quot;&gt;&lt;a href=&quot;#seq&quot; class=&quot;headerlink&quot; title=&quot;seq&quot;&gt;&lt;/a&gt;seq&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;seq start end #生成一个end-start的range数组&lt;h3 id=&quot;计算&quot;&gt;&lt;a href=&quot;#计算&quot; class=&quot;headerlink&quot; title=&quot;计算&quot;&gt;&lt;/a&gt;计算&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;$((cal_expr))&lt;h3 id=&quot;脚本相关变量&quot;&gt;&lt;a href=&quot;#脚本相关变量&quot; class=&quot;headerlink&quot; title=&quot;脚本相关变量&quot;&gt;&lt;/a&gt;脚本相关变量&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;$0 #脚本名&lt;/li&gt;
+&lt;li&gt;$# #脚本参数个数&lt;/li&gt;
+&lt;li&gt;$@ #全部脚本参数，空格分隔&lt;/li&gt;
+&lt;li&gt;$1 #第一个参数&lt;/li&gt;
+&lt;li&gt;$$ #bash的PID&lt;h3 id=&quot;shift&quot;&gt;&lt;a href=&quot;#shift&quot; class=&quot;headerlink&quot; title=&quot;shift&quot;&gt;&lt;/a&gt;shift&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;shift N #偏移几个，参数从左到右拿掉几个&lt;h3 id=&quot;判断执行结果&quot;&gt;&lt;a href=&quot;#判断执行结果&quot; class=&quot;headerlink&quot; title=&quot;判断执行结果&quot;&gt;&lt;/a&gt;判断执行结果&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ping -c 1 -w 1 192.168.1.1 &amp;amp;&amp;gt;/dev/null &amp;amp;&amp;amp; result=0 || result=1&lt;/code&gt;&lt;h3 id=&quot;sh&quot;&gt;&lt;a href=&quot;#sh&quot; class=&quot;headerlink&quot; title=&quot;sh&quot;&gt;&lt;/a&gt;sh&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;sh -n file.sh #检查语法&lt;/li&gt;
+&lt;li&gt;sh -v file.sh #执行前吧内容输出&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;sh -v file.sh #将使用到的script内容输出&lt;/p&gt;
+&lt;h3 id=&quot;判断式&quot;&gt;&lt;a href=&quot;#判断式&quot; class=&quot;headerlink&quot; title=&quot;判断式&quot;&gt;&lt;/a&gt;判断式&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;if&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;if ;then
+fi
+---
+if ;then
+elif ;then
+fi
+---
+if ;then else
+fi
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;case&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;case $var in
+&amp;quot;case1&amp;quot;)
+    ...
+    ;;
+*)  #default
+    ...
+    ;;
+esac
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;while&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;while [cond]
+do
+    ...
+done
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;until&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;until [cond]
+do
+    ...
+done
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;for&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;for v in $arrs
+do
+    ...
+done
+---
+for((i=1;i&amp;lt;$nu;i=i+1))
+do
+    ...
+done
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      鸟哥的Linux私房菜笔记-bash
+    
+    </summary>
+    
+      <category term="linux" scheme="http://blog.newbmiao.com/categories/linux/"/>
+    
+      <category term="notes" scheme="http://blog.newbmiao.com/categories/linux/notes/"/>
+    
+    
+      <category term="linux" scheme="http://blog.newbmiao.com/tags/linux/"/>
+    
+      <category term="notes" scheme="http://blog.newbmiao.com/tags/notes/"/>
+    
+  </entry>
+  
+</feed>

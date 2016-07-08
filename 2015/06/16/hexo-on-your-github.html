@@ -1,0 +1,601 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>搭建你自己的Hexo博客 | 菜鸟Miao</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="google-site-verification" content="q90Bd4BGjQuSBoXdzK6CUCB8mMUeCEO6MKbaCQS773E" >  
+  
+  
+  <meta name="keywords" itemprop="keywords" content="newbmiao,php开发,web开发,javascript,jquery,linux,hexo,编程,typecho迁移" />
+  
+  
+  <meta name="description" content="hexo-on-your-github">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建你自己的Hexo博客">
+<meta property="og:url" content="http://blog.newbmiao.com/2015/06/16/hexo-on-your-github.html">
+<meta property="og:site_name" content="菜鸟Miao">
+<meta property="og:description" content="hexo-on-your-github">
+<meta property="og:updated_time" content="2016-07-07T13:09:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="搭建你自己的Hexo博客">
+<meta name="twitter:description" content="hexo-on-your-github">
+  
+    <link rel="alternative" href="/atom.xml" title="菜鸟Miao" type="application/atom+xml">
+  
+  
+    <link rel="icon"   href="http://media.newbmiao.com/blog/asset/favicon.ico">
+  
+  
+  <link rel="stylesheet" href="//media.newbmiao.com/blog/asset/css/style.css" type="text/css">
+  
+  <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+  
+
+</head>
+
+<body>
+<div id="container">
+  <div id="wrap">
+    <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">菜鸟Miao</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">start from a newb...</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/add-ons">Add-ons</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+	  
+	
+        <div id="search-form">
+                <input type="text" class="st-default-search-input search-form-input" style="outline: none;width: 110px;">
+        </div>
+	
+      </div>
+    </div>
+  </div>
+</header>
+
+    <div class="outer">
+      <section id="main"><article id="post-hexo-on-your-github" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/06/16/hexo-on-your-github.html" class="article-date">
+  <time datetime="2015-06-16T12:23:25.000Z" itemprop="datePublished">2015-06-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>►<a class="article-category-link" href="/categories/blog/hexo/">hexo</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      搭建你自己的Hexo博客
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+	
+        <div id="toc" class="toc-article">
+         <h3>文章目录</h3>
+         <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#hexo安装"><span class="toc-number">1.</span> <span class="toc-text">hexo安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#创建博客"><span class="toc-number">2.</span> <span class="toc-text">创建博客</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#hexo-landscape-plus主题"><span class="toc-number">3.</span> <span class="toc-text">hexo landscape-plus主题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#deploy"><span class="toc-number">4.</span> <span class="toc-text">deploy</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#技巧"><span class="toc-number">5.</span> <span class="toc-text">技巧</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#plugin"><span class="toc-number">6.</span> <span class="toc-text">plugin</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#其他插件"><span class="toc-number">6.1.</span> <span class="toc-text">其他插件</span></a></li></ol></li></ol>
+        </div>
+        
+        <p><strong>Hexo</strong>基于node.js,可用于生成静态博客，结合github和Mac，可以专注创作了。<br>深入学习见文末引用。</p>
+<h4 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h4><pre><code>brew install node
+sudo npm install hexo-cli -g  #全局安装
+</code></pre><h4 id="创建博客"><a href="#创建博客" class="headerlink" title="创建博客"></a>创建博客</h4><p>Hexo使用命令:</p>
+<pre><code>hexo init &lt;folder&gt;  #执行init命令初始化hexo到你指定的目录
+hexo new [layout] &lt;title&gt; #创建文章
+hexo new page &lt;title&gt; #生成新页面
+hexo generate       #自动根据当前目录下文件,生成静态网页
+    -d #deploy after
+    -w #查看文件变化
+hexo publish [layout] &lt;filename&gt; #发布草稿
+hexo server         #运行本地服务
+    -p #端口
+    -s #只生成静态文件
+    -l #生成log
+    --draft 连草稿也生成预览
+hexo deploy
+    -g #generate before
+hexo render &lt;file1&gt; [file2] ...
+    -o #output destination
+hexo migrate &lt;type&gt; #Migrates content from other blog systems.
+hexo clean #Cleans the cache file (db.json) and generated files (public).
+hexo list &lt;type&gt; #Lists all routes.
+</code></pre><a id="more"></a>
+<h4 id="hexo-landscape-plus主题"><a href="#hexo-landscape-plus主题" class="headerlink" title="hexo landscape-plus主题"></a>hexo landscape-plus主题</h4><pre><code>git clone https://github.com/xiangming/landscape-plus.git themes/landscape-plus
+#修改hexo的配置文件_config.yml
+theme:landscape-plus
+</code></pre><h4 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h4><pre><code>#使用git前先安装
+npm install hexo-deployer-git --save
+</code></pre><blockquote>
+<p>国内github-page百度抓不到，参见<a href="http://blog.newbmiao.com/2015/08/18/hexo-with-gitcafe-and-github.html">hexo同步托管到gitcafe和github</a>配置</p>
+</blockquote>
+<h4 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h4><ul>
+<li>标签/分类的别名</li>
+</ul>
+<hr>
+<pre><code>#在_config.yml里面配置
+category_map:
+  工具集: tools
+  技术集: technique
+tag_map:
+  Java: java
+  JavaScript: js
+  css: css
+  html5: html5
+</code></pre><h4 id="plugin"><a href="#plugin" class="headerlink" title="plugin"></a>plugin</h4><ul>
+<li>hexo-migrator-rss</li>
+<li>hexo-generator-sitemap</li>
+<li>hexo-generator-feed</li>
+<li>hexo-html-minifier</li>
+<li>hexo-uglify</li>
+<li>hexo-clean-css</li>
+<li>hexo-console-optimize：html+css+js优化<ul>
+<li>hexo o #优化,替代了 hexo g</li>
+</ul>
+</li>
+</ul>
+<hr>
+<pre><code>#安装
+npm install hexo-migrator-rss --save
+npm install hexo-generator-sitemap
+npm install hexo-generator-baidu-sitemap --save #针对baidusitemap的优化
+npm install hexo-generator-feed     --save
+npm install hexo-console-optimize --save #安装
+</code></pre><hr>
+<pre><code>#根目录下_config.yml添加
+#Extensions
+plugins:
+- hexo-generator-feed
+- hexo-generator-sitemap
+- hexo-generator-baidu-sitemap
+- hexo-console-optimize
+#Feed Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+#sitemap
+#sitemap:
+#  path: sitemap.xml #要与baidusitemap.xml共存时需注释
+
+baidusitemap:
+  path:                 #默认 baidusitemap.xml，不需设置：
+</code></pre><hr>
+<h5 id="其他插件"><a href="#其他插件" class="headerlink" title="其他插件"></a>其他插件</h5><p><del>hexo-html-minifier <a href="https://github.com/hexojs/hexo-html-minifier" target="_blank" rel="external">https://github.com/hexojs/hexo-html-minifier</a></del><br><del>HTML压缩插件 (!安装会无法generate，最后还是卸载此插件)</del></p>
+<p>hexo-uglify <a href="https://github.com/hexojs/hexo-uglify" target="_blank" rel="external">https://github.com/hexojs/hexo-uglify</a><br>JavaScript压缩插件</p>
+<p>hexo-clean-css <a href="https://github.com/hexojs/hexo-clean-css" target="_blank" rel="external">https://github.com/hexojs/hexo-clean-css</a><br>css压缩插件</p>
+<ul>
+<li><p>duoshuo 评论</p>
+<blockquote>
+<p><a href="http://duoshuo.com/create-site/" target="_blank" rel="external">duoshuo创建site</a></p>
+</blockquote>
+</li>
+<li><p>baidu统计</p>
+<blockquote>
+<p><a href="http://tongji.baidu.com/web/welcome/login" target="_blank" rel="external">创建百度统计网点</a></p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<pre><code>vim themes\modernist\layout\_partial\baidu_tongji.ejs
+# 添加
+&lt;% if (theme.baidu_tongji){ %&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+# 你的百度统计代码
+&lt;/script&gt;
+&lt;% } %&gt;
+# 注册并登录百度统计获取你的统计代码。并设置关闭显示百度图标
+
+ vim themes\modernist\layout\_partial\head.ejs
+# 在『/head』之前增加：
+
+&lt;%- partial(&apos;baidu_tongji&apos;) %&gt;
+# 重新生成并部署你的站点。
+vim themes/landscape-plus/_config.yml
+# menu下加
+rss: /atom.xml
+
+# Duoshuo
+duoshuo_shortname: XXX
+
+# Baidu tongji
+baidu_tongji: true
+</code></pre><hr>
+<ul>
+<li><p>不蒜子</p>
+<blockquote>
+<p><a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="external">参考</a></p>
+</blockquote>
+</li>
+<li><p>相关推荐：无觅</p>
+<blockquote>
+<p><a href="http://lukang.me/2014/optimization-of-hexo.html" target="_blank" rel="external">参考</a></p>
+</blockquote>
+</li>
+<li><p>站内搜索</p>
+<ul>
+<li>百度</li>
+<li>swiftype</li>
+</ul>
+</li>
+</ul>
+<p>相比较而言，swiftype更个性化，但是搜索结果只是基于页面内容是否包含，没有百度智能。<a href="http://lukang.me/2015/optimization-of-hexo-2.html" target="_blank" rel="external">参考</a></p>
+<ul>
+<li>hexo-3.1.1<blockquote>
+<p><a href="https://github.com/iissnan/hexo-theme-next/issues/351" target="_blank" rel="external">markdown标题语法更严格了</a></p>
+</blockquote>
+</li>
+</ul>
+<p>脚本批量修改下吧~~</p>
+<pre><code>&lt;?php
+//标题和 #中间要有空格
+function listDir($dir) {
+    static $res = array();
+    if (!file_exists($dir) || !is_dir($dir)) {
+        return array();
+    }
+    $dirHandle = opendir($dir);
+    while ($file = readdir($dirHandle)) {
+        if ($file !== &apos;.&apos; &amp;&amp; $file !== &apos;..&apos;) {
+            $tmp = $dir . &quot;/&quot; . $file;
+            if (is_dir($tmp)) {
+                listDir($tmp);
+            } else if (stripos($file, &quot;.md&quot;) !== false) {
+                $res[] = $tmp;
+            }
+        };
+    };
+    closedir($dirHandle);
+    return $res;
+}
+
+$path  = &apos;/pathto/blog/source/_posts&apos;;
+$files = listDir($path);
+foreach ($files as $file) {
+    file_put_contents($file,
+        preg_replace(&apos;/^(#+)([^#\s]+)/m&apos;, &apos;$1 $2&apos;, file_get_contents($file)));
+}
+echo &apos;ok&apos;;
+</code></pre><ul>
+<li>不升级</li>
+</ul>
+<p>hexo 升级会有很多麻烦，避免出现错误，用于记录plugin版本的package.json记录在这</p>
+<pre><code>{
+  &quot;name&quot;: &quot;hexo-site&quot;,
+  &quot;version&quot;: &quot;0.0.0&quot;,
+  &quot;private&quot;: true,
+  &quot;hexo&quot;: {
+    &quot;version&quot;: &quot;3.1.1&quot;
+  },
+  &quot;dependencies&quot;: {
+    &quot;hexo&quot;: &quot;^3.1.1&quot;,
+    &quot;hexo-console-optimize&quot;: &quot;0.0.5&quot;,
+    &quot;hexo-deployer-git&quot;: &quot;0.0.4&quot;,
+    &quot;hexo-generator-archive&quot;: &quot;^0.1.2&quot;,
+    &quot;hexo-generator-baidu-sitemap&quot;: &quot;^0.1.1&quot;,
+    &quot;hexo-generator-category&quot;: &quot;^0.1.2&quot;,
+    &quot;hexo-generator-feed&quot;: &quot;~1.0.3&quot;,
+    &quot;hexo-generator-index&quot;: &quot;^0.1.2&quot;,
+    &quot;hexo-generator-tag&quot;: &quot;^0.1.1&quot;,
+    &quot;hexo-renderer-ejs&quot;: &quot;^0.1.0&quot;,
+    &quot;hexo-renderer-marked&quot;: &quot;^0.2.4&quot;,
+    &quot;hexo-renderer-stylus&quot;: &quot;^0.2.0&quot;,
+    &quot;hexo-server&quot;: &quot;^0.1.2&quot;
+  }
+}
+</code></pre><ul>
+<li>atom编辑器+atom-hexo</li>
+</ul>
+<p>好用不多说！<br><a href="https://github.com/atom/atom/releases" target="_blank" rel="external">atom</a><br><a href="https://github.com/heroicyang/atom-hexo" target="_blank" rel="external">atom-hexo</a></p>
+<blockquote>
+<p>参考自：<br><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">hexo-your-blog</a><br>深入学习，请看<a href="https://hexo.io/docs/" target="_blank" rel="external">官方文档</a></p>
+</blockquote>
+
+	
+	<blockquote style="padding:10px;background: #efe none repeat scroll 0% 0%;border-left-color:green">
+	如有疑问，请留言或邮件<a href="mailto:newbvirgil@gmail.com" title="newbvirgil@gmail.com">newbvirgil@gmail.com</a>
+	<br>本文链接 : <a href="http://blog.newbmiao.com/2015/06/16/hexo-on-your-github.html" title="http://blog.newbmiao.com/2015/06/16/hexo-on-your-github.html" target="_blank" rel="external">http://blog.newbmiao.com/2015/06/16/hexo-on-your-github.html</a>
+	</blockquote>
+	
+      
+    </div>
+    
+    <footer class="article-footer">
+      
+        <a data-url="http://blog.newbmiao.com/2015/06/16/hexo-on-your-github.html" data-id="ciqdsikq80006v531u61w3t6w" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="http://blog.newbmiao.com/2015/06/16/hexo-on-your-github.html#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+
+            
+	<span id="busuanzi_container_page_pv" style="color:#999">
+ 	 <i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"> <i class="fa fa-spinner fa-spin"></i></span>次阅读
+       </span>
+       
+     
+     <span style="color:#999">
+&nbsp; | &nbsp;最近更新 ：<time datetime="2016-07-07T13:09:18.000Z" itemprop="dateModify">2016-07-07</time>
+</span>
+
+     
+<!-- 无觅 -->
+<script type="text/javascript" id="wumiiRelatedItems"></script>
+
+
+<script type="text/javascript">
+    var wumiiPermaLink = "http://blog.newbmiao.com/2015/06/16/hexo-on-your-github.html"; //请用代码生成文章永久的链接
+    var wumiiTitle = "搭建你自己的Hexo博客"; //请用代码生成文章标题
+    var wumiiTags = "hexo,blog"; //请用代码生成文章标签>，以英文逗号分隔，如："标签1,标签2"
+    var wumiiCategories = ["blog","hexo"]; //请用代码生成文章分类，分>类名放在 JSONArray 中，如: ["分类1", "分类2"]
+    var wumiiSitePrefix = "http://blog.newbmiao.com";
+    var wumiiParams = "&num=5&mode=2&pf=JAVASCRIPT";
+</script>
+<script type="text/javascript" src="http://widget.wumii.cn/ext/relatedItemsWidget"></script>
+<a href="http://www.wumii.com/widget/relatedItems" style="border:0;">
+    <img src="http://static.wumii.cn/images/pixel.png" alt="无觅关联推荐，快速提升流量" style="border:0;padding:0;margin:0;" />
+</a>
+
+    </footer>
+    
+  </div>
+</article>
+
+
+
+  <section id="comments">
+    <div id="ds-thread" class="ds-thread" data-thread-key="2015/06/16/hexo-on-your-github.html" data-title="搭建你自己的Hexo博客" data-url="http://blog.newbmiao.com/2015/06/16/hexo-on-your-github.html"></div>
+  </section>
+
+</section>
+      
+      <aside id="sidebar">
+  
+   	
+  <div class="widget-wrap">
+    <h3 class="widget-title">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/03/15/mac-tool.html">mac工具集</a>
+          </li>
+        
+          <li>
+            <a href="/2015/12/04/xdebug-remote-debug-with-phpstorm-and-vagrant.html">基于phpstorm和vagrant环境的xdebug远程调试</a>
+          </li>
+        
+          <li>
+            <a href="/2015/11/28/shadowsocks-polipo-vps.html">让影梭和搬瓦工帮你科学上网</a>
+          </li>
+        
+          <li>
+            <a href="/2015/11/20/how-to-update-apps-apple-id.html">如何更新别人apple-id购买的应用</a>
+          </li>
+        
+          <li>
+            <a href="/2015/10/25/jQuery-code-record.html">jQuery应用杂记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+   	
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/dropbox/">dropbox</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/blog/hexo/">hexo</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/gearman/">gearman</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/html5/">html5</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/journal/">journal</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/js/">js</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js/jquery/">jquery</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/linux/notes/">notes</a><span class="category-list-count">7</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/">mac</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/mac/shadowsocks/">shadowsocks</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/tool/">tool</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/">mysql</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/optimize/">optimize</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/">php</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/php/CI/">CI</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/regex/">regex</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/signal/">signal</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/tool/">tool</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/redis/">redis</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/">web</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/web/notes/">notes</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/practice/">practice</a><span class="category-list-count">3</span></li></ul></li></ul>
+    </div>
+  </div>
+
+  
+   	
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/mysql/" style="font-size: 20px; color: #3495df">mysql</a> <a href="/tags/hexo/" style="font-size: 20px; color: #3495df">hexo</a> <a href="/tags/gitcafe/" style="font-size: 15px; color: #1e90ff">gitcafe</a> <a href="/tags/gearman/" style="font-size: 15px; color: #1e90ff">gearman</a> <a href="/tags/journal/" style="font-size: 17.5px; color: #2992ef">journal</a> <a href="/tags/html5/" style="font-size: 17.5px; color: #2992ef">html5</a> <a href="/tags/drag/" style="font-size: 17.5px; color: #2992ef">drag</a> <a href="/tags/chrome/" style="font-size: 15px; color: #1e90ff">chrome</a> <a href="/tags/js/" style="font-size: 30px; color: #5f9ea0">js</a> <a href="/tags/javascript-program-solution/" style="font-size: 20px; color: #3495df">javascript-program-solution</a> <a href="/tags/random/" style="font-size: 15px; color: #1e90ff">random</a> <a href="/tags/maintainable-javascript/" style="font-size: 15px; color: #1e90ff">maintainable-javascript</a> <a href="/tags/git/" style="font-size: 15px; color: #1e90ff">git</a> <a href="/tags/linux/" style="font-size: 27.5px; color: #549cb0">linux</a> <a href="/tags/mac/" style="font-size: 20px; color: #3495df">mac</a> <a href="/tags/vim/" style="font-size: 15px; color: #1e90ff">vim</a> <a href="/tags/shadowsocks/" style="font-size: 15px; color: #1e90ff">shadowsocks</a> <a href="/tags/tool/" style="font-size: 15px; color: #1e90ff">tool</a> <a href="/tags/software/" style="font-size: 15px; color: #1e90ff">software</a> <a href="/tags/blog/" style="font-size: 22.5px; color: #3f97d0">blog</a> <a href="/tags/limit/" style="font-size: 15px; color: #1e90ff">limit</a> <a href="/tags/phpdoc/" style="font-size: 15px; color: #1e90ff">phpdoc</a> <a href="/tags/php/" style="font-size: 30px; color: #5f9ea0">php</a> <a href="/tags/target/" style="font-size: 15px; color: #1e90ff">target</a> <a href="/tags/reference/" style="font-size: 15px; color: #1e90ff">reference</a> <a href="/tags/php-fpm/" style="font-size: 15px; color: #1e90ff">php-fpm</a> <a href="/tags/apache/" style="font-size: 15px; color: #1e90ff">apache</a> <a href="/tags/regex/" style="font-size: 15px; color: #1e90ff">regex</a> <a href="/tags/redis/" style="font-size: 15px; color: #1e90ff">redis</a> <a href="/tags/jquery/" style="font-size: 22.5px; color: #3f97d0">jquery</a> <a href="/tags/iframe/" style="font-size: 15px; color: #1e90ff">iframe</a> <a href="/tags/dropbox/" style="font-size: 15px; color: #1e90ff">dropbox</a> <a href="/tags/closure/" style="font-size: 15px; color: #1e90ff">closure</a> <a href="/tags/notes/" style="font-size: 25px; color: #4999c0">notes</a> <a href="/tags/CI/" style="font-size: 15px; color: #1e90ff">CI</a> <a href="/tags/pcntl/" style="font-size: 15px; color: #1e90ff">pcntl</a> <a href="/tags/signal/" style="font-size: 15px; color: #1e90ff">signal</a> <a href="/tags/xdebug/" style="font-size: 15px; color: #1e90ff">xdebug</a>
+    </div>
+  </div>
+
+
+  
+   	
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">十月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">二月 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">十二月 2014</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+   	
+  <div class="widget-wrap">
+    <h3 class="widget-title">友情链接</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://www.laruence.com/" target="_blank">风雪之隅</a>
+          </li>
+        
+          <li>
+            <a href="http://leo108.com/" target="_blank">leo108</a>
+          </li>
+        
+          <li>
+            <a href="http://leandre.cn/" target="_blank">点滴记忆</a>
+          </li>
+        
+          <li>
+            <a href="http://www.throwsnew.com/" target="_blank">先锋Song</a>
+          </li>
+        
+          <li>
+            <a href="http://liecol.lofter.com/" target="_blank">liecol-晓斌</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+   	<div class="widget-wrap widget-toc" style="display: none">
+  <h3 class="widget-title">文章目录</h3>
+  <div class="container widget" style="padding: 15px 20px;">
+  </div>
+</div>
+
+<script src="//media.newbmiao.com/blog/asset/js/toc.js" ></script>
+
+
+  
+</aside>
+
+      
+    </div>
+    <footer id="footer">
+ <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+ </script>
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 菜鸟Miao<br>
+     <p>
+     <span id="busuanzi_container_site_uv">
+  	您是本站第<span id="busuanzi_value_site_uv"> <i class="fa fa-spinner fa-spin"></i></span>个访问者
+     </span>
+     <span id="busuanzi_container_site_pv">
+        /本站总访问量<span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i> </span>次
+     </span>
+     </p>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      .
+      Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>
+      .
+      Hosted by <a href="https://gitcafe.com/signup?invited_by=newbmiao" target="_blank">Coding</a>  &amp; <a href="https://github.com/newbmiao" target="_blank">GitHub</a>
+      . 
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/add-ons" class="mobile-nav-link">Add-ons</a>
+  
+</nav>
+  <script src="http://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<!-- totop start -->
+<div id="totop">
+<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+</div>
+
+<!-- totop end -->
+
+<!-- 多说公共js代码 start -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"NewbMiao"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//media.newbmiao.com/blog/asset/js/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共js代码 end -->
+
+
+<!-- 百度分享 start -->
+
+<div id="article-share-box" class="article-share-box">
+  <div id="bdshare" class="bdsharebuttonbox article-share-links">
+    <a class="article-share-weibo" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a class="article-share-weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a class="article-share-qq" data-cmd="sqq" title="分享到QQ"></a>
+    <a class="article-share-renren" data-cmd="renren" title="分享到人人网"></a>
+    <a class="article-share-more" data-cmd="more" title="更多"></a>
+  </div>
+</div>
+<script>window._bd_share_config={"common":{},"share":{"bdCustomStyle":"/css/bdshare.css"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<!-- 百度分享 end -->
+
+
+
+<link rel="stylesheet" href="//media.newbmiao.com/blog/asset/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="//media.newbmiao.com/blog/asset/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="//media.newbmiao.com/blog/asset/js/script.js"></script>
+
+
+
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  _st('install','bqAniPPC1T7RV4MomxcE','2.0.0');
+</script>
+
+
+
+</div>
+</body>
+</html>
+

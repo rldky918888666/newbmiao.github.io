@@ -1,0 +1,1034 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>菜鸟Miao</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="google-site-verification" content="q90Bd4BGjQuSBoXdzK6CUCB8mMUeCEO6MKbaCQS773E" >  
+  
+  
+  <meta name="keywords" itemprop="keywords" content="newbmiao,php开发,web开发,javascript,jquery,linux,hexo,编程,typecho迁移" />
+  
+  
+  <meta name="description" content="菜鸟苗的个人博客,web开发,coding,reading,thinking...">
+<meta property="og:type" content="website">
+<meta property="og:title" content="菜鸟Miao">
+<meta property="og:url" content="http://blog.newbmiao.com/index.html">
+<meta property="og:site_name" content="菜鸟Miao">
+<meta property="og:description" content="菜鸟苗的个人博客,web开发,coding,reading,thinking...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="菜鸟Miao">
+<meta name="twitter:description" content="菜鸟苗的个人博客,web开发,coding,reading,thinking...">
+  
+    <link rel="alternative" href="/atom.xml" title="菜鸟Miao" type="application/atom+xml">
+  
+  
+    <link rel="icon"   href="http://media.newbmiao.com/blog/asset/favicon.ico">
+  
+  
+  <link rel="stylesheet" href="//media.newbmiao.com/blog/asset/css/style.css" type="text/css">
+  
+  <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+  
+
+</head>
+
+<body>
+<div id="container">
+  <div id="wrap">
+    <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">菜鸟Miao</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">start from a newb...</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/add-ons">Add-ons</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+	  
+	
+        <div id="search-form">
+                <input type="text" class="st-default-search-input search-form-input" style="outline: none;width: 110px;">
+        </div>
+	
+      </div>
+    </div>
+  </div>
+</header>
+
+    <div class="outer">
+      <section id="main">
+  
+    <article id="post-mac-tool" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/15/mac-tool.html" class="article-date">
+  <time datetime="2016-03-15T02:50:23.000Z" itemprop="datePublished">2016-03-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/mac/">mac</a>►<a class="article-category-link" href="/categories/mac/tool/">tool</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/15/mac-tool.html">mac工具集</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="brew"><a href="#brew" class="headerlink" title="brew"></a>brew</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ruby <span class="_">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></div></pre></td></tr></table></figure>
+<h2 id="iterm2"><a href="#iterm2" class="headerlink" title="iterm2"></a>iterm2</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">https:</span>/<span class="regexp">/iterm2.com/downloads</span><span class="regexp">/stable/i</span>Term2_v2_<span class="number">0</span>.zip</div><div class="line">运行iterm2之后按cmd+,调出设置界面，在<span class="string">'profile'</span> -&gt; <span class="string">"Terminal Type"</span>改成xterm-new。</div></pre></td></tr></table></figure>
+<h2 id="zsh"><a href="#zsh" class="headerlink" title="zsh"></a>zsh</h2><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">brew install zsh</div><div class="line">sudo vim <span class="meta-keyword">/etc/</span>shells</div><div class="line">  <span class="meta">#在最后面加上一行</span></div><div class="line">  <span class="meta-keyword">/usr/</span>local/Cellar<span class="meta-keyword">/zsh/</span><span class="number">5.0</span><span class="number">.8</span><span class="meta-keyword">/bin/</span>zsh</div><div class="line">chsh -s <span class="meta-keyword">/usr/</span>local/Cellar<span class="meta-keyword">/zsh/</span><span class="number">5.0</span><span class="number">.8</span><span class="meta-keyword">/bin/</span>zsh</div><div class="line"><span class="meta">#重启终端即可</span></div></pre></td></tr></table></figure>
+<h2 id="oh-my-zsh"><a href="#oh-my-zsh" class="headerlink" title="oh-my-zsh"></a>oh-my-zsh</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -L http<span class="variable">s:</span>//raw.github.<span class="keyword">com</span>/robbyrussell/oh-my-zsh/master/tools/install.<span class="keyword">sh</span> | <span class="keyword">sh</span></div></pre></td></tr></table></figure>
+<h2 id="dash-文档工具"><a href="#dash-文档工具" class="headerlink" title="dash 文档工具"></a>dash 文档工具</h2><h2 id="alfred-快捷调用"><a href="#alfred-快捷调用" class="headerlink" title="alfred 快捷调用"></a>alfred 快捷调用</h2><h2 id="lrzsz-服务器和本机传输工具"><a href="#lrzsz-服务器和本机传输工具" class="headerlink" title="lrzsz-服务器和本机传输工具"></a>lrzsz-服务器和本机传输工具</h2><p><a href="https://github.com/mmastrac/iterm2-zmodem">iterm2-zmodem</a><br>item2 ssh远程服务器，就能上传下载文件</p>
+<ul>
+<li><strong>sz 想要本机接收的文件</strong></li>
+<li><strong>rz 想让远程收到的文件</strong></li>
+</ul>
+<p><strong>issue：ssl证书验证失败无法下载</strong><br>原因是brew https连接失败<br>解决方法：<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">sudo <span class="keyword">vim</span> /usr/local/Library/Homebrew/utils.rb</div><div class="line"></div><div class="line">修改下面的行加一个-<span class="keyword">k</span> 参数，让 curl 忽略 https 验证</div><div class="line"></div><div class="line"><span class="keyword">args</span> = [HOMEBREW_CURL_ARGS, HOMEBREW_USER_AGENT,<span class="string">'-k'</span>, *<span class="keyword">args</span>]</div></pre></td></tr></table></figure></p>
+        
+          <p class="article-more-link">
+            <a href="/2016/03/15/mac-tool.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    
+    <footer class="article-footer">
+      
+        <a data-url="http://blog.newbmiao.com/2016/03/15/mac-tool.html" data-id="ciqdsikrg0015v531cux8bvru" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="http://blog.newbmiao.com/2016/03/15/mac-tool.html#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tool/">tool</a></li></ul>
+
+      
+     
+     <span style="color:#999">
+&nbsp; | &nbsp;最近更新 ：<time datetime="2016-07-07T13:09:20.000Z" itemprop="dateModify">2016-07-07</time>
+</span>
+
+     
+<!-- 无觅 -->
+<script type="text/javascript" id="wumiiRelatedItems"></script>
+
+    </footer>
+    
+  </div>
+</article>
+
+
+
+
+  
+    <article id="post-xdebug-remote-debug-with-phpstorm-and-vagrant" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/04/xdebug-remote-debug-with-phpstorm-and-vagrant.html" class="article-date">
+  <time datetime="2015-12-04T06:01:09.000Z" itemprop="datePublished">2015-12-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/php/">php</a>►<a class="article-category-link" href="/categories/php/tool/">tool</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/04/xdebug-remote-debug-with-phpstorm-and-vagrant.html">基于phpstorm和vagrant环境的xdebug远程调试</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="网页调试-本地调试"><a href="#网页调试-本地调试" class="headerlink" title="网页调试/本地调试"></a>网页调试/本地调试</h2><p>流程是啥</p>
+<ul>
+<li>开发环境安装xdebug，配置监听client端（安装phpstorm那端）</li>
+<li>配置phpstorm-debug，重点要用path-map，不然对于单一入口的网页调试找不到哦</li>
+<li>断点跟踪吧</li>
+</ul>
+<p>详细网上资料很多，下边三个都可以用，我就不赘述了</p>
+<p><a href="http://xrong.net/2014/09/09/phpstorm%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95/">phpstorm远程调试</a><br><a href="https://confluence.jetbrains.com/display/PhpStorm/Zero-configuration+Web+Application+Debugging+with+Xdebug+and+PhpStorm">Zero-configuration Web Application Debugging with Xdebug and PhpStorm</a><br><a href="http://stackoverflow.com/questions/15339165/cannot-debug-with-phpstorm-vagrant-xdebug">cannot-debug-with-phpstorm-vagrant-xdebug</a></p>
+<hr>
+<h2 id="远程cli调试"><a href="#远程cli调试" class="headerlink" title="远程cli调试"></a>远程cli调试</h2>
+        
+          <p class="article-more-link">
+            <a href="/2015/12/04/xdebug-remote-debug-with-phpstorm-and-vagrant.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    
+    <footer class="article-footer">
+      
+        <a data-url="http://blog.newbmiao.com/2015/12/04/xdebug-remote-debug-with-phpstorm-and-vagrant.html" data-id="ciqdsikvl0091v531m520cln1" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="http://blog.newbmiao.com/2015/12/04/xdebug-remote-debug-with-phpstorm-and-vagrant.html#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xdebug/">xdebug</a></li></ul>
+
+      
+     
+     <span style="color:#999">
+&nbsp; | &nbsp;最近更新 ：<time datetime="2016-07-07T13:09:22.000Z" itemprop="dateModify">2016-07-07</time>
+</span>
+
+     
+<!-- 无觅 -->
+<script type="text/javascript" id="wumiiRelatedItems"></script>
+
+    </footer>
+    
+  </div>
+</article>
+
+
+
+
+  
+    <article id="post-shadowsocks-polipo-vps" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/28/shadowsocks-polipo-vps.html" class="article-date">
+  <time datetime="2015-11-28T14:11:31.000Z" itemprop="datePublished">2015-11-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/mac/">mac</a>►<a class="article-category-link" href="/categories/mac/shadowsocks/">shadowsocks</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/28/shadowsocks-polipo-vps.html">让影梭和搬瓦工帮你科学上网</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>环境：</p>
+<ul>
+<li>server:shadowsocks(Linux)</li>
+<li>client:shadowsocks(Mac) , polipo</li>
+</ul>
+<p>硬广：<a href="https://bandwagonhost.com/aff.php?aff=5640">推荐VPS“搬瓦工”</a><br>理由有3：</p>
+<ul>
+<li>shadowsocks server： 一键安装（后续可自定义配置）</li>
+<li>性价比高：目前比较便宜的是 <strong>$19.99</strong> 一年,256MB内存的VPS，而且可以用 <strong>支付宝</strong> 支付</li>
+<li>操作不能在简单了！</li>
+</ul>
+</blockquote>
+        
+          <p class="article-more-link">
+            <a href="/2015/11/28/shadowsocks-polipo-vps.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    
+    <footer class="article-footer">
+      
+        <a data-url="http://blog.newbmiao.com/2015/11/28/shadowsocks-polipo-vps.html" data-id="ciqdsikrd0010v531knctifhx" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="http://blog.newbmiao.com/2015/11/28/shadowsocks-polipo-vps.html#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shadowsocks/">shadowsocks</a></li></ul>
+
+      
+     
+     <span style="color:#999">
+&nbsp; | &nbsp;最近更新 ：<time datetime="2016-07-07T13:09:20.000Z" itemprop="dateModify">2016-07-07</time>
+</span>
+
+     
+<!-- 无觅 -->
+<script type="text/javascript" id="wumiiRelatedItems"></script>
+
+    </footer>
+    
+  </div>
+</article>
+
+
+
+
+  
+    <article id="post-how-to-update-apps-apple-id" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/20/how-to-update-apps-apple-id.html" class="article-date">
+  <time datetime="2015-11-20T09:30:11.000Z" itemprop="datePublished">2015-11-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/mac/">mac</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/20/how-to-update-apps-apple-id.html">如何更新别人apple-id购买的应用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Mac的应用比如Xcode太大，一般不会自己下，别人airdrop给你，方便吧！<br>可是，升级时你就发现没有传给那个人的apple id密码你都没法升级了，而为了安全，除了appstore你别无选择</p>
+<p>不过方法还是有的，为了自己不用蛋疼，记录在这<br>
+        
+          <p class="article-more-link">
+            <a href="/2015/11/20/how-to-update-apps-apple-id.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    
+    <footer class="article-footer">
+      
+        <a data-url="http://blog.newbmiao.com/2015/11/20/how-to-update-apps-apple-id.html" data-id="ciqdsikrj0018v531bpz83w3b" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="http://blog.newbmiao.com/2015/11/20/how-to-update-apps-apple-id.html#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/software/">software</a></li></ul>
+
+      
+     
+     <span style="color:#999">
+&nbsp; | &nbsp;最近更新 ：<time datetime="2016-07-07T13:09:20.000Z" itemprop="dateModify">2016-07-07</time>
+</span>
+
+     
+<!-- 无觅 -->
+<script type="text/javascript" id="wumiiRelatedItems"></script>
+
+    </footer>
+    
+  </div>
+</article>
+
+
+
+
+  
+    <article id="post-jQuery-code-record" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/25/jQuery-code-record.html" class="article-date">
+  <time datetime="2015-10-25T14:15:38.000Z" itemprop="datePublished">2015-10-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/web/">web</a>►<a class="article-category-link" href="/categories/web/practice/">practice</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/25/jQuery-code-record.html">jQuery应用杂记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong> 工作中常用的一些代码片段 </strong></p>
+<h2 id="全选"><a href="#全选" class="headerlink" title="全选"></a>全选</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"#ckAll"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    $(<span class="string">"input[name='sub']"</span>).prop(<span class="string">"checked"</span>, <span class="keyword">this</span>.checked);</div><div class="line">  &#125;);</div><div class="line">  <span class="comment">//全部checkbox选中后 全选框也选中</span></div><div class="line"></div><div class="line">  $(<span class="string">"input[name='sub']"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> $subs = $(<span class="string">"input[name='sub']"</span>);</div><div class="line">    $(<span class="string">"#ckAll"</span>).prop(<span class="string">"checked"</span> , $subs.length == $subs.filter(<span class="string">":checked"</span>).length ? <span class="literal">true</span> :<span class="literal">false</span>);</div><div class="line">  &#125;);</div></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2015/10/25/jQuery-code-record.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    
+    <footer class="article-footer">
+      
+        <a data-url="http://blog.newbmiao.com/2015/10/25/jQuery-code-record.html" data-id="ciqdsiku1005sv5311otrvfop" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="http://blog.newbmiao.com/2015/10/25/jQuery-code-record.html#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/">jquery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+
+      
+     
+     <span style="color:#999">
+&nbsp; | &nbsp;最近更新 ：<time datetime="2016-07-07T13:09:22.000Z" itemprop="dateModify">2016-07-07</time>
+</span>
+
+     
+<!-- 无觅 -->
+<script type="text/javascript" id="wumiiRelatedItems"></script>
+
+    </footer>
+    
+  </div>
+</article>
+
+
+
+
+  
+    <article id="post-how-to-use-php-signal" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/25/how-to-use-php-signal.html" class="article-date">
+  <time datetime="2015-10-25T14:10:33.000Z" itemprop="datePublished">2015-10-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/php/">php</a>►<a class="article-category-link" href="/categories/php/signal/">signal</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/25/how-to-use-php-signal.html">php信号处理</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="pcntl"><a href="#pcntl" class="headerlink" title="pcntl"></a>pcntl</h1><h2 id="pcntl-signal"><a href="#pcntl-signal" class="headerlink" title="pcntl_signal"></a>pcntl_signal</h2><p>信号注册函数</p>
+<h2 id="pcntl-alarm"><a href="#pcntl-alarm" class="headerlink" title="pcntl_alarm"></a>pcntl_alarm</h2><ul>
+<li>指定秒数中断程序执行任务。</li>
+<li>每次执行只会有一个定时器生效，若之前计时器还没结束就定义新定时器，会替代之前定时器并返回之前定时器结束前秒数，若之前计时器已完成返回0</li>
+<li>参数设为0，会清空当前所有定时器，并不发起调用</li>
+<li>定时器会中断系统，即便是sleep执行中</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/2015/10/25/how-to-use-php-signal.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    
+    <footer class="article-footer">
+      
+        <a data-url="http://blog.newbmiao.com/2015/10/25/how-to-use-php-signal.html" data-id="ciqdsikv9007ov531to7y3lfi" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="http://blog.newbmiao.com/2015/10/25/how-to-use-php-signal.html#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pcntl/">pcntl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/signal/">signal</a></li></ul>
+
+      
+     
+     <span style="color:#999">
+&nbsp; | &nbsp;最近更新 ：<time datetime="2016-07-07T13:09:22.000Z" itemprop="dateModify">2016-07-07</time>
+</span>
+
+     
+<!-- 无觅 -->
+<script type="text/javascript" id="wumiiRelatedItems"></script>
+
+    </footer>
+    
+  </div>
+</article>
+
+
+
+
+  
+    <article id="post-gearman-beginer-guide" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/16/gearman-beginer-guide.html" class="article-date">
+  <time datetime="2015-10-16T13:18:33.000Z" itemprop="datePublished">2015-10-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/gearman/">gearman</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/16/gearman-beginer-guide.html">gearman分布式任务服务器学习记录</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>以下是强大的gearman学习及安装记录，代码demo下边的来自网络的附录有很多可以参考。</p>
+</blockquote>
+<p>Gearman 是一套用来把程式需求委派给机器，提供通用的程序框架来将任务分发在机器运算。<br>它同时具备并行工作的能力、负载均衡处理的能力，以及在不同程序语言之间沟通的能力。</p>
+        
+          <p class="article-more-link">
+            <a href="/2015/10/16/gearman-beginer-guide.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    
+    <footer class="article-footer">
+      
+        <a data-url="http://blog.newbmiao.com/2015/10/16/gearman-beginer-guide.html" data-id="ciqdsikqk000bv531x89amulx" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="http://blog.newbmiao.com/2015/10/16/gearman-beginer-guide.html#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gearman/">gearman</a></li></ul>
+
+      
+     
+     <span style="color:#999">
+&nbsp; | &nbsp;最近更新 ：<time datetime="2016-07-07T13:45:11.000Z" itemprop="dateModify">2016-07-07</time>
+</span>
+
+     
+<!-- 无觅 -->
+<script type="text/javascript" id="wumiiRelatedItems"></script>
+
+    </footer>
+    
+  </div>
+</article>
+
+
+
+
+  
+    <article id="post-jquery-tabs-with-iframe" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/14/jquery-tabs-with-iframe.html" class="article-date">
+  <time datetime="2015-10-14T01:29:19.000Z" itemprop="datePublished">2015-10-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/web/">web</a>►<a class="article-category-link" href="/categories/web/practice/">practice</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/14/jquery-tabs-with-iframe.html">iframe实现的无刷tab页</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>为了实现tab页无刷，又不想全部用ajax动态生成，同时需要在tab页内有相关操作，简单的话就是用iframe了</p>
+<p>先来看个demo: <a href="http://blog.newbmiao.com/demo/iframe-tabs.html">iframe-tabs</a></p>
+<blockquote>
+<p>参考自<a href="http://deano.me/2011/08/jquery-tabs-iframes/">jquery-tabs-iframes</a></p>
+</blockquote>
+<p>这个demo实现了基本的需求，使用中发现还有两点问题</p>
+<ol>
+<li>iframe 高度自适应</li>
+<li>如果在iframe页内 <code>history.back(-1)</code> 历史返回时要记录之前选择的tab页</li>
+<li>如果tab页要求实时性，还需要每次点击都请求页面，同时也可以只加载一个iframe并替换其src来复用，而不必每个tab都加载一个iframe</li>
+</ol>
+        
+          <p class="article-more-link">
+            <a href="/2015/10/14/jquery-tabs-with-iframe.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    
+    <footer class="article-footer">
+      
+        <a data-url="http://blog.newbmiao.com/2015/10/14/jquery-tabs-with-iframe.html" data-id="ciqdsiku3005vv531yoepglg9" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="http://blog.newbmiao.com/2015/10/14/jquery-tabs-with-iframe.html#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iframe/">iframe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/">jquery</a></li></ul>
+
+      
+     
+     <span style="color:#999">
+&nbsp; | &nbsp;最近更新 ：<time datetime="2016-07-07T13:09:22.000Z" itemprop="dateModify">2016-07-07</time>
+</span>
+
+     
+<!-- 无觅 -->
+<script type="text/javascript" id="wumiiRelatedItems"></script>
+
+    </footer>
+    
+  </div>
+</article>
+
+
+
+
+  
+    <article id="photo-up-up-in-mid-autumn-day" class="article article-type-photo" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/09/27/up-up-in-mid-autumn-day.html" class="article-date">
+  <time datetime="2015-09-27T03:07:08.000Z" itemprop="datePublished">2015-09-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/journal/">journal</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" href="http://media.newbmiao.com/blog/zhongqiu1.jpg" rel="gallery_ciqdsikqm000dv531o24l93ti">
+        <img src="http://media.newbmiao.com/blog/zhongqiu1.jpg" itemprop="image">
+      </a>
+    
+      <a class="article-gallery-img fancybox" href="http://media.newbmiao.com/blog/zhongqiu2.jpg" rel="gallery_ciqdsikqm000dv531o24l93ti">
+        <img src="http://media.newbmiao.com/blog/zhongqiu2.jpg" itemprop="image">
+      </a>
+    
+      <a class="article-gallery-img fancybox" href="http://media.newbmiao.com/blog/zhongqiu3.jpg" rel="gallery_ciqdsikqm000dv531o24l93ti">
+        <img src="http://media.newbmiao.com/blog/zhongqiu3.jpg" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/27/up-up-in-mid-autumn-day.html">中秋举牌</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>舉牌是一種支持的態度，是一種相信希望的精神，每隻可愛的小人都代表著支持你的人，鼓舞著你。舉牌世界沒有人是孤獨的，有時你需要獨自面對眼前的難關，舉牌小人會陪伴與鼓勵你，用舉牌挺你走向希望。我們相信有許多美好的事都等著我們高舉著，並將這樣的精神與鼓勵不斷地蔓延下去。</p>
+</blockquote>
+        
+          <p class="article-more-link">
+            <a href="/2015/09/27/up-up-in-mid-autumn-day.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    
+    <footer class="article-footer">
+      
+        <a data-url="http://blog.newbmiao.com/2015/09/27/up-up-in-mid-autumn-day.html" data-id="ciqdsikqm000dv531o24l93ti" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="http://blog.newbmiao.com/2015/09/27/up-up-in-mid-autumn-day.html#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/journal/">journal</a></li></ul>
+
+      
+     
+     <span style="color:#999">
+&nbsp; | &nbsp;最近更新 ：<time datetime="2016-07-07T13:09:18.000Z" itemprop="dateModify">2016-07-07</time>
+</span>
+
+     
+<!-- 无觅 -->
+<script type="text/javascript" id="wumiiRelatedItems"></script>
+
+    </footer>
+    
+  </div>
+</article>
+
+
+
+
+  
+    <article id="post-use-luhm-to-validate-bank-card" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/09/25/use-luhm-to-validate-bank-card.html" class="article-date">
+  <time datetime="2015-09-25T07:54:54.000Z" itemprop="datePublished">2015-09-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/php/">php</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/25/use-luhm-to-validate-bank-card.html">php银行卡校验</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p><strong>前言</strong><br>银行金卡，维萨和万事达、银联品牌，如果是贷记卡或准贷记卡，一定为16位卡号。而借记卡可以16-19位不等。<br>美国运通卡则不论金卡或是白金卡、普通卡，都是15位卡号。<br>16-19 位卡号校验位采用 Luhm 校验方法计算</p>
+</blockquote>
+        
+          <p class="article-more-link">
+            <a href="/2015/09/25/use-luhm-to-validate-bank-card.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    
+    <footer class="article-footer">
+      
+        <a data-url="http://blog.newbmiao.com/2015/09/25/use-luhm-to-validate-bank-card.html" data-id="ciqdsiks3001vv531ht3d5sfy" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="http://blog.newbmiao.com/2015/09/25/use-luhm-to-validate-bank-card.html#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
+
+      
+     
+     <span style="color:#999">
+&nbsp; | &nbsp;最近更新 ：<time datetime="2016-07-07T13:09:22.000Z" itemprop="dateModify">2016-07-07</time>
+</span>
+
+     
+<!-- 无觅 -->
+<script type="text/javascript" id="wumiiRelatedItems"></script>
+
+    </footer>
+    
+  </div>
+</article>
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
+  
+</section>
+      
+      <aside id="sidebar">
+  
+   	
+  <div class="widget-wrap">
+    <h3 class="widget-title">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/03/15/mac-tool.html">mac工具集</a>
+          </li>
+        
+          <li>
+            <a href="/2015/12/04/xdebug-remote-debug-with-phpstorm-and-vagrant.html">基于phpstorm和vagrant环境的xdebug远程调试</a>
+          </li>
+        
+          <li>
+            <a href="/2015/11/28/shadowsocks-polipo-vps.html">让影梭和搬瓦工帮你科学上网</a>
+          </li>
+        
+          <li>
+            <a href="/2015/11/20/how-to-update-apps-apple-id.html">如何更新别人apple-id购买的应用</a>
+          </li>
+        
+          <li>
+            <a href="/2015/10/25/jQuery-code-record.html">jQuery应用杂记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+   	
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/dropbox/">dropbox</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/blog/hexo/">hexo</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/gearman/">gearman</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/html5/">html5</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/journal/">journal</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/js/">js</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js/jquery/">jquery</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/linux/notes/">notes</a><span class="category-list-count">7</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/">mac</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/mac/shadowsocks/">shadowsocks</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/tool/">tool</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/">mysql</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/optimize/">optimize</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/">php</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/php/CI/">CI</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/regex/">regex</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/signal/">signal</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/tool/">tool</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/redis/">redis</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/">web</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/web/notes/">notes</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/practice/">practice</a><span class="category-list-count">3</span></li></ul></li></ul>
+    </div>
+  </div>
+
+  
+   	
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/mysql/" style="font-size: 20px; color: #3495df">mysql</a> <a href="/tags/hexo/" style="font-size: 20px; color: #3495df">hexo</a> <a href="/tags/gitcafe/" style="font-size: 15px; color: #1e90ff">gitcafe</a> <a href="/tags/gearman/" style="font-size: 15px; color: #1e90ff">gearman</a> <a href="/tags/journal/" style="font-size: 17.5px; color: #2992ef">journal</a> <a href="/tags/html5/" style="font-size: 17.5px; color: #2992ef">html5</a> <a href="/tags/drag/" style="font-size: 17.5px; color: #2992ef">drag</a> <a href="/tags/chrome/" style="font-size: 15px; color: #1e90ff">chrome</a> <a href="/tags/js/" style="font-size: 30px; color: #5f9ea0">js</a> <a href="/tags/javascript-program-solution/" style="font-size: 20px; color: #3495df">javascript-program-solution</a> <a href="/tags/random/" style="font-size: 15px; color: #1e90ff">random</a> <a href="/tags/maintainable-javascript/" style="font-size: 15px; color: #1e90ff">maintainable-javascript</a> <a href="/tags/git/" style="font-size: 15px; color: #1e90ff">git</a> <a href="/tags/linux/" style="font-size: 27.5px; color: #549cb0">linux</a> <a href="/tags/mac/" style="font-size: 20px; color: #3495df">mac</a> <a href="/tags/vim/" style="font-size: 15px; color: #1e90ff">vim</a> <a href="/tags/shadowsocks/" style="font-size: 15px; color: #1e90ff">shadowsocks</a> <a href="/tags/tool/" style="font-size: 15px; color: #1e90ff">tool</a> <a href="/tags/software/" style="font-size: 15px; color: #1e90ff">software</a> <a href="/tags/blog/" style="font-size: 22.5px; color: #3f97d0">blog</a> <a href="/tags/limit/" style="font-size: 15px; color: #1e90ff">limit</a> <a href="/tags/phpdoc/" style="font-size: 15px; color: #1e90ff">phpdoc</a> <a href="/tags/php/" style="font-size: 30px; color: #5f9ea0">php</a> <a href="/tags/target/" style="font-size: 15px; color: #1e90ff">target</a> <a href="/tags/reference/" style="font-size: 15px; color: #1e90ff">reference</a> <a href="/tags/php-fpm/" style="font-size: 15px; color: #1e90ff">php-fpm</a> <a href="/tags/apache/" style="font-size: 15px; color: #1e90ff">apache</a> <a href="/tags/regex/" style="font-size: 15px; color: #1e90ff">regex</a> <a href="/tags/redis/" style="font-size: 15px; color: #1e90ff">redis</a> <a href="/tags/jquery/" style="font-size: 22.5px; color: #3f97d0">jquery</a> <a href="/tags/iframe/" style="font-size: 15px; color: #1e90ff">iframe</a> <a href="/tags/dropbox/" style="font-size: 15px; color: #1e90ff">dropbox</a> <a href="/tags/closure/" style="font-size: 15px; color: #1e90ff">closure</a> <a href="/tags/notes/" style="font-size: 25px; color: #4999c0">notes</a> <a href="/tags/CI/" style="font-size: 15px; color: #1e90ff">CI</a> <a href="/tags/pcntl/" style="font-size: 15px; color: #1e90ff">pcntl</a> <a href="/tags/signal/" style="font-size: 15px; color: #1e90ff">signal</a> <a href="/tags/xdebug/" style="font-size: 15px; color: #1e90ff">xdebug</a>
+    </div>
+  </div>
+
+
+  
+   	
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">十月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">二月 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">十二月 2014</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+   	
+  <div class="widget-wrap">
+    <h3 class="widget-title">友情链接</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://www.laruence.com/" target="_blank">风雪之隅</a>
+          </li>
+        
+          <li>
+            <a href="http://leo108.com/" target="_blank">leo108</a>
+          </li>
+        
+          <li>
+            <a href="http://leandre.cn/" target="_blank">点滴记忆</a>
+          </li>
+        
+          <li>
+            <a href="http://www.throwsnew.com/" target="_blank">先锋Song</a>
+          </li>
+        
+          <li>
+            <a href="http://liecol.lofter.com/" target="_blank">liecol-晓斌</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+   	<div class="widget-wrap widget-toc" style="display: none">
+  <h3 class="widget-title">文章目录</h3>
+  <div class="container widget" style="padding: 15px 20px;">
+  </div>
+</div>
+
+<script src="//media.newbmiao.com/blog/asset/js/toc.js" ></script>
+
+
+  
+</aside>
+
+      
+    </div>
+    <footer id="footer">
+ <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+ </script>
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 菜鸟Miao<br>
+     <p>
+     <span id="busuanzi_container_site_uv">
+  	您是本站第<span id="busuanzi_value_site_uv"> <i class="fa fa-spinner fa-spin"></i></span>个访问者
+     </span>
+     <span id="busuanzi_container_site_pv">
+        /本站总访问量<span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i> </span>次
+     </span>
+     </p>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      .
+      Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>
+      .
+      Hosted by <a href="https://gitcafe.com/signup?invited_by=newbmiao" target="_blank">Coding</a>  &amp; <a href="https://github.com/newbmiao" target="_blank">GitHub</a>
+      . 
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/add-ons" class="mobile-nav-link">Add-ons</a>
+  
+</nav>
+  <script src="http://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<!-- totop start -->
+<div id="totop">
+<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+</div>
+
+<!-- totop end -->
+
+<!-- 多说公共js代码 start -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"NewbMiao"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//media.newbmiao.com/blog/asset/js/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共js代码 end -->
+
+
+<!-- 百度分享 start -->
+
+<div id="article-share-box" class="article-share-box">
+  <div id="bdshare" class="bdsharebuttonbox article-share-links">
+    <a class="article-share-weibo" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a class="article-share-weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a class="article-share-qq" data-cmd="sqq" title="分享到QQ"></a>
+    <a class="article-share-renren" data-cmd="renren" title="分享到人人网"></a>
+    <a class="article-share-more" data-cmd="more" title="更多"></a>
+  </div>
+</div>
+<script>window._bd_share_config={"common":{},"share":{"bdCustomStyle":"/css/bdshare.css"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<!-- 百度分享 end -->
+
+
+
+<link rel="stylesheet" href="//media.newbmiao.com/blog/asset/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="//media.newbmiao.com/blog/asset/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="//media.newbmiao.com/blog/asset/js/script.js"></script>
+
+
+
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  _st('install','bqAniPPC1T7RV4MomxcE','2.0.0');
+</script>
+
+
+
+</div>
+</body>
+</html>
+

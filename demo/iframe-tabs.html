@@ -1,0 +1,77 @@
+
+
+<html>
+    <head>
+        <meta charset="utf8">
+        <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script type="text/javascript" src="http://apps.bdimg.com/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+        <link href="http://apps.bdimg.com/libs/jqueryui/1.9.0/themes/base/jquery-ui.css" rel="stylesheet" type="text/css">
+        <style>
+            html {
+                font-size:10px;
+            }
+            .iframetab {
+                width:100%;
+                height:auto;
+                border:0px;
+                margin:0px;
+                position:relative;
+                top:-13px;
+            }
+            .ui-tabs-panel {
+                padding:5px !important;
+            }
+            .openout {
+                float:right;
+                position:relative;
+                top:-28px;
+                left:-5px;
+            }
+        </style>
+        <script>
+            $(document).ready(function() {
+                var $tabs = $('#tabs').tabs();
+                //get selected tab
+                function getSelectedTabIndex() {
+                    return $tabs.tabs('option', 'active');
+                }
+                //get tab contents
+                beginTab = $("#tabs ul li:eq(" + getSelectedTabIndex() + ")").find("a");
+                loadTabFrame($(beginTab).attr("href"),$(beginTab).attr("rel"));
+                $("a.tabref").click(function() {
+                    loadTabFrame($(this).attr("href"),$(this).attr("rel"));
+                });
+                //tab switching function
+                function loadTabFrame(tab, url) {
+                    if ($(tab).find("iframe").length == 0) {
+                        var html = [];
+                        html.push('<div class="tabIframeWrapper">');
+                        html.push('<div class="openout"><a id="aOpenOut" target="_blank" href="' + url + '" title="新栏打开此页">新栏打开<span class="glyphicon glyphicon-share"></span></a></div><iframe class="iframetab" src="' + url + '">Load Failed?</iframe>');
+                        html.push('</div>');
+                        $(tab).append(html.join(""));
+                        $(tab).find("iframe").height($(window).height()-80);
+                    }
+                    return false;
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div id="tabs">
+            <ul>
+                <li><a class="tabref" href="#tabs-1" rel="http://baidu.com">google</a></li>
+                <li><a class="tabref" href="#tabs-2" rel="http://www.haosou.com/">yahoo</a></li>
+                <li><a class="tabref" href="#tabs-3" rel="http://bing.co.uk">bing</a></li>
+            </ul>
+            <div id="tabs-1" class="tabMain">
+            </div>
+            <div id="tabs-2">
+            </div>
+            <div id="tabs-3">
+            </div>
+        </div>
+    </body>
+</html>
+
+
+

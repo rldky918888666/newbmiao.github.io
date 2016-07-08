@@ -1,0 +1,1076 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/10/16/gearman-beginer-guide.html</loc>
+    <lastmod>2016-07-07T13:45:11.000Z</lastmod>
+    <data>
+        <display>
+        <title>gearman分布式任务服务器学习记录</title>
+        <pubTime>2015-10-16T13:18:33.000Z</pubTime>
+        
+        <tag>gearman</tag>
+         
+         
+           
+             
+              <breadCrumb title="gearman" url="http://blog.newbmiao.com/categories/gearman/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/02/13/hide-lamp-server-info.html</loc>
+    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>隐藏服务器信息</title>
+        <pubTime>2015-02-13T03:34:00.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>apache</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.newbmiao.com/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+    
+    
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/12/04/xdebug-remote-debug-with-phpstorm-and-vagrant.html</loc>
+    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>基于phpstorm和vagrant环境的xdebug远程调试</title>
+        <pubTime>2015-12-04T06:01:09.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>xdebug</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.newbmiao.com/categories/php/"/>
+          
+             
+              <breadCrumb title="tool" url="http://blog.newbmiao.com/categories/php/tool/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/10/25/how-to-use-php-signal.html</loc>
+    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>php信号处理</title>
+        <pubTime>2015-10-25T14:10:33.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>pcntl</tag>
+         
+        <tag>signal</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.newbmiao.com/categories/php/"/>
+          
+             
+              <breadCrumb title="signal" url="http://blog.newbmiao.com/categories/php/signal/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/01/08/ci-load-class-source-code-analysis.html</loc>
+    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>CI加载类源码分析</title>
+        <pubTime>2015-01-08T09:20:00.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>CI</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.newbmiao.com/categories/php/"/>
+          
+             
+              <breadCrumb title="CI" url="http://blog.newbmiao.com/categories/php/CI/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/07/31/school-company-data-crawling.html</loc>
+    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>大学-公司数据爬取</title>
+        <pubTime>2015-07-31T12:11:39.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+        <tag>php</tag>
+         
+        <tag>closure</tag>
+         
+         
+           
+             
+              <breadCrumb title="web" url="http://blog.newbmiao.com/categories/web/"/>
+          
+             
+              <breadCrumb title="practice" url="http://blog.newbmiao.com/categories/web/practice/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/10/14/jquery-tabs-with-iframe.html</loc>
+    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>iframe实现的无刷tab页</title>
+        <pubTime>2015-10-14T01:29:19.000Z</pubTime>
+        
+        <tag>jquery</tag>
+         
+        <tag>iframe</tag>
+         
+         
+           
+             
+              <breadCrumb title="web" url="http://blog.newbmiao.com/categories/web/"/>
+          
+             
+              <breadCrumb title="practice" url="http://blog.newbmiao.com/categories/web/practice/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/10/25/jQuery-code-record.html</loc>
+    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>jQuery应用杂记</title>
+        <pubTime>2015-10-25T14:15:38.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+        <tag>jquery</tag>
+         
+         
+           
+             
+              <breadCrumb title="web" url="http://blog.newbmiao.com/categories/web/"/>
+          
+             
+              <breadCrumb title="practice" url="http://blog.newbmiao.com/categories/web/practice/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/06/26/redis-installation-guide.html</loc>
+    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>redis安装</title>
+        <pubTime>2015-06-26T09:43:23.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>redis</tag>
+         
+         
+           
+             
+              <breadCrumb title="redis" url="http://blog.newbmiao.com/categories/redis/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/02/28/regex-notes.html</loc>
+    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>正则速查</title>
+        <pubTime>2015-02-28T11:40:00.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>regex</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.newbmiao.com/categories/php/"/>
+          
+             
+              <breadCrumb title="regex" url="http://blog.newbmiao.com/categories/php/regex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/09/01/use-fastcgi_finish_request-speed-up-your-page.html</loc>
+    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>利用fastcgi_finish_request加快页面响应</title>
+        <pubTime>2015-09-01T05:41:46.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>php-fpm</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.newbmiao.com/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/09/25/use-luhm-to-validate-bank-card.html</loc>
+    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>php银行卡校验</title>
+        <pubTime>2015-09-25T07:54:54.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.newbmiao.com/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/03/08/php-assignment-and-reference.html</loc>
+    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>php的赋值与引用</title>
+        <pubTime>2015-03-08T00:56:59.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>reference</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.newbmiao.com/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/01/11/php-jump-out-of-the-frameset.html</loc>
+    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>php后台跳出框架集</title>
+        <pubTime>2015-01-11T14:14:00.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+        <tag>target</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.newbmiao.com/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/06/17/use-phpdoc-to-render-api-document.html</loc>
+    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>phpdoc生成php文档</title>
+        <pubTime>2015-06-16T23:10:24.000Z</pubTime>
+        
+        <tag>phpdoc</tag>
+         
+        <tag>php</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.newbmiao.com/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-bash.html</loc>
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>鸟哥的Linux私房菜笔记-bash</title>
+        <pubTime>2015-09-15T09:28:15.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>notes</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://blog.newbmiao.com/categories/linux/"/>
+          
+             
+              <breadCrumb title="notes" url="http://blog.newbmiao.com/categories/linux/notes/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/09/25/remember-once-mysql-optimize-operations.html</loc>
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>记一次mysql优化操作</title>
+        <pubTime>2015-09-25T06:14:20.000Z</pubTime>
+        
+        <tag>mysql</tag>
+         
+         
+           
+             
+              <breadCrumb title="mysql" url="http://blog.newbmiao.com/categories/mysql/"/>
+          
+             
+              <breadCrumb title="optimize" url="http://blog.newbmiao.com/categories/mysql/optimize/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/08/01/use-limit-subquery-in-mysql.html</loc>
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>解决mysql不可用limit子查询</title>
+        <pubTime>2015-08-01T07:43:06.000Z</pubTime>
+        
+        <tag>mysql</tag>
+         
+        <tag>limit</tag>
+         
+         
+           
+             
+              <breadCrumb title="mysql" url="http://blog.newbmiao.com/categories/mysql/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/11/20/how-to-update-apps-apple-id.html</loc>
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>如何更新别人apple-id购买的应用</title>
+        <pubTime>2015-11-20T09:30:11.000Z</pubTime>
+        
+        <tag>software</tag>
+         
+         
+           
+             
+              <breadCrumb title="mac" url="http://blog.newbmiao.com/categories/mac/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2016/03/15/mac-tool.html</loc>
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>mac工具集</title>
+        <pubTime>2016-03-15T02:50:23.000Z</pubTime>
+        
+        <tag>mac</tag>
+         
+        <tag>tool</tag>
+         
+         
+           
+             
+              <breadCrumb title="mac" url="http://blog.newbmiao.com/categories/mac/"/>
+          
+             
+              <breadCrumb title="tool" url="http://blog.newbmiao.com/categories/mac/tool/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-quota.html</loc>
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>鸟哥的Linux私房菜笔记-配额</title>
+        <pubTime>2015-09-15T09:37:30.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>notes</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://blog.newbmiao.com/categories/linux/"/>
+          
+             
+              <breadCrumb title="notes" url="http://blog.newbmiao.com/categories/linux/notes/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/11/28/shadowsocks-polipo-vps.html</loc>
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>让影梭和搬瓦工帮你科学上网</title>
+        <pubTime>2015-11-28T14:11:31.000Z</pubTime>
+        
+        <tag>mac</tag>
+         
+        <tag>shadowsocks</tag>
+         
+         
+           
+             
+              <breadCrumb title="mac" url="http://blog.newbmiao.com/categories/mac/"/>
+          
+             
+              <breadCrumb title="shadowsocks" url="http://blog.newbmiao.com/categories/mac/shadowsocks/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/08/06/set-highlight-and-autoindent-in-vim-on-mac.html</loc>
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>mac vim高亮及缩进设置</title>
+        <pubTime>2015-08-06T06:04:59.000Z</pubTime>
+        
+        <tag>mac</tag>
+         
+        <tag>vim</tag>
+         
+         
+           
+             
+              <breadCrumb title="mac" url="http://blog.newbmiao.com/categories/mac/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2014/12/28/build-your-git-server-on-linux.html</loc>
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>Git搭建自己的网站服务器（Linux)</title>
+        <pubTime>2014-12-28T08:01:00.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+        <tag>linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="git" url="http://blog.newbmiao.com/categories/git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/03/28/maintainable-javascript-note.html</loc>
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>编写可维护javascript</title>
+        <pubTime>2015-03-28T15:19:25.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+        <tag>maintainable-javascript</tag>
+         
+         
+           
+             
+              <breadCrumb title="web" url="http://blog.newbmiao.com/categories/web/"/>
+          
+             
+              <breadCrumb title="notes" url="http://blog.newbmiao.com/categories/web/notes/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/09/16/Niaoge-Linux-Desktop-Guide-notes-daemon.html</loc>
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>鸟哥的Linux私房菜笔记-系统服务</title>
+        <pubTime>2015-09-16T09:41:50.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>notes</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://blog.newbmiao.com/categories/linux/"/>
+          
+             
+              <breadCrumb title="notes" url="http://blog.newbmiao.com/categories/linux/notes/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/02/28/random-element-of-array-js.html</loc>
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>对数组元素打乱输出（不重复随机串）</title>
+        <pubTime>2015-02-28T11:27:15.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+        <tag>random</tag>
+         
+         
+           
+             
+              <breadCrumb title="js" url="http://blog.newbmiao.com/categories/js/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-process.html</loc>
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>鸟哥的Linux私房菜笔记-程序管理</title>
+        <pubTime>2015-09-15T09:41:50.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>notes</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://blog.newbmiao.com/categories/linux/"/>
+          
+             
+              <breadCrumb title="notes" url="http://blog.newbmiao.com/categories/linux/notes/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-ACL.html</loc>
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>鸟哥的Linux私房菜笔记-权限管理</title>
+        <pubTime>2015-09-15T09:34:48.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>notes</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://blog.newbmiao.com/categories/linux/"/>
+          
+             
+              <breadCrumb title="notes" url="http://blog.newbmiao.com/categories/linux/notes/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-cron.html</loc>
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>鸟哥的Linux私房菜笔记-排程</title>
+        <pubTime>2015-09-15T09:39:47.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>notes</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://blog.newbmiao.com/categories/linux/"/>
+          
+             
+              <breadCrumb title="notes" url="http://blog.newbmiao.com/categories/linux/notes/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/09/23/mysql-common-function-accumulation.html</loc>
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>mysql常用函数积累</title>
+        <pubTime>2015-09-23T13:56:47.000Z</pubTime>
+        
+        <tag>mysql</tag>
+         
+         
+           
+             
+              <breadCrumb title="mysql" url="http://blog.newbmiao.com/categories/mysql/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-basis.html</loc>
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>鸟哥的Linux私房菜笔记-基础</title>
+        <pubTime>2015-09-15T09:16:16.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>notes</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://blog.newbmiao.com/categories/linux/"/>
+          
+             
+              <breadCrumb title="notes" url="http://blog.newbmiao.com/categories/linux/notes/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/02/22/html5-drag-api.html</loc>
+    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>html5的拖拽api</title>
+        <pubTime>2015-02-22T10:29:00.000Z</pubTime>
+        
+        <tag>html5</tag>
+         
+        <tag>drag</tag>
+         
+        <tag>js</tag>
+         
+         
+           
+             
+              <breadCrumb title="html5" url="http://blog.newbmiao.com/categories/html5/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/09/01/jquery-detach.html</loc>
+    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>jQuery之detach的使用</title>
+        <pubTime>2015-09-01T05:59:16.000Z</pubTime>
+        
+        <tag>jquery</tag>
+         
+         
+           
+             
+              <breadCrumb title="js" url="http://blog.newbmiao.com/categories/js/"/>
+          
+             
+              <breadCrumb title="jquery" url="http://blog.newbmiao.com/categories/js/jquery/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/02/28/jquery-html5.html</loc>
+    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>jquery 和 html5</title>
+        <pubTime>2015-02-28T15:20:57.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+        <tag>javascript-program-solution</tag>
+         
+         
+           
+             
+              <breadCrumb title="web" url="http://blog.newbmiao.com/categories/web/"/>
+          
+             
+              <breadCrumb title="notes" url="http://blog.newbmiao.com/categories/web/notes/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/07/18/typecho-to-hexo.html</loc>
+    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>typecho to hexo</title>
+        <pubTime>2015-07-17T16:21:39.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>blog</tag>
+         
+         
+           
+             
+              <breadCrumb title="blog" url="http://blog.newbmiao.com/categories/blog/"/>
+          
+             
+              <breadCrumb title="hexo" url="http://blog.newbmiao.com/categories/blog/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/08/18/hexo-with-gitcafe-and-github.html</loc>
+    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>hexo同步托管到gitcafe和github</title>
+        <pubTime>2015-08-18T06:35:03.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>blog</tag>
+         
+        <tag>gitcafe</tag>
+         
+         
+           
+             
+              <breadCrumb title="blog" url="http://blog.newbmiao.com/categories/blog/"/>
+          
+             
+              <breadCrumb title="hexo" url="http://blog.newbmiao.com/categories/blog/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/02/28/js-data-structure.html</loc>
+    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>js数据类型</title>
+        <pubTime>2015-02-28T15:19:25.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+        <tag>javascript-program-solution</tag>
+         
+         
+           
+             
+              <breadCrumb title="web" url="http://blog.newbmiao.com/categories/web/"/>
+          
+             
+              <breadCrumb title="notes" url="http://blog.newbmiao.com/categories/web/notes/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/02/28/js-function-closure.html</loc>
+    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>js函数和闭包</title>
+        <pubTime>2015-02-28T15:16:04.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+        <tag>javascript-program-solution</tag>
+         
+         
+           
+             
+              <breadCrumb title="web" url="http://blog.newbmiao.com/categories/web/"/>
+          
+             
+              <breadCrumb title="notes" url="http://blog.newbmiao.com/categories/web/notes/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/09/23/some-code-when-use-jquery-fileupload.html</loc>
+    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>jquery图片上传</title>
+        <pubTime>2015-09-23T03:58:21.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+        <tag>jquery</tag>
+         
+         
+           
+             
+              <breadCrumb title="js" url="http://blog.newbmiao.com/categories/js/"/>
+          
+             
+              <breadCrumb title="jquery" url="http://blog.newbmiao.com/categories/js/jquery/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/02/22/html5-drag-api2-chrome-drag-to-downloa.html</loc>
+    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>html5拖拽2-chrome拖拽下载</title>
+        <pubTime>2015-02-22T14:39:00.000Z</pubTime>
+        
+        <tag>html5</tag>
+         
+        <tag>drag</tag>
+         
+        <tag>chrome</tag>
+         
+         
+           
+             
+              <breadCrumb title="html5" url="http://blog.newbmiao.com/categories/html5/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/09/24/a-tribute-to-the-great-god-of-php.html</loc>
+    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>向php大神致敬</title>
+        <pubTime>2015-09-24T04:59:24.000Z</pubTime>
+        
+        <tag>journal</tag>
+         
+         
+           
+             
+              <breadCrumb title="journal" url="http://blog.newbmiao.com/categories/journal/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/09/27/up-up-in-mid-autumn-day.html</loc>
+    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>中秋举牌</title>
+        <pubTime>2015-09-27T03:07:08.000Z</pubTime>
+        
+        <tag>journal</tag>
+         
+         
+           
+             
+              <breadCrumb title="journal" url="http://blog.newbmiao.com/categories/journal/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/06/16/hexo-on-your-github.html</loc>
+    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>搭建你自己的Hexo博客</title>
+        <pubTime>2015-06-16T12:23:25.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>blog</tag>
+         
+         
+           
+             
+              <breadCrumb title="blog" url="http://blog.newbmiao.com/categories/blog/"/>
+          
+             
+              <breadCrumb title="hexo" url="http://blog.newbmiao.com/categories/blog/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/08/08/auto-sync-your-mac-file-with-dropbox.html</loc>
+    <lastmod>2015-08-10T01:30:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>dropbox同步你的mac文件</title>
+        <pubTime>2015-08-08T02:05:04.000Z</pubTime>
+        
+        <tag>blog</tag>
+         
+        <tag>dropbox</tag>
+         
+         
+           
+             
+              <breadCrumb title="blog" url="http://blog.newbmiao.com/categories/blog/"/>
+          
+             
+              <breadCrumb title="dropbox" url="http://blog.newbmiao.com/categories/blog/dropbox/"/>
+          
+        </display>
+    </data>
+    </url>
+
+</urlset>
