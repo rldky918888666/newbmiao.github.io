@@ -72,6 +72,7 @@
     
     
     
+    
   <url>
     <loc>http://blog.newbmiao.com/2015/12/04/xdebug-remote-debug-with-phpstorm-and-vagrant.html</loc>
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
@@ -252,27 +253,26 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/06/26/redis-installation-guide.html</loc>
+    <loc>http://blog.newbmiao.com/2015/02/13/hide-lamp-server-info.html</loc>
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
     <data>
         <display>
-        <title>redis安装</title>
-        <pubTime>2015-06-26T09:43:23.000Z</pubTime>
+        <title>隐藏服务器信息</title>
+        <pubTime>2015-02-13T03:34:00.000Z</pubTime>
         
-        <tag>linux</tag>
+        <tag>php</tag>
          
-        <tag>redis</tag>
+        <tag>apache</tag>
          
          
            
              
-              <breadCrumb title="redis" url="http://blog.newbmiao.com/categories/redis/"/>
+              <breadCrumb title="php" url="http://blog.newbmiao.com/categories/php/"/>
           
         </display>
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://blog.newbmiao.com/2015/09/01/use-fastcgi_finish_request-speed-up-your-page.html</loc>
@@ -383,21 +383,21 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/02/13/hide-lamp-server-info.html</loc>
+    <loc>http://blog.newbmiao.com/2015/06/26/redis-installation-guide.html</loc>
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
     <data>
         <display>
-        <title>隐藏服务器信息</title>
-        <pubTime>2015-02-13T03:34:00.000Z</pubTime>
+        <title>redis安装</title>
+        <pubTime>2015-06-26T09:43:23.000Z</pubTime>
         
-        <tag>php</tag>
+        <tag>linux</tag>
          
-        <tag>apache</tag>
+        <tag>redis</tag>
          
          
            
              
-              <breadCrumb title="php" url="http://blog.newbmiao.com/categories/php/"/>
+              <breadCrumb title="redis" url="http://blog.newbmiao.com/categories/redis/"/>
           
         </display>
     </data>
@@ -497,6 +497,28 @@
 
     
   <url>
+    <loc>http://blog.newbmiao.com/2015/02/28/random-element-of-array-js.html</loc>
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>对数组元素打乱输出（不重复随机串）</title>
+        <pubTime>2015-02-28T11:27:15.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+        <tag>random</tag>
+         
+         
+           
+             
+              <breadCrumb title="js" url="http://blog.newbmiao.com/categories/js/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.newbmiao.com/2015/11/20/how-to-update-apps-apple-id.html</loc>
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     <data>
@@ -510,6 +532,31 @@
            
              
               <breadCrumb title="mac" url="http://blog.newbmiao.com/categories/mac/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-quota.html</loc>
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>鸟哥的Linux私房菜笔记-配额</title>
+        <pubTime>2015-09-15T09:37:30.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>notes</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://blog.newbmiao.com/categories/linux/"/>
+          
+             
+              <breadCrumb title="notes" url="http://blog.newbmiao.com/categories/linux/notes/"/>
           
         </display>
     </data>
@@ -564,31 +611,6 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-quota.html</loc>
-    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>鸟哥的Linux私房菜笔记-配额</title>
-        <pubTime>2015-09-15T09:37:30.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-        <tag>notes</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="http://blog.newbmiao.com/categories/linux/"/>
-          
-             
-              <breadCrumb title="notes" url="http://blog.newbmiao.com/categories/linux/notes/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://blog.newbmiao.com/2014/12/28/build-your-git-server-on-linux.html</loc>
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     <data>
@@ -629,28 +651,6 @@
           
              
               <breadCrumb title="notes" url="http://blog.newbmiao.com/categories/linux/notes/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.newbmiao.com/2015/02/28/random-element-of-array-js.html</loc>
-    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>对数组元素打乱输出（不重复随机串）</title>
-        <pubTime>2015-02-28T11:27:15.000Z</pubTime>
-        
-        <tag>js</tag>
-         
-        <tag>random</tag>
-         
-         
-           
-             
-              <breadCrumb title="js" url="http://blog.newbmiao.com/categories/js/"/>
           
         </display>
     </data>
@@ -708,12 +708,12 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-ACL.html</loc>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-bash.html</loc>
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     <data>
         <display>
-        <title>鸟哥的Linux私房菜笔记-权限管理</title>
-        <pubTime>2015-09-15T09:34:48.000Z</pubTime>
+        <title>鸟哥的Linux私房菜笔记-bash</title>
+        <pubTime>2015-09-15T09:28:15.000Z</pubTime>
         
         <tag>linux</tag>
          
@@ -756,12 +756,12 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-basis.html</loc>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-ACL.html</loc>
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     <data>
         <display>
-        <title>鸟哥的Linux私房菜笔记-基础</title>
-        <pubTime>2015-09-15T09:16:16.000Z</pubTime>
+        <title>鸟哥的Linux私房菜笔记-权限管理</title>
+        <pubTime>2015-09-15T09:34:48.000Z</pubTime>
         
         <tag>linux</tag>
          
@@ -781,12 +781,12 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-bash.html</loc>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-basis.html</loc>
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     <data>
         <display>
-        <title>鸟哥的Linux私房菜笔记-bash</title>
-        <pubTime>2015-09-15T09:28:15.000Z</pubTime>
+        <title>鸟哥的Linux私房菜笔记-基础</title>
+        <pubTime>2015-09-15T09:16:16.000Z</pubTime>
         
         <tag>linux</tag>
          
@@ -847,6 +847,31 @@
           
              
               <breadCrumb title="jquery" url="http://blog.newbmiao.com/categories/js/jquery/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/07/18/typecho-to-hexo.html</loc>
+    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>typecho to hexo</title>
+        <pubTime>2015-07-17T16:21:39.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>blog</tag>
+         
+         
+           
+             
+              <breadCrumb title="blog" url="http://blog.newbmiao.com/categories/blog/"/>
+          
+             
+              <breadCrumb title="hexo" url="http://blog.newbmiao.com/categories/blog/hexo/"/>
           
         </display>
     </data>
@@ -931,30 +956,6 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/02/22/html5-drag-api.html</loc>
-    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
-    <data>
-        <display>
-        <title>html5的拖拽api</title>
-        <pubTime>2015-02-22T10:29:00.000Z</pubTime>
-        
-        <tag>js</tag>
-         
-        <tag>html5</tag>
-         
-        <tag>drag</tag>
-         
-         
-           
-             
-              <breadCrumb title="html5" url="http://blog.newbmiao.com/categories/html5/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://blog.newbmiao.com/2015/02/28/jquery-html5.html</loc>
     <lastmod>2016-07-07T13:09:18.000Z</lastmod>
     <data>
@@ -979,6 +980,30 @@
     </url>
 
     
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/02/22/html5-drag-api2-chrome-drag-to-downloa.html</loc>
+    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>html5拖拽2-chrome拖拽下载</title>
+        <pubTime>2015-02-22T14:39:00.000Z</pubTime>
+        
+        <tag>html5</tag>
+         
+        <tag>drag</tag>
+         
+        <tag>chrome</tag>
+         
+         
+           
+             
+              <breadCrumb title="html5" url="http://blog.newbmiao.com/categories/html5/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>http://blog.newbmiao.com/2015/09/24/a-tribute-to-the-great-god-of-php.html</loc>
@@ -1021,43 +1046,18 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/07/18/typecho-to-hexo.html</loc>
+    <loc>http://blog.newbmiao.com/2015/02/22/html5-drag-api.html</loc>
     <lastmod>2016-07-07T13:09:18.000Z</lastmod>
     <data>
         <display>
-        <title>typecho to hexo</title>
-        <pubTime>2015-07-17T16:21:39.000Z</pubTime>
+        <title>html5的拖拽api</title>
+        <pubTime>2015-02-22T10:29:00.000Z</pubTime>
         
-        <tag>hexo</tag>
+        <tag>js</tag>
          
-        <tag>blog</tag>
-         
-         
-           
-             
-              <breadCrumb title="blog" url="http://blog.newbmiao.com/categories/blog/"/>
-          
-             
-              <breadCrumb title="hexo" url="http://blog.newbmiao.com/categories/blog/hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.newbmiao.com/2015/02/22/html5-drag-api2-chrome-drag-to-downloa.html</loc>
-    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
-    <data>
-        <display>
-        <title>html5拖拽2-chrome拖拽下载</title>
-        <pubTime>2015-02-22T14:39:00.000Z</pubTime>
-        
         <tag>html5</tag>
          
         <tag>drag</tag>
-         
-        <tag>chrome</tag>
          
          
            
