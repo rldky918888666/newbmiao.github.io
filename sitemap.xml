@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.newbmiao.com/2016/03/15/mac-tool.html</loc>
+    
+    <lastmod>2016-08-17T06:29:58.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.newbmiao.com/2016/08/17/how-to-call-a-function-with-unsure-number-params.html</loc>
     
     <lastmod>2016-08-17T06:26:29.000Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://blog.newbmiao.com/2015/10/16/gearman-beginer-guide.html</loc>
     
     <lastmod>2016-07-07T13:45:11.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.newbmiao.com/demo/index.html</loc>
-    
-    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
     
   </url>
   
@@ -107,6 +107,13 @@
   </url>
   
   <url>
+    <loc>http://blog.newbmiao.com/demo/index.html</loc>
+    
+    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.newbmiao.com/2015/02/13/hide-lamp-server-info.html</loc>
     
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
@@ -135,14 +142,14 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/01/11/php-jump-out-of-the-frameset.html</loc>
+    <loc>http://blog.newbmiao.com/2015/06/17/use-phpdoc-to-render-api-document.html</loc>
     
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/06/17/use-phpdoc-to-render-api-document.html</loc>
+    <loc>http://blog.newbmiao.com/2015/01/11/php-jump-out-of-the-frameset.html</loc>
     
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
     
@@ -171,13 +178,6 @@
   
   <url>
     <loc>http://blog.newbmiao.com/2015/11/28/shadowsocks-polipo-vps.html</loc>
-    
-    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.newbmiao.com/2016/03/15/mac-tool.html</loc>
     
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     
@@ -254,6 +254,13 @@
   </url>
   
   <url>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-basis.html</loc>
+    
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.newbmiao.com/2015/09/25/remember-once-mysql-optimize-operations.html</loc>
     
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
@@ -262,13 +269,6 @@
   
   <url>
     <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-ACL.html</loc>
-    
-    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-basis.html</loc>
     
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     

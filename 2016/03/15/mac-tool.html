@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://blog.newbmiao.com/2016/03/15/mac-tool.html">
 <meta property="og:site_name" content="菜鸟Miao">
 <meta property="og:description" content="mac,tool">
-<meta property="og:updated_time" content="2016-07-07T13:09:20.000Z">
+<meta property="og:updated_time" content="2016-08-17T06:29:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mac工具集">
 <meta name="twitter:description" content="mac,tool">
@@ -114,6 +114,7 @@
 	
         <h2 id="brew"><a href="#brew" class="headerlink" title="brew"></a>brew</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ruby <span class="_">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></div></pre></td></tr></table></figure>
 <h2 id="iterm2"><a href="#iterm2" class="headerlink" title="iterm2"></a>iterm2</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">https:</span>/<span class="regexp">/iterm2.com/downloads</span><span class="regexp">/stable/i</span>Term2_v2_<span class="number">0</span>.zip</div><div class="line">运行iterm2之后按cmd+,调出设置界面，在<span class="string">'profile'</span> -&gt; <span class="string">"Terminal Type"</span>改成xterm-new。</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <h2 id="zsh"><a href="#zsh" class="headerlink" title="zsh"></a>zsh</h2><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">brew install zsh</div><div class="line">sudo vim <span class="meta-keyword">/etc/</span>shells</div><div class="line">  <span class="meta">#在最后面加上一行</span></div><div class="line">  <span class="meta-keyword">/usr/</span>local/Cellar<span class="meta-keyword">/zsh/</span><span class="number">5.0</span><span class="number">.8</span><span class="meta-keyword">/bin/</span>zsh</div><div class="line">chsh -s <span class="meta-keyword">/usr/</span>local/Cellar<span class="meta-keyword">/zsh/</span><span class="number">5.0</span><span class="number">.8</span><span class="meta-keyword">/bin/</span>zsh</div><div class="line"><span class="meta">#重启终端即可</span></div></pre></td></tr></table></figure>
 <h2 id="oh-my-zsh"><a href="#oh-my-zsh" class="headerlink" title="oh-my-zsh"></a>oh-my-zsh</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -L http<span class="variable">s:</span>//raw.github.<span class="keyword">com</span>/robbyrussell/oh-my-zsh/master/tools/install.<span class="keyword">sh</span> | <span class="keyword">sh</span></div></pre></td></tr></table></figure>
 <h2 id="dash-文档工具"><a href="#dash-文档工具" class="headerlink" title="dash 文档工具"></a>dash 文档工具</h2><h2 id="alfred-快捷调用"><a href="#alfred-快捷调用" class="headerlink" title="alfred 快捷调用"></a>alfred 快捷调用</h2><h2 id="lrzsz-服务器和本机传输工具"><a href="#lrzsz-服务器和本机传输工具" class="headerlink" title="lrzsz-服务器和本机传输工具"></a>lrzsz-服务器和本机传输工具</h2><p><a href="https://github.com/mmastrac/iterm2-zmodem" target="_blank" rel="external">iterm2-zmodem</a><br>item2 ssh远程服务器，就能上传下载文件</p>
@@ -122,7 +123,6 @@
 <li><strong>rz 想让远程收到的文件</strong></li>
 </ul>
 <p><strong>issue：ssl证书验证失败无法下载</strong><br>原因是brew https连接失败<br>解决方法：<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">sudo <span class="keyword">vim</span> /usr/local/Library/Homebrew/utils.rb</div><div class="line"></div><div class="line">修改下面的行加一个-<span class="keyword">k</span> 参数，让 curl 忽略 https 验证</div><div class="line"></div><div class="line"><span class="keyword">args</span> = [HOMEBREW_CURL_ARGS, HOMEBREW_USER_AGENT,<span class="string">'-k'</span>, *<span class="keyword">args</span>]</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
 <h2 id="tldr"><a href="#tldr" class="headerlink" title="tldr"></a>tldr</h2><p><a href="https://github.com/tldr-pages/tldr" target="_blank" rel="external">tldr查询命令如何用</a></p>
 <h2 id="how2"><a href="#how2" class="headerlink" title="how2"></a>how2</h2><p><a href="https://github.com/santinic/how2" target="_blank" rel="external">stackoverflow命令行查询工具</a></p>
 <h2 id="git-credential-osxkeychain"><a href="#git-credential-osxkeychain" class="headerlink" title="git-credential-osxkeychain"></a>git-credential-osxkeychain</h2><p><a href="https://help.github.com/articles/caching-your-github-password-in-git/" target="_blank" rel="external">免密码提交</a><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">curl -s -O https:<span class="comment">//github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain</span></div><div class="line">chmod u+x git-credential-osxkeychain</div><div class="line">sudo mv git-credential-osxkeychain <span class="string">"$(dirname $(which git))/git-credential-osxkeychain"</span></div><div class="line">git config --global credential<span class="selector-class">.helper</span> osxkeychain</div></pre></td></tr></table></figure></p>
@@ -155,7 +155,7 @@
        
      
      <span style="color:#999">
-&nbsp; | &nbsp;最近更新 ：<time datetime="2016-07-07T13:09:20.000Z" itemprop="dateModify">2016-07-07</time>
+&nbsp; | &nbsp;最近更新 ：<time datetime="2016-08-17T06:29:58.000Z" itemprop="dateModify">2016-08-17</time>
 </span>
 
      
