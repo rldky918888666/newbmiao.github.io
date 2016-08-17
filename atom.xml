@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.newbmiao.com/"/>
-  <updated>2016-07-07T13:09:20.000Z</updated>
+  <updated>2016-08-17T06:26:29.000Z</updated>
   <id>http://blog.newbmiao.com/</id>
   
   <author>
@@ -14,6 +14,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>js如何动态调用不确定参数的函数</title>
+    <link href="http://blog.newbmiao.com/2016/08/17/how-to-call-a-function-with-unsure-number-params.html"/>
+    <id>http://blog.newbmiao.com/2016/08/17/how-to-call-a-function-with-unsure-number-params.html</id>
+    <published>2016-08-17T06:17:31.000Z</published>
+    <updated>2016-08-17T06:26:29.000Z</updated>
+    
+    <content type="html">&lt;figure class=&quot;highlight actionscript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//需求：想通过传函数体和参数去调用，但不确定参数（就是说不想写死参数）&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//比方m这个函数可能会改成需要4个，8个参数，但不想改动态调用它的函数&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; m = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(a, b, c)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; a + b + c;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//this is solution&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//apply+arguments 把参数数组动态传递给函数体&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;makeFunc&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; args = &lt;span class=&quot;built_in&quot;&gt;Array&lt;/span&gt;.prototype.slice.call(&lt;span class=&quot;built_in&quot;&gt;arguments&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; func = args.shift();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; func.apply(&lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt;, args.concat(&lt;span class=&quot;built_in&quot;&gt;Array&lt;/span&gt;.prototype.slice.call(&lt;span class=&quot;built_in&quot;&gt;arguments&lt;/span&gt;)));&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;m2 = makeFunc(m, &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;); &lt;span class=&quot;comment&quot;&gt;//缺的参数也可以在附加（注意concat的调用，叠加了参数数组）&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(m2(&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;)); &lt;span class=&quot;comment&quot;&gt;//多余的参数7不会被用到&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//简化&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//Array.prototype.slice可以用[].slice替换&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//题外话：意外遇到一个上下文调用的错误=_=！&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; p = &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;p(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;); &lt;span class=&quot;comment&quot;&gt;//error: Uncaught TypeError: Illegal invocation（在控制台查看）&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;p.apply(&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;, [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;]); &lt;span class=&quot;comment&quot;&gt;//ok&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      js如何动态调用不确定参数的函数
+    
+    </summary>
+    
+      <category term="js" scheme="http://blog.newbmiao.com/categories/js/"/>
+    
+    
+      <category term="js" scheme="http://blog.newbmiao.com/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title>mac工具集</title>
@@ -1598,213 +1623,6 @@ echo &amp;quot;/home&amp;quot; &amp;gt; /usr/local/cwp/.conf/quota_part.conf
     <summary type="html">
     
       鸟哥的Linux私房菜笔记-权限管理
-    
-    </summary>
-    
-      <category term="linux" scheme="http://blog.newbmiao.com/categories/linux/"/>
-    
-      <category term="notes" scheme="http://blog.newbmiao.com/categories/linux/notes/"/>
-    
-    
-      <category term="linux" scheme="http://blog.newbmiao.com/tags/linux/"/>
-    
-      <category term="notes" scheme="http://blog.newbmiao.com/tags/notes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>鸟哥的Linux私房菜笔记-bash</title>
-    <link href="http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-bash.html"/>
-    <id>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-bash.html</id>
-    <published>2015-09-15T09:28:15.000Z</published>
-    <updated>2016-07-07T13:09:20.000Z</updated>
-    
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;笔记记录于《鸟哥的Linux私房菜-第三版》,以备多看。&lt;/p&gt;
-&lt;h2 id=&quot;bash&quot;&gt;&lt;a href=&quot;#bash&quot; class=&quot;headerlink&quot; title=&quot;bash&quot;&gt;&lt;/a&gt;bash&lt;/h2&gt;&lt;h3 id=&quot;type&quot;&gt;&lt;a href=&quot;#type&quot; class=&quot;headerlink&quot; title=&quot;type&quot;&gt;&lt;/a&gt;type&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;-t #查看指令类型&lt;/li&gt;
-&lt;li&gt;-a #显示PATH中所有指令&lt;h3 id=&quot;env&quot;&gt;&lt;a href=&quot;#env&quot; class=&quot;headerlink&quot; title=&quot;env&quot;&gt;&lt;/a&gt;env&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;查看当前环境变量&lt;h3 id=&quot;export&quot;&gt;&lt;a href=&quot;#export&quot; class=&quot;headerlink&quot; title=&quot;export&quot;&gt;&lt;/a&gt;export&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;将自定义变量导入当前环境(子程序)&lt;h3 id=&quot;declare&quot;&gt;&lt;a href=&quot;#declare&quot; class=&quot;headerlink&quot; title=&quot;declare&quot;&gt;&lt;/a&gt;declare&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;declare -i num=$RANDOM*10/32768 #选取0-9随机数&lt;/li&gt;
-&lt;li&gt;-x variable #将变量导入环境变量&lt;/li&gt;
-&lt;li&gt;-r variable #只读变量&lt;/li&gt;
-&lt;li&gt;+x variable #取消导入到环境变量(除 a,r 不会取消)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h3 id=&quot;ulimit&quot;&gt;&lt;a href=&quot;#ulimit&quot; class=&quot;headerlink&quot; title=&quot;ulimit&quot;&gt;&lt;/a&gt;ulimit&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;-a 显示配额&lt;h3 id=&quot;read&quot;&gt;&lt;a href=&quot;#read&quot; class=&quot;headerlink&quot; title=&quot;read&quot;&gt;&lt;/a&gt;read&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;-p “提示信息” variable&lt;/li&gt;
-&lt;li&gt;-t 30 variable #限定时间&lt;h3 id=&quot;删除&quot;&gt;&lt;a href=&quot;#删除&quot; class=&quot;headerlink&quot; title=&quot;删除&quot;&gt;&lt;/a&gt;删除&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;echo ${PATH#/*:} #从左向右删最短&lt;/li&gt;
-&lt;li&gt;echo ${PATH##/*:} #从左向右删最长&lt;/li&gt;
-&lt;li&gt;echo ${PATH%/*bin} #从右向左删最短&lt;/li&gt;
-&lt;li&gt;echo ${PATH%%/*bin} #从右向左删最长&lt;h3 id=&quot;替换&quot;&gt;&lt;a href=&quot;#替换&quot; class=&quot;headerlink&quot; title=&quot;替换&quot;&gt;&lt;/a&gt;替换&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;echo ${PATH/sbin/SBIN} #从左到右替换第一个匹配&lt;/li&gt;
-&lt;li&gt;echo ${PATH//sbin/SBIN} #从左到右替换全部匹配&lt;h3 id=&quot;初始化&quot;&gt;&lt;a href=&quot;#初始化&quot; class=&quot;headerlink&quot; title=&quot;初始化&quot;&gt;&lt;/a&gt;初始化&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;new_var=${old_var-default_var} #old_var未赋值则赋值为default_var&lt;/li&gt;
-&lt;li&gt;new_var=${old_var:-default_var} #old_var &lt;strong&gt;未赋值或赋值为空字符串&lt;/strong&gt; 则赋值为default_var&lt;/li&gt;
-&lt;li&gt;new_var=${old_var=default_var} #效果同上，只是old_var也会被修改&lt;/li&gt;
-&lt;li&gt;new_var=${old_var:=default_var} #效果同上，只是old_var也会被修改&lt;h3 id=&quot;alias-amp-unalias&quot;&gt;&lt;a href=&quot;#alias-amp-unalias&quot; class=&quot;headerlink&quot; title=&quot;alias&amp;amp;unalias&quot;&gt;&lt;/a&gt;alias&amp;amp;unalias&lt;/h3&gt;&lt;h3 id=&quot;history&quot;&gt;&lt;a href=&quot;#history&quot; class=&quot;headerlink&quot; title=&quot;history&quot;&gt;&lt;/a&gt;history&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;!num #第几条历史操作&lt;/li&gt;
-&lt;li&gt;!! #上一条操作&lt;/li&gt;
-&lt;li&gt;!cmd #最近一条cmd开头操作&lt;h3 id=&quot;PS1&quot;&gt;&lt;a href=&quot;#PS1&quot; class=&quot;headerlink&quot; title=&quot;PS1&quot;&gt;&lt;/a&gt;PS1&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;PS1=’[\u@\h \t \W]\$ ‘ #用户状态&lt;h3 id=&quot;登陆&quot;&gt;&lt;a href=&quot;#登陆&quot; class=&quot;headerlink&quot; title=&quot;登陆&quot;&gt;&lt;/a&gt;登陆&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;/etc/issue #进站信息&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;/etc/motd #欢迎信息&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;/etc/profile #系统配置&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;~/.bash_profile | ~/.bash_login | ~/.profile #个人配置&lt;/li&gt;
-&lt;li&gt;最终操作的文件是 ~/.bashrc ,所以个人设置可以放里边&lt;h3 id=&quot;source&quot;&gt;&lt;a href=&quot;#source&quot; class=&quot;headerlink&quot; title=&quot;source&quot;&gt;&lt;/a&gt;source&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;source ~/.bashrc #读取配置当前环境&lt;/li&gt;
-&lt;li&gt;. ~/.bashrc #同上&lt;h3 id=&quot;grep&quot;&gt;&lt;a href=&quot;#grep&quot; class=&quot;headerlink&quot; title=&quot;grep&quot;&gt;&lt;/a&gt;grep&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;cat file | grep -n -A2 -B3 ‘str’ #连搜索结果的前3行和后2行一起显示出来&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;cat file | grep -vn ‘str’ #反向搜索&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;cat file | grep -in ‘str’ #不分大小写&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;cat file | grep -n ‘[^[:lower:]]ar’ #非小写字母+ar; [:lower:]同[a-z]&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;grep -l ‘*‘  $(find /etc/ -type f) #查找/etc下包含*的文件&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;find /etc/ -type f|xargs -n 10 grep ‘*‘ #改良版，每次处理十个文件查找&lt;/p&gt;
-&lt;h3 id=&quot;egrep&quot;&gt;&lt;a href=&quot;#egrep&quot; class=&quot;headerlink&quot; title=&quot;egrep&quot;&gt;&lt;/a&gt;egrep&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;egrep -v ‘^$|^#’ file #列出非注释与非空白行&lt;/p&gt;
-&lt;h3 id=&quot;sed&quot;&gt;&lt;a href=&quot;#sed&quot; class=&quot;headerlink&quot; title=&quot;sed&quot;&gt;&lt;/a&gt;sed&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;cat -n file|sed ‘2,5d’  #删除2-5行&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;cat -n file|sed ‘2a 添加到第2行后’  #&lt;strong&gt;行后添加&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;cat -n file|sed ‘2i 添加到第2行前再加一行’ # &lt;strong&gt;行前添加&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;sed -n ‘2 w output.txt’ file #将内容 &lt;strong&gt;写入&lt;/strong&gt; output.txt&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;cat -n file|sed ‘2,5c 替换文字’  # &lt;strong&gt;替换&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;sed -n ‘2,5p’ file #按行打印&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;cat -n t |sed -n ‘2~5p’ #按范围打印，第2行开始每隔5行&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;cat -n t |sed -n ‘/search/,+5p’ #匹配到search，再多打印5行&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;cat -n t |sed ‘s/搜索字符串/替换字符串/g’ #替换字符串&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;cat -n t |sed ‘/^$/d’ #删除空白行&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;sed -i ‘s/.$/!/g’ file #直接修改源文件，替换行尾的.为!&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;sed ‘s/^/ls -l /e’ files #替换并 &lt;strong&gt;执行&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;sed -i ‘$a 新增内容’ file #在文件末尾附加内容&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;sed -n -f sed-cmd-file file #执行文件中sed命令&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;cat file|sed -e ‘4d’ -e ‘6c replace 6th line’ #多条指令&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;sed ‘{&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;s/Google/Github/
-s/Git/git/
-}&amp;apos; file #同上
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;sed ‘s/^.&lt;em&gt;/&amp;lt;&amp;amp;&amp;gt;/‘ file   # “&amp;lt;&amp;gt;”包裹行   &lt;em&gt;*&amp;amp;&lt;/em&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;sed ‘s/Paul|Addy/[&amp;amp;]/g’ file # &lt;strong&gt;|需转义&lt;/strong&gt;,sed中正则需转义字符&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;echo “string”|sed  ‘s/string/S\LTRING/‘ # \L将后边字符小写;\l将后边第一个字符小写&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;echo “string”|sed  ‘s/string/\Ustring/‘ # \U将后边字符大写;\u将后边第一个字符大写&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;echo “string”|sed  ‘s/string/\Us\Etring/‘ # \E能打断\L或者\U改变大小写&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;sed –in-place=bak ‘s/Ian/IAN/‘ source.txt # 边替换边备份&lt;br&gt;  sed -ibak ‘s/Ian/IAN/‘ source.txt&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;sed ‘y/AB/ab/‘ file # &lt;strong&gt;转换字符&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&quot;awk&quot;&gt;&lt;a href=&quot;#awk&quot; class=&quot;headerlink&quot; title=&quot;awk&quot;&gt;&lt;/a&gt;awk&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;last -5|awk &amp;#39;{print  $1 &amp;quot;\t&amp;quot;&lt;/code&gt; $3}’ #截取用户和ip格式化显示&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;last -5|awk &amp;#39;{print  $1 &amp;quot;\t&amp;quot; line:&amp;quot;NR&amp;quot; &amp;quot;\t&amp;quot; col:&amp;quot;NF&amp;quot;}&amp;#39;&lt;/code&gt; #截取用户和ip格式化显示&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;last -5|awk &amp;#39;{print  $1 &amp;quot;\t line:&amp;quot;NR &amp;quot;\t col:&amp;quot;NF &amp;quot;\t delimiter:&amp;quot;FS}&amp;#39;&lt;/code&gt; #内置变数&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;cat /etc/passwd|awk &amp;#39;BEGIN{FS=&amp;quot;:&amp;quot;} $3&amp;lt;10 {print $1 &amp;quot;\t&amp;quot; $3}&amp;#39;&lt;/code&gt; #预设分隔符，并取出UID&amp;lt;10的用户名&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;cat pay.txt|awk &amp;#39;NR==1{printf &amp;quot;%10s %10s %10s %10s %10s\n&amp;quot;,$1,$2,$3,$4,&amp;quot;Total&amp;quot;};NR&amp;gt;=2{total=$2+$3+$4;printf &amp;quot;%10s %10s %10s %10s %10s\n&amp;quot;,$1,$2,$3,$4,total}&amp;#39;&lt;/code&gt; #计算总合,”;”可用 enter 替换&lt;/p&gt;
-&lt;h3 id=&quot;cut&quot;&gt;&lt;a href=&quot;#cut&quot; class=&quot;headerlink&quot; title=&quot;cut&quot;&gt;&lt;/a&gt;cut&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;-d ‘分隔符’ -fN #默认tab分隔，N为第几列&lt;h3 id=&quot;diff&quot;&gt;&lt;a href=&quot;#diff&quot; class=&quot;headerlink&quot; title=&quot;diff&quot;&gt;&lt;/a&gt;diff&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;-b #只是空白不同不列出&lt;h3 id=&quot;cmp&quot;&gt;&lt;a href=&quot;#cmp&quot; class=&quot;headerlink&quot; title=&quot;cmp&quot;&gt;&lt;/a&gt;cmp&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;-s #不同位置都列出来&lt;h3 id=&quot;patch&quot;&gt;&lt;a href=&quot;#patch&quot; class=&quot;headerlink&quot; title=&quot;patch&quot;&gt;&lt;/a&gt;patch&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;diff -Naur t t2 &amp;gt;t.patch #生成patch&lt;/li&gt;
-&lt;li&gt;patch  -pN  &amp;lt; file.patch #更新旧档案,N代表要去掉几个 &lt;code&gt;&amp;quot;/&amp;quot;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;patch -R -pN  &amp;lt; file.patch #还原旧档案&lt;h2 id=&quot;shell-script&quot;&gt;&lt;a href=&quot;#shell-script&quot; class=&quot;headerlink&quot; title=&quot;shell script&quot;&gt;&lt;/a&gt;shell script&lt;/h2&gt;&lt;h3 id=&quot;test&quot;&gt;&lt;a href=&quot;#test&quot; class=&quot;headerlink&quot; title=&quot;test&quot;&gt;&lt;/a&gt;test&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;test -z str&lt;/code&gt; #判断字符串是否为空&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;[ -z  &amp;quot;$HOME&amp;quot; ];echo $?&lt;/code&gt; #注意空格&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;test -e filename &amp;amp;&amp;amp; echo &amp;#39;exist&amp;#39; || echo &amp;#39;not exist&amp;#39;&lt;/code&gt; #判断文件是否存在&lt;h3 id=&quot;seq&quot;&gt;&lt;a href=&quot;#seq&quot; class=&quot;headerlink&quot; title=&quot;seq&quot;&gt;&lt;/a&gt;seq&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;seq start end #生成一个end-start的range数组&lt;h3 id=&quot;计算&quot;&gt;&lt;a href=&quot;#计算&quot; class=&quot;headerlink&quot; title=&quot;计算&quot;&gt;&lt;/a&gt;计算&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;$((cal_expr))&lt;h3 id=&quot;脚本相关变量&quot;&gt;&lt;a href=&quot;#脚本相关变量&quot; class=&quot;headerlink&quot; title=&quot;脚本相关变量&quot;&gt;&lt;/a&gt;脚本相关变量&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;$0 #脚本名&lt;/li&gt;
-&lt;li&gt;$# #脚本参数个数&lt;/li&gt;
-&lt;li&gt;$@ #全部脚本参数，空格分隔&lt;/li&gt;
-&lt;li&gt;$1 #第一个参数&lt;/li&gt;
-&lt;li&gt;$$ #bash的PID&lt;h3 id=&quot;shift&quot;&gt;&lt;a href=&quot;#shift&quot; class=&quot;headerlink&quot; title=&quot;shift&quot;&gt;&lt;/a&gt;shift&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;shift N #偏移几个，参数从左到右拿掉几个&lt;h3 id=&quot;判断执行结果&quot;&gt;&lt;a href=&quot;#判断执行结果&quot; class=&quot;headerlink&quot; title=&quot;判断执行结果&quot;&gt;&lt;/a&gt;判断执行结果&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ping -c 1 -w 1 192.168.1.1 &amp;amp;&amp;gt;/dev/null &amp;amp;&amp;amp; result=0 || result=1&lt;/code&gt;&lt;h3 id=&quot;sh&quot;&gt;&lt;a href=&quot;#sh&quot; class=&quot;headerlink&quot; title=&quot;sh&quot;&gt;&lt;/a&gt;sh&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;sh -n file.sh #检查语法&lt;/li&gt;
-&lt;li&gt;sh -v file.sh #执行前吧内容输出&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;sh -v file.sh #将使用到的script内容输出&lt;/p&gt;
-&lt;h3 id=&quot;判断式&quot;&gt;&lt;a href=&quot;#判断式&quot; class=&quot;headerlink&quot; title=&quot;判断式&quot;&gt;&lt;/a&gt;判断式&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;if&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;if ;then
-fi
----
-if ;then
-elif ;then
-fi
----
-if ;then else
-fi
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;case&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;case $var in
-&amp;quot;case1&amp;quot;)
-    ...
-    ;;
-*)  #default
-    ...
-    ;;
-esac
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;while&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;while [cond]
-do
-    ...
-done
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;until&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;until [cond]
-do
-    ...
-done
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;for&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;for v in $arrs
-do
-    ...
-done
----
-for((i=1;i&amp;lt;$nu;i=i+1))
-do
-    ...
-done
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      鸟哥的Linux私房菜笔记-bash
     
     </summary>
     
