@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.newbmiao.com/"/>
-  <updated>2016-08-17T10:43:32.000Z</updated>
+  <updated>2016-09-07T03:32:30.000Z</updated>
   <id>http://blog.newbmiao.com/</id>
   
   <author>
@@ -14,6 +14,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>jquery-timepicker-addon动态显示使用</title>
+    <link href="http://blog.newbmiao.com/2016/09/07/how-to-dynamic-show-jquery-timepicker-addon.html"/>
+    <id>http://blog.newbmiao.com/2016/09/07/how-to-dynamic-show-jquery-timepicker-addon.html</id>
+    <published>2016-09-07T03:26:24.000Z</published>
+    <updated>2016-09-07T03:32:30.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://trentrichardson.com/examples/timepicker/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;文档&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;需要分条件判断是否显示时间选择，而timepicker是单例模式，&lt;br&gt;初始化只有第一次生效，要想实时更新需要用到&lt;code&gt;option&lt;/code&gt;选项设置&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;29&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;30&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;31&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;32&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;33&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;34&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;35&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;36&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;37&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;38&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;39&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;40&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;41&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;42&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;43&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;44&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;45&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;46&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;47&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;48&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;49&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;50&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// #cond是条件选择select，带.selectDateInput的是两个时间选择输入框&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$(&lt;span class=&quot;string&quot;&gt;&#39;#cond&#39;&lt;/span&gt;).change(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;//设置默认显示&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; defaultOption = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    timeFormat: &lt;span class=&quot;string&quot;&gt;&quot;HH:mm:ss&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    dateFormat: &lt;span class=&quot;string&quot;&gt;&quot;yy-mm-dd&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;//获取分组对应时间(小时)，是否显示时间选择&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; startHour = &lt;span class=&quot;number&quot;&gt;9&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; enableTimePicker = &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;//设置时间控件（防止直接输入时间）&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  $(&lt;span class=&quot;string&quot;&gt;&#39;.selectDateInput&#39;&lt;/span&gt;).prop(&lt;span class=&quot;string&quot;&gt;&#39;readonly&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;readonly&#39;&lt;/span&gt;).val(&lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (!enableTimePicker) &amp;#123; &lt;span class=&quot;comment&quot;&gt;//不允许选择时间&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; startOption = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      hour: startHour, &lt;span class=&quot;comment&quot;&gt;//设置初始时间&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      showHour: &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      showMinute: &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      timeInput: &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;, &lt;span class=&quot;comment&quot;&gt;//是否允许时间编辑&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      disabled: &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;, &lt;span class=&quot;comment&quot;&gt;//是否禁用控件&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      onSelect: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;selectedDateTime&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//选中后设置默认初始小时和结束时间（次日24小时后）&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        selectedDateTime = selectedDateTime.split(&lt;span class=&quot;string&quot;&gt;&#39; &#39;&lt;/span&gt;)[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;] + &lt;span class=&quot;string&quot;&gt;&quot; 00:00:00&quot;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; startDate = (&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Date&lt;/span&gt;(selectedDateTime));&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//setDate设置时间&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;).datetimepicker(&lt;span class=&quot;string&quot;&gt;&#39;setDate&#39;&lt;/span&gt;, selectedDateTime + &lt;span class=&quot;string&quot;&gt;&quot; &quot;&lt;/span&gt; + startHour + &lt;span class=&quot;string&quot;&gt;&quot;:00:00&quot;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        startDate.setTime(startDate.getTime() + &lt;span class=&quot;number&quot;&gt;1000&lt;/span&gt; * &lt;span class=&quot;number&quot;&gt;3600&lt;/span&gt; * (&lt;span class=&quot;number&quot;&gt;24&lt;/span&gt; + startHour) - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//格式化时间显示&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; endDateStr = startDate.toLocaleDateString(&lt;span class=&quot;string&quot;&gt;&#39;chinese&#39;&lt;/span&gt;).replace(&lt;span class=&quot;regexp&quot;&gt;/\//g&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;-&quot;&lt;/span&gt;) + &lt;span class=&quot;string&quot;&gt;&quot; &quot;&lt;/span&gt; + startDate.toTimeString().split(&lt;span class=&quot;string&quot;&gt;&quot; &quot;&lt;/span&gt;)[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $(&lt;span class=&quot;string&quot;&gt;&#39;.selectDateInput:eq(1)&#39;&lt;/span&gt;).val(endDateStr);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $(&lt;span class=&quot;string&quot;&gt;&#39;.selectDateInput:eq(0)&#39;&lt;/span&gt;).datetimepicker(defaultOption)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      .datetimepicker(&lt;span class=&quot;string&quot;&gt;&#39;option&#39;&lt;/span&gt;, startOption); &lt;span class=&quot;comment&quot;&gt;//option更新（可实时刷新显示）&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $(&lt;span class=&quot;string&quot;&gt;&#39;.selectDateInput:eq(1)&#39;&lt;/span&gt;).datetimepicker()&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      .datetimepicker(&lt;span class=&quot;string&quot;&gt;&#39;option&#39;&lt;/span&gt;, &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        disabled: &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;//禁用第二个时间选择输入框&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &amp;#125;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123; &lt;span class=&quot;comment&quot;&gt;//时间选择显示&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $(&lt;span class=&quot;string&quot;&gt;&#39;.selectDateInput&#39;&lt;/span&gt;).datetimepicker(defaultOption)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      .datetimepicker(&lt;span class=&quot;string&quot;&gt;&#39;option&#39;&lt;/span&gt;, &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        showHour: &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        showMinute: &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        timeInput: &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        disabled: &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        onSelect: &lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &amp;#125;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;).trigger(&lt;span class=&quot;string&quot;&gt;&#39;change&#39;&lt;/span&gt;);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;为了实现动态显示折腾了好久，以后查资料还是要多看看官方api和 stackOverFlow 了。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      jquery-timepicker-addon动态显示使用
+    
+    </summary>
+    
+      <category term="js" scheme="http://blog.newbmiao.com/categories/js/"/>
+    
+      <category term="jquery" scheme="http://blog.newbmiao.com/categories/js/jquery/"/>
+    
+    
+      <category term="jquery-timepicker-addon" scheme="http://blog.newbmiao.com/tags/jquery-timepicker-addon/"/>
+    
+      <category term="disabled" scheme="http://blog.newbmiao.com/tags/disabled/"/>
+    
+      <category term="option" scheme="http://blog.newbmiao.com/tags/option/"/>
+    
+      <category term="onSelect" scheme="http://blog.newbmiao.com/tags/onSelect/"/>
+    
+  </entry>
   
   <entry>
     <title>js如何动态调用不确定参数的函数</title>
@@ -1539,90 +1576,6 @@ echo &amp;quot;/home&amp;quot; &amp;gt; /usr/local/cwp/.conf/quota_part.conf
     <summary type="html">
     
       鸟哥的Linux私房菜笔记-配额
-    
-    </summary>
-    
-      <category term="linux" scheme="http://blog.newbmiao.com/categories/linux/"/>
-    
-      <category term="notes" scheme="http://blog.newbmiao.com/categories/linux/notes/"/>
-    
-    
-      <category term="linux" scheme="http://blog.newbmiao.com/tags/linux/"/>
-    
-      <category term="notes" scheme="http://blog.newbmiao.com/tags/notes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>鸟哥的Linux私房菜笔记-权限管理</title>
-    <link href="http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-ACL.html"/>
-    <id>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-ACL.html</id>
-    <published>2015-09-15T09:34:48.000Z</published>
-    <updated>2016-07-07T13:09:20.000Z</updated>
-    
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;笔记记录于《鸟哥的Linux私房菜-第三版》,以备多看。&lt;/p&gt;
-&lt;h1 id=&quot;权限管理&quot;&gt;&lt;a href=&quot;#权限管理&quot; class=&quot;headerlink&quot; title=&quot;权限管理&quot;&gt;&lt;/a&gt;权限管理&lt;/h1&gt;&lt;h2 id=&quot;用户权限&quot;&gt;&lt;a href=&quot;#用户权限&quot; class=&quot;headerlink&quot; title=&quot;用户权限&quot;&gt;&lt;/a&gt;用户权限&lt;/h2&gt;&lt;h3 id=&quot;etc-shadow理解&quot;&gt;&lt;a href=&quot;#etc-shadow理解&quot; class=&quot;headerlink&quot; title=&quot;/etc/shadow理解&quot;&gt;&lt;/a&gt;/etc/shadow理解&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.cyberciti.biz/faq/understanding-etcshadow-file/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;参考文章&lt;/a&gt;&lt;h3 id=&quot;useradd&quot;&gt;&lt;a href=&quot;#useradd&quot; class=&quot;headerlink&quot; title=&quot;useradd&quot;&gt;&lt;/a&gt;useradd&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;-u UID&lt;/li&gt;
-&lt;li&gt;-c ‘msg’&lt;/li&gt;
-&lt;li&gt;-g 初始群组&lt;/li&gt;
-&lt;li&gt;-G 附加次要群组&lt;/li&gt;
-&lt;li&gt;-d 指定家目录&lt;/li&gt;
-&lt;li&gt;-s 指定shell&lt;/li&gt;
-&lt;li&gt;-e YYYY-MM-DD #指定密码失效日期&lt;/li&gt;
-&lt;li&gt;-f num #密码失效多少天内账号还可以使用，-1永久可以；0立马不能使用&lt;/li&gt;
-&lt;li&gt;-D #显示预设&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h3 id=&quot;usermod&quot;&gt;&lt;a href=&quot;#usermod&quot; class=&quot;headerlink&quot; title=&quot;usermod&quot;&gt;&lt;/a&gt;usermod&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;-L #lock&lt;/li&gt;
-&lt;li&gt;-U #unlock&lt;/li&gt;
-&lt;li&gt;-aG group_name #附加次要群组，而不是替换&lt;/li&gt;
-&lt;li&gt;其余参数同useradd&lt;h3 id=&quot;userdel&quot;&gt;&lt;a href=&quot;#userdel&quot; class=&quot;headerlink&quot; title=&quot;userdel&quot;&gt;&lt;/a&gt;userdel&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;-r #删除家目录&lt;h3 id=&quot;passwd&quot;&gt;&lt;a href=&quot;#passwd&quot; class=&quot;headerlink&quot; title=&quot;passwd&quot;&gt;&lt;/a&gt;passwd&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;-l #锁定用户&lt;/li&gt;
-&lt;li&gt;-u #解锁&lt;/li&gt;
-&lt;li&gt;-S #显示账户密码资讯&lt;/li&gt;
-&lt;li&gt;-n num #多少天不可修改密码&lt;/li&gt;
-&lt;li&gt;-x num #多少天必须修改密码&lt;/li&gt;
-&lt;li&gt;-w num #deadline多少天前提醒&lt;/li&gt;
-&lt;li&gt;-i YYYY-MM-DD #指定密码失效日期&lt;/li&gt;
-&lt;li&gt;–stdin #利用管线修改密码 &lt;h3 id=&quot;chage&quot;&gt;&lt;a href=&quot;#chage&quot; class=&quot;headerlink&quot; title=&quot;chage&quot;&gt;&lt;/a&gt;chage&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;-l #显示账户密码资讯&lt;/li&gt;
-&lt;li&gt;-d YYYY-MM-DD #指定密码最近修改日期; 若指定为0，下次登录必须改密码&lt;/li&gt;
-&lt;li&gt;-m num #多少天不可修改密码&lt;/li&gt;
-&lt;li&gt;-M num #多少天必须修改密码&lt;/li&gt;
-&lt;li&gt;-w num #deadline多少天前提醒&lt;/li&gt;
-&lt;li&gt;-I YYYY-MM-DD #指定密码失效日期&lt;/li&gt;
-&lt;li&gt;-E YYYY-MM-DD #指定账号失效日期&lt;h2 id=&quot;组权限&quot;&gt;&lt;a href=&quot;#组权限&quot; class=&quot;headerlink&quot; title=&quot;组权限&quot;&gt;&lt;/a&gt;组权限&lt;/h2&gt;&lt;h3 id=&quot;groupadd&quot;&gt;&lt;a href=&quot;#groupadd&quot; class=&quot;headerlink&quot; title=&quot;groupadd&quot;&gt;&lt;/a&gt;groupadd&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;-g GID&lt;/li&gt;
-&lt;li&gt;-r 系统群组&lt;h3 id=&quot;groupmod&quot;&gt;&lt;a href=&quot;#groupmod&quot; class=&quot;headerlink&quot; title=&quot;groupmod&quot;&gt;&lt;/a&gt;groupmod&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;-g GID&lt;/li&gt;
-&lt;li&gt;-n 群组名称&lt;h3 id=&quot;groupdel&quot;&gt;&lt;a href=&quot;#groupdel&quot; class=&quot;headerlink&quot; title=&quot;groupdel&quot;&gt;&lt;/a&gt;groupdel&lt;/h3&gt;&lt;h3 id=&quot;groups&quot;&gt;&lt;a href=&quot;#groups&quot; class=&quot;headerlink&quot; title=&quot;groups&quot;&gt;&lt;/a&gt;groups&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;第一个显示的是有效群组&lt;h3 id=&quot;gpasswd&quot;&gt;&lt;a href=&quot;#gpasswd&quot; class=&quot;headerlink&quot; title=&quot;gpasswd&quot;&gt;&lt;/a&gt;gpasswd&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;gpasswd group #修改密码&lt;/li&gt;
-&lt;li&gt;-A user group #设管理员&lt;/li&gt;
-&lt;li&gt;-a user group #添加成员&lt;h3 id=&quot;newgrp&quot;&gt;&lt;a href=&quot;#newgrp&quot; class=&quot;headerlink&quot; title=&quot;newgrp&quot;&gt;&lt;/a&gt;newgrp&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;切换有效群组&lt;h3 id=&quot;finger&quot;&gt;&lt;a href=&quot;#finger&quot; class=&quot;headerlink&quot; title=&quot;finger&quot;&gt;&lt;/a&gt;finger&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;finger  user #其中用户的plan 可以 &lt;code&gt;echo &amp;#39;str&amp;#39; &amp;gt;~/.plan&lt;/code&gt; 创建&lt;h3 id=&quot;chfn&quot;&gt;&lt;a href=&quot;#chfn&quot; class=&quot;headerlink&quot; title=&quot;chfn&quot;&gt;&lt;/a&gt;chfn&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;-f #名字&lt;/li&gt;
-&lt;li&gt;-o #office&lt;/li&gt;
-&lt;li&gt;-p #phone&lt;/li&gt;
-&lt;li&gt;-h #home-phone&lt;h3 id=&quot;chsh&quot;&gt;&lt;a href=&quot;#chsh&quot; class=&quot;headerlink&quot; title=&quot;chsh&quot;&gt;&lt;/a&gt;chsh&lt;/h3&gt;-l #list&lt;br&gt;-s #改变自己的shell&lt;h3 id=&quot;id&quot;&gt;&lt;a href=&quot;#id&quot; class=&quot;headerlink&quot; title=&quot;id&quot;&gt;&lt;/a&gt;id&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;id newbmiao &amp;lt;==查阅 newbmiao 账号的属性&lt;h2 id=&quot;ACL控制&quot;&gt;&lt;a href=&quot;#ACL控制&quot; class=&quot;headerlink&quot; title=&quot;ACL控制&quot;&gt;&lt;/a&gt;ACL控制&lt;/h2&gt;&lt;h3 id=&quot;setfacl&quot;&gt;&lt;a href=&quot;#setfacl&quot; class=&quot;headerlink&quot; title=&quot;setfacl&quot;&gt;&lt;/a&gt;setfacl&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;-m u:[user列表]:rwx file&lt;/li&gt;
-&lt;li&gt;-m d:u:[user列表]:rwx dir #设置子目录可继承acl&lt;/li&gt;
-&lt;li&gt;-m g:[group列表]:rwx file&lt;/li&gt;
-&lt;li&gt;-m m:rwx file #设置mask,权限与之交集才是有效权限 【规范最大权限】&lt;/li&gt;
-&lt;li&gt;-b file #移除acl&lt;h3 id=&quot;getfacl&quot;&gt;&lt;a href=&quot;#getfacl&quot; class=&quot;headerlink&quot; title=&quot;getfacl&quot;&gt;&lt;/a&gt;getfacl&lt;/h3&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      鸟哥的Linux私房菜笔记-权限管理
     
     </summary>
     
