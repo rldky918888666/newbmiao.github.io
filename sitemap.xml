@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.newbmiao.com/2016/09/07/how-to-dynamic-show-jquery-timepicker-addon.html</loc>
+    
+    <lastmod>2016-09-28T07:31:41.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.newbmiao.com/2016/03/15/mac-tool.html</loc>
+    
+    <lastmod>2016-09-21T06:59:13.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.newbmiao.com/2015/11/28/shadowsocks-polipo-vps.html</loc>
     
     <lastmod>2016-09-18T05:21:25.000Z</lastmod>
@@ -9,23 +23,9 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2016/09/07/how-to-dynamic-show-jquery-timepicker-addon.html</loc>
-    
-    <lastmod>2016-09-07T03:34:17.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.newbmiao.com/2016/08/17/how-to-call-a-function-with-unsure-number-params.html</loc>
     
     <lastmod>2016-08-17T10:43:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.newbmiao.com/2016/03/15/mac-tool.html</loc>
-    
-    <lastmod>2016-08-17T06:29:58.000Z</lastmod>
     
   </url>
   

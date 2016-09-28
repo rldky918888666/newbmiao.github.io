@@ -4,6 +4,56 @@
 
     
   <url>
+    <loc>http://blog.newbmiao.com/2016/09/07/how-to-dynamic-show-jquery-timepicker-addon.html</loc>
+    <lastmod>2016-09-28T07:31:41.000Z</lastmod>
+    <data>
+        <display>
+        <title>jquery-timepicker-addon动态显示使用</title>
+        <pubTime>2016-09-07T03:26:24.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+        <tag>jquery-timepicker-addon</tag>
+         
+         
+           
+             
+              <breadCrumb title="js" url="http://blog.newbmiao.com/categories/js/"/>
+          
+             
+              <breadCrumb title="jquery" url="http://blog.newbmiao.com/categories/js/jquery/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2016/03/15/mac-tool.html</loc>
+    <lastmod>2016-09-21T06:59:13.000Z</lastmod>
+    <data>
+        <display>
+        <title>mac工具集</title>
+        <pubTime>2016-03-15T02:50:23.000Z</pubTime>
+        
+        <tag>mac</tag>
+         
+        <tag>tool</tag>
+         
+         
+           
+             
+              <breadCrumb title="mac" url="http://blog.newbmiao.com/categories/mac/"/>
+          
+             
+              <breadCrumb title="tool" url="http://blog.newbmiao.com/categories/mac/tool/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.newbmiao.com/2015/11/28/shadowsocks-polipo-vps.html</loc>
     <lastmod>2016-09-18T05:21:25.000Z</lastmod>
     <data>
@@ -29,31 +79,6 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2016/09/07/how-to-dynamic-show-jquery-timepicker-addon.html</loc>
-    <lastmod>2016-09-07T03:34:17.000Z</lastmod>
-    <data>
-        <display>
-        <title>jquery-timepicker-addon动态显示使用</title>
-        <pubTime>2016-09-07T03:26:24.000Z</pubTime>
-        
-        <tag>js</tag>
-         
-        <tag>jquery-timepicker-addon</tag>
-         
-         
-           
-             
-              <breadCrumb title="js" url="http://blog.newbmiao.com/categories/js/"/>
-          
-             
-              <breadCrumb title="jquery" url="http://blog.newbmiao.com/categories/js/jquery/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://blog.newbmiao.com/2016/08/17/how-to-call-a-function-with-unsure-number-params.html</loc>
     <lastmod>2016-08-17T10:43:32.000Z</lastmod>
     <data>
@@ -67,31 +92,6 @@
            
              
               <breadCrumb title="js" url="http://blog.newbmiao.com/categories/js/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.newbmiao.com/2016/03/15/mac-tool.html</loc>
-    <lastmod>2016-08-17T06:29:58.000Z</lastmod>
-    <data>
-        <display>
-        <title>mac工具集</title>
-        <pubTime>2016-03-15T02:50:23.000Z</pubTime>
-        
-        <tag>mac</tag>
-         
-        <tag>tool</tag>
-         
-         
-           
-             
-              <breadCrumb title="mac" url="http://blog.newbmiao.com/categories/mac/"/>
-          
-             
-              <breadCrumb title="tool" url="http://blog.newbmiao.com/categories/mac/tool/"/>
           
         </display>
     </data>
