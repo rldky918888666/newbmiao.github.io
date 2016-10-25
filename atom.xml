@@ -81,7 +81,7 @@
     <link href="http://blog.newbmiao.com/2016/03/15/mac-tool.html"/>
     <id>http://blog.newbmiao.com/2016/03/15/mac-tool.html</id>
     <published>2016-03-15T02:50:23.000Z</published>
-    <updated>2016-09-21T06:59:13.000Z</updated>
+    <updated>2016-10-08T04:04:29.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;brew&quot;&gt;&lt;a href=&quot;#brew&quot; class=&quot;headerlink&quot; title=&quot;brew&quot;&gt;&lt;/a&gt;brew&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;ruby &lt;span class=&quot;_&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;variable&quot;&gt;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&lt;/span&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&quot;iterm2&quot;&gt;&lt;a href=&quot;#iterm2&quot; class=&quot;headerlink&quot; title=&quot;iterm2&quot;&gt;&lt;/a&gt;iterm2&lt;/h2&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;symbol&quot;&gt;https:&lt;/span&gt;/&lt;span class=&quot;regexp&quot;&gt;/iterm2.com/downloads&lt;/span&gt;&lt;span class=&quot;regexp&quot;&gt;/stable/i&lt;/span&gt;Term2_v2_&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;.zip&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;运行iterm2之后按cmd+,调出设置界面，在&lt;span class=&quot;string&quot;&gt;&#39;profile&#39;&lt;/span&gt; -&amp;gt; &lt;span class=&quot;string&quot;&gt;&quot;Terminal Type&quot;&lt;/span&gt;改成xterm-new。&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -101,6 +101,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;推荐  &lt;a href=&quot;http://gooday.xyz/proxifier%E6%B3%A8%E5%86%8C%E7%A0%81%E4%BB%A5%E5%8F%8A%E9%85%8D%E5%90%88shadowsocks%E4%B8%8A%E7%BD%91/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;googledrive+proxifier&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h2 id=&quot;shortcat&quot;&gt;&lt;a href=&quot;#shortcat&quot; class=&quot;headerlink&quot; title=&quot;shortcat&quot;&gt;&lt;/a&gt;shortcat&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.appinn.com/shortcat/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;扔掉你的鼠标&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://blog.magi.site/2016/06/15/shortcat-config-tips/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;配置&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
