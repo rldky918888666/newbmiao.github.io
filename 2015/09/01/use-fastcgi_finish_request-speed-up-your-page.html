@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://blog.newbmiao.com/2015/09/01/use-fastcgi_finish_request-speed-up-your-page.html">
 <meta property="og:site_name" content="菜鸟Miao">
 <meta property="og:description" content="利用fastcgi_finish_request加快页面响应">
-<meta property="og:updated_time" content="2016-07-07T13:09:22.000Z">
+<meta property="og:updated_time" content="2016-11-08T11:40:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用fastcgi_finish_request加快页面响应">
 <meta name="twitter:description" content="利用fastcgi_finish_request加快页面响应">
@@ -115,7 +115,7 @@
         <blockquote>
 <h1 id="fastcgi-finish-request"><a href="#fastcgi-finish-request" class="headerlink" title="fastcgi_finish_request"></a>fastcgi_finish_request</h1><p>此函数冲刷(flush)所有响应的数据给客户端并结束请求。 这使得客户端结束连接后，需要大量时间运行的任务能够继续运行。</p>
 </blockquote>
-<p>用php-fpm的话，这个函数可以实现伪异步哦，这么厉害的函数却不知道，惭愧！<br>在这里记录一下，代码修改主要参考于<a href="http://huoding.com/2011/04/12/63" target="_blank" rel="external">火丁笔记</a> </p>
+<p>用php-fpm的话，这个函数可以实现伪异步哦，这么厉害的函数却不知道，惭愧！<br>在这里记录一下，代码修改主要参考于<a href="http://huoding.com/2011/04/12/63" target="_blank" rel="external">火丁笔记</a></p>
 <a id="more"></a>
 <pre><code>echo &apos;例子：&apos;.date(&apos;Y-m-d H:i:s&apos;,time());
 
@@ -161,7 +161,7 @@ file_put_contents(&apos;log.txt&apos;, date(&apos;Y-m-d H:i:s&apos;) . &quot; �
        
      
      <span style="color:#999">
-&nbsp; | &nbsp;最近更新 ：<time datetime="2016-07-07T13:09:22.000Z" itemprop="dateModify">2016-07-07</time>
+&nbsp; | &nbsp;最近更新 ：<time datetime="2016-11-08T11:40:56.000Z" itemprop="dateModify">2016-11-08</time>
 </span>
 
      
