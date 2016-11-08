@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.newbmiao.com/"/>
-  <updated>2016-09-28T07:31:41.000Z</updated>
+  <updated>2016-11-08T11:38:35.000Z</updated>
   <id>http://blog.newbmiao.com/</id>
   
   <author>
@@ -16,11 +16,86 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>php踩坑记录</title>
+    <link href="http://blog.newbmiao.com/2016/11/08/some-misuse-of-php.html"/>
+    <id>http://blog.newbmiao.com/2016/11/08/some-misuse-of-php.html</id>
+    <published>2016-11-08T11:33:22.000Z</published>
+    <updated>2016-11-08T11:38:35.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;函数&quot;&gt;&lt;a href=&quot;#函数&quot; class=&quot;headerlink&quot; title=&quot;函数&quot;&gt;&lt;/a&gt;函数&lt;/h1&gt;&lt;h2 id=&quot;mb-strlen-不生效&quot;&gt;&lt;a href=&quot;#mb-strlen-不生效&quot; class=&quot;headerlink&quot; title=&quot;mb_strlen 不生效&quot;&gt;&lt;/a&gt;mb_strlen 不生效&lt;/h2&gt;&lt;p&gt;有一天发现本地&lt;code&gt;mb_strlen(&amp;#39;哈&amp;#39;)&lt;/code&gt;本地为1,服务器为3,猜测应该是配置问题&lt;br&gt;看文档关键在于&lt;code&gt;mb_internal_encoding&lt;/code&gt;&lt;br&gt;&lt;figure class=&quot;highlight applescript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;mixed mb_strlen ( &lt;span class=&quot;built_in&quot;&gt;string&lt;/span&gt; $str [, &lt;span class=&quot;built_in&quot;&gt;string&lt;/span&gt; $encoding = mb_internal_encoding() ] )&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;继续搜 mbstring.internal_encoding (定义内部字符的默认编码)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Warning: This feature has been DEPRECATED &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;of&lt;/span&gt; PHP &lt;span class=&quot;number&quot;&gt;5.6&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;.0&lt;/span&gt;. Relying &lt;span class=&quot;keyword&quot;&gt;on&lt;/span&gt; this feature &lt;span class=&quot;keyword&quot;&gt;is&lt;/span&gt; highly discouraged.。&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;PHP &lt;span class=&quot;number&quot;&gt;5.6&lt;/span&gt; 及更新版的用户应该将此选项留空，并设置 default_charset 作为代替。&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;好吧，服务器 default_charset 没设置，然后默认用 ISO&lt;span class=&quot;number&quot;&gt;-8859&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;解决方案：&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;//入口设置，有权限的话也可以 ini_&lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;default_charset&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;UTF-8&#39;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;mb_internal_encoding(&lt;span class=&quot;string&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      php踩坑记录
+    
+    </summary>
+    
+      <category term="php" scheme="http://blog.newbmiao.com/categories/php/"/>
+    
+    
+      <category term="php" scheme="http://blog.newbmiao.com/tags/php/"/>
+    
+      <category term="function" scheme="http://blog.newbmiao.com/tags/function/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jquery多异步管理使用记录</title>
+    <link href="http://blog.newbmiao.com/2016/11/08/jquery-multi-async-manage-note.html"/>
+    <id>http://blog.newbmiao.com/2016/11/08/jquery-multi-async-manage-note.html</id>
+    <published>2016-11-08T11:27:05.000Z</published>
+    <updated>2016-11-08T11:38:44.000Z</updated>
+    
+    <content type="html">&lt;p&gt;先记录一些参考文章&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2012/12/asynchronous%EF%BC%BFjavascript.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Javascript异步编程的4种方法(阮一峰)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://borninsummer.com/2015/06/02/using-promise-to-carry-out-multi-ajax-procedure/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;用Promise实现多个Ajax的异步流程控制&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://xifengxx.github.io/2016/05/04/jQuery%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;jQuery的AJAX方法(全局)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://es6.ruanyifeng.com/#docs/promise&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Promise对象(ES6)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;when-传递多个deferred&quot;&gt;&lt;a href=&quot;#when-传递多个deferred&quot; class=&quot;headerlink&quot; title=&quot;$.when() 传递多个deferred&quot;&gt;&lt;/a&gt;$.when() 传递多个deferred&lt;/h3&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;var ajaxBatch=[];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;regexp&quot;&gt;//&lt;/span&gt;构建deferred数组&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;...&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;variable&quot;&gt;$.&lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;when&lt;/span&gt;.apply(&lt;span class=&quot;variable&quot;&gt;$,&lt;/span&gt; ajaxBatch).done();&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;done-callback内arguments结构不一致&quot;&gt;&lt;a href=&quot;#done-callback内arguments结构不一致&quot; class=&quot;headerlink&quot; title=&quot;done() callback内arguments结构不一致&quot;&gt;&lt;/a&gt;done() callback内arguments结构不一致&lt;/h3&gt;&lt;p&gt;就是会有三种情况：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;无参数&lt;/li&gt;
+&lt;li&gt;$.when()一个deferred参数: [data, textStatus , jqXHR] #假定 x代表[data,textStatus,jqXHR]结构&lt;/li&gt;
+&lt;li&gt;$.when()多个deferred参数: [x1,x2,x3]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;是不是醉了，怎么统一处理？&lt;br&gt;目前使用判断最里层data的结构&lt;br&gt;&lt;figure class=&quot;highlight markdown&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;.done(function()&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  var params=[].slice.call(arguments);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  if(typeof params[&lt;span class=&quot;string&quot;&gt;0&lt;/span&gt;][&lt;span class=&quot;symbol&quot;&gt;0&lt;/span&gt;] !=&#39;object&#39;)&amp;#123; //第二种情况返回undefined&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;code&quot;&gt;      params=[];&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;code&quot;&gt;      params[0]=[].slice.call(arguments);&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  //然后遍历结果吧&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/a/28365429/4431337&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;stackoverflow&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.odoo.com/documentation/8.0/reference/async.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Asynchronous Operations&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;同步UI阻塞弹出层提示&quot;&gt;&lt;a href=&quot;#同步UI阻塞弹出层提示&quot; class=&quot;headerlink&quot; title=&quot;同步UI阻塞弹出层提示&quot;&gt;&lt;/a&gt;同步UI阻塞弹出层提示&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://jsfiddle.net/newbmiao/77xyhjjj/4/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;弹出层成功回调中使用setTimeout延时&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      jquery多异步管理使用记录
+    
+    </summary>
+    
+      <category term="js" scheme="http://blog.newbmiao.com/categories/js/"/>
+    
+      <category term="jquery" scheme="http://blog.newbmiao.com/categories/js/jquery/"/>
+    
+    
+      <category term="js" scheme="http://blog.newbmiao.com/tags/js/"/>
+    
+      <category term="jquery" scheme="http://blog.newbmiao.com/tags/jquery/"/>
+    
+      <category term="ajax" scheme="http://blog.newbmiao.com/tags/ajax/"/>
+    
+      <category term="promise" scheme="http://blog.newbmiao.com/tags/promise/"/>
+    
+  </entry>
+  
+  <entry>
     <title>jquery-timepicker-addon动态显示使用</title>
     <link href="http://blog.newbmiao.com/2016/09/07/how-to-dynamic-show-jquery-timepicker-addon.html"/>
     <id>http://blog.newbmiao.com/2016/09/07/how-to-dynamic-show-jquery-timepicker-addon.html</id>
     <published>2016-09-07T03:26:24.000Z</published>
-    <updated>2016-09-28T07:31:41.000Z</updated>
+    <updated>2016-09-28T07:53:32.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;http://trentrichardson.com/examples/timepicker/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;文档&lt;/a&gt;&lt;/p&gt;
@@ -81,7 +156,7 @@
     <link href="http://blog.newbmiao.com/2016/03/15/mac-tool.html"/>
     <id>http://blog.newbmiao.com/2016/03/15/mac-tool.html</id>
     <published>2016-03-15T02:50:23.000Z</published>
-    <updated>2016-10-08T04:04:29.000Z</updated>
+    <updated>2016-11-08T11:40:25.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;brew&quot;&gt;&lt;a href=&quot;#brew&quot; class=&quot;headerlink&quot; title=&quot;brew&quot;&gt;&lt;/a&gt;brew&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;ruby &lt;span class=&quot;_&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;variable&quot;&gt;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&lt;/span&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&quot;iterm2&quot;&gt;&lt;a href=&quot;#iterm2&quot; class=&quot;headerlink&quot; title=&quot;iterm2&quot;&gt;&lt;/a&gt;iterm2&lt;/h2&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;symbol&quot;&gt;https:&lt;/span&gt;/&lt;span class=&quot;regexp&quot;&gt;/iterm2.com/downloads&lt;/span&gt;&lt;span class=&quot;regexp&quot;&gt;/stable/i&lt;/span&gt;Term2_v2_&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;.zip&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;运行iterm2之后按cmd+,调出设置界面，在&lt;span class=&quot;string&quot;&gt;&#39;profile&#39;&lt;/span&gt; -&amp;gt; &lt;span class=&quot;string&quot;&gt;&quot;Terminal Type&quot;&lt;/span&gt;改成xterm-new。&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -1414,172 +1489,6 @@ vi /etc/logrotate.d/syslog
     <summary type="html">
     
       鸟哥的Linux私房菜笔记-程序管理
-    
-    </summary>
-    
-      <category term="linux" scheme="http://blog.newbmiao.com/categories/linux/"/>
-    
-      <category term="notes" scheme="http://blog.newbmiao.com/categories/linux/notes/"/>
-    
-    
-      <category term="linux" scheme="http://blog.newbmiao.com/tags/linux/"/>
-    
-      <category term="notes" scheme="http://blog.newbmiao.com/tags/notes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>鸟哥的Linux私房菜笔记-排程</title>
-    <link href="http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-cron.html"/>
-    <id>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-cron.html</id>
-    <published>2015-09-15T09:39:47.000Z</published>
-    <updated>2016-07-07T13:09:20.000Z</updated>
-    
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;笔记记录于《鸟哥的Linux私房菜-第三版》,以备多看。&lt;/p&gt;
-&lt;h2 id=&quot;排程&quot;&gt;&lt;a href=&quot;#排程&quot; class=&quot;headerlink&quot; title=&quot;排程&quot;&gt;&lt;/a&gt;排程&lt;/h2&gt;&lt;h3 id=&quot;at&quot;&gt;&lt;a href=&quot;#at&quot; class=&quot;headerlink&quot; title=&quot;at&quot;&gt;&lt;/a&gt;at&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;启动服务 /etc/init.d/atd restart chkconfig atd on&lt;/li&gt;
-&lt;li&gt;-m #完成后email通知&lt;/li&gt;
-&lt;li&gt;-l #相当于atq，列出该使用者排程&lt;/li&gt;
-&lt;li&gt;-d num #相当于atrm，取消一个排程&lt;/li&gt;
-&lt;li&gt;-v #以时间格式列出排程&lt;/li&gt;
-&lt;li&gt;-c num #列出该指令内容&lt;h3 id=&quot;batch&quot;&gt;&lt;a href=&quot;#batch&quot; class=&quot;headerlink&quot; title=&quot;batch&quot;&gt;&lt;/a&gt;batch&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;在系统负载小于0.8时进行排程&lt;/li&gt;
-&lt;li&gt;HH:MM YYYY-M-DD #指定时间执行&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h3 id=&quot;crontab&quot;&gt;&lt;a href=&quot;#crontab&quot; class=&quot;headerlink&quot; title=&quot;crontab&quot;&gt;&lt;/a&gt;crontab&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;-u uname #root可使用&lt;/li&gt;
-&lt;li&gt;-e #编辑crontab内容&lt;/li&gt;
-&lt;li&gt;-l #查阅&lt;/li&gt;
-&lt;li&gt;-r #移除所有&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;格式：tab 分隔&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# Example of job definition:
-# .---------------- minute (0 - 59)
-# |  .------------- hour (0 - 23)
-# |  |  .---------- day of month (1 - 31)
-# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
-# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) 
-# |  |  |  |  |            OR sun,mon,tue,wed,thu,fri,sat
-# *  *  *  *  * user-name command to be executed
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  特殊符号|意义&lt;br&gt;  -|-&lt;br&gt;  &lt;em&gt;|任意时刻&lt;br&gt;  ,|分隔时段; 3,6 3点和6点&lt;br&gt;  -|时间范围; 3-6&lt;br&gt;  /n|每隔n个单位间隔; `&lt;/em&gt;/5` 每5分钟&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;/etc/crontab #系统排程设置&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;/etc/init.d/crond restart #修改后确保进入排程
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;anacron&quot;&gt;&lt;a href=&quot;#anacron&quot; class=&quot;headerlink&quot; title=&quot;anacron&quot;&gt;&lt;/a&gt;anacron&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;唤醒停机期间的工作任务,其判断 &lt;code&gt;/var/spool/anacron&lt;/code&gt; 中对应的时间戳记&lt;/li&gt;
-&lt;li&gt;-s cron.daily #开始执行未进行job&lt;/li&gt;
-&lt;li&gt;-f job #强制执行而不判断记录档时间戳记&lt;/li&gt;
-&lt;li&gt;-n job #立即进行，不延迟等待时间&lt;/li&gt;
-&lt;li&gt;-u job #仅更新时间记录档的时间戳记，不进行任何工作&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      鸟哥的Linux私房菜笔记-排程
-    
-    </summary>
-    
-      <category term="linux" scheme="http://blog.newbmiao.com/categories/linux/"/>
-    
-      <category term="notes" scheme="http://blog.newbmiao.com/categories/linux/notes/"/>
-    
-    
-      <category term="linux" scheme="http://blog.newbmiao.com/tags/linux/"/>
-    
-      <category term="notes" scheme="http://blog.newbmiao.com/tags/notes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>鸟哥的Linux私房菜笔记-配额</title>
-    <link href="http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-quota.html"/>
-    <id>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-quota.html</id>
-    <published>2015-09-15T09:37:30.000Z</published>
-    <updated>2016-07-07T13:09:20.000Z</updated>
-    
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;笔记记录于《鸟哥的Linux私房菜-第三版》,以备多看。&lt;/p&gt;
-&lt;h2 id=&quot;配额&quot;&gt;&lt;a href=&quot;#配额&quot; class=&quot;headerlink&quot; title=&quot;配额&quot;&gt;&lt;/a&gt;配额&lt;/h2&gt;&lt;p&gt;单次生效：&lt;br&gt;    mount -o remount,usrquota,grpquota 单独的filesystem  #对应/etc/mtab&lt;/p&gt;
-&lt;p&gt;每次开机有效 编辑/etc/fstab&lt;br&gt;    UUID=&lt;del&gt;XXX&lt;/del&gt; 单独的filesystem                      ext4    defaults,&lt;strong&gt;usrquota,grpquota&lt;/strong&gt;       0 0&lt;br&gt;    umount 单独的filesystem&lt;br&gt;    mount -a&lt;br&gt;   mount|grep 单独的filesystem #确认是否添加quota&lt;/p&gt;
-&lt;h3 id=&quot;quota&quot;&gt;&lt;a href=&quot;#quota&quot; class=&quot;headerlink&quot; title=&quot;quota&quot;&gt;&lt;/a&gt;quota&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;-auvg #扫描需要quota的filesystem [a-/etc/mtab中找需要quota的filesystem;u-user;g-group]&lt;/li&gt;
-&lt;li&gt;-mf #强制执行检查写入&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h3 id=&quot;quotaon&quot;&gt;&lt;a href=&quot;#quotaon&quot; class=&quot;headerlink&quot; title=&quot;quotaon&quot;&gt;&lt;/a&gt;quotaon&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;-avug #第一次启动quota &lt;h3 id=&quot;quotaoff&quot;&gt;&lt;a href=&quot;#quotaoff&quot; class=&quot;headerlink&quot; title=&quot;quotaoff&quot;&gt;&lt;/a&gt;quotaoff&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;-aug&lt;/p&gt;
-&lt;h3 id=&quot;edquota&quot;&gt;&lt;a href=&quot;#edquota&quot; class=&quot;headerlink&quot; title=&quot;edquota&quot;&gt;&lt;/a&gt;edquota&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;-u user #用户配额&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;-g group #组配额&lt;/li&gt;
-&lt;li&gt;-t #修改宽限时间&lt;/li&gt;
-&lt;li&gt;-p 范本账号 -u 新账号 #复制配额&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;单位kb&lt;/p&gt;
-&lt;h3 id=&quot;quota-1&quot;&gt;&lt;a href=&quot;#quota-1&quot; class=&quot;headerlink&quot; title=&quot;quota&quot;&gt;&lt;/a&gt;quota&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;-u  user #显示用户配额&lt;/li&gt;
-&lt;li&gt;-v #显示所有用户配额&lt;/li&gt;
-&lt;li&gt;-g group #显示用户配额&lt;/li&gt;
-&lt;li&gt;-s #按M显示配额&lt;h3 id=&quot;repquota&quot;&gt;&lt;a href=&quot;#repquota&quot; class=&quot;headerlink&quot; title=&quot;repquota&quot;&gt;&lt;/a&gt;repquota&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;-auvgs #显示整个filesystem配额&lt;h3 id=&quot;warnquota&quot;&gt;&lt;a href=&quot;#warnquota&quot; class=&quot;headerlink&quot; title=&quot;warnquota&quot;&gt;&lt;/a&gt;warnquota&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;执行会判断是否需要邮件提醒，需要则会发给root和目标用户邮件&lt;/li&gt;
-&lt;li&gt;每日自动执行&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;pre&gt;&lt;code&gt;echo &amp;quot;/usr/sbin/warnquota&amp;quot;&amp;gt; /etc/cron.daily/warnquota
-chmod 755 /etc/cron.daily/warnquota
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;setquota&quot;&gt;&lt;a href=&quot;#setquota&quot; class=&quot;headerlink&quot; title=&quot;setquota&quot;&gt;&lt;/a&gt;setquota&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;setquota [-u|-g] [-rm] [-F quotaformat] &amp;lt;user|group&amp;gt; &amp;lt;block-softlimit&amp;gt; &amp;lt;block-hardlimit&amp;gt; &amp;lt;inode-softlimit&amp;gt; &amp;lt;inode-hardlimit&amp;gt; -a|&amp;lt;filesystem&amp;gt;...
-setquota [-u|-g] [-rm] [-F quotaformat] &amp;lt;-p protouser|protogroup&amp;gt; &amp;lt;user|group&amp;gt; -a|&amp;lt;filesystem&amp;gt;...
-setquota [-u|-g] [-rm] [-F quotaformat] -b [-c] -a|&amp;lt;filesystem&amp;gt;...
-setquota [-u|-g] [-F quotaformat] -t &amp;lt;blockgrace&amp;gt; &amp;lt;inodegrace&amp;gt; -a|&amp;lt;filesystem&amp;gt;...
-setquota [-u|-g] [-F quotaformat] &amp;lt;user|group&amp;gt; -T &amp;lt;blockgrace&amp;gt; &amp;lt;inodegrace&amp;gt; -a|&amp;lt;filesystem&amp;gt;...
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;journaled-quota&quot;&gt;&lt;a href=&quot;#journaled-quota&quot; class=&quot;headerlink&quot; title=&quot;journaled quota&quot;&gt;&lt;/a&gt;journaled quota&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;quotacheck: Your kernel probably supports journaled quota but you are not using it. Consider switching to journaled quota to avoid running quotacheck after an unclean shutdown.&lt;br&gt;    yum install quota&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Edit: /etc/fstab   &lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;vi /etc/fstab 
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;replace “defaults” with “usrjquota=quota.user,jqfmt=vfsv0” for / mount point&lt;/p&gt;
-&lt;p&gt;Before:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;UUID=ac567666-9385-4ef5-885c-80f61ec64647       /       ext3    defaults        1       1
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After Replace:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;UUID=ac567666-9385-4ef5-885c-80f61ec64647       /       ext3    usrjquota=quota.user,jqfmt=vfsv0        1       1
-
-mount -o remount /
-quotacheck -avugm
-quotaon -avug
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If you have /home in /etc/fstab then you will need to edit line matching /home&lt;br&gt;replace “defaults” with “usrjquota=quota.user,jqfmt=vfsv0” for /home mount point&lt;/p&gt;
-&lt;p&gt;Before:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;UUID=ac567666-9385-4ef5-885c-80f61ec64647       /home       ext3    defaults        1       1
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After Replace:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;UUID=ac567666-9385-4ef5-885c-80f61ec64647       /home       ext3    usrjquota=quota.user,jqfmt=vfsv0        1       1
-
-mount -o remount /home
-quotacheck -avugm
-quotaon -avug
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now you need to add this into the CWP Configuration&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;mkdir -p /usr/local/cwp/.conf/
-echo &amp;quot;/home&amp;quot; &amp;gt; /usr/local/cwp/.conf/quota_part.conf
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;How to check if quota works ?&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;repquota -a
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This will display you user limits&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;附&lt;/strong&gt;[添加组配额要加上]： grpjquota=aquota.group&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://forum.centos-webpanel.com/centos-configuration/how-to-setup-user-quotas/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;参考自：How to setup user quotas&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;mdadm&quot;&gt;&lt;a href=&quot;#mdadm&quot; class=&quot;headerlink&quot; title=&quot;mdadm&quot;&gt;&lt;/a&gt;mdadm&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;RAID&lt;h3 id=&quot;LVM&quot;&gt;&lt;a href=&quot;#LVM&quot; class=&quot;headerlink&quot; title=&quot;LVM&quot;&gt;&lt;/a&gt;LVM&lt;/h3&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-</content>
-    
-    <summary type="html">
-    
-      鸟哥的Linux私房菜笔记-配额
     
     </summary>
     

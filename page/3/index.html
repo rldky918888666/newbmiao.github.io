@@ -86,6 +86,158 @@
     <div class="outer">
       <section id="main">
   
+    <article id="post-Niaoge-Linux-Desktop-Guide-notes-cron" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-cron.html" class="article-date">
+  <time datetime="2015-09-15T09:39:47.000Z" itemprop="datePublished">2015-09-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/linux/">linux</a>►<a class="article-category-link" href="/categories/linux/notes/">notes</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-cron.html">鸟哥的Linux私房菜笔记-排程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>笔记记录于《鸟哥的Linux私房菜-第三版》,以备多看。</p>
+<h2 id="排程"><a href="#排程" class="headerlink" title="排程"></a>排程</h2><h3 id="at"><a href="#at" class="headerlink" title="at"></a>at</h3><ul>
+<li>启动服务 /etc/init.d/atd restart chkconfig atd on</li>
+<li>-m #完成后email通知</li>
+<li>-l #相当于atq，列出该使用者排程</li>
+<li>-d num #相当于atrm，取消一个排程</li>
+<li>-v #以时间格式列出排程</li>
+<li>-c num #列出该指令内容<h3 id="batch"><a href="#batch" class="headerlink" title="batch"></a>batch</h3></li>
+<li>在系统负载小于0.8时进行排程</li>
+<li>HH:MM YYYY-M-DD #指定时间执行</li>
+</ul>
+</blockquote>
+        
+          <p class="article-more-link">
+            <a href="/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-cron.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    
+    <footer class="article-footer">
+      
+        <a data-url="http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-cron.html" data-id="civ9f7vi4007osn31pbrzvcal" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-cron.html#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/notes/">notes</a></li></ul>
+
+      
+     
+     <span style="color:#999">
+&nbsp; | &nbsp;最近更新 ：<time datetime="2016-07-07T13:09:20.000Z" itemprop="dateModify">2016-07-07</time>
+</span>
+
+     
+<!-- 无觅 -->
+<script type="text/javascript" id="wumiiRelatedItems"></script>
+
+    </footer>
+    
+  </div>
+</article>
+
+
+
+
+  
+    <article id="post-Niaoge-Linux-Desktop-Guide-notes-quota" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-quota.html" class="article-date">
+  <time datetime="2015-09-15T09:37:30.000Z" itemprop="datePublished">2015-09-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/linux/">linux</a>►<a class="article-category-link" href="/categories/linux/notes/">notes</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-quota.html">鸟哥的Linux私房菜笔记-配额</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>笔记记录于《鸟哥的Linux私房菜-第三版》,以备多看。</p>
+<h2 id="配额"><a href="#配额" class="headerlink" title="配额"></a>配额</h2><p>单次生效：<br>    mount -o remount,usrquota,grpquota 单独的filesystem  #对应/etc/mtab</p>
+<p>每次开机有效 编辑/etc/fstab<br>    UUID=<del>XXX</del> 单独的filesystem                      ext4    defaults,<strong>usrquota,grpquota</strong>       0 0<br>    umount 单独的filesystem<br>    mount -a<br>   mount|grep 单独的filesystem #确认是否添加quota</p>
+<h3 id="quota"><a href="#quota" class="headerlink" title="quota"></a>quota</h3><ul>
+<li>-auvg #扫描需要quota的filesystem [a-/etc/mtab中找需要quota的filesystem;u-user;g-group]</li>
+<li>-mf #强制执行检查写入</li>
+</ul>
+</blockquote>
+        
+          <p class="article-more-link">
+            <a href="/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-quota.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    
+    <footer class="article-footer">
+      
+        <a data-url="http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-quota.html" data-id="civ9f7vik0085sn31nb2pzxkk" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-quota.html#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/notes/">notes</a></li></ul>
+
+      
+     
+     <span style="color:#999">
+&nbsp; | &nbsp;最近更新 ：<time datetime="2016-07-07T13:09:20.000Z" itemprop="dateModify">2016-07-07</time>
+</span>
+
+     
+<!-- 无觅 -->
+<script type="text/javascript" id="wumiiRelatedItems"></script>
+
+    </footer>
+    
+  </div>
+</article>
+
+
+
+
+  
     <article id="post-Niaoge-Linux-Desktop-Guide-notes-ACL" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-ACL.html" class="article-date">
@@ -137,7 +289,7 @@
     
     <footer class="article-footer">
       
-        <a data-url="http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-ACL.html" data-id="cissco6cq007ko631ltio0xoi" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-ACL.html" data-id="civ9f7vie007xsn31cbroefpl" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
@@ -215,7 +367,7 @@
     
     <footer class="article-footer">
       
-        <a data-url="http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-bash.html" data-id="cissco6ci0079o631f1jd542o" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-bash.html" data-id="civ9f7vi2007ksn311gr73omp" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
@@ -286,7 +438,7 @@
     
     <footer class="article-footer">
       
-        <a data-url="http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-basis.html" data-id="cissco6ck007do6318n4ezlyq" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-basis.html" data-id="civ9f7vi5007rsn31d531bok6" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
@@ -355,7 +507,7 @@
     
     <footer class="article-footer">
       
-        <a data-url="http://blog.newbmiao.com/2015/09/01/jquery-detach.html" data-id="cissco6cb0071o631rnhpabel" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="http://blog.newbmiao.com/2015/09/01/jquery-detach.html" data-id="civ9f7vhq007dsn315wrppm82" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
@@ -424,7 +576,7 @@
     
     <footer class="article-footer">
       
-        <a data-url="http://blog.newbmiao.com/2015/09/01/use-fastcgi_finish_request-speed-up-your-page.html" data-id="cissco69t0021o631gapbkrv1" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="http://blog.newbmiao.com/2015/09/01/use-fastcgi_finish_request-speed-up-your-page.html" data-id="civ9f7vdk001ssn311zzmvlt9" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
@@ -496,7 +648,7 @@
     
     <footer class="article-footer">
       
-        <a data-url="http://blog.newbmiao.com/2015/08/18/hexo-with-gitcafe-and-github.html" data-id="cissco6800008o631n06ufshz" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="http://blog.newbmiao.com/2015/08/18/hexo-with-gitcafe-and-github.html" data-id="civ9f7ver002jsn31k2kup9od" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
@@ -567,7 +719,7 @@
     
     <footer class="article-footer">
       
-        <a data-url="http://blog.newbmiao.com/2015/08/08/auto-sync-your-mac-file-with-dropbox.html" data-id="cissco6a4002bo631ffru6jiu" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="http://blog.newbmiao.com/2015/08/08/auto-sync-your-mac-file-with-dropbox.html" data-id="civ9f7ve10023sn31seayylje" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
@@ -641,7 +793,7 @@
     
     <footer class="article-footer">
       
-        <a data-url="http://blog.newbmiao.com/2015/08/06/set-highlight-and-autoindent-in-vim-on-mac.html" data-id="cissco68x0011o631hqln51b6" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="http://blog.newbmiao.com/2015/08/06/set-highlight-and-autoindent-in-vim-on-mac.html" data-id="civ9f7vc5000usn31gcunxdz3" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
@@ -655,170 +807,6 @@
      
      <span style="color:#999">
 &nbsp; | &nbsp;最近更新 ：<time datetime="2016-07-07T13:09:20.000Z" itemprop="dateModify">2016-07-07</time>
-</span>
-
-     
-<!-- 无觅 -->
-<script type="text/javascript" id="wumiiRelatedItems"></script>
-
-    </footer>
-    
-  </div>
-</article>
-
-
-
-
-  
-    <article id="photo-use-limit-subquery-in-mysql" class="article article-type-photo" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/08/01/use-limit-subquery-in-mysql.html" class="article-date">
-  <time datetime="2015-08-01T07:43:06.000Z" itemprop="datePublished">2015-08-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/mysql/">mysql</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-<div class="article-gallery">
-  <div class="article-gallery-photos">
-    
-      <a class="article-gallery-img fancybox" href="http://media.newbmiao.com/blog/ops.jpg" rel="gallery_cissco69b001ko631zpcv4ye9">
-        <img src="http://media.newbmiao.com/blog/ops.jpg" itemprop="image">
-      </a>
-    
-  </div>
-</div>
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/01/use-limit-subquery-in-mysql.html">解决mysql不可用limit子查询</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>当你在mysql子查询中使用了limit，那么恭喜你，你会看到</p>
-<blockquote>
-<p>ERROR 1235 (42000): This version of MySQL doesn’t yet support ‘LIMIT &amp; IN/ALL/ANY/SOME subquery’</p>
-</blockquote>
-<p><code>limit</code>在mysql中本来的效率就不高，mysql于是也禁止在子查询中使用limit，可是如果非要用呢</p>
-<p>比方说需求是：</p>
-<ul>
-<li>一等奖5名</li>
-<li>二等奖15名</li>
-<li>获了一等奖的不能再获二等奖</li>
-</ul>
-<p>直觉告诉我们，下边的sql是可以的。</p>
-        
-          <p class="article-more-link">
-            <a href="/2015/08/01/use-limit-subquery-in-mysql.html#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    
-    <footer class="article-footer">
-      
-        <a data-url="http://blog.newbmiao.com/2015/08/01/use-limit-subquery-in-mysql.html" data-id="cissco69b001ko631zpcv4ye9" class="article-share-link" data-share="baidu">分享到</a>
-      
-
-      
-        <a href="http://blog.newbmiao.com/2015/08/01/use-limit-subquery-in-mysql.html#ds-thread" class="article-comment-link">评论</a>
-      
-
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/limit/">limit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
-
-      
-     
-     <span style="color:#999">
-&nbsp; | &nbsp;最近更新 ：<time datetime="2016-07-07T13:09:20.000Z" itemprop="dateModify">2016-07-07</time>
-</span>
-
-     
-<!-- 无觅 -->
-<script type="text/javascript" id="wumiiRelatedItems"></script>
-
-    </footer>
-    
-  </div>
-</article>
-
-
-
-
-  
-    <article id="photo-school-company-data-crawling" class="article article-type-photo" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/07/31/school-company-data-crawling.html" class="article-date">
-  <time datetime="2015-07-31T12:11:39.000Z" itemprop="datePublished">2015-07-31</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/web/">web</a>►<a class="article-category-link" href="/categories/web/practice/">practice</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-<div class="article-gallery">
-  <div class="article-gallery-photos">
-    
-      <a class="article-gallery-img fancybox" href="http://media.newbmiao.com/blog/college.jpg" rel="gallery_cissco6aa002go63116vutqyl">
-        <img src="http://media.newbmiao.com/blog/college.jpg" itemprop="image">
-      </a>
-    
-  </div>
-</div>
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/31/school-company-data-crawling.html">大学-公司数据爬取</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今天需要搞大学数据库，目标是新浪高考网。<br>仔细分析其页面的数据获取是使用Jsonp的js方式。于是在控制台能使用js爬取了大学数据源（1378条）<br>》》<a href="https://github.com/NewbMiao/webDataSource/tree/master/%E5%A4%A7%E5%AD%A6%E6%95%B0%E6%8D%AE%E5%BA%93_1378_20150731">需要大学数据可以这里拿</a></p>
-<p>这里要记录的是爬取中数组合并的问题</p>
-        
-          <p class="article-more-link">
-            <a href="/2015/07/31/school-company-data-crawling.html#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    
-    <footer class="article-footer">
-      
-        <a data-url="http://blog.newbmiao.com/2015/07/31/school-company-data-crawling.html" data-id="cissco6aa002go63116vutqyl" class="article-share-link" data-share="baidu">分享到</a>
-      
-
-      
-        <a href="http://blog.newbmiao.com/2015/07/31/school-company-data-crawling.html#ds-thread" class="article-comment-link">评论</a>
-      
-
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/closure/">closure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
-
-      
-     
-     <span style="color:#999">
-&nbsp; | &nbsp;最近更新 ：<time datetime="2016-07-07T13:09:22.000Z" itemprop="dateModify">2016-07-07</time>
 </span>
 
      
@@ -850,6 +838,14 @@
       <ul>
         
           <li>
+            <a href="/2016/11/08/some-misuse-of-php.html">php踩坑记录</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/08/jquery-multi-async-manage-note.html">jquery多异步管理使用记录</a>
+          </li>
+        
+          <li>
             <a href="/2016/09/07/how-to-dynamic-show-jquery-timepicker-addon.html">jquery-timepicker-addon动态显示使用</a>
           </li>
         
@@ -861,14 +857,6 @@
             <a href="/2016/03/15/mac-tool.html">mac工具集</a>
           </li>
         
-          <li>
-            <a href="/2015/12/04/xdebug-remote-debug-with-phpstorm-and-vagrant.html">基于phpstorm和vagrant环境的xdebug远程调试</a>
-          </li>
-        
-          <li>
-            <a href="/2015/11/28/shadowsocks-polipo-vps.html">让影梭和搬瓦工帮你科学上网</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -878,7 +866,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/dropbox/">dropbox</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/blog/hexo/">hexo</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/gearman/">gearman</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/html5/">html5</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/journal/">journal</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/js/">js</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js/jquery/">jquery</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/linux/notes/">notes</a><span class="category-list-count">7</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/">mac</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/mac/shadowsocks/">shadowsocks</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/tool/">tool</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/">mysql</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/optimize/">optimize</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/">php</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/php/CI/">CI</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/regex/">regex</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/signal/">signal</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/tool/">tool</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/redis/">redis</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/">web</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/web/notes/">notes</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/practice/">practice</a><span class="category-list-count">3</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/dropbox/">dropbox</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/blog/hexo/">hexo</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/gearman/">gearman</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/html5/">html5</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/journal/">journal</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/js/">js</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js/jquery/">jquery</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/linux/notes/">notes</a><span class="category-list-count">7</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/">mac</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/mac/shadowsocks/">shadowsocks</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/tool/">tool</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/">mysql</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/optimize/">optimize</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/">php</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/php/CI/">CI</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/regex/">regex</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/signal/">signal</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/tool/">tool</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/redis/">redis</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/">web</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/web/notes/">notes</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/practice/">practice</a><span class="category-list-count">3</span></li></ul></li></ul>
     </div>
   </div>
 
@@ -887,7 +875,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/phpdoc/" style="font-size: 15px; color: #1e90ff">phpdoc</a> <a href="/tags/hexo/" style="font-size: 19.29px; color: #3194e4">hexo</a> <a href="/tags/gitcafe/" style="font-size: 15px; color: #1e90ff">gitcafe</a> <a href="/tags/journal/" style="font-size: 17.14px; color: #2792f1">journal</a> <a href="/tags/gearman/" style="font-size: 15px; color: #1e90ff">gearman</a> <a href="/tags/html5/" style="font-size: 17.14px; color: #2792f1">html5</a> <a href="/tags/drag/" style="font-size: 17.14px; color: #2792f1">drag</a> <a href="/tags/chrome/" style="font-size: 15px; color: #1e90ff">chrome</a> <a href="/tags/js/" style="font-size: 30px; color: #5f9ea0">js</a> <a href="/tags/javascript-program-solution/" style="font-size: 19.29px; color: #3194e4">javascript-program-solution</a> <a href="/tags/random/" style="font-size: 15px; color: #1e90ff">random</a> <a href="/tags/maintainable-javascript/" style="font-size: 15px; color: #1e90ff">maintainable-javascript</a> <a href="/tags/git/" style="font-size: 15px; color: #1e90ff">git</a> <a href="/tags/linux/" style="font-size: 25.71px; color: #4c9abb">linux</a> <a href="/tags/mac/" style="font-size: 19.29px; color: #3194e4">mac</a> <a href="/tags/vim/" style="font-size: 15px; color: #1e90ff">vim</a> <a href="/tags/shadowsocks/" style="font-size: 15px; color: #1e90ff">shadowsocks</a> <a href="/tags/tool/" style="font-size: 15px; color: #1e90ff">tool</a> <a href="/tags/software/" style="font-size: 15px; color: #1e90ff">software</a> <a href="/tags/mysql/" style="font-size: 19.29px; color: #3194e4">mysql</a> <a href="/tags/limit/" style="font-size: 15px; color: #1e90ff">limit</a> <a href="/tags/blog/" style="font-size: 21.43px; color: #3a96d6">blog</a> <a href="/tags/php/" style="font-size: 27.86px; color: #569cae">php</a> <a href="/tags/target/" style="font-size: 15px; color: #1e90ff">target</a> <a href="/tags/reference/" style="font-size: 15px; color: #1e90ff">reference</a> <a href="/tags/php-fpm/" style="font-size: 15px; color: #1e90ff">php-fpm</a> <a href="/tags/apache/" style="font-size: 15px; color: #1e90ff">apache</a> <a href="/tags/regex/" style="font-size: 15px; color: #1e90ff">regex</a> <a href="/tags/redis/" style="font-size: 15px; color: #1e90ff">redis</a> <a href="/tags/dropbox/" style="font-size: 15px; color: #1e90ff">dropbox</a> <a href="/tags/jquery/" style="font-size: 21.43px; color: #3a96d6">jquery</a> <a href="/tags/iframe/" style="font-size: 15px; color: #1e90ff">iframe</a> <a href="/tags/closure/" style="font-size: 15px; color: #1e90ff">closure</a> <a href="/tags/jquery-timepicker-addon/" style="font-size: 15px; color: #1e90ff">jquery-timepicker-addon</a> <a href="/tags/notes/" style="font-size: 23.57px; color: #4398c9">notes</a> <a href="/tags/pcntl/" style="font-size: 15px; color: #1e90ff">pcntl</a> <a href="/tags/signal/" style="font-size: 15px; color: #1e90ff">signal</a> <a href="/tags/CI/" style="font-size: 15px; color: #1e90ff">CI</a> <a href="/tags/xdebug/" style="font-size: 15px; color: #1e90ff">xdebug</a>
+      <a href="/tags/phpdoc/" style="font-size: 15px; color: #1e90ff">phpdoc</a> <a href="/tags/journal/" style="font-size: 16.88px; color: #2692f3">journal</a> <a href="/tags/html5/" style="font-size: 16.88px; color: #2692f3">html5</a> <a href="/tags/js/" style="font-size: 30px; color: #5f9ea0">js</a> <a href="/tags/drag/" style="font-size: 16.88px; color: #2692f3">drag</a> <a href="/tags/chrome/" style="font-size: 15px; color: #1e90ff">chrome</a> <a href="/tags/javascript-program-solution/" style="font-size: 18.75px; color: #2e94e7">javascript-program-solution</a> <a href="/tags/maintainable-javascript/" style="font-size: 15px; color: #1e90ff">maintainable-javascript</a> <a href="/tags/random/" style="font-size: 15px; color: #1e90ff">random</a> <a href="/tags/mac/" style="font-size: 18.75px; color: #2e94e7">mac</a> <a href="/tags/vim/" style="font-size: 15px; color: #1e90ff">vim</a> <a href="/tags/shadowsocks/" style="font-size: 15px; color: #1e90ff">shadowsocks</a> <a href="/tags/tool/" style="font-size: 15px; color: #1e90ff">tool</a> <a href="/tags/git/" style="font-size: 15px; color: #1e90ff">git</a> <a href="/tags/linux/" style="font-size: 26.25px; color: #4f9bb8">linux</a> <a href="/tags/software/" style="font-size: 15px; color: #1e90ff">software</a> <a href="/tags/mysql/" style="font-size: 18.75px; color: #2e94e7">mysql</a> <a href="/tags/limit/" style="font-size: 15px; color: #1e90ff">limit</a> <a href="/tags/php/" style="font-size: 28.13px; color: #579cac">php</a> <a href="/tags/function/" style="font-size: 15px; color: #1e90ff">function</a> <a href="/tags/reference/" style="font-size: 15px; color: #1e90ff">reference</a> <a href="/tags/gearman/" style="font-size: 15px; color: #1e90ff">gearman</a> <a href="/tags/target/" style="font-size: 15px; color: #1e90ff">target</a> <a href="/tags/php-fpm/" style="font-size: 15px; color: #1e90ff">php-fpm</a> <a href="/tags/redis/" style="font-size: 15px; color: #1e90ff">redis</a> <a href="/tags/apache/" style="font-size: 15px; color: #1e90ff">apache</a> <a href="/tags/regex/" style="font-size: 15px; color: #1e90ff">regex</a> <a href="/tags/blog/" style="font-size: 20.63px; color: #3695db">blog</a> <a href="/tags/dropbox/" style="font-size: 15px; color: #1e90ff">dropbox</a> <a href="/tags/jquery/" style="font-size: 22.5px; color: #3f97d0">jquery</a> <a href="/tags/iframe/" style="font-size: 15px; color: #1e90ff">iframe</a> <a href="/tags/closure/" style="font-size: 15px; color: #1e90ff">closure</a> <a href="/tags/hexo/" style="font-size: 18.75px; color: #2e94e7">hexo</a> <a href="/tags/gitcafe/" style="font-size: 15px; color: #1e90ff">gitcafe</a> <a href="/tags/ajax/" style="font-size: 15px; color: #1e90ff">ajax</a> <a href="/tags/promise/" style="font-size: 15px; color: #1e90ff">promise</a> <a href="/tags/jquery-timepicker-addon/" style="font-size: 15px; color: #1e90ff">jquery-timepicker-addon</a> <a href="/tags/notes/" style="font-size: 24.38px; color: #4799c4">notes</a> <a href="/tags/CI/" style="font-size: 15px; color: #1e90ff">CI</a> <a href="/tags/pcntl/" style="font-size: 15px; color: #1e90ff">pcntl</a> <a href="/tags/signal/" style="font-size: 15px; color: #1e90ff">signal</a> <a href="/tags/xdebug/" style="font-size: 15px; color: #1e90ff">xdebug</a>
     </div>
   </div>
 
@@ -897,7 +885,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">十月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">二月 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">十二月 2014</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">十月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">二月 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">十二月 2014</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 

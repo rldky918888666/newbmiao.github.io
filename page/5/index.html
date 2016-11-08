@@ -86,6 +86,167 @@
     <div class="outer">
       <section id="main">
   
+    <article id="post-js-function-closure" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/02/28/js-function-closure.html" class="article-date">
+  <time datetime="2015-02-28T15:16:04.000Z" itemprop="datePublished">2015-02-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/web/">web</a>►<a class="article-category-link" href="/categories/web/notes/">notes</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/28/js-function-closure.html">js函数和闭包</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><h3 id="函数作用域"><a href="#函数作用域" class="headerlink" title="函数作用域"></a>函数作用域</h3><ul>
+<li>在函数中，无论变量、函数声明先后，都会在调用时优先选择<h3 id="块级作用域"><a href="#块级作用域" class="headerlink" title="块级作用域"></a>块级作用域</h3></li>
+<li><p>js中不存在块级作用域，局部变量作用域并不会局限于块级</p>
+<pre><code>{
+    for(var i=0;i&lt;10;i++){
+        //...    
+    }
+    //这里i值为10
+}
+</code></pre></li>
+<li>但let声明的变量可实现块级作用域</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/2015/02/28/js-function-closure.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    
+    <footer class="article-footer">
+      
+        <a data-url="http://blog.newbmiao.com/2015/02/28/js-function-closure.html" data-id="civ9f7vbd000hsn31rt147jmv" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="http://blog.newbmiao.com/2015/02/28/js-function-closure.html#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript-program-solution/">javascript-program-solution</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+
+      
+     
+     <span style="color:#999">
+&nbsp; | &nbsp;最近更新 ：<time datetime="2016-07-07T13:09:18.000Z" itemprop="dateModify">2016-07-07</time>
+</span>
+
+     
+<!-- 无觅 -->
+<script type="text/javascript" id="wumiiRelatedItems"></script>
+
+    </footer>
+    
+  </div>
+</article>
+
+
+
+
+  
+    <article id="post-regex-notes" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/02/28/regex-notes.html" class="article-date">
+  <time datetime="2015-02-28T11:40:00.000Z" itemprop="datePublished">2015-02-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/php/">php</a>►<a class="article-category-link" href="/categories/php/regex/">regex</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/28/regex-notes.html">正则速查</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><ul>
+<li><p>元字符</p>
+<ul>
+<li><code>.        [匹配除换行符以外的任意字符]</code></li>
+<li><code>\w    [匹配字母数字下划线或汉字]</code></li>
+<li><code>\s    [匹配任意空白符]</code></li>
+<li><code>\b    [匹配单词的开始或结束]</code></li>
+<li><code>*        [匹配0-n次连续出现的字符]</code></li>
+<li><code>+        [匹配1-n次连续出现的字符]</code></li>
+<li><code>?        [匹配0-1次出现的字符]</code></li>
+<li><code>^        [匹配相反的字符]</code></li>
+</ul>
+<hr>
+<pre><code>example：非（提取a标签内容）
+        $reg=&apos;#&lt;a[^&gt;]*&gt;([^&lt;&gt;]*)&lt;\/a&gt;#&apos;;
+        $str=&quot;&lt;a href=&apos;ssss&apos;&gt;some&lt;/a&gt;other&lt;a href=&apos;ddd&apos;&gt;some&lt;/a&gt;&quot;;
+        $res=preg_match_all($reg,$str,$m);
+</code></pre></li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/2015/02/28/regex-notes.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    
+    <footer class="article-footer">
+      
+        <a data-url="http://blog.newbmiao.com/2015/02/28/regex-notes.html" data-id="civ9f7ve00021sn31be3f6k06" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="http://blog.newbmiao.com/2015/02/28/regex-notes.html#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/regex/">regex</a></li></ul>
+
+      
+     
+     <span style="color:#999">
+&nbsp; | &nbsp;最近更新 ：<time datetime="2016-07-07T13:09:22.000Z" itemprop="dateModify">2016-07-07</time>
+</span>
+
+     
+<!-- 无觅 -->
+<script type="text/javascript" id="wumiiRelatedItems"></script>
+
+    </footer>
+    
+  </div>
+</article>
+
+
+
+
+  
     <article id="post-random-element-of-array-js" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/02/28/random-element-of-array-js.html" class="article-date">
@@ -170,7 +331,7 @@ randomSort(arr);
     
     <footer class="article-footer">
       
-        <a data-url="http://blog.newbmiao.com/2015/02/28/random-element-of-array-js.html" data-id="cissco68r000uo631nam3iseg" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="http://blog.newbmiao.com/2015/02/28/random-element-of-array-js.html" data-id="civ9f7vc4000tsn31x1ck9pbm" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
@@ -258,7 +419,7 @@ randomSort(arr);
     
     <footer class="article-footer">
       
-        <a data-url="http://blog.newbmiao.com/2015/02/22/html5-drag-api2-chrome-drag-to-downloa.html" data-id="cissco68b000ho6319qog6a15" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="http://blog.newbmiao.com/2015/02/22/html5-drag-api2-chrome-drag-to-downloa.html" data-id="civ9f7vb6000esn31uu8pofyw" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
@@ -333,7 +494,7 @@ randomSort(arr);
     
     <footer class="article-footer">
       
-        <a data-url="http://blog.newbmiao.com/2015/02/22/html5-drag-api.html" data-id="cissco68h000lo631sl34we7q" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="http://blog.newbmiao.com/2015/02/22/html5-drag-api.html" data-id="civ9f7vb5000csn312rhdwmwb" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
@@ -422,7 +583,7 @@ Full (or not specified) default &gt;&gt;Server: Apache/2.0.55 (Debian) php/5.1.2
     
     <footer class="article-footer">
       
-        <a data-url="http://blog.newbmiao.com/2015/02/13/hide-lamp-server-info.html" data-id="cissco69w0024o631myhcs1be" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="http://blog.newbmiao.com/2015/02/13/hide-lamp-server-info.html" data-id="civ9f7vdw001ysn31tci6yb7f" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
@@ -537,7 +698,7 @@ if (!empty($_POST)) {
     
     <footer class="article-footer">
       
-        <a data-url="http://blog.newbmiao.com/2015/01/11/php-jump-out-of-the-frameset.html" data-id="cissco69k001to631z19clst3" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="http://blog.newbmiao.com/2015/01/11/php-jump-out-of-the-frameset.html" data-id="civ9f7vdh001qsn31nu4h720i" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
@@ -607,7 +768,7 @@ if (!empty($_POST)) {
     
     <footer class="article-footer">
       
-        <a data-url="http://blog.newbmiao.com/2015/01/08/ci-load-class-source-code-analysis.html" data-id="cissco6cy007yo631uvkpe5vm" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="http://blog.newbmiao.com/2015/01/08/ci-load-class-source-code-analysis.html" data-id="civ9f7vio0089sn3138ypqgm8" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
@@ -694,7 +855,7 @@ if (!empty($_POST)) {
     
     <footer class="article-footer">
       
-        <a data-url="http://blog.newbmiao.com/2014/12/28/build-your-git-server-on-linux.html" data-id="cissco68v000zo6310f2ql5so" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="http://blog.newbmiao.com/2014/12/28/build-your-git-server-on-linux.html" data-id="civ9f7vci0013sn31lspbsf0l" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
@@ -739,6 +900,14 @@ if (!empty($_POST)) {
       <ul>
         
           <li>
+            <a href="/2016/11/08/some-misuse-of-php.html">php踩坑记录</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/08/jquery-multi-async-manage-note.html">jquery多异步管理使用记录</a>
+          </li>
+        
+          <li>
             <a href="/2016/09/07/how-to-dynamic-show-jquery-timepicker-addon.html">jquery-timepicker-addon动态显示使用</a>
           </li>
         
@@ -750,14 +919,6 @@ if (!empty($_POST)) {
             <a href="/2016/03/15/mac-tool.html">mac工具集</a>
           </li>
         
-          <li>
-            <a href="/2015/12/04/xdebug-remote-debug-with-phpstorm-and-vagrant.html">基于phpstorm和vagrant环境的xdebug远程调试</a>
-          </li>
-        
-          <li>
-            <a href="/2015/11/28/shadowsocks-polipo-vps.html">让影梭和搬瓦工帮你科学上网</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -767,7 +928,7 @@ if (!empty($_POST)) {
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/dropbox/">dropbox</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/blog/hexo/">hexo</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/gearman/">gearman</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/html5/">html5</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/journal/">journal</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/js/">js</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js/jquery/">jquery</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/linux/notes/">notes</a><span class="category-list-count">7</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/">mac</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/mac/shadowsocks/">shadowsocks</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/tool/">tool</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/">mysql</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/optimize/">optimize</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/">php</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/php/CI/">CI</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/regex/">regex</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/signal/">signal</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/tool/">tool</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/redis/">redis</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/">web</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/web/notes/">notes</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/practice/">practice</a><span class="category-list-count">3</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/dropbox/">dropbox</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/blog/hexo/">hexo</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/gearman/">gearman</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/html5/">html5</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/journal/">journal</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/js/">js</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js/jquery/">jquery</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/linux/notes/">notes</a><span class="category-list-count">7</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/">mac</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/mac/shadowsocks/">shadowsocks</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/tool/">tool</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/">mysql</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/optimize/">optimize</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/">php</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/php/CI/">CI</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/regex/">regex</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/signal/">signal</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/tool/">tool</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/redis/">redis</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/">web</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/web/notes/">notes</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/practice/">practice</a><span class="category-list-count">3</span></li></ul></li></ul>
     </div>
   </div>
 
@@ -776,7 +937,7 @@ if (!empty($_POST)) {
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/phpdoc/" style="font-size: 15px; color: #1e90ff">phpdoc</a> <a href="/tags/hexo/" style="font-size: 19.29px; color: #3194e4">hexo</a> <a href="/tags/gitcafe/" style="font-size: 15px; color: #1e90ff">gitcafe</a> <a href="/tags/journal/" style="font-size: 17.14px; color: #2792f1">journal</a> <a href="/tags/gearman/" style="font-size: 15px; color: #1e90ff">gearman</a> <a href="/tags/html5/" style="font-size: 17.14px; color: #2792f1">html5</a> <a href="/tags/drag/" style="font-size: 17.14px; color: #2792f1">drag</a> <a href="/tags/chrome/" style="font-size: 15px; color: #1e90ff">chrome</a> <a href="/tags/js/" style="font-size: 30px; color: #5f9ea0">js</a> <a href="/tags/javascript-program-solution/" style="font-size: 19.29px; color: #3194e4">javascript-program-solution</a> <a href="/tags/random/" style="font-size: 15px; color: #1e90ff">random</a> <a href="/tags/maintainable-javascript/" style="font-size: 15px; color: #1e90ff">maintainable-javascript</a> <a href="/tags/git/" style="font-size: 15px; color: #1e90ff">git</a> <a href="/tags/linux/" style="font-size: 25.71px; color: #4c9abb">linux</a> <a href="/tags/mac/" style="font-size: 19.29px; color: #3194e4">mac</a> <a href="/tags/vim/" style="font-size: 15px; color: #1e90ff">vim</a> <a href="/tags/shadowsocks/" style="font-size: 15px; color: #1e90ff">shadowsocks</a> <a href="/tags/tool/" style="font-size: 15px; color: #1e90ff">tool</a> <a href="/tags/software/" style="font-size: 15px; color: #1e90ff">software</a> <a href="/tags/mysql/" style="font-size: 19.29px; color: #3194e4">mysql</a> <a href="/tags/limit/" style="font-size: 15px; color: #1e90ff">limit</a> <a href="/tags/blog/" style="font-size: 21.43px; color: #3a96d6">blog</a> <a href="/tags/php/" style="font-size: 27.86px; color: #569cae">php</a> <a href="/tags/target/" style="font-size: 15px; color: #1e90ff">target</a> <a href="/tags/reference/" style="font-size: 15px; color: #1e90ff">reference</a> <a href="/tags/php-fpm/" style="font-size: 15px; color: #1e90ff">php-fpm</a> <a href="/tags/apache/" style="font-size: 15px; color: #1e90ff">apache</a> <a href="/tags/regex/" style="font-size: 15px; color: #1e90ff">regex</a> <a href="/tags/redis/" style="font-size: 15px; color: #1e90ff">redis</a> <a href="/tags/dropbox/" style="font-size: 15px; color: #1e90ff">dropbox</a> <a href="/tags/jquery/" style="font-size: 21.43px; color: #3a96d6">jquery</a> <a href="/tags/iframe/" style="font-size: 15px; color: #1e90ff">iframe</a> <a href="/tags/closure/" style="font-size: 15px; color: #1e90ff">closure</a> <a href="/tags/jquery-timepicker-addon/" style="font-size: 15px; color: #1e90ff">jquery-timepicker-addon</a> <a href="/tags/notes/" style="font-size: 23.57px; color: #4398c9">notes</a> <a href="/tags/pcntl/" style="font-size: 15px; color: #1e90ff">pcntl</a> <a href="/tags/signal/" style="font-size: 15px; color: #1e90ff">signal</a> <a href="/tags/CI/" style="font-size: 15px; color: #1e90ff">CI</a> <a href="/tags/xdebug/" style="font-size: 15px; color: #1e90ff">xdebug</a>
+      <a href="/tags/phpdoc/" style="font-size: 15px; color: #1e90ff">phpdoc</a> <a href="/tags/journal/" style="font-size: 16.88px; color: #2692f3">journal</a> <a href="/tags/html5/" style="font-size: 16.88px; color: #2692f3">html5</a> <a href="/tags/js/" style="font-size: 30px; color: #5f9ea0">js</a> <a href="/tags/drag/" style="font-size: 16.88px; color: #2692f3">drag</a> <a href="/tags/chrome/" style="font-size: 15px; color: #1e90ff">chrome</a> <a href="/tags/javascript-program-solution/" style="font-size: 18.75px; color: #2e94e7">javascript-program-solution</a> <a href="/tags/maintainable-javascript/" style="font-size: 15px; color: #1e90ff">maintainable-javascript</a> <a href="/tags/random/" style="font-size: 15px; color: #1e90ff">random</a> <a href="/tags/mac/" style="font-size: 18.75px; color: #2e94e7">mac</a> <a href="/tags/vim/" style="font-size: 15px; color: #1e90ff">vim</a> <a href="/tags/shadowsocks/" style="font-size: 15px; color: #1e90ff">shadowsocks</a> <a href="/tags/tool/" style="font-size: 15px; color: #1e90ff">tool</a> <a href="/tags/git/" style="font-size: 15px; color: #1e90ff">git</a> <a href="/tags/linux/" style="font-size: 26.25px; color: #4f9bb8">linux</a> <a href="/tags/software/" style="font-size: 15px; color: #1e90ff">software</a> <a href="/tags/mysql/" style="font-size: 18.75px; color: #2e94e7">mysql</a> <a href="/tags/limit/" style="font-size: 15px; color: #1e90ff">limit</a> <a href="/tags/php/" style="font-size: 28.13px; color: #579cac">php</a> <a href="/tags/function/" style="font-size: 15px; color: #1e90ff">function</a> <a href="/tags/reference/" style="font-size: 15px; color: #1e90ff">reference</a> <a href="/tags/gearman/" style="font-size: 15px; color: #1e90ff">gearman</a> <a href="/tags/target/" style="font-size: 15px; color: #1e90ff">target</a> <a href="/tags/php-fpm/" style="font-size: 15px; color: #1e90ff">php-fpm</a> <a href="/tags/redis/" style="font-size: 15px; color: #1e90ff">redis</a> <a href="/tags/apache/" style="font-size: 15px; color: #1e90ff">apache</a> <a href="/tags/regex/" style="font-size: 15px; color: #1e90ff">regex</a> <a href="/tags/blog/" style="font-size: 20.63px; color: #3695db">blog</a> <a href="/tags/dropbox/" style="font-size: 15px; color: #1e90ff">dropbox</a> <a href="/tags/jquery/" style="font-size: 22.5px; color: #3f97d0">jquery</a> <a href="/tags/iframe/" style="font-size: 15px; color: #1e90ff">iframe</a> <a href="/tags/closure/" style="font-size: 15px; color: #1e90ff">closure</a> <a href="/tags/hexo/" style="font-size: 18.75px; color: #2e94e7">hexo</a> <a href="/tags/gitcafe/" style="font-size: 15px; color: #1e90ff">gitcafe</a> <a href="/tags/ajax/" style="font-size: 15px; color: #1e90ff">ajax</a> <a href="/tags/promise/" style="font-size: 15px; color: #1e90ff">promise</a> <a href="/tags/jquery-timepicker-addon/" style="font-size: 15px; color: #1e90ff">jquery-timepicker-addon</a> <a href="/tags/notes/" style="font-size: 24.38px; color: #4799c4">notes</a> <a href="/tags/CI/" style="font-size: 15px; color: #1e90ff">CI</a> <a href="/tags/pcntl/" style="font-size: 15px; color: #1e90ff">pcntl</a> <a href="/tags/signal/" style="font-size: 15px; color: #1e90ff">signal</a> <a href="/tags/xdebug/" style="font-size: 15px; color: #1e90ff">xdebug</a>
     </div>
   </div>
 
@@ -786,7 +947,7 @@ if (!empty($_POST)) {
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">十月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">二月 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">十二月 2014</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">十月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">二月 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">十二月 2014</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
