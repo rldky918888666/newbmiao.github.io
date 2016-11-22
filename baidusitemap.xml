@@ -5,30 +5,8 @@
     
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/01/use-fastcgi_finish_request-speed-up-your-page.html</loc>
-    <lastmod>2016-11-08T11:40:56.000Z</lastmod>
-    <data>
-        <display>
-        <title>利用fastcgi_finish_request加快页面响应</title>
-        <pubTime>2015-09-01T05:41:46.000Z</pubTime>
-        
-        <tag>php</tag>
-         
-        <tag>php-fpm</tag>
-         
-         
-           
-             
-              <breadCrumb title="php" url="http://blog.newbmiao.com/categories/php/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://blog.newbmiao.com/2016/03/15/mac-tool.html</loc>
-    <lastmod>2016-11-08T11:40:25.000Z</lastmod>
+    <lastmod>2016-11-22T10:28:39.000Z</lastmod>
     <data>
         <display>
         <title>mac工具集</title>
@@ -45,6 +23,28 @@
           
              
               <breadCrumb title="tool" url="http://blog.newbmiao.com/categories/mac/tool/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/09/01/use-fastcgi_finish_request-speed-up-your-page.html</loc>
+    <lastmod>2016-11-08T11:40:56.000Z</lastmod>
+    <data>
+        <display>
+        <title>利用fastcgi_finish_request加快页面响应</title>
+        <pubTime>2015-09-01T05:41:46.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>php-fpm</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.newbmiao.com/categories/php/"/>
           
         </display>
     </data>
