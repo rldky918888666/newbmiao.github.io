@@ -3,6 +3,28 @@
 
 
     
+  <url>
+    <loc>http://blog.newbmiao.com/2016/11/08/some-misuse-of-php.html</loc>
+    <lastmod>2016-12-27T07:58:23.000Z</lastmod>
+    <data>
+        <display>
+        <title>php踩坑记录</title>
+        <pubTime>2016-11-08T11:33:22.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>function</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.newbmiao.com/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://blog.newbmiao.com/2016/03/15/mac-tool.html</loc>
@@ -74,28 +96,6 @@
           
              
               <breadCrumb title="jquery" url="http://blog.newbmiao.com/categories/js/jquery/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.newbmiao.com/2016/11/08/some-misuse-of-php.html</loc>
-    <lastmod>2016-11-08T11:38:35.000Z</lastmod>
-    <data>
-        <display>
-        <title>php踩坑记录</title>
-        <pubTime>2016-11-08T11:33:22.000Z</pubTime>
-        
-        <tag>php</tag>
-         
-        <tag>function</tag>
-         
-         
-           
-             
-              <breadCrumb title="php" url="http://blog.newbmiao.com/categories/php/"/>
           
         </display>
     </data>

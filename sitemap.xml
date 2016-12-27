@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.newbmiao.com/2016/11/08/some-misuse-of-php.html</loc>
+    
+    <lastmod>2016-12-27T07:58:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.newbmiao.com/add-ons/index.html</loc>
     
     <lastmod>2016-11-22T10:29:32.000Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://blog.newbmiao.com/2016/11/08/jquery-multi-async-manage-note.html</loc>
     
     <lastmod>2016-11-08T11:38:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.newbmiao.com/2016/11/08/some-misuse-of-php.html</loc>
-    
-    <lastmod>2016-11-08T11:38:35.000Z</lastmod>
     
   </url>
   

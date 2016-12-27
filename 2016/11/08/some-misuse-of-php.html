@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://blog.newbmiao.com/2016/11/08/some-misuse-of-php.html">
 <meta property="og:site_name" content="菜鸟Miao">
 <meta property="og:description" content="php踩坑记录">
-<meta property="og:updated_time" content="2016-11-08T11:38:35.000Z">
+<meta property="og:updated_time" content="2016-12-27T07:58:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="php踩坑记录">
 <meta name="twitter:description" content="php踩坑记录">
@@ -114,12 +114,17 @@
 	
         <div id="toc" class="toc-article">
          <h3>文章目录</h3>
-         <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#函数"><span class="toc-number">1.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#mb-strlen-不生效"><span class="toc-number">1.1.</span> <span class="toc-text">mb_strlen 不生效</span></a></li></ol></li></ol>
+         <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#函数"><span class="toc-number">1.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#mb-strlen-不生效"><span class="toc-number">1.1.</span> <span class="toc-text">mb_strlen 不生效</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解决方案"><span class="toc-number">2.</span> <span class="toc-text">解决方案</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#session文件锁"><span class="toc-number">2.1.</span> <span class="toc-text">session文件锁</span></a></li></ol></li></ol>
         </div>
         
         <h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="mb-strlen-不生效"><a href="#mb-strlen-不生效" class="headerlink" title="mb_strlen 不生效"></a>mb_strlen 不生效</h2><p>有一天发现本地<code>mb_strlen(&#39;哈&#39;)</code>本地为1,服务器为3,猜测应该是配置问题<br>看文档关键在于<code>mb_internal_encoding</code><br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">mixed mb_strlen ( <span class="built_in">string</span> $str [, <span class="built_in">string</span> $encoding = mb_internal_encoding() ] )</div><div class="line"></div><div class="line">继续搜 mbstring.internal_encoding (定义内部字符的默认编码)</div><div class="line"></div><div class="line">Warning: This feature has been DEPRECATED <span class="keyword">as</span> <span class="keyword">of</span> PHP <span class="number">5.6</span><span class="number">.0</span>. Relying <span class="keyword">on</span> this feature <span class="keyword">is</span> highly discouraged.。</div><div class="line"></div><div class="line">PHP <span class="number">5.6</span> 及更新版的用户应该将此选项留空，并设置 default_charset 作为代替。</div><div class="line"></div><div class="line">好吧，服务器 default_charset 没设置，然后默认用 ISO<span class="number">-8859</span><span class="number">-1</span></div></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <p>解决方案：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//入口设置，有权限的话也可以 ini_<span class="built_in">set</span>(<span class="string">'default_charset'</span>,<span class="string">'UTF-8'</span>);</div><div class="line">mb_internal_encoding(<span class="string">"UTF-8"</span>);</div></pre></td></tr></table></figure></p>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><h2 id="session文件锁"><a href="#session文件锁" class="headerlink" title="session文件锁"></a>session文件锁</h2><p>并发下，php是不推荐用文件存储的方式管理session的，因为session管理有 【读写锁】！！！附干活两篇</p>
+<ul>
+<li><a href="https://log.zvz.im/2016/02/27/PHP-session/" target="_blank" rel="external">PHP session锁：如何避免session阻塞PHP请求</a></li>
+<li><a href="https://laravel-china.org/topics/1093" target="_blank" rel="external">关于 PHP 中 Session 的几个问题</a></li>
+</ul>
 
 	
 	<blockquote style="padding:10px;background: #efe none repeat scroll 0% 0%;border-left-color:green">
@@ -149,7 +154,7 @@
        
      
      <span style="color:#999">
-&nbsp; | &nbsp;最近更新 ：<time datetime="2016-11-08T11:38:35.000Z" itemprop="dateModify">2016-11-08</time>
+&nbsp; | &nbsp;最近更新 ：<time datetime="2016-12-27T07:58:23.000Z" itemprop="dateModify">2016-12-27</time>
 </span>
 
      
