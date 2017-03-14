@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.newbmiao.com/add-ons/index.html</loc>
+    
+    <lastmod>2017-03-14T07:50:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.newbmiao.com/2017/03/14/laradock-in-action.html</loc>
     
     <lastmod>2017-03-14T07:35:05.000Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>http://blog.newbmiao.com/2015/10/25/jQuery-code-record.html</loc>
     
     <lastmod>2017-01-19T08:13:09.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.newbmiao.com/add-ons/index.html</loc>
-    
-    <lastmod>2016-11-22T10:29:32.000Z</lastmod>
     
   </url>
   
