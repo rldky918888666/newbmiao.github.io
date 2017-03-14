@@ -12,51 +12,33 @@
   <meta name="keywords" itemprop="keywords" content="newbmiao,php开发,web开发,javascript,jquery,linux,hexo,编程,typecho迁移" />
   
   
-  <meta name="description" content="laradock
+  <meta name="description" content="此文是我用marp展示ppt拿过来的，可能看着不太明白，抱歉，我太懒~
+
+laradock
 DIY(do it yourself)
 DRY(dont repeat youself)
-人生苦短，我用docker
-
-
-
-特点
-易组合：在PHP版本切换、数据库引擎、软件组合
-分而治之：一个软件，一个容器，比如：PHP-FPM, NGINX, PHP-CLI…
-可信镜像：所有镜像继承自一个官方基础镜像（Trusted base Images）
-方便配置，且使用最新Docker">
+人生苦短，我用docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="laradock开发实践">
 <meta property="og:url" content="http://blog.newbmiao.com/2017/03/14/laradock-in-action.html">
 <meta property="og:site_name" content="菜鸟Miao">
-<meta property="og:description" content="laradock
+<meta property="og:description" content="此文是我用marp展示ppt拿过来的，可能看着不太明白，抱歉，我太懒~
+
+laradock
 DIY(do it yourself)
 DRY(dont repeat youself)
-人生苦短，我用docker
-
-
-
-特点
-易组合：在PHP版本切换、数据库引擎、软件组合
-分而治之：一个软件，一个容器，比如：PHP-FPM, NGINX, PHP-CLI…
-可信镜像：所有镜像继承自一个官方基础镜像（Trusted base Images）
-方便配置，且使用最新Docker">
+人生苦短，我用docker">
 <meta property="og:image" content="http://wiki.jikexueyuan.com/project/docker-technology-and-combat/images/virtualization.png">
 <meta property="og:image" content="http://wiki.jikexueyuan.com/project/docker-technology-and-combat/images/docker.png">
-<meta property="og:updated_time" content="2017-03-14T07:27:54.000Z">
+<meta property="og:updated_time" content="2017-03-14T07:33:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="laradock开发实践">
-<meta name="twitter:description" content="laradock
+<meta name="twitter:description" content="此文是我用marp展示ppt拿过来的，可能看着不太明白，抱歉，我太懒~
+
+laradock
 DIY(do it yourself)
 DRY(dont repeat youself)
-人生苦短，我用docker
-
-
-
-特点
-易组合：在PHP版本切换、数据库引擎、软件组合
-分而治之：一个软件，一个容器，比如：PHP-FPM, NGINX, PHP-CLI…
-可信镜像：所有镜像继承自一个官方基础镜像（Trusted base Images）
-方便配置，且使用最新Docker">
+人生苦短，我用docker">
 <meta name="twitter:image" content="http://wiki.jikexueyuan.com/project/docker-technology-and-combat/images/virtualization.png">
   
     <link rel="alternative" href="/atom.xml" title="菜鸟Miao" type="application/atom+xml">
@@ -150,17 +132,19 @@ DRY(dont repeat youself)
 	
         <div id="toc" class="toc-article">
          <h3>文章目录</h3>
-         <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#laradock"><span class="toc-number">1.</span> <span class="toc-text">laradock</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#DIY-do-it-yourself"><span class="toc-number">1.0.1.</span> <span class="toc-text">DIY(do it yourself)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DRY-dont-repeat-youself"><span class="toc-number">1.0.2.</span> <span class="toc-text">DRY(dont repeat youself)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#人生苦短，我用docker"><span class="toc-number">1.0.3.</span> <span class="toc-text">人生苦短，我用docker</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#特点"><span class="toc-number">1.1.</span> <span class="toc-text">特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#docker是什么"><span class="toc-number">1.2.</span> <span class="toc-text">docker是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对比传统虚拟机总结"><span class="toc-number">1.3.</span> <span class="toc-text">对比传统虚拟机总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三个基本概念"><span class="toc-number">1.4.</span> <span class="toc-text">三个基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用命令"><span class="toc-number">1.5.</span> <span class="toc-text">常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#laradock的结构"><span class="toc-number">1.6.</span> <span class="toc-text">laradock的结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#彩蛋"><span class="toc-number">1.7.</span> <span class="toc-text">彩蛋</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#快捷操作"><span class="toc-number">1.7.1.</span> <span class="toc-text">快捷操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地dns泛解析"><span class="toc-number">1.7.2.</span> <span class="toc-text">本地dns泛解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#xdebug监听不变的host-ip"><span class="toc-number">1.7.3.</span> <span class="toc-text">xdebug监听不变的host ip</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装操作"><span class="toc-number">1.7.3.1.</span> <span class="toc-text">安装操作</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#End"><span class="toc-number">1.8.</span> <span class="toc-text">End</span></a></li></ol></li></ol>
+         <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#laradock"><span class="toc-number">1.</span> <span class="toc-text">laradock</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#DIY-do-it-yourself"><span class="toc-number">1.0.1.</span> <span class="toc-text">DIY(do it yourself)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DRY-dont-repeat-youself"><span class="toc-number">1.0.2.</span> <span class="toc-text">DRY(dont repeat youself)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#人生苦短，我用docker"><span class="toc-number">1.0.3.</span> <span class="toc-text">人生苦短，我用docker</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#特点"><span class="toc-number">1.1.</span> <span class="toc-text">特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#docker是什么"><span class="toc-number">1.2.</span> <span class="toc-text">docker是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对比传统虚拟机总结"><span class="toc-number">1.3.</span> <span class="toc-text">对比传统虚拟机总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三个基本概念"><span class="toc-number">1.4.</span> <span class="toc-text">三个基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用命令"><span class="toc-number">1.5.</span> <span class="toc-text">常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#laradock的结构"><span class="toc-number">1.6.</span> <span class="toc-text">laradock的结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#彩蛋"><span class="toc-number">1.7.</span> <span class="toc-text">彩蛋</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#快捷操作"><span class="toc-number">1.7.1.</span> <span class="toc-text">快捷操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#xdebug监听不变的host-ip"><span class="toc-number">1.7.2.</span> <span class="toc-text">xdebug监听不变的host ip</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地dns泛解析"><span class="toc-number">1.7.3.</span> <span class="toc-text">本地dns泛解析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装操作"><span class="toc-number">1.7.3.1.</span> <span class="toc-text">安装操作</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#End"><span class="toc-number">1.8.</span> <span class="toc-text">End</span></a></li></ol></li></ol>
         </div>
         
-        <a id="more"></a>
+        <blockquote>
+<p>此文是我用marp展示ppt拿过来的，可能看着不太明白，抱歉，我太懒~</p>
+</blockquote>
 <h1 id="laradock"><a href="#laradock" class="headerlink" title="laradock"></a>laradock</h1><ul>
 <li><h3 id="DIY-do-it-yourself"><a href="#DIY-do-it-yourself" class="headerlink" title="DIY(do it yourself)"></a>DIY(do it yourself)</h3></li>
 <li><h3 id="DRY-dont-repeat-youself"><a href="#DRY-dont-repeat-youself" class="headerlink" title="DRY(dont repeat youself)"></a>DRY(dont repeat youself)</h3></li>
 <li><h3 id="人生苦短，我用docker"><a href="#人生苦短，我用docker" class="headerlink" title="人生苦短，我用docker"></a>人生苦短，我用docker</h3></li>
 </ul>
 <hr>
-<!-- more -->
+<a id="more"></a>
 <h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
 <li>易组合：在PHP版本切换、数据库引擎、软件组合</li>
 <li>分而治之：一个软件，一个容器，比如：PHP-FPM, NGINX, PHP-CLI…</li>
@@ -230,11 +214,11 @@ DRY(dont repeat youself)
 <h2 id="彩蛋"><a href="#彩蛋" class="headerlink" title="彩蛋"></a>彩蛋</h2><h3 id="快捷操作"><a href="#快捷操作" class="headerlink" title="快捷操作"></a>快捷操作</h3><blockquote>
 <p><a href="https://raw.githubusercontent.com/yeasy/docker_practice/master/_local/.bashrc_docker" target="_blank" rel="external">docker快捷命令：.bashrc_docker</a></p>
 </blockquote>
-<h3 id="本地dns泛解析"><a href="#本地dns泛解析" class="headerlink" title="本地dns泛解析"></a>本地dns泛解析</h3><blockquote>
-<p><a href="https://blog.netsh.org/posts/mac-os-x-dnsmasq_1762.netsh.html" target="_blank" rel="external">hosts泛解析</a><br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># 这里ams不是laravel框架，我做了过滤</div><div class="line">server_name ~^(?&lt;<span class="keyword">project</span>&gt;\b(?!ams\b).+)\.laradock\.dev$;</div><div class="line">root <span class="regexp">/var/</span>www<span class="regexp">/$project/</span><span class="keyword">public</span>;</div></pre></td></tr></table></figure></p>
-</blockquote>
 <h3 id="xdebug监听不变的host-ip"><a href="#xdebug监听不变的host-ip" class="headerlink" title="xdebug监听不变的host ip"></a>xdebug监听不变的host ip</h3><blockquote>
 <p><a href="http://stackoverflow.com/questions/22944631/how-to-get-the-ip-address-of-the-docker-host-from-inside-a-docker-container/39026136#39026136" target="_blank" rel="external">set host ip never changed</a></p>
+</blockquote>
+<h3 id="本地dns泛解析"><a href="#本地dns泛解析" class="headerlink" title="本地dns泛解析"></a>本地dns泛解析</h3><blockquote>
+<p><a href="https://blog.netsh.org/posts/mac-os-x-dnsmasq_1762.netsh.html" target="_blank" rel="external">hosts泛解析</a><br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># 这里ams不是laravel框架，我做了过滤</div><div class="line">server_name ~^(?&lt;<span class="keyword">project</span>&gt;\b(?!ams\b).+)\.laradock\.dev$;</div><div class="line">root <span class="regexp">/var/</span>www<span class="regexp">/$project/</span><span class="keyword">public</span>;</div></pre></td></tr></table></figure></p>
 </blockquote>
 <hr>
 <h4 id="安装操作"><a href="#安装操作" class="headerlink" title="安装操作"></a>安装操作</h4><figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># 安装 dnsmasq</span></div><div class="line">brew install dnsmasq</div><div class="line">sudo cp -v $(brew --prefix dnsmasq)/homebrew.mxcl.dnsmasq.plist /<span class="keyword">Library</span>/LaunchDaemons</div><div class="line"></div><div class="line"><span class="meta"># 添加本地dns解析服务器</span></div><div class="line">[ -d /etc/resolver ] || sudo mkdir -v /etc/resolver</div><div class="line">sudo bash -c 'echo <span class="string">"nameserver 127.0.0.1"</span> &gt; /etc/resolver/dev'</div><div class="line"></div><div class="line"><span class="meta"># 配置泛解析 (域名后缀自行指定，这里为 .dev)</span></div><div class="line">sudo mkdir -p $(brew --prefix)/etc/</div><div class="line">cat &gt; $(brew --prefix)/etc/dnsmasq.conf &lt;&lt;-<span class="built_in">EOF</span></div><div class="line">listen-address=<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></div><div class="line">address=/.dev/<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></div><div class="line"><span class="meta"># keep nameserver order of resolv.conf</span></div><div class="line">strict-order</div><div class="line"><span class="built_in">EOF</span></div><div class="line"></div><div class="line"><span class="meta"># 启用dnsmasq</span></div><div class="line">sudo launchctl <span class="keyword">load</span> -w /<span class="keyword">Library</span>/LaunchDaemons/homebrew.mxcl.dnsmasq.plist</div><div class="line"></div><div class="line"><span class="meta"># 若更新dnsmasq后，需重启以应用</span></div><div class="line">sudo launchctl <span class="keyword">stop</span> homebrew.mxcl.dnsmasq</div><div class="line">sudo launchctl start homebrew.mxcl.dnsmasq</div><div class="line">sudo killall -HUP mDNSResponder</div></pre></td></tr></table></figure>
@@ -301,7 +285,7 @@ DRY(dont repeat youself)
        
      
      <span style="color:#999">
-&nbsp; | &nbsp;最近更新 ：<time datetime="2017-03-14T07:27:54.000Z" itemprop="dateModify">2017-03-14</time>
+&nbsp; | &nbsp;最近更新 ：<time datetime="2017-03-14T07:33:40.000Z" itemprop="dateModify">2017-03-14</time>
 </span>
 
      

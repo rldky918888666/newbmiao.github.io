@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.newbmiao.com/"/>
-  <updated>2017-03-14T07:27:54.000Z</updated>
+  <updated>2017-03-14T07:33:40.000Z</updated>
   <id>http://blog.newbmiao.com/</id>
   
   <author>
@@ -20,16 +20,18 @@
     <link href="http://blog.newbmiao.com/2017/03/14/laradock-in-action.html"/>
     <id>http://blog.newbmiao.com/2017/03/14/laradock-in-action.html</id>
     <published>2017-03-14T07:27:27.000Z</published>
-    <updated>2017-03-14T07:27:54.000Z</updated>
+    <updated>2017-03-14T07:33:40.000Z</updated>
     
-    <content type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;此文是我用marp展示ppt拿过来的，可能看着不太明白，抱歉，我太懒~&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h1 id=&quot;laradock&quot;&gt;&lt;a href=&quot;#laradock&quot; class=&quot;headerlink&quot; title=&quot;laradock&quot;&gt;&lt;/a&gt;laradock&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;&lt;h3 id=&quot;DIY-do-it-yourself&quot;&gt;&lt;a href=&quot;#DIY-do-it-yourself&quot; class=&quot;headerlink&quot; title=&quot;DIY(do it yourself)&quot;&gt;&lt;/a&gt;DIY(do it yourself)&lt;/h3&gt;&lt;/li&gt;
 &lt;li&gt;&lt;h3 id=&quot;DRY-dont-repeat-youself&quot;&gt;&lt;a href=&quot;#DRY-dont-repeat-youself&quot; class=&quot;headerlink&quot; title=&quot;DRY(dont repeat youself)&quot;&gt;&lt;/a&gt;DRY(dont repeat youself)&lt;/h3&gt;&lt;/li&gt;
 &lt;li&gt;&lt;h3 id=&quot;人生苦短，我用docker&quot;&gt;&lt;a href=&quot;#人生苦短，我用docker&quot; class=&quot;headerlink&quot; title=&quot;人生苦短，我用docker&quot;&gt;&lt;/a&gt;人生苦短，我用docker&lt;/h3&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;!-- more --&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h2 id=&quot;特点&quot;&gt;&lt;a href=&quot;#特点&quot; class=&quot;headerlink&quot; title=&quot;特点&quot;&gt;&lt;/a&gt;特点&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;易组合：在PHP版本切换、数据库引擎、软件组合&lt;/li&gt;
 &lt;li&gt;分而治之：一个软件，一个容器，比如：PHP-FPM, NGINX, PHP-CLI…&lt;/li&gt;
@@ -99,11 +101,11 @@
 &lt;h2 id=&quot;彩蛋&quot;&gt;&lt;a href=&quot;#彩蛋&quot; class=&quot;headerlink&quot; title=&quot;彩蛋&quot;&gt;&lt;/a&gt;彩蛋&lt;/h2&gt;&lt;h3 id=&quot;快捷操作&quot;&gt;&lt;a href=&quot;#快捷操作&quot; class=&quot;headerlink&quot; title=&quot;快捷操作&quot;&gt;&lt;/a&gt;快捷操作&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https://raw.githubusercontent.com/yeasy/docker_practice/master/_local/.bashrc_docker&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;docker快捷命令：.bashrc_docker&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&quot;本地dns泛解析&quot;&gt;&lt;a href=&quot;#本地dns泛解析&quot; class=&quot;headerlink&quot; title=&quot;本地dns泛解析&quot;&gt;&lt;/a&gt;本地dns泛解析&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://blog.netsh.org/posts/mac-os-x-dnsmasq_1762.netsh.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hosts泛解析&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight gradle&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;# 这里ams不是laravel框架，我做了过滤&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;server_name ~^(?&amp;lt;&lt;span class=&quot;keyword&quot;&gt;project&lt;/span&gt;&amp;gt;\b(?!ams\b).+)\.laradock\.dev$;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;root &lt;span class=&quot;regexp&quot;&gt;/var/&lt;/span&gt;www&lt;span class=&quot;regexp&quot;&gt;/$project/&lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt;;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
 &lt;h3 id=&quot;xdebug监听不变的host-ip&quot;&gt;&lt;a href=&quot;#xdebug监听不变的host-ip&quot; class=&quot;headerlink&quot; title=&quot;xdebug监听不变的host ip&quot;&gt;&lt;/a&gt;xdebug监听不变的host ip&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/22944631/how-to-get-the-ip-address-of-the-docker-host-from-inside-a-docker-container/39026136#39026136&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;set host ip never changed&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;本地dns泛解析&quot;&gt;&lt;a href=&quot;#本地dns泛解析&quot; class=&quot;headerlink&quot; title=&quot;本地dns泛解析&quot;&gt;&lt;/a&gt;本地dns泛解析&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.netsh.org/posts/mac-os-x-dnsmasq_1762.netsh.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hosts泛解析&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight gradle&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;# 这里ams不是laravel框架，我做了过滤&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;server_name ~^(?&amp;lt;&lt;span class=&quot;keyword&quot;&gt;project&lt;/span&gt;&amp;gt;\b(?!ams\b).+)\.laradock\.dev$;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;root &lt;span class=&quot;regexp&quot;&gt;/var/&lt;/span&gt;www&lt;span class=&quot;regexp&quot;&gt;/$project/&lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt;;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h4 id=&quot;安装操作&quot;&gt;&lt;a href=&quot;#安装操作&quot; class=&quot;headerlink&quot; title=&quot;安装操作&quot;&gt;&lt;/a&gt;安装操作&lt;/h4&gt;&lt;figure class=&quot;highlight gauss&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;# 安装 dnsmasq&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;brew install dnsmasq&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo cp -v $(brew --prefix dnsmasq)/homebrew.mxcl.dnsmasq.plist /&lt;span class=&quot;keyword&quot;&gt;Library&lt;/span&gt;/LaunchDaemons&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;# 添加本地dns解析服务器&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;[ -d /etc/resolver ] || sudo mkdir -v /etc/resolver&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo bash -c &#39;echo &lt;span class=&quot;string&quot;&gt;&quot;nameserver 127.0.0.1&quot;&lt;/span&gt; &amp;gt; /etc/resolver/dev&#39;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;# 配置泛解析 (域名后缀自行指定，这里为 .dev)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo mkdir -p $(brew --prefix)/etc/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;cat &amp;gt; $(brew --prefix)/etc/dnsmasq.conf &amp;lt;&amp;lt;-&lt;span class=&quot;built_in&quot;&gt;EOF&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;listen-address=&lt;span class=&quot;number&quot;&gt;127.0&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;.0&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;.1&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;address=/.dev/&lt;span class=&quot;number&quot;&gt;127.0&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;.0&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;.1&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;# keep nameserver order of resolv.conf&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;strict-order&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;EOF&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;# 启用dnsmasq&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo launchctl &lt;span class=&quot;keyword&quot;&gt;load&lt;/span&gt; -w /&lt;span class=&quot;keyword&quot;&gt;Library&lt;/span&gt;/LaunchDaemons/homebrew.mxcl.dnsmasq.plist&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;# 若更新dnsmasq后，需重启以应用&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo launchctl &lt;span class=&quot;keyword&quot;&gt;stop&lt;/span&gt; homebrew.mxcl.dnsmasq&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo launchctl start homebrew.mxcl.dnsmasq&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo killall -HUP mDNSResponder&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -145,9 +147,15 @@
     
     <summary type="html">
     
-      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+      &lt;blockquote&gt;
+&lt;p&gt;此文是我用marp展示ppt拿过来的，可能看着不太明白，抱歉，我太懒~&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h1 id=&quot;laradock&quot;&gt;&lt;a href=&quot;#laradock&quot; class=&quot;headerlink&quot; title=&quot;laradock&quot;&gt;&lt;/a&gt;laradock&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;h3 id=&quot;DIY-do-it-your
+&lt;li&gt;&lt;h3 id=&quot;DIY-do-it-yourself&quot;&gt;&lt;a href=&quot;#DIY-do-it-yourself&quot; class=&quot;headerlink&quot; title=&quot;DIY(do it yourself)&quot;&gt;&lt;/a&gt;DIY(do it yourself)&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h3 id=&quot;DRY-dont-repeat-youself&quot;&gt;&lt;a href=&quot;#DRY-dont-repeat-youself&quot; class=&quot;headerlink&quot; title=&quot;DRY(dont repeat youself)&quot;&gt;&lt;/a&gt;DRY(dont repeat youself)&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h3 id=&quot;人生苦短，我用docker&quot;&gt;&lt;a href=&quot;#人生苦短，我用docker&quot; class=&quot;headerlink&quot; title=&quot;人生苦短，我用docker&quot;&gt;&lt;/a&gt;人生苦短，我用docker&lt;/h3&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
     
     </summary>
     

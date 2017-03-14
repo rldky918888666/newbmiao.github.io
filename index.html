@@ -112,138 +112,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-	
-        <div id="toc" class="toc-article">
-         <h3>文章目录</h3>
-         <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#laradock"><span class="toc-number">1.</span> <span class="toc-text">laradock</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#DIY-do-it-yourself"><span class="toc-number">1.0.1.</span> <span class="toc-text">DIY(do it yourself)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DRY-dont-repeat-youself"><span class="toc-number">1.0.2.</span> <span class="toc-text">DRY(dont repeat youself)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#人生苦短，我用docker"><span class="toc-number">1.0.3.</span> <span class="toc-text">人生苦短，我用docker</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#特点"><span class="toc-number">1.1.</span> <span class="toc-text">特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#docker是什么"><span class="toc-number">1.2.</span> <span class="toc-text">docker是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对比传统虚拟机总结"><span class="toc-number">1.3.</span> <span class="toc-text">对比传统虚拟机总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三个基本概念"><span class="toc-number">1.4.</span> <span class="toc-text">三个基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用命令"><span class="toc-number">1.5.</span> <span class="toc-text">常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#laradock的结构"><span class="toc-number">1.6.</span> <span class="toc-text">laradock的结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#彩蛋"><span class="toc-number">1.7.</span> <span class="toc-text">彩蛋</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#快捷操作"><span class="toc-number">1.7.1.</span> <span class="toc-text">快捷操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地dns泛解析"><span class="toc-number">1.7.2.</span> <span class="toc-text">本地dns泛解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#xdebug监听不变的host-ip"><span class="toc-number">1.7.3.</span> <span class="toc-text">xdebug监听不变的host ip</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装操作"><span class="toc-number">1.7.3.1.</span> <span class="toc-text">安装操作</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#End"><span class="toc-number">1.8.</span> <span class="toc-text">End</span></a></li></ol></li></ol>
-        </div>
-        
-        <a id="more"></a>
+        <blockquote>
+<p>此文是我用marp展示ppt拿过来的，可能看着不太明白，抱歉，我太懒~</p>
+</blockquote>
 <h1 id="laradock"><a href="#laradock" class="headerlink" title="laradock"></a>laradock</h1><ul>
 <li><h3 id="DIY-do-it-yourself"><a href="#DIY-do-it-yourself" class="headerlink" title="DIY(do it yourself)"></a>DIY(do it yourself)</h3></li>
 <li><h3 id="DRY-dont-repeat-youself"><a href="#DRY-dont-repeat-youself" class="headerlink" title="DRY(dont repeat youself)"></a>DRY(dont repeat youself)</h3></li>
 <li><h3 id="人生苦短，我用docker"><a href="#人生苦短，我用docker" class="headerlink" title="人生苦短，我用docker"></a>人生苦短，我用docker</h3></li>
 </ul>
 <hr>
-<!-- more -->
-<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
-<li>易组合：在PHP版本切换、数据库引擎、软件组合</li>
-<li>分而治之：一个软件，一个容器，比如：PHP-FPM, NGINX, PHP-CLI…</li>
-<li>可信镜像：所有镜像继承自一个官方基础镜像（Trusted base Images）</li>
-<li>方便配置，且使用最新Docker Compose</li>
-<li>每周都会有更新…</li>
-<li><del>快速的镜像构建</del>(GFW)</li>
-</ul>
-<blockquote>
-<p><a href="https://github.com/laradock/laradock/blob/master/README-zh.md" target="_blank" rel="external">文档</a></p>
-</blockquote>
-<hr>
-<h2 id="docker是什么"><a href="#docker是什么" class="headerlink" title="docker是什么"></a>docker是什么</h2><ul>
-<li>2013年初开源项目，基于go语言</li>
-<li>轻量级</li>
-<li>操作系统虚拟化</li>
-</ul>
-<hr>
-<h2 id="对比传统虚拟机总结"><a href="#对比传统虚拟机总结" class="headerlink" title="对比传统虚拟机总结"></a>对比传统虚拟机总结</h2><table>
-<thead>
-<tr>
-<th style="text-align:center">特性</th>
-<th style="text-align:center">容器</th>
-<th style="text-align:center">虚拟机</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">启动</td>
-<td style="text-align:center">秒级</td>
-<td style="text-align:center">分钟级</td>
-</tr>
-<tr>
-<td style="text-align:center">硬盘使用</td>
-<td style="text-align:center">一般为 MB</td>
-<td style="text-align:center">一般为 GB</td>
-</tr>
-<tr>
-<td style="text-align:center">性能</td>
-<td style="text-align:center">接近原生</td>
-<td style="text-align:center">弱于</td>
-</tr>
-<tr>
-<td style="text-align:center">系统支持量</td>
-<td style="text-align:center">单机支持上千个容</td>
-<td style="text-align:center">一般几十个</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<p><img src="http://wiki.jikexueyuan.com/project/docker-technology-and-combat/images/virtualization.png" alt="虚拟机"><br><img src="http://wiki.jikexueyuan.com/project/docker-technology-and-combat/images/docker.png" alt="docker"></p>
-<hr>
-<h2 id="三个基本概念"><a href="#三个基本概念" class="headerlink" title="三个基本概念"></a>三个基本概念</h2><ul>
-<li>镜像（Image）</li>
-<li>容器（Container）</li>
-<li>仓库（Repository）</li>
-</ul>
-<blockquote>
-<p>镜像是只读的，容器在启动的时候创建一层可写层作为最上层。<br>注意一个镜像不能超过 127 层</p>
-<p><a href="https://docs.docker.com/engine/installation/" target="_blank" rel="external">安装</a></p>
-</blockquote>
-<hr>
-<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#镜像</span></div><div class="line">docker images <span class="comment">#列出本地镜像</span></div><div class="line">docker rmi training/sinatra <span class="comment">#删除（在删除镜像之前要先用 docker rm 删掉依赖于这个镜像的所有容器）</span></div><div class="line">docker run -t -i ubuntu:<span class="number">14.04</span> /bin/bash <span class="comment">#</span></div><div class="line">docker commit -m <span class="string">"Added json gem"</span> -a <span class="string">"Docker Newbee"</span> <span class="number">0</span>b2616b0e5a8 ouruser/sinatra:v2 <span class="comment">#更新镜像</span></div><div class="line">docker <span class="keyword">tag</span> <span class="title">5db5f8471261</span> ouruser/sinatra:devel <span class="comment">#修改标签</span></div><div class="line">docker build $&#123;dockerfile_dir&#125; <span class="comment">#Dockerfile 构建</span></div><div class="line">docker save -o ubuntu_14.<span class="number">04</span>.tar ubuntu:<span class="number">14.04</span> <span class="comment">#保存</span></div><div class="line">docker load --input ubuntu_14.<span class="number">04</span>.tar <span class="comment">#导入</span></div><div class="line"><span class="comment">#容器</span></div><div class="line">docker ps <span class="comment">#查看容器信息</span></div><div class="line">docker rm <span class="comment">#删掉容器（-f 删除运行中）</span></div><div class="line">docker inspect <span class="comment">#查看指定容器详细信息（可获取ip，pid等信息）</span></div><div class="line">docker logs insane_babbage <span class="comment">#查看容器log</span></div><div class="line">docker port CONTAINER [PRIVATE_PORT[/PROTO]] <span class="comment">#查看端口映射</span></div><div class="line">docker <span class="literal">start</span>|<span class="literal">stop</span>|restart insane_babbage <span class="comment">#启动终止重启</span></div><div class="line">docker attach insane_babbage <span class="comment">#进入后台运行的容器 -d（推荐nsenter）</span></div><div class="line">docker export <span class="number">7691</span>a814370e &gt; ubuntu.tar <span class="comment">#导出快照</span></div><div class="line">cat ubuntu.tar | sudo docker import - test/ubuntu:v1.<span class="number">0</span> <span class="comment">#导入快照</span></div><div class="line"><span class="comment">## docker hub </span></div><div class="line">docker search <span class="comment">#搜索镜像</span></div><div class="line">docker pull <span class="comment">#下载</span></div><div class="line">docker push <span class="comment">#推送（需登录）</span></div></pre></td></tr></table></figure>
-<hr>
-<h2 id="laradock的结构"><a href="#laradock的结构" class="headerlink" title="laradock的结构"></a>laradock的结构</h2><figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">├── laradock </div><div class="line">│   ├── _guides</div><div class="line">│   ├── docker-compose.yml <span class="meta">#compose 配置</span></div><div class="line">│   ├── docs</div><div class="line">│   ├── elasticsearch</div><div class="line">│   ├── hhvm</div><div class="line">│   ├── logs  <span class="meta">#nginx日志；xdebug日志</span></div><div class="line">│   ├── mariadb</div><div class="line">│   ├── memcached</div><div class="line">│   ├── mongo</div><div class="line">│   ├── mysql</div><div class="line">│   ├── nginx <span class="meta"># nginx 容器配置</span></div><div class="line">│   ├── php-fpm <span class="meta">#php-fpm 容器配置</span></div><div class="line">│   ├── phpmyadmin</div><div class="line">│   ├── rabbitmq</div><div class="line">│   ├── redis</div><div class="line">│   ├── workspace <span class="meta">#工作台</span></div><div class="line">│   └── xdebugPhpFpm <span class="meta">#动态设置 xdebug 是否启用（需 build 时先安装）</span></div><div class="line">└── website <span class="meta">#网站项目</span></div><div class="line">    ├── afp</div><div class="line">    ├── ams</div><div class="line">    ├── inncms</div></pre></td></tr></table></figure>
-<hr>
-<h2 id="彩蛋"><a href="#彩蛋" class="headerlink" title="彩蛋"></a>彩蛋</h2><h3 id="快捷操作"><a href="#快捷操作" class="headerlink" title="快捷操作"></a>快捷操作</h3><blockquote>
-<p><a href="https://raw.githubusercontent.com/yeasy/docker_practice/master/_local/.bashrc_docker" target="_blank" rel="external">docker快捷命令：.bashrc_docker</a></p>
-</blockquote>
-<h3 id="本地dns泛解析"><a href="#本地dns泛解析" class="headerlink" title="本地dns泛解析"></a>本地dns泛解析</h3><blockquote>
-<p><a href="https://blog.netsh.org/posts/mac-os-x-dnsmasq_1762.netsh.html" target="_blank" rel="external">hosts泛解析</a><br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># 这里ams不是laravel框架，我做了过滤</div><div class="line">server_name ~^(?&lt;<span class="keyword">project</span>&gt;\b(?!ams\b).+)\.laradock\.dev$;</div><div class="line">root <span class="regexp">/var/</span>www<span class="regexp">/$project/</span><span class="keyword">public</span>;</div></pre></td></tr></table></figure></p>
-</blockquote>
-<h3 id="xdebug监听不变的host-ip"><a href="#xdebug监听不变的host-ip" class="headerlink" title="xdebug监听不变的host ip"></a>xdebug监听不变的host ip</h3><blockquote>
-<p><a href="http://stackoverflow.com/questions/22944631/how-to-get-the-ip-address-of-the-docker-host-from-inside-a-docker-container/39026136#39026136" target="_blank" rel="external">set host ip never changed</a></p>
-</blockquote>
-<hr>
-<h4 id="安装操作"><a href="#安装操作" class="headerlink" title="安装操作"></a>安装操作</h4><figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># 安装 dnsmasq</span></div><div class="line">brew install dnsmasq</div><div class="line">sudo cp -v $(brew --prefix dnsmasq)/homebrew.mxcl.dnsmasq.plist /<span class="keyword">Library</span>/LaunchDaemons</div><div class="line"></div><div class="line"><span class="meta"># 添加本地dns解析服务器</span></div><div class="line">[ -d /etc/resolver ] || sudo mkdir -v /etc/resolver</div><div class="line">sudo bash -c 'echo <span class="string">"nameserver 127.0.0.1"</span> &gt; /etc/resolver/dev'</div><div class="line"></div><div class="line"><span class="meta"># 配置泛解析 (域名后缀自行指定，这里为 .dev)</span></div><div class="line">sudo mkdir -p $(brew --prefix)/etc/</div><div class="line">cat &gt; $(brew --prefix)/etc/dnsmasq.conf &lt;&lt;-<span class="built_in">EOF</span></div><div class="line">listen-address=<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></div><div class="line">address=/.dev/<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></div><div class="line"><span class="meta"># keep nameserver order of resolv.conf</span></div><div class="line">strict-order</div><div class="line"><span class="built_in">EOF</span></div><div class="line"></div><div class="line"><span class="meta"># 启用dnsmasq</span></div><div class="line">sudo launchctl <span class="keyword">load</span> -w /<span class="keyword">Library</span>/LaunchDaemons/homebrew.mxcl.dnsmasq.plist</div><div class="line"></div><div class="line"><span class="meta"># 若更新dnsmasq后，需重启以应用</span></div><div class="line">sudo launchctl <span class="keyword">stop</span> homebrew.mxcl.dnsmasq</div><div class="line">sudo launchctl start homebrew.mxcl.dnsmasq</div><div class="line">sudo killall -HUP mDNSResponder</div></pre></td></tr></table></figure>
-<hr>
-<h2 id="End"><a href="#End" class="headerlink" title="End"></a>End</h2><ul>
-<li><p>docker for mac</p>
-<blockquote>
-<ul>
-<li><a href="https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac" target="_blank" rel="external">安装</a></li>
-</ul>
-</blockquote>
-</li>
-<li><p>基于开发的一些修改（踩坑）</p>
-<blockquote>
-<ul>
-<li>git@github.com:NewbMiao/laradock.git (dev分支，master定期手动同步官方分支)<blockquote>
-<ul>
-<li>xdebug 配置</li>
-<li>全局安装composer及<code>hirak/prestissimo</code>(可加速composer）</li>
-<li>ssh开启 可配合phpstorm 指定CLI interpreter</li>
-<li>关闭nginx <code>open_file_cache</code></li>
-<li>composer国内地址替换；aliyun源替换</li>
-</ul>
-</blockquote>
-</li>
-</ul>
-</blockquote>
-</li>
-</ul>
-<blockquote>
-<ul>
-<li><p>git@github.com:laradock/laradock.git （官方分支）</p>
-</li>
-<li><p>能番羽墙最好，不然，可以参考下边</p>
-<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">## apt-get替换源</span></div><div class="line"><span class="meta"># 另外，在国内使用 docker（以 ubuntu 为例）， Dockerfile 第一个执行的命令最好为：</span></div><div class="line">RUN sed -i <span class="string">'s/archive.ubuntu.com/mirrors.aliyun.com/g'</span> /etc/apt/sources.list \</div><div class="line">    &amp;&amp; apt-<span class="keyword">get</span> update --fix-missing \</div><div class="line">    &amp;&amp; apt-<span class="keyword">get</span> -y upgrade</div><div class="line"></div><div class="line"><span class="meta">## composer替换源</span></div><div class="line">RUN composer config -g repo.packagist composer https:<span class="comment">//packagist.phpcomposer.com</span></div><div class="line"></div><div class="line"><span class="meta">## ssh workspace（推荐还是exec方式）</span></div><div class="line">chmod <span class="number">0600</span> workspace/insecure_id_rsa</div><div class="line">ssh -i workspace/insecure_id_rsa -v root@laradock.dev -p2222</div></pre></td></tr></table></figure></li>
-</ul>
-</blockquote>
-
-	
-	<blockquote style="padding:10px;background: #efe none repeat scroll 0% 0%;border-left-color:green">
-	如有疑问，请留言或邮件<a href="mailto:newbvirgil@gmail.com" title="newbvirgil@gmail.com">newbvirgil@gmail.com</a>
-	<br>本文链接 : <a href="http://blog.newbmiao.com/2017/03/14/laradock-in-action.html" title="http://blog.newbmiao.com/2017/03/14/laradock-in-action.html" target="_blank" rel="external">http://blog.newbmiao.com/2017/03/14/laradock-in-action.html</a>
-	</blockquote>
-	
+        
+          <p class="article-more-link">
+            <a href="/2017/03/14/laradock-in-action.html#more">Read More</a>
+          </p>
+        
       
     </div>
     
@@ -262,7 +144,7 @@
       
      
      <span style="color:#999">
-&nbsp; | &nbsp;最近更新 ：<time datetime="2017-03-14T07:27:54.000Z" itemprop="dateModify">2017-03-14</time>
+&nbsp; | &nbsp;最近更新 ：<time datetime="2017-03-14T07:33:40.000Z" itemprop="dateModify">2017-03-14</time>
 </span>
 
      
