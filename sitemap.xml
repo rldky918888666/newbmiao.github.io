@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://blog.newbmiao.com/add-ons/index.html</loc>
+    <loc>http://blog.newbmiao.com/2017/03/14/laradock-in-action.html</loc>
     
-    <lastmod>2017-03-14T07:50:20.000Z</lastmod>
+    <lastmod>2017-03-14T08:27:14.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2017/03/14/laradock-in-action.html</loc>
+    <loc>http://blog.newbmiao.com/add-ons/index.html</loc>
     
-    <lastmod>2017-03-14T07:35:05.000Z</lastmod>
+    <lastmod>2017-03-14T07:50:20.000Z</lastmod>
     
   </url>
   
@@ -107,14 +107,14 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/demo/index.html</loc>
+    <loc>http://blog.newbmiao.com/2015/12/04/xdebug-remote-debug-with-phpstorm-and-vagrant.html</loc>
     
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/07/31/school-company-data-crawling.html</loc>
+    <loc>http://blog.newbmiao.com/demo/jquery-upload-preview.html</loc>
     
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
     
@@ -135,13 +135,6 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/12/04/xdebug-remote-debug-with-phpstorm-and-vagrant.html</loc>
-    
-    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.newbmiao.com/2015/10/14/jquery-tabs-with-iframe.html</loc>
     
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
@@ -149,7 +142,7 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/01/08/ci-load-class-source-code-analysis.html</loc>
+    <loc>http://blog.newbmiao.com/2015/02/28/regex-notes.html</loc>
     
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
     
@@ -157,6 +150,13 @@
   
   <url>
     <loc>http://blog.newbmiao.com/2015/06/17/use-phpdoc-to-render-api-document.html</loc>
+    
+    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.newbmiao.com/2015/01/08/ci-load-class-source-code-analysis.html</loc>
     
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
     
@@ -177,13 +177,6 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/add-ons/weather.html</loc>
-    
-    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.newbmiao.com/2015/09/25/use-luhm-to-validate-bank-card.html</loc>
     
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
@@ -191,14 +184,21 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/demo/jquery-upload-preview.html</loc>
+    <loc>http://blog.newbmiao.com/add-ons/weather.html</loc>
     
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/02/28/regex-notes.html</loc>
+    <loc>http://blog.newbmiao.com/demo/index.html</loc>
+    
+    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.newbmiao.com/2015/07/31/school-company-data-crawling.html</loc>
     
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
     
@@ -215,13 +215,6 @@
     <loc>http://blog.newbmiao.com/2015/02/13/hide-lamp-server-info.html</loc>
     
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-cron.html</loc>
-    
-    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     
   </url>
   
@@ -247,21 +240,14 @@
   </url>
   
   <url>
+    <loc>http://blog.newbmiao.com/2014/12/28/build-your-git-server-on-linux.html</loc>
+    
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.newbmiao.com/2015/02/28/random-element-of-array-js.html</loc>
-    
-    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.newbmiao.com/2015/03/28/maintainable-javascript-note.html</loc>
-    
-    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.newbmiao.com/2015/08/06/set-highlight-and-autoindent-in-vim-on-mac.html</loc>
     
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     
@@ -275,28 +261,7 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2014/12/28/build-your-git-server-on-linux.html</loc>
-    
-    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-bash.html</loc>
-    
-    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-basis.html</loc>
-    
-    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-ACL.html</loc>
+    <loc>http://blog.newbmiao.com/2015/08/06/set-highlight-and-autoindent-in-vim-on-mac.html</loc>
     
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     
@@ -310,6 +275,34 @@
   </url>
   
   <url>
+    <loc>http://blog.newbmiao.com/2015/03/28/maintainable-javascript-note.html</loc>
+    
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-basis.html</loc>
+    
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-bash.html</loc>
+    
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-cron.html</loc>
+    
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-process.html</loc>
     
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
@@ -317,14 +310,14 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/404.html</loc>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-ACL.html</loc>
     
-    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/07/18/typecho-to-hexo.html</loc>
+    <loc>http://blog.newbmiao.com/2015/02/22/html5-drag-api.html</loc>
     
     <lastmod>2016-07-07T13:09:18.000Z</lastmod>
     
@@ -366,7 +359,7 @@
   </url>
   
   <url>
-    <loc>http://blog.newbmiao.com/2015/02/22/html5-drag-api.html</loc>
+    <loc>http://blog.newbmiao.com/404.html</loc>
     
     <lastmod>2016-07-07T13:09:18.000Z</lastmod>
     
@@ -388,6 +381,13 @@
   
   <url>
     <loc>http://blog.newbmiao.com/2015/09/24/a-tribute-to-the-great-god-of-php.html</loc>
+    
+    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.newbmiao.com/2015/07/18/typecho-to-hexo.html</loc>
     
     <lastmod>2016-07-07T13:09:18.000Z</lastmod>
     
