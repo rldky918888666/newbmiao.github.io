@@ -835,31 +835,6 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-cron.html</loc>
-    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>鸟哥的Linux私房菜笔记-排程</title>
-        <pubTime>2015-09-15T09:39:47.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-        <tag>notes</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="http://blog.newbmiao.com/categories/linux/"/>
-          
-             
-              <breadCrumb title="notes" url="http://blog.newbmiao.com/categories/linux/notes/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-bash.html</loc>
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     <data>
@@ -910,6 +885,31 @@
 
     
   <url>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-ACL.html</loc>
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>鸟哥的Linux私房菜笔记-权限管理</title>
+        <pubTime>2015-09-15T09:34:48.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>notes</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://blog.newbmiao.com/categories/linux/"/>
+          
+             
+              <breadCrumb title="notes" url="http://blog.newbmiao.com/categories/linux/notes/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-process.html</loc>
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     <data>
@@ -935,12 +935,12 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-ACL.html</loc>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-cron.html</loc>
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     <data>
         <display>
-        <title>鸟哥的Linux私房菜笔记-权限管理</title>
-        <pubTime>2015-09-15T09:34:48.000Z</pubTime>
+        <title>鸟哥的Linux私房菜笔记-排程</title>
+        <pubTime>2015-09-15T09:39:47.000Z</pubTime>
         
         <tag>linux</tag>
          
@@ -1152,26 +1152,6 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/27/up-up-in-mid-autumn-day.html</loc>
-    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
-    <data>
-        <display>
-        <title>中秋举牌</title>
-        <pubTime>2015-09-27T03:07:08.000Z</pubTime>
-        
-        <tag>journal</tag>
-         
-         
-           
-             
-              <breadCrumb title="journal" url="http://blog.newbmiao.com/categories/journal/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://blog.newbmiao.com/2015/07/18/typecho-to-hexo.html</loc>
     <lastmod>2016-07-07T13:09:18.000Z</lastmod>
     <data>
@@ -1190,6 +1170,26 @@
           
              
               <breadCrumb title="hexo" url="http://blog.newbmiao.com/categories/blog/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/09/27/up-up-in-mid-autumn-day.html</loc>
+    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>中秋举牌</title>
+        <pubTime>2015-09-27T03:07:08.000Z</pubTime>
+        
+        <tag>journal</tag>
+         
+         
+           
+             
+              <breadCrumb title="journal" url="http://blog.newbmiao.com/categories/journal/"/>
           
         </display>
     </data>
