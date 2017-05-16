@@ -9,28 +9,19 @@
   <meta name="google-site-verification" content="q90Bd4BGjQuSBoXdzK6CUCB8mMUeCEO6MKbaCQS773E" >  
   
   
-  <meta name="keywords" itemprop="keywords" content="newbmiao,php开发,web开发,javascript,jquery,linux,hexo,编程,typecho迁移" />
+  <meta name="keywords" itemprop="keywords" content="cors,cookie,go" />
   
   
-  <meta name="description" content="登录态共享登录态共享？什么鬼，不知道的就可以不用看啦，需要时再说，说不定到时也用不到，笑脸~~
-场景解决多个子系统中共用模块（比方说工单系统）可以共享子系统的登录态为简化问题，设定场景：登录系统A，点工单操作跳转系统B，并且无需登录（至于系统登录何时失效暂不考虑）
-还有：别问我为什么不用单点登录(SSO)，那个，不想说，笑脸~~
-先别废话，直接代码上">
+  <meta name="description" content="跨域登录态共享">
 <meta property="og:type" content="article">
 <meta property="og:title" content="跨域登录态共享">
-<meta property="og:url" content="http://blog.newbmiao.com/2017/05/16/web/跨域登录态共享.html">
+<meta property="og:url" content="http://blog.newbmiao.com/2017/05/16/share-the-login-status-under-cors.html">
 <meta property="og:site_name" content="菜鸟Miao">
-<meta property="og:description" content="登录态共享登录态共享？什么鬼，不知道的就可以不用看啦，需要时再说，说不定到时也用不到，笑脸~~
-场景解决多个子系统中共用模块（比方说工单系统）可以共享子系统的登录态为简化问题，设定场景：登录系统A，点工单操作跳转系统B，并且无需登录（至于系统登录何时失效暂不考虑）
-还有：别问我为什么不用单点登录(SSO)，那个，不想说，笑脸~~
-先别废话，直接代码上">
-<meta property="og:updated_time" content="2017-05-16T11:08:03.000Z">
+<meta property="og:description" content="跨域登录态共享">
+<meta property="og:updated_time" content="2017-05-16T11:10:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="跨域登录态共享">
-<meta name="twitter:description" content="登录态共享登录态共享？什么鬼，不知道的就可以不用看啦，需要时再说，说不定到时也用不到，笑脸~~
-场景解决多个子系统中共用模块（比方说工单系统）可以共享子系统的登录态为简化问题，设定场景：登录系统A，点工单操作跳转系统B，并且无需登录（至于系统登录何时失效暂不考虑）
-还有：别问我为什么不用单点登录(SSO)，那个，不想说，笑脸~~
-先别废话，直接代码上">
+<meta name="twitter:description" content="跨域登录态共享">
   
     <link rel="alternative" href="/atom.xml" title="菜鸟Miao" type="application/atom+xml">
   
@@ -94,9 +85,9 @@
 </header>
 
     <div class="outer">
-      <section id="main"><article id="post-web/跨域登录态共享" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-share-the-login-status-under-cors" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/05/16/web/跨域登录态共享.html" class="article-date">
+    <a href="/2017/05/16/share-the-login-status-under-cors.html" class="article-date">
   <time datetime="2017-05-16T10:53:38.000Z" itemprop="datePublished">2017-05-16</time>
 </a>
     
@@ -154,7 +145,7 @@
 	
 	<blockquote style="padding:10px;background: #efe none repeat scroll 0% 0%;border-left-color:green">
 	如有疑问，请留言或邮件<a href="mailto:newbvirgil@gmail.com" title="newbvirgil@gmail.com">newbvirgil@gmail.com</a>
-	<br>本文链接 : <a href="http://blog.newbmiao.com/2017/05/16/web/跨域登录态共享.html" title="http://blog.newbmiao.com/2017/05/16/web/跨域登录态共享.html" target="_blank" rel="external">http://blog.newbmiao.com/2017/05/16/web/跨域登录态共享.html</a>
+	<br>本文链接 : <a href="http://blog.newbmiao.com/2017/05/16/share-the-login-status-under-cors.html" title="http://blog.newbmiao.com/2017/05/16/share-the-login-status-under-cors.html" target="_blank" rel="external">http://blog.newbmiao.com/2017/05/16/share-the-login-status-under-cors.html</a>
 	</blockquote>
 	
       
@@ -162,11 +153,11 @@
     
     <footer class="article-footer">
       
-        <a data-url="http://blog.newbmiao.com/2017/05/16/web/跨域登录态共享.html" data-id="cj2rggn3w0070q9317tgt1kua" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="http://blog.newbmiao.com/2017/05/16/share-the-login-status-under-cors.html" data-id="cj2rggn3w0070q9317tgt1kua" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
-        <a href="http://blog.newbmiao.com/2017/05/16/web/跨域登录态共享.html#disqus_thread" class="article-comment-link">评论</a>
+        <a href="http://blog.newbmiao.com/2017/05/16/share-the-login-status-under-cors.html#disqus_thread" class="article-comment-link">评论</a>
       
 
       
@@ -179,7 +170,7 @@
        
      
      <span style="color:#999">
-&nbsp; | &nbsp;最近更新 ：<time datetime="2017-05-16T11:08:03.000Z" itemprop="dateModify">2017-05-16</time>
+&nbsp; | &nbsp;最近更新 ：<time datetime="2017-05-16T11:10:49.000Z" itemprop="dateModify">2017-05-16</time>
 </span>
 
      
@@ -188,7 +179,7 @@
 
 
 <script type="text/javascript">
-    var wumiiPermaLink = "http://blog.newbmiao.com/2017/05/16/web/跨域登录态共享.html"; //请用代码生成文章永久的链接
+    var wumiiPermaLink = "http://blog.newbmiao.com/2017/05/16/share-the-login-status-under-cors.html"; //请用代码生成文章永久的链接
     var wumiiTitle = "跨域登录态共享"; //请用代码生成文章标题
     var wumiiTags = "cors,go"; //请用代码生成文章标签>，以英文逗号分隔，如："标签1,标签2"
     var wumiiCategories = ["web","practice"]; //请用代码生成文章分类，分>类名放在 JSONArray 中，如: ["分类1", "分类2"]
@@ -224,7 +215,7 @@
       <ul>
         
           <li>
-            <a href="/2017/05/16/web/跨域登录态共享.html">跨域登录态共享</a>
+            <a href="/2017/05/16/share-the-login-status-under-cors.html">跨域登录态共享</a>
           </li>
         
           <li>
@@ -375,7 +366,7 @@
 <script>
   var disqus_shortname = 'newbmiao';
   
-  var disqus_url = 'http://blog.newbmiao.com/2017/05/16/web/跨域登录态共享.html';
+  var disqus_url = 'http://blog.newbmiao.com/2017/05/16/share-the-login-status-under-cors.html';
   
   (function(){
     var dsq = document.createElement('script');
