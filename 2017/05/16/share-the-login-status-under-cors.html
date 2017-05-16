@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://blog.newbmiao.com/2017/05/16/share-the-login-status-under-cors.html">
 <meta property="og:site_name" content="菜鸟Miao">
 <meta property="og:description" content="跨域登录态共享">
-<meta property="og:updated_time" content="2017-05-16T11:10:49.000Z">
+<meta property="og:updated_time" content="2017-05-16T11:11:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="跨域登录态共享">
 <meta name="twitter:description" content="跨域登录态共享">
@@ -112,6 +112,11 @@
     <div class="article-entry" itemprop="articleBody">
       
 	
+        <div id="toc" class="toc-article">
+         <h3>文章目录</h3>
+         <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#登录态共享"><span class="toc-number">1.</span> <span class="toc-text">登录态共享</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#场景"><span class="toc-number">1.1.</span> <span class="toc-text">场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#系统A"><span class="toc-number">1.2.</span> <span class="toc-text">系统A</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#跳转自动登录"><span class="toc-number">1.2.1.</span> <span class="toc-text">跳转自动登录</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#工单系统B"><span class="toc-number">1.3.</span> <span class="toc-text">工单系统B</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#登录逻辑"><span class="toc-number">1.3.1.</span> <span class="toc-text">登录逻辑</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#完结"><span class="toc-number">1.4.</span> <span class="toc-text">完结</span></a></li></ol></li></ol>
+        </div>
+        
         <h1 id="登录态共享"><a href="#登录态共享" class="headerlink" title="登录态共享"></a>登录态共享</h1><p>登录态共享？什么鬼，不知道的就可以不用看啦，需要时再说，说不定到时也用不到，笑脸~~</p>
 <h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><p>解决多个子系统中共用模块（比方说工单系统）可以共享子系统的登录态<br>为简化问题，设定场景：<br>登录系统A，点工单操作跳转系统B，并且无需登录（至于系统登录何时失效暂不考虑）</p>
 <p>还有：别问我为什么不用单点登录(SSO)，那个，不想说，笑脸~~</p>
@@ -170,7 +175,7 @@
        
      
      <span style="color:#999">
-&nbsp; | &nbsp;最近更新 ：<time datetime="2017-05-16T11:10:49.000Z" itemprop="dateModify">2017-05-16</time>
+&nbsp; | &nbsp;最近更新 ：<time datetime="2017-05-16T11:11:03.000Z" itemprop="dateModify">2017-05-16</time>
 </span>
 
      
