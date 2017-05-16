@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.newbmiao.com/"/>
-  <updated>2017-03-14T08:27:14.000Z</updated>
+  <updated>2017-05-16T11:08:03.000Z</updated>
   <id>http://blog.newbmiao.com/</id>
   
   <author>
@@ -14,6 +14,64 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>跨域登录态共享</title>
+    <link href="http://blog.newbmiao.com/2017/05/16/web/%E8%B7%A8%E5%9F%9F%E7%99%BB%E5%BD%95%E6%80%81%E5%85%B1%E4%BA%AB.html"/>
+    <id>http://blog.newbmiao.com/2017/05/16/web/跨域登录态共享.html</id>
+    <published>2017-05-16T10:53:38.000Z</published>
+    <updated>2017-05-16T11:08:03.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;登录态共享&quot;&gt;&lt;a href=&quot;#登录态共享&quot; class=&quot;headerlink&quot; title=&quot;登录态共享&quot;&gt;&lt;/a&gt;登录态共享&lt;/h1&gt;&lt;p&gt;登录态共享？什么鬼，不知道的就可以不用看啦，需要时再说，说不定到时也用不到，笑脸~~&lt;/p&gt;
+&lt;h2 id=&quot;场景&quot;&gt;&lt;a href=&quot;#场景&quot; class=&quot;headerlink&quot; title=&quot;场景&quot;&gt;&lt;/a&gt;场景&lt;/h2&gt;&lt;p&gt;解决多个子系统中共用模块（比方说工单系统）可以共享子系统的登录态&lt;br&gt;为简化问题，设定场景：&lt;br&gt;登录系统A，点工单操作跳转系统B，并且无需登录（至于系统登录何时失效暂不考虑）&lt;/p&gt;
+&lt;p&gt;还有：别问我为什么不用单点登录(SSO)，那个，不想说，笑脸~~&lt;/p&gt;
+&lt;p&gt;先别废话，直接代码上&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;系统A&quot;&gt;&lt;a href=&quot;#系统A&quot; class=&quot;headerlink&quot; title=&quot;系统A&quot;&gt;&lt;/a&gt;系统A&lt;/h2&gt;&lt;h3 id=&quot;跳转自动登录&quot;&gt;&lt;a href=&quot;#跳转自动登录&quot; class=&quot;headerlink&quot; title=&quot;跳转自动登录&quot;&gt;&lt;/a&gt;跳转自动登录&lt;/h3&gt;&lt;hr&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//假定在 http://shop.laradock.dev/ 点击工单button执行&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; taskApi=&lt;span class=&quot;string&quot;&gt;&#39;http://localhost:10100/&#39;&lt;/span&gt;;&lt;span class=&quot;comment&quot;&gt;//工单系统地址&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$.ajax(&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    url: taskApi+&lt;span class=&quot;string&quot;&gt;&#39;login&#39;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    type: &lt;span class=&quot;string&quot;&gt;&quot;post&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    dataType: &lt;span class=&quot;string&quot;&gt;&quot;json&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    data: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        username:&lt;span class=&quot;string&quot;&gt;&#39;newbmiao&#39;&lt;/span&gt;,&lt;span class=&quot;comment&quot;&gt;//账户唯一标识&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        refer:location.href,&lt;span class=&quot;comment&quot;&gt;//可用于工单系统跳回A使用&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    xhrFields: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        withCredentials: &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;//大招在这里&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    success: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;res&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(res);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//自动登录成功后跳转（什么？已经登陆了？！）&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//location.href=taskApi;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;工单系统B&quot;&gt;&lt;a href=&quot;#工单系统B&quot; class=&quot;headerlink&quot; title=&quot;工单系统B&quot;&gt;&lt;/a&gt;工单系统B&lt;/h2&gt;&lt;h3 id=&quot;登录逻辑&quot;&gt;&lt;a href=&quot;#登录逻辑&quot; class=&quot;headerlink&quot; title=&quot;登录逻辑&quot;&gt;&lt;/a&gt;登录逻辑&lt;/h3&gt;&lt;p&gt;不用想的是,接到username，校验是管理员等等，ok的话设置到session返回给系统A&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;问题1：系统A怎么跨域请求&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;有人想到&lt;code&gt;Access-Control-Allow-Origin&lt;/code&gt;了，就是这个&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;问题2：服务器B&lt;code&gt;session&lt;/code&gt;设置没问题，怎么系统A能拿到&lt;code&gt;session&lt;/code&gt;的&lt;code&gt;cookie&lt;/code&gt; ？拿到了再请求服务器B,&lt;code&gt;cookie&lt;/code&gt;能拿到么？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;好问题，还是cors解决了，不过这个是双向的&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;就是客户端说：我请求会带你给我的cookie，服务器说：我也允许读取你传递的cookie&lt;/code&gt;&lt;br&gt;当然不是什么cookie都能回传，只能是系统B设置的cookie（而且系统B其实能设置成功的话，也必须将&lt;code&gt;Access-Control-Allow-Origin&lt;/code&gt;明确指定为系统A）&lt;/p&gt;
+&lt;p&gt;有没有晕，多读几遍就好了&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;附文一篇巩固下：&lt;a href=&quot;http://www.ruanyifeng.com/blog/2016/04/cors.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;跨域资源共享CORS详解&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;思路对了，最后就是就是怎么按cors设置了&lt;/p&gt;
+&lt;hr&gt;
+&lt;figure class=&quot;highlight go&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;29&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;30&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;31&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;32&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;33&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;34&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;35&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;36&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;37&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;38&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;39&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;40&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;41&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;42&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;43&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;44&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;45&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//按go (beego) 代码写的，但很简单，相信能看懂&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//看不懂，好吧，请喷吧，笑脸~~&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//in_array&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;InArray&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(val &lt;span class=&quot;keyword&quot;&gt;string&lt;/span&gt;, array []&lt;span class=&quot;keyword&quot;&gt;string&lt;/span&gt;)&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;(exists &lt;span class=&quot;keyword&quot;&gt;bool&lt;/span&gt;, index &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt; &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    exists = &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    index = &lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i, v := &lt;span class=&quot;keyword&quot;&gt;range&lt;/span&gt; array &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; val == v &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            index = i&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            exists = &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//这里是重点&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;(c *BaseController)&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;addAccessControlHeader&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt; &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    r := c.Ctx.Request&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    w := c.Ctx.ResponseWriter&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;//假定配置好的两个系统域名&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    originUrls:= &lt;span class=&quot;string&quot;&gt;&quot;http://shop.laradock.dev/,http://another-shop.laradock.dev/&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    originArr := strings.Split(originUrls, &lt;span class=&quot;string&quot;&gt;&quot;,&quot;&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    Origin := r.Header.Get(&lt;span class=&quot;string&quot;&gt;&quot;Origin&quot;&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; != &lt;span class=&quot;built_in&quot;&gt;len&lt;/span&gt;(Origin) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        isExist, index := help.InArray(Origin, originArr)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; !isExist &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            c.echoJson(&lt;span class=&quot;string&quot;&gt;&quot;请求未授权&quot;&lt;/span&gt;, &lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        w.Header().Add(&lt;span class=&quot;string&quot;&gt;&quot;Access-Control-Allow-Origin&quot;&lt;/span&gt;, originArr[index])&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        w.Header().Add(&lt;span class=&quot;string&quot;&gt;&quot;Access-Control-Allow-Methods&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;POST,GET,OPTIONS&quot;&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        w.Header().Add(&lt;span class=&quot;string&quot;&gt;&quot;Access-Control-Allow-Headers&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;x-requested-with,content-type&quot;&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        w.Header().Add(&lt;span class=&quot;string&quot;&gt;&quot;Access-Control-Allow-Credentials&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;true&quot;&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//json输出&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;(c *BaseController)&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;echoJson&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(data &lt;span class=&quot;keyword&quot;&gt;interface&lt;/span&gt;&amp;#123;&amp;#125;, msg &lt;span class=&quot;keyword&quot;&gt;string&lt;/span&gt;, code &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;)&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;map&lt;/span&gt;[&lt;span class=&quot;title&quot;&gt;string&lt;/span&gt;]&lt;span class=&quot;title&quot;&gt;interface&lt;/span&gt;&lt;/span&gt;&amp;#123;&amp;#125; &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    c.addAccessControlHeader()&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    ret := &lt;span class=&quot;built_in&quot;&gt;make&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;map&lt;/span&gt;[&lt;span class=&quot;keyword&quot;&gt;string&lt;/span&gt;]&lt;span class=&quot;keyword&quot;&gt;interface&lt;/span&gt;&amp;#123;&amp;#125;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    ret[&lt;span class=&quot;string&quot;&gt;&quot;data&quot;&lt;/span&gt;] = data&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    ret[&lt;span class=&quot;string&quot;&gt;&quot;msg&quot;&lt;/span&gt;] = msg&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    ret[&lt;span class=&quot;string&quot;&gt;&quot;code&quot;&lt;/span&gt;] = code&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    c.Data[&lt;span class=&quot;string&quot;&gt;&quot;json&quot;&lt;/span&gt;] = ret&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    c.ServeJSON()&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;完结&quot;&gt;&lt;a href=&quot;#完结&quot; class=&quot;headerlink&quot; title=&quot;完结&quot;&gt;&lt;/a&gt;完结&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;题外话，go很不错，只是还没玩明白啊，继续挖坑&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;登录态共享&quot;&gt;&lt;a href=&quot;#登录态共享&quot; class=&quot;headerlink&quot; title=&quot;登录态共享&quot;&gt;&lt;/a&gt;登录态共享&lt;/h1&gt;&lt;p&gt;登录态共享？什么鬼，不知道的就可以不用看啦，需要时再说，说不定到时也用不到，笑脸~~&lt;/p&gt;
+&lt;h2 id=&quot;场景&quot;&gt;&lt;a href=&quot;#场景&quot; class=&quot;headerlink&quot; title=&quot;场景&quot;&gt;&lt;/a&gt;场景&lt;/h2&gt;&lt;p&gt;解决多个子系统中共用模块（比方说工单系统）可以共享子系统的登录态&lt;br&gt;为简化问题，设定场景：&lt;br&gt;登录系统A，点工单操作跳转系统B，并且无需登录（至于系统登录何时失效暂不考虑）&lt;/p&gt;
+&lt;p&gt;还有：别问我为什么不用单点登录(SSO)，那个，不想说，笑脸~~&lt;/p&gt;
+&lt;p&gt;先别废话，直接代码上&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="web" scheme="http://blog.newbmiao.com/categories/web/"/>
+    
+      <category term="practice" scheme="http://blog.newbmiao.com/categories/web/practice/"/>
+    
+    
+      <category term="cors" scheme="http://blog.newbmiao.com/tags/cors/"/>
+    
+      <category term="go" scheme="http://blog.newbmiao.com/tags/go/"/>
+    
+  </entry>
   
   <entry>
     <title>laradock开发实践</title>
@@ -1243,141 +1301,6 @@ select * from mysql.slow_log;
     
     
       <category term="mysql" scheme="http://blog.newbmiao.com/tags/mysql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>jquery图片上传</title>
-    <link href="http://blog.newbmiao.com/2015/09/23/some-code-when-use-jquery-fileupload.html"/>
-    <id>http://blog.newbmiao.com/2015/09/23/some-code-when-use-jquery-fileupload.html</id>
-    <published>2015-09-23T03:58:21.000Z</published>
-    <updated>2016-07-07T13:09:18.000Z</updated>
-    
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;图片上传在web中也是经常用到，这里整理下&lt;/p&gt;
-&lt;h1 id=&quot;jquery-fileupload&quot;&gt;&lt;a href=&quot;#jquery-fileupload&quot; class=&quot;headerlink&quot; title=&quot;jquery-fileupload&quot;&gt;&lt;/a&gt;jquery-fileupload&lt;/h1&gt;&lt;p&gt;File Upload widget with multiple file selection, drag&amp;amp;drop support, progress bars, validation and preview images, audio and video for jQuery.&lt;br&gt;Supports cross-domain, chunked and resumable file uploads and client-side image resizing. Works with any server-side platform (PHP, Python, Ruby on Rails, Java, Node.js, Go etc.) that supports standard HTML form file uploads.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;异步上传&quot;&gt;&lt;a href=&quot;#异步上传&quot; class=&quot;headerlink&quot; title=&quot;异步上传&quot;&gt;&lt;/a&gt;异步上传&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;最小支持文件&lt;/p&gt;
-&lt;p&gt;  jquery.fileupload.css&lt;br&gt;  jquery.min.js&lt;br&gt;  jquery.ui.widget.js&lt;br&gt;  jquery.iframe-transport.js&lt;br&gt;  jquery.fileupload.js&lt;/p&gt;
-&lt;hr&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;form-group&amp;quot;&amp;gt;
-    &amp;lt;label class=&amp;quot;col-sm-2 control-label&amp;quot;&amp;gt;图片&amp;lt;/label&amp;gt;
-    &amp;lt;div class=&amp;quot;col-sm-4 form-control-static&amp;quot;&amp;gt;
-        &amp;lt;a target=&amp;quot;_blank&amp;quot; href=&amp;quot;&amp;quot; id=&amp;quot;pic&amp;quot; style=&amp;quot;display: none&amp;quot;&amp;gt;
-            &amp;lt;img width=&amp;quot;128px&amp;quot; height=&amp;quot;63px&amp;quot; src=&amp;quot;&amp;quot;/&amp;gt;
-        &amp;lt;/a&amp;gt;
-        &amp;lt;span class=&amp;quot;btn btn-success fileinput-button btn-sm&amp;quot;&amp;gt;
-             &amp;lt;i class=&amp;quot;glyphicon glyphicon-plus&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;
-        &amp;lt;span&amp;gt;上传&amp;lt;/span&amp;gt;
-            &amp;lt;input class=&amp;quot;uploadPicBtn&amp;quot; type=&amp;quot;file&amp;quot; name=&amp;quot;file&amp;quot;&amp;gt;
-        &amp;lt;/span&amp;gt;
-        &amp;lt;input type=&amp;quot;hidden&amp;quot; name=&amp;quot;pic&amp;quot; &amp;gt;
-    &amp;lt;/div&amp;gt;
-&amp;lt;/div&amp;gt;
-
-//自定义processbar
-var processHtml = &amp;apos;&amp;lt;div id=&amp;quot;progress&amp;quot; class=&amp;quot;progress&amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;progress-bar progress-bar-success&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;apos;;
-$(&amp;apos;.uploadPicBtn&amp;apos;).fileupload({
-    url: &amp;apos;/upload/push&amp;apos;,
-    dataType: &amp;apos;json&amp;apos;,
-    start: function (e) {
-        $(e.target).parent().after(processHtml);
-    },
-    done: function (e, data) {
-        if (data.result.result == false) {
-            alert(data.result.msg);
-            return;
-        }
-        var img_url = data.result.data[0].src;
-        $(&amp;apos;input[name=pic]&amp;apos;).val(img_url);
-        $(&amp;apos;#pic&amp;apos;).attr(&amp;apos;href&amp;apos;, img_url).show().find(&amp;apos;img&amp;apos;).attr(&amp;apos;src&amp;apos;, img_url);
-        $(&amp;apos;#progress&amp;apos;).remove();
-    },
-    progressall: function (e, data) {
-        var progress = parseInt(data.loaded / data.total * 100, 10);
-        $(&amp;apos;#progress .progress-bar&amp;apos;).css(
-            &amp;apos;width&amp;apos;,
-            progress + &amp;apos;%&amp;apos;
-        );
-    }
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;预览&quot;&gt;&lt;a href=&quot;#预览&quot; class=&quot;headerlink&quot; title=&quot;预览&quot;&gt;&lt;/a&gt;预览&lt;/h2&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;使用imgeload &lt;a href=&quot;https://github.com/blueimp/JavaScript-Load-Image/blob/master/js/load-image.all.min.js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;load-image.all.min.js&lt;/a&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$(&amp;apos;.fileupload&amp;apos;).fileupload({
-        disableImageResize: false,
-        previewMaxWidth: 320,
-        previewMaxHeight: 320
-    }).bind(&amp;apos;fileuploadprocessalways&amp;apos;, function(e, data)
-    {
-        var canvas = data.files[0].preview;
-        var dataURL = canvas.toDataURL();
-        $(&amp;quot;#test&amp;quot;).attr(&amp;quot;src&amp;quot;, &amp;apos;&amp;apos; + dataURL +&amp;apos;&amp;apos;).show();
-    });
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;使用filereader&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;function readURL(input) {
-        if (input.files &amp;amp;&amp;amp; input.files[0]) {
-            var reader = new FileReader();            
-            reader.onload = function (e) {
-                $(&amp;apos;#target&amp;apos;).attr(&amp;apos;src&amp;apos;, e.target.result);
-            }      
-            reader.readAsDataURL(input.files[0]);
-        }
-}
-# 或
-$(&amp;apos;.uploadPicBtn&amp;apos;).fileupload({
-    disableImageResize: false,
-    previewMaxWidth: 320,
-    previewMaxHeight: 320
-}).bind(&amp;apos;fileuploadprocessalways&amp;apos;, function(e, data)
-{
-    var canvas = data.files[0].preview;
-    var dataURL = canvas.toDataURL();
-    $(&amp;quot;#img-element&amp;quot;).attr(&amp;quot;src&amp;quot;, &amp;apos;&amp;apos; + dataURL +&amp;apos;&amp;apos;).show();
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;demo： &lt;a href=&quot;http://blog.newbmiao.com/demo/jquery-upload-preview.html&quot;&gt;jquery-upload-preview&lt;/a&gt; 查看源码了解&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;客户端裁剪&quot;&gt;&lt;a href=&quot;#客户端裁剪&quot; class=&quot;headerlink&quot; title=&quot;客户端裁剪&quot;&gt;&lt;/a&gt;客户端裁剪&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/blueimp/jQuery-File-Upload/wiki/Client-side-Image-Resizing&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Client-side-Image-Resizing&lt;/a&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$(&amp;apos;.uploadPicBtn&amp;apos;).fileupload({
-    url: &amp;apos;/upload/push&amp;apos;,
-    dataType: &amp;apos;json&amp;apos;,
-    // Enable image resizing, except for Android and Opera,
-    // which actually support image resizing, but fail to
-    // send Blob objects via XHR requests:
-    disableImageResize: /Android(?!.*Chrome)|Opera/.test(window.navigator &amp;amp;&amp;amp; navigator.userAgent),
-    imageMaxWidth: 800,
-    imageMaxHeight: 800,
-    imageCrop: true // Force cropped images
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;blockquote&gt;
-&lt;p&gt;附&lt;a href=&quot;https://github.com/blueimp/jQuery-File-Upload/wiki/Options&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;jquery-fileupload文档&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-</content>
-    
-    <summary type="html">
-    
-      jquery图片上传
-    
-    </summary>
-    
-      <category term="js" scheme="http://blog.newbmiao.com/categories/js/"/>
-    
-      <category term="jquery" scheme="http://blog.newbmiao.com/categories/js/jquery/"/>
-    
-    
-      <category term="js" scheme="http://blog.newbmiao.com/tags/js/"/>
-    
-      <category term="jquery" scheme="http://blog.newbmiao.com/tags/jquery/"/>
     
   </entry>
   
