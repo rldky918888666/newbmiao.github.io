@@ -365,6 +365,7 @@
     </url>
 
     
+    
   <url>
     <loc>http://blog.newbmiao.com/2015/07/31/school-company-data-crawling.html</loc>
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
@@ -391,7 +392,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://blog.newbmiao.com/2015/10/25/how-to-use-php-signal.html</loc>
@@ -470,6 +470,7 @@
     </url>
 
     
+    
   <url>
     <loc>http://blog.newbmiao.com/2015/06/17/use-phpdoc-to-render-api-document.html</loc>
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
@@ -536,6 +537,7 @@
     </url>
 
     
+    
   <url>
     <loc>http://blog.newbmiao.com/2015/09/25/use-luhm-to-validate-bank-card.html</loc>
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
@@ -555,8 +557,6 @@
     </data>
     </url>
 
-    
-    
     
   <url>
     <loc>http://blog.newbmiao.com/2015/12/04/xdebug-remote-debug-with-phpstorm-and-vagrant.html</loc>
@@ -607,28 +607,6 @@
     
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/06/26/redis-installation-guide.html</loc>
-    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
-    <data>
-        <display>
-        <title>redis安装</title>
-        <pubTime>2015-06-26T09:43:23.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-        <tag>redis</tag>
-         
-         
-           
-             
-              <breadCrumb title="redis" url="http://blog.newbmiao.com/categories/redis/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://blog.newbmiao.com/2015/02/28/regex-notes.html</loc>
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
     <data>
@@ -654,22 +632,46 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/25/remember-once-mysql-optimize-operations.html</loc>
-    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    <loc>http://blog.newbmiao.com/2015/06/26/redis-installation-guide.html</loc>
+    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
     <data>
         <display>
-        <title>记一次mysql优化操作</title>
-        <pubTime>2015-09-25T06:14:20.000Z</pubTime>
+        <title>redis安装</title>
+        <pubTime>2015-06-26T09:43:23.000Z</pubTime>
         
-        <tag>mysql</tag>
+        <tag>linux</tag>
+         
+        <tag>redis</tag>
          
          
            
              
-              <breadCrumb title="mysql" url="http://blog.newbmiao.com/categories/mysql/"/>
+              <breadCrumb title="redis" url="http://blog.newbmiao.com/categories/redis/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-ACL.html</loc>
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>鸟哥的Linux私房菜笔记-权限管理</title>
+        <pubTime>2015-09-15T09:34:48.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>notes</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://blog.newbmiao.com/categories/linux/"/>
           
              
-              <breadCrumb title="optimize" url="http://blog.newbmiao.com/categories/mysql/optimize/"/>
+              <breadCrumb title="notes" url="http://blog.newbmiao.com/categories/linux/notes/"/>
           
         </display>
     </data>
@@ -741,46 +743,21 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/03/28/maintainable-javascript-note.html</loc>
+    <loc>http://blog.newbmiao.com/2015/02/28/random-element-of-array-js.html</loc>
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     <data>
         <display>
-        <title>编写可维护javascript</title>
-        <pubTime>2015-03-28T15:19:25.000Z</pubTime>
+        <title>对数组元素打乱输出（不重复随机串）</title>
+        <pubTime>2015-02-28T11:27:15.000Z</pubTime>
         
         <tag>js</tag>
          
-        <tag>maintainable-javascript</tag>
+        <tag>random</tag>
          
          
            
              
-              <breadCrumb title="web" url="http://blog.newbmiao.com/categories/web/"/>
-          
-             
-              <breadCrumb title="notes" url="http://blog.newbmiao.com/categories/web/notes/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.newbmiao.com/2014/12/28/build-your-git-server-on-linux.html</loc>
-    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>Git搭建自己的网站服务器（Linux)</title>
-        <pubTime>2014-12-28T08:01:00.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-        <tag>linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="git" url="http://blog.newbmiao.com/categories/git/"/>
+              <breadCrumb title="js" url="http://blog.newbmiao.com/categories/js/"/>
           
         </display>
     </data>
@@ -813,6 +790,28 @@
 
     
   <url>
+    <loc>http://blog.newbmiao.com/2014/12/28/build-your-git-server-on-linux.html</loc>
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>Git搭建自己的网站服务器（Linux)</title>
+        <pubTime>2014-12-28T08:01:00.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+        <tag>linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="git" url="http://blog.newbmiao.com/categories/git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.newbmiao.com/2015/09/16/Niaoge-Linux-Desktop-Guide-notes-daemon.html</loc>
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     <data>
@@ -838,21 +837,24 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/02/28/random-element-of-array-js.html</loc>
+    <loc>http://blog.newbmiao.com/2015/03/28/maintainable-javascript-note.html</loc>
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     <data>
         <display>
-        <title>对数组元素打乱输出（不重复随机串）</title>
-        <pubTime>2015-02-28T11:27:15.000Z</pubTime>
+        <title>编写可维护javascript</title>
+        <pubTime>2015-03-28T15:19:25.000Z</pubTime>
         
         <tag>js</tag>
          
-        <tag>random</tag>
+        <tag>maintainable-javascript</tag>
          
          
            
              
-              <breadCrumb title="js" url="http://blog.newbmiao.com/categories/js/"/>
+              <breadCrumb title="web" url="http://blog.newbmiao.com/categories/web/"/>
+          
+             
+              <breadCrumb title="notes" url="http://blog.newbmiao.com/categories/web/notes/"/>
           
         </display>
     </data>
@@ -866,31 +868,6 @@
         <display>
         <title>鸟哥的Linux私房菜笔记-bash</title>
         <pubTime>2015-09-15T09:28:15.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-        <tag>notes</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="http://blog.newbmiao.com/categories/linux/"/>
-          
-             
-              <breadCrumb title="notes" url="http://blog.newbmiao.com/categories/linux/notes/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-process.html</loc>
-    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>鸟哥的Linux私房菜笔记-程序管理</title>
-        <pubTime>2015-09-15T09:41:50.000Z</pubTime>
         
         <tag>linux</tag>
          
@@ -960,12 +937,35 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-ACL.html</loc>
+    <loc>http://blog.newbmiao.com/2015/09/25/remember-once-mysql-optimize-operations.html</loc>
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     <data>
         <display>
-        <title>鸟哥的Linux私房菜笔记-权限管理</title>
-        <pubTime>2015-09-15T09:34:48.000Z</pubTime>
+        <title>记一次mysql优化操作</title>
+        <pubTime>2015-09-25T06:14:20.000Z</pubTime>
+        
+        <tag>mysql</tag>
+         
+         
+           
+             
+              <breadCrumb title="mysql" url="http://blog.newbmiao.com/categories/mysql/"/>
+          
+             
+              <breadCrumb title="optimize" url="http://blog.newbmiao.com/categories/mysql/optimize/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-process.html</loc>
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>鸟哥的Linux私房菜笔记-程序管理</title>
+        <pubTime>2015-09-15T09:41:50.000Z</pubTime>
         
         <tag>linux</tag>
          
@@ -984,38 +984,17 @@
     </url>
 
     
-  <url>
-    <loc>http://blog.newbmiao.com/2015/02/22/html5-drag-api.html</loc>
-    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
-    <data>
-        <display>
-        <title>html5的拖拽api</title>
-        <pubTime>2015-02-22T10:29:00.000Z</pubTime>
-        
-        <tag>html5</tag>
-         
-        <tag>drag</tag>
-         
-        <tag>js</tag>
-         
-         
-           
-             
-              <breadCrumb title="html5" url="http://blog.newbmiao.com/categories/html5/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/01/jquery-detach.html</loc>
+    <loc>http://blog.newbmiao.com/2015/09/23/some-code-when-use-jquery-fileupload.html</loc>
     <lastmod>2016-07-07T13:09:18.000Z</lastmod>
     <data>
         <display>
-        <title>jQuery之detach的使用</title>
-        <pubTime>2015-09-01T05:59:16.000Z</pubTime>
+        <title>jquery图片上传</title>
+        <pubTime>2015-09-23T03:58:21.000Z</pubTime>
         
+        <tag>js</tag>
+         
         <tag>jquery</tag>
          
          
@@ -1107,15 +1086,37 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/23/some-code-when-use-jquery-fileupload.html</loc>
+    <loc>http://blog.newbmiao.com/2015/02/22/html5-drag-api.html</loc>
     <lastmod>2016-07-07T13:09:18.000Z</lastmod>
     <data>
         <display>
-        <title>jquery图片上传</title>
-        <pubTime>2015-09-23T03:58:21.000Z</pubTime>
+        <title>html5的拖拽api</title>
+        <pubTime>2015-02-22T10:29:00.000Z</pubTime>
         
+        <tag>html5</tag>
+         
+        <tag>drag</tag>
+         
         <tag>js</tag>
          
+         
+           
+             
+              <breadCrumb title="html5" url="http://blog.newbmiao.com/categories/html5/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/09/01/jquery-detach.html</loc>
+    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>jQuery之detach的使用</title>
+        <pubTime>2015-09-01T05:59:16.000Z</pubTime>
+        
         <tag>jquery</tag>
          
          
@@ -1130,7 +1131,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://blog.newbmiao.com/2015/02/22/html5-drag-api2-chrome-drag-to-downloa.html</loc>
