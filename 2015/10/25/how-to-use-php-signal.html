@@ -1,4 +1,133 @@
-<!-- build time:Sat May 20 2017 14:39:01 GMT+0800 (CST) --><!DOCTYPE html><html><head><meta charset="utf-8"><title>php信号处理 | 菜鸟Miao</title><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="google-site-verification" content="q90Bd4BGjQuSBoXdzK6CUCB8mMUeCEO6MKbaCQS773E"><meta name="keywords" itemprop="keywords" content="pcntl,signal,php"><meta name="description" content="php信号处理"><meta name="keywords" content="pcntl,signal,php"><meta property="og:type" content="article"><meta property="og:title" content="php信号处理"><meta property="og:url" content="http://blog.newbmiao.com/2015/10/25/how-to-use-php-signal.html"><meta property="og:site_name" content="菜鸟Miao"><meta property="og:description" content="php信号处理"><meta property="og:updated_time" content="2016-07-07T13:09:22.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="php信号处理"><meta name="twitter:description" content="php信号处理"><link rel="alternative" href="/atom.xml" title="菜鸟Miao" type="application/atom+xml"><link rel="icon" href="http://media.newbmiao.com/blog/asset/favicon.ico"><link rel="stylesheet" href="//media.newbmiao.com/blog/asset/css/style.css" type="text/css"><link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css"><!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]--></head></html><body><div id="container"><div id="wrap"><header id="header"><div id="banner"></div><div id="header-outer" class="outer"><div id="header-title" class="inner"><h1 id="logo-wrap"><a href="/" id="logo">菜鸟Miao</a></h1><h2 id="subtitle-wrap"><a href="/" id="subtitle">start from a newb...</a></h2></div><div id="header-inner" class="inner"><nav id="main-nav"><a id="main-nav-toggle" class="nav-icon"></a> <a class="main-nav-link" href="/">Home</a> <a class="main-nav-link" href="/archives">Archives</a> <a class="main-nav-link" href="/add-ons">Add-ons</a></nav><nav id="sub-nav"><a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a> <a id="nav-search-btn" class="nav-icon" title="Search"></a></nav><div id="search-form-wrap"><div id="search-form"><input type="text" class="st-default-search-input search-form-input" style="outline:0;width:110px"></div></div></div></div></header><div class="outer"><section id="main"><article id="post-how-to-use-php-signal" class="article article-type-post" itemscope itemprop="blogPost"><div class="article-meta"><a href="/2015/10/25/how-to-use-php-signal.html" class="article-date"><time datetime="2015-10-25T14:10:33.000Z" itemprop="datePublished">2015-10-25</time></a><div class="article-category"><a class="article-category-link" href="/categories/php/">php</a>►<a class="article-category-link" href="/categories/php/signal/">signal</a></div></div><div class="article-inner"><header class="article-header"><h1 class="article-title" itemprop="name">php信号处理</h1></header><div class="article-entry" itemprop="articleBody"><div id="toc" class="toc-article"><h3>文章目录</h3><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#pcntl"><span class="toc-number">1.</span> <span class="toc-text">pcntl</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#pcntl-signal"><span class="toc-number">1.1.</span> <span class="toc-text">pcntl_signal</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pcntl-alarm"><span class="toc-number">1.2.</span> <span class="toc-text">pcntl_alarm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pcntl-fork"><span class="toc-number">1.3.</span> <span class="toc-text">pcntl_fork</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pcntl-waitpid"><span class="toc-number">1.4.</span> <span class="toc-text">pcntl_waitpid</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pcntl-wexitstatus"><span class="toc-number">1.5.</span> <span class="toc-text">pcntl_wexitstatus</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SIGCHLD-父进程不阻塞"><span class="toc-number">1.6.</span> <span class="toc-text">SIGCHLD: 父进程不阻塞</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pcntl-exec"><span class="toc-number">1.7.</span> <span class="toc-text">pcntl_exec</span></a></li></ol></li></ol></div><h1 id="pcntl"><a href="#pcntl" class="headerlink" title="pcntl"></a>pcntl</h1><h2 id="pcntl-signal"><a href="#pcntl-signal" class="headerlink" title="pcntl_signal"></a>pcntl_signal</h2><p>信号注册函数</p><h2 id="pcntl-alarm"><a href="#pcntl-alarm" class="headerlink" title="pcntl_alarm"></a>pcntl_alarm</h2><ul><li>指定秒数中断程序执行任务。</li><li>每次执行只会有一个定时器生效，若之前计时器还没结束就定义新定时器，会替代之前定时器并返回之前定时器结束前秒数，若之前计时器已完成返回0</li><li>参数设为0，会清空当前所有定时器，并不发起调用</li><li>定时器会中断系统，即便是sleep执行中</li></ul><a id="more"></a><hr><pre><code>&lt;?php
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>php信号处理 | 菜鸟Miao</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="google-site-verification" content="q90Bd4BGjQuSBoXdzK6CUCB8mMUeCEO6MKbaCQS773E" >  
+  
+  
+  <meta name="keywords" itemprop="keywords" content="pcntl,signal,php" />
+  
+  
+  <meta name="description" content="php信号处理">
+<meta name="keywords" content="pcntl,signal,php">
+<meta property="og:type" content="article">
+<meta property="og:title" content="php信号处理">
+<meta property="og:url" content="http://blog.newbmiao.com/2015/10/25/how-to-use-php-signal.html">
+<meta property="og:site_name" content="菜鸟Miao">
+<meta property="og:description" content="php信号处理">
+<meta property="og:updated_time" content="2016-07-07T13:09:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="php信号处理">
+<meta name="twitter:description" content="php信号处理">
+  
+    <link rel="alternative" href="/atom.xml" title="菜鸟Miao" type="application/atom+xml">
+  
+  
+    <link rel="icon"   href="http://media.newbmiao.com/blog/asset/favicon.ico">
+  
+  
+  <link rel="stylesheet" href="//media.newbmiao.com/blog/asset/css/style.css" type="text/css">
+  
+  <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+  
+
+</head>
+
+<body>
+<div id="container">
+  <div id="wrap">
+    <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">菜鸟Miao</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">start from a newb...</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/add-ons">Add-ons</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+	  
+	
+        <div id="search-form">
+                <input type="text" class="st-default-search-input search-form-input" style="outline: none;width: 110px;">
+        </div>
+	
+      </div>
+    </div>
+  </div>
+</header>
+
+    <div class="outer">
+      <section id="main"><article id="post-how-to-use-php-signal" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/25/how-to-use-php-signal.html" class="article-date">
+  <time datetime="2015-10-25T14:10:33.000Z" itemprop="datePublished">2015-10-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/php/">php</a>►<a class="article-category-link" href="/categories/php/signal/">signal</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      php信号处理
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+	
+        <div id="toc" class="toc-article">
+         <h3>文章目录</h3>
+         <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#pcntl"><span class="toc-number">1.</span> <span class="toc-text">pcntl</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#pcntl-signal"><span class="toc-number">1.1.</span> <span class="toc-text">pcntl_signal</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pcntl-alarm"><span class="toc-number">1.2.</span> <span class="toc-text">pcntl_alarm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pcntl-fork"><span class="toc-number">1.3.</span> <span class="toc-text">pcntl_fork</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pcntl-waitpid"><span class="toc-number">1.4.</span> <span class="toc-text">pcntl_waitpid</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pcntl-wexitstatus"><span class="toc-number">1.5.</span> <span class="toc-text">pcntl_wexitstatus</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SIGCHLD-父进程不阻塞"><span class="toc-number">1.6.</span> <span class="toc-text">SIGCHLD: 父进程不阻塞</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pcntl-exec"><span class="toc-number">1.7.</span> <span class="toc-text">pcntl_exec</span></a></li></ol></li></ol>
+        </div>
+        
+        <h1 id="pcntl"><a href="#pcntl" class="headerlink" title="pcntl"></a>pcntl</h1><h2 id="pcntl-signal"><a href="#pcntl-signal" class="headerlink" title="pcntl_signal"></a>pcntl_signal</h2><p>信号注册函数</p>
+<h2 id="pcntl-alarm"><a href="#pcntl-alarm" class="headerlink" title="pcntl_alarm"></a>pcntl_alarm</h2><ul>
+<li>指定秒数中断程序执行任务。</li>
+<li>每次执行只会有一个定时器生效，若之前计时器还没结束就定义新定时器，会替代之前定时器并返回之前定时器结束前秒数，若之前计时器已完成返回0</li>
+<li>参数设为0，会清空当前所有定时器，并不发起调用</li>
+<li>定时器会中断系统，即便是sleep执行中</li>
+</ul>
+<a id="more"></a>
+<hr>
+<pre><code>&lt;?php
 declare(ticks = 1);
 
 function signal_handler($signal) {
@@ -15,7 +144,12 @@ while(1) {
     //
 }
 ?&gt;
-</code></pre><h2 id="pcntl-fork"><a href="#pcntl-fork" class="headerlink" title="pcntl_fork"></a>pcntl_fork</h2><p>创建子进程</p><ul><li>unix创建进程效率要比线程高，但需考虑进程数和内存等限制</li></ul><hr><pre><code>&lt;?php
+</code></pre><h2 id="pcntl-fork"><a href="#pcntl-fork" class="headerlink" title="pcntl_fork"></a>pcntl_fork</h2><p>创建子进程</p>
+<ul>
+<li>unix创建进程效率要比线程高，但需考虑进程数和内存等限制</li>
+</ul>
+<hr>
+<pre><code>&lt;?php
 $pid = pcntl_fork();
 
 switch($pid) {
@@ -29,7 +163,25 @@ switch($pid) {
         print &quot;In parent!\n&quot;;
 }
 ?&gt;
-</code></pre><h2 id="pcntl-waitpid"><a href="#pcntl-waitpid" class="headerlink" title="pcntl_waitpid"></a>pcntl_waitpid</h2><p>等待或返回fork的子进程状态<br>挂起当前进程的执行直到参数pid指定的进程号的进程退出， 或接收到一个信号要求中断当前进程或调用一个信号处理函数。<br>如果pid指定的子进程在此函数调用时已经退出（俗称僵尸进程），此函数 将立刻返回。<br><strong>pid可选值</strong></p><ul><li>小于-1 等待任意进程组ID等于参数pid给定值的绝对值的进程。</li><li>-1 等待任意子进程;与pcntl_wait函数行为一致。</li><li>0 等待任意与调用进程组ID相同的子进程。</li><li>大于0 等待进程号等于参数pid值的子进程。</li></ul><p><strong>options</strong></p><ul><li>WNOHANG 如果没有子进程退出立刻返回。</li><li>WUNTRACED 子进程已经退出并且其状态未报告时返回。</li></ul><p><a href="http://www.hackingwithphp.com/16/1/7/other-ways-to-evaluate-pcntl_waitpids-return-value" target="_blank" rel="external">其他方式去计算本函数的返回值</a></p><h2 id="pcntl-wexitstatus"><a href="#pcntl-wexitstatus" class="headerlink" title="pcntl_wexitstatus"></a>pcntl_wexitstatus</h2><p>检查状态代码是否代表一个正常的退出。</p><ul><li>进程共享内容</li></ul><hr><pre><code>&lt;?php
+</code></pre><h2 id="pcntl-waitpid"><a href="#pcntl-waitpid" class="headerlink" title="pcntl_waitpid"></a>pcntl_waitpid</h2><p>等待或返回fork的子进程状态<br>挂起当前进程的执行直到参数pid指定的进程号的进程退出， 或接收到一个信号要求中断当前进程或调用一个信号处理函数。<br>如果pid指定的子进程在此函数调用时已经退出（俗称僵尸进程），此函数 将立刻返回。<br><strong>pid可选值</strong></p>
+<ul>
+<li>小于-1     等待任意进程组ID等于参数pid给定值的绝对值的进程。</li>
+<li>-1     等待任意子进程;与pcntl_wait函数行为一致。</li>
+<li>0     等待任意与调用进程组ID相同的子进程。</li>
+<li>大于0     等待进程号等于参数pid值的子进程。 </li>
+</ul>
+<p><strong>options</strong></p>
+<ul>
+<li>WNOHANG     如果没有子进程退出立刻返回。</li>
+<li>WUNTRACED     子进程已经退出并且其状态未报告时返回。 </li>
+</ul>
+<p><a href="http://www.hackingwithphp.com/16/1/7/other-ways-to-evaluate-pcntl_waitpids-return-value" target="_blank" rel="external">其他方式去计算本函数的返回值</a></p>
+<h2 id="pcntl-wexitstatus"><a href="#pcntl-wexitstatus" class="headerlink" title="pcntl_wexitstatus"></a>pcntl_wexitstatus</h2><p>检查状态代码是否代表一个正常的退出。</p>
+<ul>
+<li>进程共享内容</li>
+</ul>
+<hr>
+<pre><code>&lt;?php
 for ($i = 1; $i &lt;= 5; ++$i) {
     $pid = pcntl_fork();
 
@@ -44,7 +196,9 @@ while (pcntl_waitpid(0, $status) != -1) {
     echo &quot;Child $status completed\n&quot;;
 }
 ?&gt;
-</code></pre><h2 id="SIGCHLD-父进程不阻塞"><a href="#SIGCHLD-父进程不阻塞" class="headerlink" title="SIGCHLD: 父进程不阻塞"></a>SIGCHLD: 父进程不阻塞</h2><p>SIGCHLD信号会在<strong>一个或多个</strong>子进程结束时向父进程通知<br>此时再加上pcntl_waitpid loop来让父进程及时回收全部结束的子进程</p><hr><pre><code>&lt;?php
+</code></pre><h2 id="SIGCHLD-父进程不阻塞"><a href="#SIGCHLD-父进程不阻塞" class="headerlink" title="SIGCHLD: 父进程不阻塞"></a>SIGCHLD: 父进程不阻塞</h2><p>SIGCHLD信号会在<strong>一个或多个</strong>子进程结束时向父进程通知<br>此时再加上pcntl_waitpid loop来让父进程及时回收全部结束的子进程</p>
+<hr>
+<pre><code>&lt;?php
 declare(ticks = 1);
 
 pcntl_signal(SIGCHLD, &quot;signal_handler&quot;);
@@ -77,10 +231,290 @@ while(1) {
     sleep(1);
 }
 ?&gt;
-</code></pre><h2 id="pcntl-exec"><a href="#pcntl-exec" class="headerlink" title="pcntl_exec"></a>pcntl_exec</h2><p>调用程序执行，并取代自身</p><hr><pre><code>&lt;?php
+</code></pre><h2 id="pcntl-exec"><a href="#pcntl-exec" class="headerlink" title="pcntl_exec"></a>pcntl_exec</h2><p>调用程序执行，并取代自身</p>
+<hr>
+<pre><code>&lt;?php
 print &quot;Before\n&quot;;
 pcntl_exec(&quot;/usr/bin/uptime&quot;);
 //下边不会输出
 print &quot;After\n&quot;; 
 ?&gt;
-</code></pre><blockquote style="padding:10px;background:#efe none repeat scroll 0 0;border-left-color:green">如有疑问，请留言或邮件<a href="mailto:newbvirgil@gmail.com" title="newbvirgil@gmail.com">newbvirgil@gmail.com</a><br>本文链接 : <a href="http://blog.newbmiao.com/2015/10/25/how-to-use-php-signal.html" title="http://blog.newbmiao.com/2015/10/25/how-to-use-php-signal.html" target="_blank" rel="external">http://blog.newbmiao.com/2015/10/25/how-to-use-php-signal.html</a></blockquote></div><footer class="article-footer"><a data-url="http://blog.newbmiao.com/2015/10/25/how-to-use-php-signal.html" data-id="cj2wvrcin008teh313fuuarwy" class="article-share-link" data-share="baidu">分享到</a> <a href="http://blog.newbmiao.com/2015/10/25/how-to-use-php-signal.html#disqus_thread" class="article-comment-link">评论</a><ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pcntl/">pcntl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/signal/">signal</a></li></ul><span id="busuanzi_container_page_pv" style="color:#999"><i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>次阅读 </span><span style="color:#999">&nbsp; | &nbsp;最近更新 ：<time datetime="2016-07-07T13:09:22.000Z" itemprop="dateModify">2016-07-07</time></span><script type="text/javascript" id="wumiiRelatedItems"></script><script type="text/javascript">var wumiiPermaLink="http://blog.newbmiao.com/2015/10/25/how-to-use-php-signal.html",wumiiTitle="php信号处理",wumiiTags="php,pcntl,signal",wumiiCategories=["php","signal"],wumiiSitePrefix="http://blog.newbmiao.com",wumiiParams="&num=5&mode=2&pf=JAVASCRIPT"</script><script type="text/javascript" src="http://widget.wumii.cn/ext/relatedItemsWidget"></script><a href="http://www.wumii.com/widget/relatedItems" style="border:0"><img src="http://static.wumii.cn/images/pixel.png" alt="无觅关联推荐，快速提升流量" style="border:0;padding:0;margin:0"></a></footer></div></article><section id="comments"><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div></section></section><aside id="sidebar"><div class="widget-wrap"><h3 class="widget-title">近期文章</h3><div class="widget"><ul><li><a href="/2017/05/16/share-the-login-status-under-cors.html">跨域登录态共享</a></li><li><a href="/2017/03/14/laradock-in-action.html">laradock开发实践</a></li><li><a href="/2017/02/17/auto-wrap-chinese-use-imagick-and-upload-image-by-base64-encode-str.html">imagick中文自动换行和base64串上传图片</a></li><li><a href="/2016/11/08/some-misuse-of-php.html">php踩坑记录</a></li><li><a href="/2016/11/08/jquery-multi-async-manage-note.html">jquery多异步管理使用记录</a></li></ul></div></div><div class="widget-wrap"><h3 class="widget-title">分类</h3><div class="widget"><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/dropbox/">dropbox</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/blog/hexo/">hexo</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/gearman/">gearman</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/html5/">html5</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/journal/">journal</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/js/">js</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js/jquery/">jquery</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/linux/notes/">notes</a><span class="category-list-count">7</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/">mac</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/mac/shadowsocks/">shadowsocks</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/tool/">tool</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/">mysql</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/optimize/">optimize</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/">php</a><span class="category-list-count">13</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/php/CI/">CI</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/regex/">regex</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/signal/">signal</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/tool/">tool</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/redis/">redis</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/">web</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/web/notes/">notes</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/practice/">practice</a><span class="category-list-count">4</span></li></ul></li></ul></div></div><div class="widget-wrap"><h3 class="widget-title">标签云</h3><div class="widget tagcloud"><a href="/tags/phpdoc/" style="font-size:15px;color:#1e90ff">phpdoc</a> <a href="/tags/hexo/" style="font-size:18.75px;color:#2e94e7">hexo</a> <a href="/tags/gitcafe/" style="font-size:15px;color:#1e90ff">gitcafe</a> <a href="/tags/gearman/" style="font-size:15px;color:#1e90ff">gearman</a> <a href="/tags/html5/" style="font-size:16.88px;color:#2692f3">html5</a> <a href="/tags/js/" style="font-size:30px;color:#5f9ea0">js</a> <a href="/tags/drag/" style="font-size:16.88px;color:#2692f3">drag</a> <a href="/tags/journal/" style="font-size:16.88px;color:#2692f3">journal</a> <a href="/tags/chrome/" style="font-size:15px;color:#1e90ff">chrome</a> <a href="/tags/javascript-program-solution/" style="font-size:18.75px;color:#2e94e7">javascript-program-solution</a> <a href="/tags/random/" style="font-size:15px;color:#1e90ff">random</a> <a href="/tags/maintainable-javascript/" style="font-size:15px;color:#1e90ff">maintainable-javascript</a> <a href="/tags/git/" style="font-size:15px;color:#1e90ff">git</a> <a href="/tags/linux/" style="font-size:26.25px;color:#4f9bb8">linux</a> <a href="/tags/mac/" style="font-size:18.75px;color:#2e94e7">mac</a> <a href="/tags/vim/" style="font-size:15px;color:#1e90ff">vim</a> <a href="/tags/tool/" style="font-size:15px;color:#1e90ff">tool</a> <a href="/tags/shadowsocks/" style="font-size:15px;color:#1e90ff">shadowsocks</a> <a href="/tags/software/" style="font-size:15px;color:#1e90ff">software</a> <a href="/tags/mysql/" style="font-size:18.75px;color:#2e94e7">mysql</a> <a href="/tags/limit/" style="font-size:15px;color:#1e90ff">limit</a> <a href="/tags/imgick/" style="font-size:15px;color:#1e90ff">imgick</a> <a href="/tags/json/" style="font-size:15px;color:#1e90ff">json</a> <a href="/tags/blob/" style="font-size:15px;color:#1e90ff">blob</a> <a href="/tags/blog/" style="font-size:20.63px;color:#3695db">blog</a> <a href="/tags/php/" style="font-size:28.13px;color:#579cac">php</a> <a href="/tags/target/" style="font-size:15px;color:#1e90ff">target</a> <a href="/tags/reference/" style="font-size:15px;color:#1e90ff">reference</a> <a href="/tags/function/" style="font-size:15px;color:#1e90ff">function</a> <a href="/tags/php-fpm/" style="font-size:15px;color:#1e90ff">php-fpm</a> <a href="/tags/apache/" style="font-size:15px;color:#1e90ff">apache</a> <a href="/tags/regex/" style="font-size:15px;color:#1e90ff">regex</a> <a href="/tags/redis/" style="font-size:15px;color:#1e90ff">redis</a> <a href="/tags/dropbox/" style="font-size:15px;color:#1e90ff">dropbox</a> <a href="/tags/jquery/" style="font-size:22.5px;color:#3f97d0">jquery</a> <a href="/tags/iframe/" style="font-size:15px;color:#1e90ff">iframe</a> <a href="/tags/closure/" style="font-size:15px;color:#1e90ff">closure</a> <a href="/tags/cors/" style="font-size:15px;color:#1e90ff">cors</a> <a href="/tags/go/" style="font-size:15px;color:#1e90ff">go</a> <a href="/tags/jquery-timepicker-addon/" style="font-size:15px;color:#1e90ff">jquery-timepicker-addon</a> <a href="/tags/ajax/" style="font-size:15px;color:#1e90ff">ajax</a> <a href="/tags/promise/" style="font-size:15px;color:#1e90ff">promise</a> <a href="/tags/notes/" style="font-size:24.38px;color:#4799c4">notes</a> <a href="/tags/CI/" style="font-size:15px;color:#1e90ff">CI</a> <a href="/tags/pcntl/" style="font-size:15px;color:#1e90ff">pcntl</a> <a href="/tags/signal/" style="font-size:15px;color:#1e90ff">signal</a> <a href="/tags/laradock/" style="font-size:15px;color:#1e90ff">laradock</a> <a href="/tags/docker/" style="font-size:15px;color:#1e90ff">docker</a> <a href="/tags/xdebug/" style="font-size:15px;color:#1e90ff">xdebug</a></div></div><div class="widget-wrap"><h3 class="widget-title">归档</h3><div class="widget"><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">十月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">二月 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">十二月 2014</a><span class="archive-list-count">1</span></li></ul></div></div><div class="widget-wrap"><h3 class="widget-title">友情链接</h3><div class="widget"><ul><li><a href="http://coolshell.cn/" target="_blank">酷壳</a></li><li><a href="http://www.laruence.com/" target="_blank">风雪之隅</a></li><li><a href="http://leo108.com/" target="_blank">leo108</a></li><li><a href="http://www.cnblogs.com/liaoziyu/" target="_blank">大粨兔奶糖</a></li><li><a href="http://blog.ihuxu.com/" target="_blank">胡小旭</a></li><li><a href="http://bin.bloggao.cn/" target="_blank">liecol-晓斌</a></li><li><a href="http://xianfengsong.github.io/" target="_blank">先锋Song</a></li></ul></div></div><div class="widget-wrap widget-toc" style="display:none"><h3 class="widget-title">文章目录</h3><div class="container widget" style="padding:15px 20px"></div></div><script src="//media.newbmiao.com/blog/asset/js/toc.js"></script></aside></div><footer id="footer"><script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><div class="outer"><div id="footer-info" class="inner">&copy; 2017 菜鸟Miao<br><p><span id="busuanzi_container_site_uv">您是本站第<span id="busuanzi_value_site_uv"> <i class="fa fa-spinner fa-spin"></i></span>个访问者 </span><span id="busuanzi_container_site_pv">/本站总访问量<span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i> </span>次</span></p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> . Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a> . Hosted by <a href="https://coding.net/register?key=094c9e10-c87d-4f7c-a678-30702fb842a3" target="_blank">Coding</a> &amp; <a href="https://github.com/newbmiao" target="_blank">GitHub</a> .</div></div></footer></div><nav id="mobile-nav"><a href="/" class="mobile-nav-link">Home</a> <a href="/archives" class="mobile-nav-link">Archives</a> <a href="/add-ons" class="mobile-nav-link">Add-ons</a></nav><script src="http://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script><div id="totop"><a title="返回顶部"><img src="/img/scrollup.png"></a></div><script>var disqus_shortname="newbmiao",disqus_url="http://blog.newbmiao.com/2015/10/25/how-to-use-php-signal.html";!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//"+disqus_shortname+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)}()</script><div id="article-share-box" class="article-share-box"><div id="bdshare" class="bdsharebuttonbox article-share-links"><a class="article-share-weibo" data-cmd="tsina" title="分享到新浪微博"></a> <a class="article-share-weixin" data-cmd="weixin" title="分享到微信"></a> <a class="article-share-qq" data-cmd="sqq" title="分享到QQ"></a> <a class="article-share-renren" data-cmd="renren" title="分享到人人网"></a> <a class="article-share-more" data-cmd="more" title="更多"></a></div></div><script>with(window._bd_share_config={common:{},share:{bdCustomStyle:"/css/bdshare.css"}},document)(0)[(getElementsByTagName("head")[0]||body).appendChild(createElement("script")).src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion="+~(-new Date/36e5)]</script><link rel="stylesheet" href="//media.newbmiao.com/blog/asset/fancybox/jquery.fancybox.css" media="screen" type="text/css"><script src="//media.newbmiao.com/blog/asset/fancybox/jquery.fancybox.pack.js"></script><script src="//media.newbmiao.com/blog/asset/js/script.js"></script><script type="text/javascript">!function(t,e,n,s,c,i,o){t.SwiftypeObject=c,t[c]=t[c]||function(){(t[c].q=t[c].q||[]).push(arguments)},i=e.createElement(n),o=e.getElementsByTagName(n)[0],i.async=1,i.src=s,o.parentNode.insertBefore(i,o)}(window,document,"script","//s.swiftypecdn.com/install/v2/st.js","_st"),_st("install","bqAniPPC1T7RV4MomxcE","2.0.0")</script></div></body><!-- rebuild by neat -->
+</code></pre>
+	
+	<blockquote style="padding:10px;background: #efe none repeat scroll 0% 0%;border-left-color:green">
+	如有疑问，请留言或邮件<a href="mailto:newbvirgil@gmail.com" title="newbvirgil@gmail.com">newbvirgil@gmail.com</a>
+	<br>本文链接 : <a href="http://blog.newbmiao.com/2015/10/25/how-to-use-php-signal.html" title="http://blog.newbmiao.com/2015/10/25/how-to-use-php-signal.html" target="_blank" rel="external">http://blog.newbmiao.com/2015/10/25/how-to-use-php-signal.html</a>
+	</blockquote>
+	
+      
+    </div>
+    
+    <footer class="article-footer">
+      
+        <a data-url="http://blog.newbmiao.com/2015/10/25/how-to-use-php-signal.html" data-id="cj2wvrcin008teh313fuuarwy" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="http://blog.newbmiao.com/2015/10/25/how-to-use-php-signal.html#disqus_thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pcntl/">pcntl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/signal/">signal</a></li></ul>
+
+            
+	<span id="busuanzi_container_page_pv" style="color:#999">
+ 	 <i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"> <i class="fa fa-spinner fa-spin"></i></span>次阅读
+       </span>
+       
+     
+     <span style="color:#999">
+&nbsp; | &nbsp;最近更新 ：<time datetime="2016-07-07T13:09:22.000Z" itemprop="dateModify">2016-07-07</time>
+</span>
+
+     
+<!-- 无觅 -->
+<script type="text/javascript" id="wumiiRelatedItems"></script>
+
+
+<script type="text/javascript">
+    var wumiiPermaLink = "http://blog.newbmiao.com/2015/10/25/how-to-use-php-signal.html"; //请用代码生成文章永久的链接
+    var wumiiTitle = "php信号处理"; //请用代码生成文章标题
+    var wumiiTags = "php,pcntl,signal"; //请用代码生成文章标签>，以英文逗号分隔，如："标签1,标签2"
+    var wumiiCategories = ["php","signal"]; //请用代码生成文章分类，分>类名放在 JSONArray 中，如: ["分类1", "分类2"]
+    var wumiiSitePrefix = "http://blog.newbmiao.com";
+    var wumiiParams = "&num=5&mode=2&pf=JAVASCRIPT";
+</script>
+<script type="text/javascript" src="http://widget.wumii.cn/ext/relatedItemsWidget"></script>
+<a href="http://www.wumii.com/widget/relatedItems" style="border:0;">
+    <img src="http://static.wumii.cn/images/pixel.png" alt="无觅关联推荐，快速提升流量" style="border:0;padding:0;margin:0;" />
+</a>
+
+    </footer>
+    
+  </div>
+</article>
+
+
+
+  <section id="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+</section>
+      
+      <aside id="sidebar">
+  
+   	
+  <div class="widget-wrap">
+    <h3 class="widget-title">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/05/16/share-the-login-status-under-cors.html">跨域登录态共享</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/14/laradock-in-action.html">laradock开发实践</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/17/auto-wrap-chinese-use-imagick-and-upload-image-by-base64-encode-str.html">imagick中文自动换行和base64串上传图片</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/08/some-misuse-of-php.html">php踩坑记录</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/08/jquery-multi-async-manage-note.html">jquery多异步管理使用记录</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+   	
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/dropbox/">dropbox</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/blog/hexo/">hexo</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/gearman/">gearman</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/html5/">html5</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/journal/">journal</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/js/">js</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js/jquery/">jquery</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/linux/notes/">notes</a><span class="category-list-count">7</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/">mac</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/mac/shadowsocks/">shadowsocks</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/tool/">tool</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/">mysql</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/optimize/">optimize</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/">php</a><span class="category-list-count">13</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/php/CI/">CI</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/regex/">regex</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/signal/">signal</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/tool/">tool</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/redis/">redis</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/">web</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/web/notes/">notes</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/practice/">practice</a><span class="category-list-count">4</span></li></ul></li></ul>
+    </div>
+  </div>
+
+  
+   	
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/phpdoc/" style="font-size: 15px; color: #1e90ff">phpdoc</a> <a href="/tags/hexo/" style="font-size: 18.75px; color: #2e94e7">hexo</a> <a href="/tags/gitcafe/" style="font-size: 15px; color: #1e90ff">gitcafe</a> <a href="/tags/gearman/" style="font-size: 15px; color: #1e90ff">gearman</a> <a href="/tags/html5/" style="font-size: 16.88px; color: #2692f3">html5</a> <a href="/tags/js/" style="font-size: 30px; color: #5f9ea0">js</a> <a href="/tags/drag/" style="font-size: 16.88px; color: #2692f3">drag</a> <a href="/tags/journal/" style="font-size: 16.88px; color: #2692f3">journal</a> <a href="/tags/chrome/" style="font-size: 15px; color: #1e90ff">chrome</a> <a href="/tags/javascript-program-solution/" style="font-size: 18.75px; color: #2e94e7">javascript-program-solution</a> <a href="/tags/random/" style="font-size: 15px; color: #1e90ff">random</a> <a href="/tags/maintainable-javascript/" style="font-size: 15px; color: #1e90ff">maintainable-javascript</a> <a href="/tags/git/" style="font-size: 15px; color: #1e90ff">git</a> <a href="/tags/linux/" style="font-size: 26.25px; color: #4f9bb8">linux</a> <a href="/tags/mac/" style="font-size: 18.75px; color: #2e94e7">mac</a> <a href="/tags/vim/" style="font-size: 15px; color: #1e90ff">vim</a> <a href="/tags/tool/" style="font-size: 15px; color: #1e90ff">tool</a> <a href="/tags/shadowsocks/" style="font-size: 15px; color: #1e90ff">shadowsocks</a> <a href="/tags/software/" style="font-size: 15px; color: #1e90ff">software</a> <a href="/tags/mysql/" style="font-size: 18.75px; color: #2e94e7">mysql</a> <a href="/tags/limit/" style="font-size: 15px; color: #1e90ff">limit</a> <a href="/tags/imgick/" style="font-size: 15px; color: #1e90ff">imgick</a> <a href="/tags/json/" style="font-size: 15px; color: #1e90ff">json</a> <a href="/tags/blob/" style="font-size: 15px; color: #1e90ff">blob</a> <a href="/tags/blog/" style="font-size: 20.63px; color: #3695db">blog</a> <a href="/tags/php/" style="font-size: 28.13px; color: #579cac">php</a> <a href="/tags/target/" style="font-size: 15px; color: #1e90ff">target</a> <a href="/tags/reference/" style="font-size: 15px; color: #1e90ff">reference</a> <a href="/tags/function/" style="font-size: 15px; color: #1e90ff">function</a> <a href="/tags/php-fpm/" style="font-size: 15px; color: #1e90ff">php-fpm</a> <a href="/tags/apache/" style="font-size: 15px; color: #1e90ff">apache</a> <a href="/tags/regex/" style="font-size: 15px; color: #1e90ff">regex</a> <a href="/tags/redis/" style="font-size: 15px; color: #1e90ff">redis</a> <a href="/tags/dropbox/" style="font-size: 15px; color: #1e90ff">dropbox</a> <a href="/tags/jquery/" style="font-size: 22.5px; color: #3f97d0">jquery</a> <a href="/tags/iframe/" style="font-size: 15px; color: #1e90ff">iframe</a> <a href="/tags/closure/" style="font-size: 15px; color: #1e90ff">closure</a> <a href="/tags/cors/" style="font-size: 15px; color: #1e90ff">cors</a> <a href="/tags/go/" style="font-size: 15px; color: #1e90ff">go</a> <a href="/tags/jquery-timepicker-addon/" style="font-size: 15px; color: #1e90ff">jquery-timepicker-addon</a> <a href="/tags/ajax/" style="font-size: 15px; color: #1e90ff">ajax</a> <a href="/tags/promise/" style="font-size: 15px; color: #1e90ff">promise</a> <a href="/tags/notes/" style="font-size: 24.38px; color: #4799c4">notes</a> <a href="/tags/CI/" style="font-size: 15px; color: #1e90ff">CI</a> <a href="/tags/pcntl/" style="font-size: 15px; color: #1e90ff">pcntl</a> <a href="/tags/signal/" style="font-size: 15px; color: #1e90ff">signal</a> <a href="/tags/laradock/" style="font-size: 15px; color: #1e90ff">laradock</a> <a href="/tags/docker/" style="font-size: 15px; color: #1e90ff">docker</a> <a href="/tags/xdebug/" style="font-size: 15px; color: #1e90ff">xdebug</a>
+    </div>
+  </div>
+
+
+  
+   	
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">十月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">二月 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">十二月 2014</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+   	
+  <div class="widget-wrap">
+    <h3 class="widget-title">友情链接</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://coolshell.cn/" target="_blank">酷壳</a>
+          </li>
+        
+          <li>
+            <a href="http://www.laruence.com/" target="_blank">风雪之隅</a>
+          </li>
+        
+          <li>
+            <a href="http://leo108.com/" target="_blank">leo108</a>
+          </li>
+        
+          <li>
+            <a href="http://www.cnblogs.com/liaoziyu/" target="_blank">大粨兔奶糖</a>
+          </li>
+        
+          <li>
+            <a href="http://blog.ihuxu.com/" target="_blank">胡小旭</a>
+          </li>
+        
+          <li>
+            <a href="http://bin.bloggao.cn/" target="_blank">liecol-晓斌</a>
+          </li>
+        
+          <li>
+            <a href="http://xianfengsong.github.io/" target="_blank">先锋Song</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+   	<div class="widget-wrap widget-toc" style="display: none">
+  <h3 class="widget-title">文章目录</h3>
+  <div class="container widget" style="padding: 15px 20px;">
+  </div>
+</div>
+
+<script src="//media.newbmiao.com/blog/asset/js/toc.js" ></script>
+
+
+  
+</aside>
+
+      
+    </div>
+    <footer id="footer">
+ <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+ </script>
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 菜鸟Miao<br>
+     <p>
+     <span id="busuanzi_container_site_uv">
+  	您是本站第<span id="busuanzi_value_site_uv"> <i class="fa fa-spinner fa-spin"></i></span>个访问者
+     </span>
+     <span id="busuanzi_container_site_pv">
+        /本站总访问量<span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i> </span>次
+     </span>
+     </p>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      .
+      Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>
+      .
+      Hosted by <a href="https://coding.net/register?key=094c9e10-c87d-4f7c-a678-30702fb842a3" target="_blank">Coding</a>  &amp; <a href="https://github.com/newbmiao" target="_blank">GitHub</a>
+      . 
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/add-ons" class="mobile-nav-link">Add-ons</a>
+  
+</nav>
+  <script src="http://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<!-- totop start -->
+<div id="totop">
+<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+</div>
+
+<!-- totop end -->
+
+<script>
+  var disqus_shortname = 'newbmiao';
+  
+  var disqus_url = 'http://blog.newbmiao.com/2015/10/25/how-to-use-php-signal.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<!-- 百度分享 start -->
+
+<div id="article-share-box" class="article-share-box">
+  <div id="bdshare" class="bdsharebuttonbox article-share-links">
+    <a class="article-share-weibo" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a class="article-share-weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a class="article-share-qq" data-cmd="sqq" title="分享到QQ"></a>
+    <a class="article-share-renren" data-cmd="renren" title="分享到人人网"></a>
+    <a class="article-share-more" data-cmd="more" title="更多"></a>
+  </div>
+</div>
+<script>window._bd_share_config={"common":{},"share":{"bdCustomStyle":"/css/bdshare.css"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<!-- 百度分享 end -->
+
+
+
+<link rel="stylesheet" href="//media.newbmiao.com/blog/asset/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="//media.newbmiao.com/blog/asset/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="//media.newbmiao.com/blog/asset/js/script.js"></script>
+
+
+
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  _st('install','bqAniPPC1T7RV4MomxcE','2.0.0');
+</script>
+
+
+
+</div>
+</body>
+</html>
+
