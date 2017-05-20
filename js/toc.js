@@ -1,35 +1,3 @@
-(function() {
-    var getOffset = function(ele) {
-        var t = 0, l = 0;
-        while (ele.offsetParent) {
-            t += ele.offsetTop;
-            l += ele.offsetLeft;
-            ele = ele.offsetParent;
-        }
-        return {
-            top: t,
-            left: l
-        };
-    }
-    var onScroll = function() {
-        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        if (scrollTop >= offsetTop) {
-            elTocWidget.style.position = 'fixed';
-            elTocWidget.style.top = '10px';
-            elTocWidget.style.width = 'inherit';
-        } else {
-            elTocWidget.style.position = 'static';
-            elTocWidget.style.width = 'auto';
-        }
-    };
-    var elToc = document.querySelector(".toc");
-    if (!elToc) return;
-    var elTocWidget = document.querySelector(".widget-toc");
-    var elContainer = elTocWidget.querySelector(".container");
-    elContainer.appendChild(elToc.cloneNode(true));
-    elTocWidget.style.display = "block";
-    var offsetTop = getOffset(elTocWidget).top;
-    if (document.addEventListener) {
-        document.addEventListener("scroll", onScroll);
-    }
-})();
+// build time:Sat May 20 2017 14:15:50 GMT+0800 (CST)
+(function(){var e=function(e){var t=0,o=0;while(e.offsetParent){t+=e.offsetTop;o+=e.offsetLeft;e=e.offsetParent}return{top:t,left:o}};var t=function(){var e=document.documentElement.scrollTop||document.body.scrollTop;if(e>=i){n.style.position="fixed";n.style.top="10px";n.style.width="inherit"}else{n.style.position="static";n.style.width="auto"}};var o=document.querySelector(".toc");if(!o)return;var n=document.querySelector(".widget-toc");var r=n.querySelector(".container");r.appendChild(o.cloneNode(true));n.style.display="block";var i=e(n).top;if(document.addEventListener){document.addEventListener("scroll",t)}})();
+//rebuild by neat 

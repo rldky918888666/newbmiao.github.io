@@ -607,6 +607,28 @@
     
     
   <url>
+    <loc>http://blog.newbmiao.com/2015/06/26/redis-installation-guide.html</loc>
+    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>redis安装</title>
+        <pubTime>2015-06-26T09:43:23.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>redis</tag>
+         
+         
+           
+             
+              <breadCrumb title="redis" url="http://blog.newbmiao.com/categories/redis/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.newbmiao.com/2015/02/28/regex-notes.html</loc>
     <lastmod>2016-07-07T13:09:22.000Z</lastmod>
     <data>
@@ -625,28 +647,6 @@
           
              
               <breadCrumb title="regex" url="http://blog.newbmiao.com/categories/php/regex/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.newbmiao.com/2015/06/26/redis-installation-guide.html</loc>
-    <lastmod>2016-07-07T13:09:22.000Z</lastmod>
-    <data>
-        <display>
-        <title>redis安装</title>
-        <pubTime>2015-06-26T09:43:23.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-        <tag>redis</tag>
-         
-         
-           
-             
-              <breadCrumb title="redis" url="http://blog.newbmiao.com/categories/redis/"/>
           
         </display>
     </data>
@@ -679,21 +679,22 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/08/01/use-limit-subquery-in-mysql.html</loc>
+    <loc>http://blog.newbmiao.com/2015/09/25/remember-once-mysql-optimize-operations.html</loc>
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     <data>
         <display>
-        <title>解决mysql不可用limit子查询</title>
-        <pubTime>2015-08-01T07:43:06.000Z</pubTime>
+        <title>记一次mysql优化操作</title>
+        <pubTime>2015-09-25T06:14:20.000Z</pubTime>
         
         <tag>mysql</tag>
-         
-        <tag>limit</tag>
          
          
            
              
               <breadCrumb title="mysql" url="http://blog.newbmiao.com/categories/mysql/"/>
+          
+             
+              <breadCrumb title="optimize" url="http://blog.newbmiao.com/categories/mysql/optimize/"/>
           
         </display>
     </data>
@@ -937,22 +938,21 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/25/remember-once-mysql-optimize-operations.html</loc>
+    <loc>http://blog.newbmiao.com/2015/08/01/use-limit-subquery-in-mysql.html</loc>
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     <data>
         <display>
-        <title>记一次mysql优化操作</title>
-        <pubTime>2015-09-25T06:14:20.000Z</pubTime>
+        <title>解决mysql不可用limit子查询</title>
+        <pubTime>2015-08-01T07:43:06.000Z</pubTime>
         
         <tag>mysql</tag>
+         
+        <tag>limit</tag>
          
          
            
              
               <breadCrumb title="mysql" url="http://blog.newbmiao.com/categories/mysql/"/>
-          
-             
-              <breadCrumb title="optimize" url="http://blog.newbmiao.com/categories/mysql/optimize/"/>
           
         </display>
     </data>
@@ -1011,24 +1011,22 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/02/28/jquery-html5.html</loc>
+    <loc>http://blog.newbmiao.com/2015/09/01/jquery-detach.html</loc>
     <lastmod>2016-07-07T13:09:18.000Z</lastmod>
     <data>
         <display>
-        <title>jquery 和 html5</title>
-        <pubTime>2015-02-28T15:20:57.000Z</pubTime>
+        <title>jQuery之detach的使用</title>
+        <pubTime>2015-09-01T05:59:16.000Z</pubTime>
         
-        <tag>js</tag>
-         
-        <tag>javascript-program-solution</tag>
+        <tag>jquery</tag>
          
          
            
              
-              <breadCrumb title="web" url="http://blog.newbmiao.com/categories/web/"/>
+              <breadCrumb title="js" url="http://blog.newbmiao.com/categories/js/"/>
           
              
-              <breadCrumb title="notes" url="http://blog.newbmiao.com/categories/web/notes/"/>
+              <breadCrumb title="jquery" url="http://blog.newbmiao.com/categories/js/jquery/"/>
           
         </display>
     </data>
@@ -1086,53 +1084,6 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/02/22/html5-drag-api.html</loc>
-    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
-    <data>
-        <display>
-        <title>html5的拖拽api</title>
-        <pubTime>2015-02-22T10:29:00.000Z</pubTime>
-        
-        <tag>html5</tag>
-         
-        <tag>drag</tag>
-         
-        <tag>js</tag>
-         
-         
-           
-             
-              <breadCrumb title="html5" url="http://blog.newbmiao.com/categories/html5/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.newbmiao.com/2015/09/01/jquery-detach.html</loc>
-    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
-    <data>
-        <display>
-        <title>jQuery之detach的使用</title>
-        <pubTime>2015-09-01T05:59:16.000Z</pubTime>
-        
-        <tag>jquery</tag>
-         
-         
-           
-             
-              <breadCrumb title="js" url="http://blog.newbmiao.com/categories/js/"/>
-          
-             
-              <breadCrumb title="jquery" url="http://blog.newbmiao.com/categories/js/jquery/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://blog.newbmiao.com/2015/02/22/html5-drag-api2-chrome-drag-to-downloa.html</loc>
     <lastmod>2016-07-07T13:09:18.000Z</lastmod>
     <data>
@@ -1150,6 +1101,31 @@
            
              
               <breadCrumb title="html5" url="http://blog.newbmiao.com/categories/html5/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/02/28/jquery-html5.html</loc>
+    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>jquery 和 html5</title>
+        <pubTime>2015-02-28T15:20:57.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+        <tag>javascript-program-solution</tag>
+         
+         
+           
+             
+              <breadCrumb title="web" url="http://blog.newbmiao.com/categories/web/"/>
+          
+             
+              <breadCrumb title="notes" url="http://blog.newbmiao.com/categories/web/notes/"/>
           
         </display>
     </data>
@@ -1190,6 +1166,30 @@
            
              
               <breadCrumb title="journal" url="http://blog.newbmiao.com/categories/journal/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/02/22/html5-drag-api.html</loc>
+    <lastmod>2016-07-07T13:09:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>html5的拖拽api</title>
+        <pubTime>2015-02-22T10:29:00.000Z</pubTime>
+        
+        <tag>html5</tag>
+         
+        <tag>js</tag>
+         
+        <tag>drag</tag>
+         
+         
+           
+             
+              <breadCrumb title="html5" url="http://blog.newbmiao.com/categories/html5/"/>
           
         </display>
     </data>
