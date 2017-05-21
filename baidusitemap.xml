@@ -4,6 +4,31 @@
 
     
   <url>
+    <loc>http://blog.newbmiao.com/2015/06/16/hexo-on-your-github.html</loc>
+    <lastmod>2017-05-21T09:15:50.000Z</lastmod>
+    <data>
+        <display>
+        <title>搭建你自己的Hexo博客</title>
+        <pubTime>2015-06-16T12:23:25.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>blog</tag>
+         
+         
+           
+             
+              <breadCrumb title="blog" url="http://blog.newbmiao.com/categories/blog/"/>
+          
+             
+              <breadCrumb title="hexo" url="http://blog.newbmiao.com/categories/blog/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.newbmiao.com/2017/05/16/share-the-login-status-under-cors.html</loc>
     <lastmod>2017-05-16T11:11:03.000Z</lastmod>
     <data>
@@ -22,31 +47,6 @@
           
              
               <breadCrumb title="practice" url="http://blog.newbmiao.com/categories/web/practice/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.newbmiao.com/2015/06/16/hexo-on-your-github.html</loc>
-    <lastmod>2017-03-22T07:13:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>搭建你自己的Hexo博客</title>
-        <pubTime>2015-06-16T12:23:25.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>blog</tag>
-         
-         
-           
-             
-              <breadCrumb title="blog" url="http://blog.newbmiao.com/categories/blog/"/>
-          
-             
-              <breadCrumb title="hexo" url="http://blog.newbmiao.com/categories/blog/hexo/"/>
           
         </display>
     </data>
