@@ -4,6 +4,33 @@
 
     
     
+  <url>
+    <loc>http://blog.newbmiao.com/2017/03/14/laradock-in-action.html</loc>
+    <lastmod>2019-01-08T00:18:39.262Z</lastmod>
+    <data>
+        <display>
+        <title>laradock开发实践</title>
+        <pubTime>2017-03-14T07:27:27.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>laradock</tag>
+         
+        <tag>docker</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.newbmiao.com/categories/php/"/>
+          
+             
+              <breadCrumb title="tool" url="http://blog.newbmiao.com/categories/php/tool/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
     
   <url>
@@ -245,33 +272,6 @@
           
              
               <breadCrumb title="practice" url="http://blog.newbmiao.com/categories/web/practice/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.newbmiao.com/2017/03/14/laradock-in-action.html</loc>
-    <lastmod>2017-03-14T08:27:14.000Z</lastmod>
-    <data>
-        <display>
-        <title>laradock开发实践</title>
-        <pubTime>2017-03-14T07:27:27.000Z</pubTime>
-        
-        <tag>php</tag>
-         
-        <tag>laradock</tag>
-         
-        <tag>docker</tag>
-         
-         
-           
-             
-              <breadCrumb title="php" url="http://blog.newbmiao.com/categories/php/"/>
-          
-             
-              <breadCrumb title="tool" url="http://blog.newbmiao.com/categories/php/tool/"/>
           
         </display>
     </data>
@@ -799,6 +799,50 @@
     
     
   <url>
+    <loc>http://blog.newbmiao.com/2014/12/28/build-your-git-server-on-linux.html</loc>
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>Git搭建自己的网站服务器（Linux)</title>
+        <pubTime>2014-12-28T08:01:00.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+        <tag>linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="git" url="http://blog.newbmiao.com/categories/git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.newbmiao.com/2015/08/06/set-highlight-and-autoindent-in-vim-on-mac.html</loc>
+    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>mac vim高亮及缩进设置</title>
+        <pubTime>2015-08-06T06:04:59.000Z</pubTime>
+        
+        <tag>mac</tag>
+         
+        <tag>vim</tag>
+         
+         
+           
+             
+              <breadCrumb title="mac" url="http://blog.newbmiao.com/categories/mac/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.newbmiao.com/2015/02/28/random-element-of-array-js.html</loc>
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     <data>
@@ -839,50 +883,6 @@
           
              
               <breadCrumb title="notes" url="http://blog.newbmiao.com/categories/web/notes/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.newbmiao.com/2014/12/28/build-your-git-server-on-linux.html</loc>
-    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>Git搭建自己的网站服务器（Linux)</title>
-        <pubTime>2014-12-28T08:01:00.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-        <tag>linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="git" url="http://blog.newbmiao.com/categories/git/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.newbmiao.com/2015/08/06/set-highlight-and-autoindent-in-vim-on-mac.html</loc>
-    <lastmod>2016-07-07T13:09:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>mac vim高亮及缩进设置</title>
-        <pubTime>2015-08-06T06:04:59.000Z</pubTime>
-        
-        <tag>mac</tag>
-         
-        <tag>vim</tag>
-         
-         
-           
-             
-              <breadCrumb title="mac" url="http://blog.newbmiao.com/categories/mac/"/>
           
         </display>
     </data>
@@ -980,12 +980,12 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-bash.html</loc>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-cron.html</loc>
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     <data>
         <display>
-        <title>鸟哥的Linux私房菜笔记-bash</title>
-        <pubTime>2015-09-15T09:28:15.000Z</pubTime>
+        <title>鸟哥的Linux私房菜笔记-排程</title>
+        <pubTime>2015-09-15T09:39:47.000Z</pubTime>
         
         <tag>linux</tag>
          
@@ -1005,12 +1005,12 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-cron.html</loc>
+    <loc>http://blog.newbmiao.com/2015/09/15/Niaoge-Linux-Desktop-Guide-notes-bash.html</loc>
     <lastmod>2016-07-07T13:09:20.000Z</lastmod>
     <data>
         <display>
-        <title>鸟哥的Linux私房菜笔记-排程</title>
-        <pubTime>2015-09-15T09:39:47.000Z</pubTime>
+        <title>鸟哥的Linux私房菜笔记-bash</title>
+        <pubTime>2015-09-15T09:28:15.000Z</pubTime>
         
         <tag>linux</tag>
          
@@ -1155,12 +1155,12 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/27/up-up-in-mid-autumn-day.html</loc>
+    <loc>http://blog.newbmiao.com/2015/09/24/a-tribute-to-the-great-god-of-php.html</loc>
     <lastmod>2016-07-07T13:09:18.000Z</lastmod>
     <data>
         <display>
-        <title>中秋举牌</title>
-        <pubTime>2015-09-27T03:07:08.000Z</pubTime>
+        <title>向php大神致敬</title>
+        <pubTime>2015-09-24T04:59:24.000Z</pubTime>
         
         <tag>journal</tag>
          
@@ -1175,12 +1175,12 @@
 
     
   <url>
-    <loc>http://blog.newbmiao.com/2015/09/24/a-tribute-to-the-great-god-of-php.html</loc>
+    <loc>http://blog.newbmiao.com/2015/09/27/up-up-in-mid-autumn-day.html</loc>
     <lastmod>2016-07-07T13:09:18.000Z</lastmod>
     <data>
         <display>
-        <title>向php大神致敬</title>
-        <pubTime>2015-09-24T04:59:24.000Z</pubTime>
+        <title>中秋举牌</title>
+        <pubTime>2015-09-27T03:07:08.000Z</pubTime>
         
         <tag>journal</tag>
          
